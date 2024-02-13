@@ -1,0 +1,93 @@
+[
+  {
+    "id": 8479,
+    "name": "Chh\u0101tak",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "25.03852000",
+    "longitude": "91.66958000",
+    "wikiDataId": "Q4518434"
+  },
+  {
+    "id": 8498,
+    "name": "Habiganj",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.43333000",
+    "longitude": "91.41667000",
+    "wikiDataId": "Q1438974"
+  },
+  {
+    "id": 8501,
+    "name": "Jahedpur",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.83333000",
+    "longitude": "91.65000000",
+    "wikiDataId": "Q6123226"
+  },
+  {
+    "id": 8533,
+    "name": "Maulavi B\u0101z\u0101r",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.48888000",
+    "longitude": "91.77075000",
+    "wikiDataId": "Q1856323"
+  },
+  {
+    "id": 8534,
+    "name": "Maulvibazar",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.50000000",
+    "longitude": "91.83333000",
+    "wikiDataId": "Q281435"
+  },
+  {
+    "id": 8595,
+    "name": "Sunamganj",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.86667000",
+    "longitude": "91.41667000",
+    "wikiDataId": "Q2429432"
+  },
+  {
+    "id": 8596,
+    "name": "Sylhet",
+    "state_id": 767,
+    "state_code": "60",
+    "state_name": "Sylhet District",
+    "country_id": 19,
+    "country_code": "BD",
+    "country_name": "Bangladesh",
+    "latitude": "24.91667000",
+    "longitude": "91.76667000",
+    "wikiDataId": "Q2093352"
+  }
+]

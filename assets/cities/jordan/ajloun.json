@@ -1,0 +1,41 @@
+[
+  {
+    "id": 63208,
+    "name": "\u2018Ayn Jannah",
+    "state_id": 963,
+    "state_code": "AJ",
+    "state_name": "Ajloun",
+    "country_id": 111,
+    "country_code": "JO",
+    "country_name": "Jordan",
+    "latitude": "32.33466000",
+    "longitude": "35.76370000",
+    "wikiDataId": "Q2828134"
+  },
+  {
+    "id": 63202,
+    "name": "\u1e28al\u0101wah",
+    "state_id": 963,
+    "state_code": "AJ",
+    "state_name": "Ajloun",
+    "country_id": 111,
+    "country_code": "JO",
+    "country_name": "Jordan",
+    "latitude": "32.38433000",
+    "longitude": "35.66167000",
+    "wikiDataId": "Q15222591"
+  },
+  {
+    "id": 63199,
+    "name": "\u015eakhrah",
+    "state_id": 963,
+    "state_code": "AJ",
+    "state_name": "Ajloun",
+    "country_id": 111,
+    "country_code": "JO",
+    "country_name": "Jordan",
+    "latitude": "32.37087000",
+    "longitude": "35.84267000",
+    "wikiDataId": "Q148062"
+  }
+]

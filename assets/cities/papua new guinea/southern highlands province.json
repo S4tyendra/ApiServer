@@ -1,0 +1,67 @@
+[
+  {
+    "id": 81048,
+    "name": "Ialibu Pangia",
+    "state_id": 4844,
+    "state_code": "SHM",
+    "state_name": "Southern Highlands Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-6.16667000",
+    "longitude": "144.00000000",
+    "wikiDataId": "Q3710980"
+  },
+  {
+    "id": 81050,
+    "name": "Imbonggu",
+    "state_id": 4844,
+    "state_code": "SHM",
+    "state_name": "Southern Highlands Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-6.16667000",
+    "longitude": "144.00000000",
+    "wikiDataId": "Q3710986"
+  },
+  {
+    "id": 81053,
+    "name": "Kagua Erave",
+    "state_id": 4844,
+    "state_code": "SHM",
+    "state_name": "Southern Highlands Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-6.66667000",
+    "longitude": "144.00000000",
+    "wikiDataId": "Q3711020"
+  },
+  {
+    "id": 81081,
+    "name": "Mendi",
+    "state_id": 4844,
+    "state_code": "SHM",
+    "state_name": "Southern Highlands Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-6.14755000",
+    "longitude": "143.65633000",
+    "wikiDataId": "Q1017120"
+  },
+  {
+    "id": 81090,
+    "name": "Nipa Kutubu",
+    "state_id": 4844,
+    "state_code": "SHM",
+    "state_name": "Southern Highlands Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-6.33333000",
+    "longitude": "143.33333000",
+    "wikiDataId": "Q3711238"
+  }
+]

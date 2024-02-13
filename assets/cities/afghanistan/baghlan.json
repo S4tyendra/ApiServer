@@ -1,0 +1,41 @@
+[
+  {
+    "id": 140,
+    "name": "\u1e28uk\u016bmat\u012b Dahanah-ye Gh\u014dr\u012b",
+    "state_id": 3875,
+    "state_code": "BGL",
+    "state_name": "Baghlan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "35.90617000",
+    "longitude": "68.48869000",
+    "wikiDataId": "Q5194960"
+  },
+  {
+    "id": 101,
+    "name": "Nahr\u012bn",
+    "state_id": 3875,
+    "state_code": "BGL",
+    "state_name": "Baghlan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "36.06490000",
+    "longitude": "69.13343000",
+    "wikiDataId": "Q6959392"
+  },
+  {
+    "id": 105,
+    "name": "Pul-e Khumr\u012b",
+    "state_id": 3875,
+    "state_code": "BGL",
+    "state_name": "Baghlan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "35.94458000",
+    "longitude": "68.71512000",
+    "wikiDataId": "Q477148"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 67653,
+    "name": "Magway",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "20.14956000",
+    "longitude": "94.93246000",
+    "wikiDataId": "Q957326"
+  },
+  {
+    "id": 67662,
+    "name": "Minbu",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "20.18059000",
+    "longitude": "94.87595000",
+    "wikiDataId": "Q3826997"
+  },
+  {
+    "id": 67668,
+    "name": "Myaydo",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "19.36838000",
+    "longitude": "95.21512000",
+    "wikiDataId": "Q6947282"
+  },
+  {
+    "id": 67676,
+    "name": "Pakokku",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "21.33489000",
+    "longitude": "95.08438000",
+    "wikiDataId": "Q652202"
+  },
+  {
+    "id": 67692,
+    "name": "Taungdwingyi",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "20.00650000",
+    "longitude": "95.54531000",
+    "wikiDataId": "Q30016638"
+  },
+  {
+    "id": 67698,
+    "name": "Thayetmyo",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "19.32076000",
+    "longitude": "95.18272000",
+    "wikiDataId": "Q3139162"
+  },
+  {
+    "id": 67704,
+    "name": "Yenangyaung",
+    "state_id": 2136,
+    "state_code": "03",
+    "state_name": "Magway Region",
+    "country_id": 151,
+    "country_code": "MM",
+    "country_name": "Myanmar",
+    "latitude": "20.46504000",
+    "longitude": "94.87120000",
+    "wikiDataId": "Q1185041"
+  }
+]

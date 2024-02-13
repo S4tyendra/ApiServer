@@ -1,0 +1,134 @@
+[
+  {
+    "id": 2866,
+    "name": "Bouenza Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "11",
+    "type": null,
+    "latitude": "-4.11280790",
+    "longitude": "13.72891670"
+  },
+  {
+    "id": 2870,
+    "name": "Brazzaville",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "BZV",
+    "type": null,
+    "latitude": "-4.26335970",
+    "longitude": "15.24288530"
+  },
+  {
+    "id": 2864,
+    "name": "Cuvette Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "8",
+    "type": null,
+    "latitude": "-0.28774460",
+    "longitude": "16.15809370"
+  },
+  {
+    "id": 2869,
+    "name": "Cuvette-Ouest Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "15",
+    "type": null,
+    "latitude": "0.14475500",
+    "longitude": "14.47233010"
+  },
+  {
+    "id": 2867,
+    "name": "Kouilou Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "5",
+    "type": null,
+    "latitude": "-4.14284130",
+    "longitude": "11.88917210"
+  },
+  {
+    "id": 2868,
+    "name": "L\u00e9koumou Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "2",
+    "type": null,
+    "latitude": "-3.17038200",
+    "longitude": "13.35872880"
+  },
+  {
+    "id": 2865,
+    "name": "Likouala Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "7",
+    "type": null,
+    "latitude": "2.04392400",
+    "longitude": "17.66888700"
+  },
+  {
+    "id": 2872,
+    "name": "Niari Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "9",
+    "type": null,
+    "latitude": "-3.18427000",
+    "longitude": "12.25479190"
+  },
+  {
+    "id": 2862,
+    "name": "Plateaux Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "14",
+    "type": null,
+    "latitude": "-2.06800880",
+    "longitude": "15.40680790"
+  },
+  {
+    "id": 2863,
+    "name": "Pointe-Noire",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "16",
+    "type": null,
+    "latitude": "-4.76916230",
+    "longitude": "11.86636200"
+  },
+  {
+    "id": 2873,
+    "name": "Pool Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "12",
+    "type": null,
+    "latitude": "-3.77626280",
+    "longitude": "14.84546190"
+  },
+  {
+    "id": 2871,
+    "name": "Sangha Department",
+    "country_id": 50,
+    "country_code": "CG",
+    "country_name": "Congo",
+    "state_code": "13",
+    "type": null,
+    "latitude": "1.46623280",
+    "longitude": "15.40680790"
+  }
+]

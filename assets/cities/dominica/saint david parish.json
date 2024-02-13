@@ -1,0 +1,15 @@
+[
+  {
+    "id": 31012,
+    "name": "Rosalie",
+    "state_id": 4078,
+    "state_code": "03",
+    "state_name": "Saint David Parish",
+    "country_id": 61,
+    "country_code": "DM",
+    "country_name": "Dominica",
+    "latitude": "15.36667000",
+    "longitude": "-61.26667000",
+    "wikiDataId": "Q976314"
+  }
+]

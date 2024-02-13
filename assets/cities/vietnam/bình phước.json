@@ -1,0 +1,80 @@
+[
+  {
+    "id": 130197,
+    "name": "Don Luan",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.53495000",
+    "longitude": "106.88324000",
+    "wikiDataId": "Q36027"
+  },
+  {
+    "id": 130227,
+    "name": "Huy\u1ec7n B\u00f9 \u0110\u1ed1p",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "12.00374000",
+    "longitude": "106.81545000",
+    "wikiDataId": "Q3710726"
+  },
+  {
+    "id": 130256,
+    "name": "Huy\u1ec7n Ch\u01a1n Th\u00e0nh",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.46283000",
+    "longitude": "106.66655000",
+    "wikiDataId": "Q1319826"
+  },
+  {
+    "id": 130547,
+    "name": "Huy\u1ec7n \u0110\u1ed3ng Ph\u00fa",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.50071000",
+    "longitude": "107.01192000",
+    "wikiDataId": "Q3593897"
+  },
+  {
+    "id": 130319,
+    "name": "Huy\u1ec7n H\u1edbn Qu\u1ea3n",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.59718000",
+    "longitude": "106.62739000",
+    "wikiDataId": "Q5942590"
+  },
+  {
+    "id": 130614,
+    "name": "Th\u1ecb X\u00e3 Ph\u01b0\u1edbc Long",
+    "state_id": 3797,
+    "state_code": "58",
+    "state_name": "B\u00ecnh Ph\u01b0\u1edbc",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.81142000",
+    "longitude": "106.99670000",
+    "wikiDataId": "Q1320204"
+  }
+]

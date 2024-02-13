@@ -1,0 +1,28 @@
+[
+  {
+    "id": 31496,
+    "name": "Ca\u00f1ar",
+    "state_id": 2917,
+    "state_code": "F",
+    "state_name": "Ca\u00f1ar",
+    "country_id": 64,
+    "country_code": "EC",
+    "country_name": "Ecuador",
+    "latitude": "-2.56062000",
+    "longitude": "-78.93940000",
+    "wikiDataId": "Q23885206"
+  },
+  {
+    "id": 31518,
+    "name": "La Troncal",
+    "state_id": 2917,
+    "state_code": "F",
+    "state_name": "Ca\u00f1ar",
+    "country_id": 64,
+    "country_code": "EC",
+    "country_name": "Ecuador",
+    "latitude": "-2.42355000",
+    "longitude": "-79.33977000",
+    "wikiDataId": "Q6465543"
+  }
+]

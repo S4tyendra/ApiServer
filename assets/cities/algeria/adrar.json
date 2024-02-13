@@ -1,0 +1,28 @@
+[
+  {
+    "id": 31406,
+    "name": "Reggane",
+    "state_id": 1118,
+    "state_code": "01",
+    "state_name": "Adrar",
+    "country_id": 4,
+    "country_code": "DZ",
+    "country_name": "Algeria",
+    "latitude": "26.71576000",
+    "longitude": "0.17140000",
+    "wikiDataId": "Q582905"
+  },
+  {
+    "id": 31450,
+    "name": "Timimoun",
+    "state_id": 1118,
+    "state_code": "01",
+    "state_name": "Adrar",
+    "country_id": 4,
+    "country_code": "DZ",
+    "country_name": "Algeria",
+    "latitude": "29.26388000",
+    "longitude": "0.23098000",
+    "wikiDataId": "Q1021173"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 89866,
+    "name": "Fuwayri\u0163",
+    "state_id": 3180,
+    "state_code": "MS",
+    "state_name": "Madinat ash Shamal",
+    "country_id": 179,
+    "country_code": "QA",
+    "country_name": "Qatar",
+    "latitude": "26.02565000",
+    "longitude": "51.36971000",
+    "wikiDataId": "Q3296633"
+  },
+  {
+    "id": 89867,
+    "name": "Mad\u012bnat ash Sham\u0101l",
+    "state_id": 3180,
+    "state_code": "MS",
+    "state_name": "Madinat ash Shamal",
+    "country_id": 179,
+    "country_code": "QA",
+    "country_name": "Qatar",
+    "latitude": "26.12933000",
+    "longitude": "51.20090000",
+    "wikiDataId": "Q310872"
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "id": 3998,
+    "name": "Chagang Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "04",
+    "type": null,
+    "latitude": "40.72028090",
+    "longitude": "126.56211370"
+  },
+  {
+    "id": 3999,
+    "name": "Kangwon Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "07",
+    "type": null,
+    "latitude": "38.84323930",
+    "longitude": "127.55970670"
+  },
+  {
+    "id": 3995,
+    "name": "North Hamgyong Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "09",
+    "type": null,
+    "latitude": "41.81487580",
+    "longitude": "129.45819550"
+  },
+  {
+    "id": 4004,
+    "name": "North Hwanghae Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "06",
+    "type": null,
+    "latitude": "38.37860850",
+    "longitude": "126.43643630"
+  },
+  {
+    "id": 4002,
+    "name": "North Pyongan Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "03",
+    "type": null,
+    "latitude": "39.92556180",
+    "longitude": "125.39280250"
+  },
+  {
+    "id": 4005,
+    "name": "Pyongyang",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "01",
+    "type": null,
+    "latitude": "39.03921930",
+    "longitude": "125.76252410"
+  },
+  {
+    "id": 4001,
+    "name": "Rason",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "13",
+    "type": null,
+    "latitude": "42.25690630",
+    "longitude": "130.29771860"
+  },
+  {
+    "id": 3996,
+    "name": "Ryanggang Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "10",
+    "type": null,
+    "latitude": "41.23189210",
+    "longitude": "128.50763590"
+  },
+  {
+    "id": 4000,
+    "name": "South Hamgyong Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "08",
+    "type": null,
+    "latitude": "40.37253390",
+    "longitude": "128.29888400"
+  },
+  {
+    "id": 4003,
+    "name": "South Hwanghae Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "05",
+    "type": null,
+    "latitude": "38.20072150",
+    "longitude": "125.47819260"
+  },
+  {
+    "id": 3997,
+    "name": "South Pyongan Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "state_code": "02",
+    "type": null,
+    "latitude": "39.35391780",
+    "longitude": "126.16827100"
+  }
+]

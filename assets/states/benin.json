@@ -1,0 +1,134 @@
+[
+  {
+    "id": 3077,
+    "name": "Alibori Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "AL",
+    "type": null,
+    "latitude": "10.96810930",
+    "longitude": "2.77798130"
+  },
+  {
+    "id": 3076,
+    "name": "Atakora Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "AK",
+    "type": null,
+    "latitude": "10.79549310",
+    "longitude": "1.67606910"
+  },
+  {
+    "id": 3079,
+    "name": "Atlantique Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "AQ",
+    "type": null,
+    "latitude": "6.65883910",
+    "longitude": "2.22366670"
+  },
+  {
+    "id": 3078,
+    "name": "Borgou Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "BO",
+    "type": null,
+    "latitude": "9.53408640",
+    "longitude": "2.77798130"
+  },
+  {
+    "id": 3070,
+    "name": "Collines Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "CO",
+    "type": null,
+    "latitude": "8.30222970",
+    "longitude": "2.30244600"
+  },
+  {
+    "id": 3072,
+    "name": "Donga Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "DO",
+    "type": null,
+    "latitude": "9.71918670",
+    "longitude": "1.67606910"
+  },
+  {
+    "id": 3071,
+    "name": "Kouffo Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "KO",
+    "type": null,
+    "latitude": "7.00358940",
+    "longitude": "1.75388170"
+  },
+  {
+    "id": 3081,
+    "name": "Littoral Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "LI",
+    "type": null,
+    "latitude": "6.38069730",
+    "longitude": "2.44063870"
+  },
+  {
+    "id": 3075,
+    "name": "Mono Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "MO",
+    "type": null,
+    "latitude": "37.92186080",
+    "longitude": "-118.95286450"
+  },
+  {
+    "id": 3080,
+    "name": "Ou\u00e9m\u00e9 Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "OU",
+    "type": null,
+    "latitude": "6.61481520",
+    "longitude": "2.49999180"
+  },
+  {
+    "id": 3074,
+    "name": "Plateau Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "PL",
+    "type": null,
+    "latitude": "7.34451410",
+    "longitude": "2.53960300"
+  },
+  {
+    "id": 3073,
+    "name": "Zou Department",
+    "country_id": 24,
+    "country_code": "BJ",
+    "country_name": "Benin",
+    "state_code": "ZO",
+    "type": null,
+    "latitude": "7.34692680",
+    "longitude": "2.06651970"
+  }
+]

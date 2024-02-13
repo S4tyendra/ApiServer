@@ -1,0 +1,28 @@
+[
+  {
+    "id": 48140,
+    "name": "Makokou",
+    "state_id": 2724,
+    "state_code": "6",
+    "state_name": "Ogoou\u00e9-Ivindo Province",
+    "country_id": 79,
+    "country_code": "GA",
+    "country_name": "Gabon",
+    "latitude": "0.57381000",
+    "longitude": "12.86419000",
+    "wikiDataId": "Q1002583"
+  },
+  {
+    "id": 48156,
+    "name": "Zadie",
+    "state_id": 2724,
+    "state_code": "6",
+    "state_name": "Ogoou\u00e9-Ivindo Province",
+    "country_id": 79,
+    "country_code": "GA",
+    "country_name": "Gabon",
+    "latitude": "0.92582000",
+    "longitude": "13.90813000",
+    "wikiDataId": "Q690421"
+  }
+]

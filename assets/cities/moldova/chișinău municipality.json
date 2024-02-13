@@ -1,0 +1,80 @@
+[
+  {
+    "id": 67288,
+    "name": "Ciorescu",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "47.13000000",
+    "longitude": "28.88937000",
+    "wikiDataId": "Q428572"
+  },
+  {
+    "id": 67292,
+    "name": "Cricova",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "47.13835000",
+    "longitude": "28.86156000",
+    "wikiDataId": "Q1139983"
+  },
+  {
+    "id": 67327,
+    "name": "S\u00eengera",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "46.91557000",
+    "longitude": "28.96673000",
+    "wikiDataId": "Q2628984"
+  },
+  {
+    "id": 67326,
+    "name": "St\u0103uceni",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "47.09643000",
+    "longitude": "28.86791000",
+    "wikiDataId": "Q2387813"
+  },
+  {
+    "id": 67336,
+    "name": "Vadul lui Vod\u0103",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "47.09009000",
+    "longitude": "29.07570000",
+    "wikiDataId": "Q2621050"
+  },
+  {
+    "id": 67338,
+    "name": "Vatra",
+    "state_id": 4373,
+    "state_code": "CU",
+    "state_name": "Chi\u0219in\u0103u Municipality",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "47.07460000",
+    "longitude": "28.73685000",
+    "wikiDataId": "Q1117303"
+  }
+]

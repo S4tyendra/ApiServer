@@ -1,0 +1,28 @@
+[
+  {
+    "id": 130655,
+    "name": "Nofoali\u2018i",
+    "state_id": 4763,
+    "state_code": "AA",
+    "state_name": "A'ana",
+    "country_id": 191,
+    "country_code": "WS",
+    "country_name": "Samoa",
+    "latitude": "-13.82170000",
+    "longitude": "-171.95873000",
+    "wikiDataId": "Q31971483"
+  },
+  {
+    "id": 130658,
+    "name": "Satapuala",
+    "state_id": 4763,
+    "state_code": "AA",
+    "state_name": "A'ana",
+    "country_id": 191,
+    "country_code": "WS",
+    "country_name": "Samoa",
+    "latitude": "-13.83535000",
+    "longitude": "-171.97963000",
+    "wikiDataId": "Q7425943"
+  }
+]

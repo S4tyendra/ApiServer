@@ -1,0 +1,28 @@
+[
+  {
+    "id": 105149,
+    "name": "Melfi",
+    "state_id": 3576,
+    "state_code": "GR",
+    "state_name": "Gu\u00e9ra",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "11.05980000",
+    "longitude": "17.93550000",
+    "wikiDataId": "Q3305032"
+  },
+  {
+    "id": 105150,
+    "name": "Mongo",
+    "state_id": 3576,
+    "state_code": "GR",
+    "state_name": "Gu\u00e9ra",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "12.18441000",
+    "longitude": "18.69303000",
+    "wikiDataId": "Q540895"
+  }
+]

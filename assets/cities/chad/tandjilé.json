@@ -1,0 +1,28 @@
+[
+  {
+    "id": 105140,
+    "name": "Kelo",
+    "state_id": 3579,
+    "state_code": "TA",
+    "state_name": "Tandjil\u00e9",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "9.30859000",
+    "longitude": "15.80658000",
+    "wikiDataId": "Q1011669"
+  },
+  {
+    "id": 105144,
+    "name": "La\u00ef",
+    "state_id": 3579,
+    "state_code": "TA",
+    "state_name": "Tandjil\u00e9",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "9.39720000",
+    "longitude": "16.30066000",
+    "wikiDataId": "Q1856972"
+  }
+]

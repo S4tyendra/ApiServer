@@ -1,0 +1,67 @@
+[
+  {
+    "id": 130528,
+    "name": "Huy\u1ec7n \u0110i\u1ec7n Bi\u00ean \u0110\u00f4ng",
+    "state_id": 3773,
+    "state_code": "71",
+    "state_name": "\u0110i\u1ec7n Bi\u00ean",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.25266000",
+    "longitude": "103.26900000",
+    "wikiDataId": "Q5295738"
+  },
+  {
+    "id": 130365,
+    "name": "Huy\u1ec7n M\u01b0\u1eddng Nh\u00e9",
+    "state_id": 3773,
+    "state_code": "71",
+    "state_name": "\u0110i\u1ec7n Bi\u00ean",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.10353000",
+    "longitude": "102.58465000",
+    "wikiDataId": "Q10796264"
+  },
+  {
+    "id": 130493,
+    "name": "Huy\u1ec7n T\u1ee7a Ch\u00f9a",
+    "state_id": 3773,
+    "state_code": "71",
+    "state_name": "\u0110i\u1ec7n Bi\u00ean",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.95357000",
+    "longitude": "103.37332000",
+    "wikiDataId": "Q7484836"
+  },
+  {
+    "id": 130478,
+    "name": "Huy\u1ec7n Tu\u1ea7n Gi\u00e1o",
+    "state_id": 3773,
+    "state_code": "71",
+    "state_name": "\u0110i\u1ec7n Bi\u00ean",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.69481000",
+    "longitude": "103.41758000",
+    "wikiDataId": "Q2232329"
+  },
+  {
+    "id": 130611,
+    "name": "Th\u1ecb X\u00e3 M\u01b0\u00f2ng Lay",
+    "state_id": 3773,
+    "state_code": "71",
+    "state_name": "\u0110i\u1ec7n Bi\u00ean",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.03374000",
+    "longitude": "103.12331000",
+    "wikiDataId": "Q3031171"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 105117,
+    "name": "Adr\u00e9",
+    "state_id": 3582,
+    "state_code": "OD",
+    "state_name": "Ouadda\u00ef",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "13.46648000",
+    "longitude": "22.19875000",
+    "wikiDataId": "Q2570307"
+  },
+  {
+    "id": 105137,
+    "name": "Goz B\u00e9\u00efda",
+    "state_id": 3582,
+    "state_code": "OD",
+    "state_name": "Ouadda\u00ef",
+    "country_id": 43,
+    "country_code": "TD",
+    "country_name": "Chad",
+    "latitude": "13.94563000",
+    "longitude": "20.54680000",
+    "wikiDataId": "Q3112862"
+  }
+]

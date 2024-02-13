@@ -1,0 +1,41 @@
+[
+  {
+    "id": 130072,
+    "name": "Cuman\u00e1",
+    "state_id": 2056,
+    "state_code": "R",
+    "state_name": "Sucre",
+    "country_id": 239,
+    "country_code": "VE",
+    "country_name": "Venezuela",
+    "latitude": "10.45397000",
+    "longitude": "-64.18256000",
+    "wikiDataId": "Q1134454"
+  },
+  {
+    "id": 130086,
+    "name": "G\u00fciria",
+    "state_id": 2056,
+    "state_code": "R",
+    "state_name": "Sucre",
+    "country_id": 239,
+    "country_code": "VE",
+    "country_name": "Venezuela",
+    "latitude": "10.57721000",
+    "longitude": "-62.29841000",
+    "wikiDataId": "Q1000143"
+  },
+  {
+    "id": 130123,
+    "name": "Municipio Valdez",
+    "state_id": 2056,
+    "state_code": "R",
+    "state_name": "Sucre",
+    "country_id": 239,
+    "country_code": "VE",
+    "country_name": "Venezuela",
+    "latitude": "10.57945000",
+    "longitude": "-62.30029000",
+    "wikiDataId": "Q2230534"
+  }
+]

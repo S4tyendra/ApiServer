@@ -1,0 +1,28 @@
+[
+  {
+    "id": 89863,
+    "name": "Ash Sh\u012b\u1e29\u0101n\u012byah",
+    "state_id": 3178,
+    "state_code": "SH",
+    "state_name": "Al-Shahaniya",
+    "country_id": 179,
+    "country_code": "QA",
+    "country_name": "Qatar",
+    "latitude": "25.37088000",
+    "longitude": "51.22264000",
+    "wikiDataId": "Q3298589"
+  },
+  {
+    "id": 89865,
+    "name": "Dukh\u0101n",
+    "state_id": 3178,
+    "state_code": "SH",
+    "state_name": "Al-Shahaniya",
+    "country_id": 179,
+    "country_code": "QA",
+    "country_name": "Qatar",
+    "latitude": "25.42485000",
+    "longitude": "50.78227000",
+    "wikiDataId": "Q3296633"
+  }
+]

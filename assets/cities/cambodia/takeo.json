@@ -1,0 +1,54 @@
+[
+  {
+    "id": 64971,
+    "name": "Phum\u012d V\u00e9al Sr\u00ea",
+    "state_id": 3975,
+    "state_code": "21",
+    "state_name": "Takeo",
+    "country_id": 37,
+    "country_code": "KH",
+    "country_name": "Cambodia",
+    "latitude": "10.98081000",
+    "longitude": "104.77828000",
+    "wikiDataId": "Q1850"
+  },
+  {
+    "id": 65030,
+    "name": "Sr\u014fk \u00c2ngk\u00f4r Borei",
+    "state_id": 3975,
+    "state_code": "21",
+    "state_name": "Takeo",
+    "country_id": 37,
+    "country_code": "KH",
+    "country_name": "Cambodia",
+    "latitude": "10.99291000",
+    "longitude": "104.95177000",
+    "wikiDataId": "Q4763323"
+  },
+  {
+    "id": 64992,
+    "name": "Sr\u014fk Borei Cholsar",
+    "state_id": 3975,
+    "state_code": "21",
+    "state_name": "Takeo",
+    "country_id": 37,
+    "country_code": "KH",
+    "country_name": "Cambodia",
+    "latitude": "10.81414000",
+    "longitude": "104.98994000",
+    "wikiDataId": "Q4950138"
+  },
+  {
+    "id": 65038,
+    "name": "Takeo",
+    "state_id": 3975,
+    "state_code": "21",
+    "state_name": "Takeo",
+    "country_id": 37,
+    "country_code": "KH",
+    "country_name": "Cambodia",
+    "latitude": "10.99081000",
+    "longitude": "104.78498000",
+    "wikiDataId": "Q10861438"
+  }
+]

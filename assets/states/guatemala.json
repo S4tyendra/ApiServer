@@ -1,0 +1,233 @@
+[
+  {
+    "id": 3671,
+    "name": "Alta Verapaz Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "AV",
+    "type": null,
+    "latitude": "15.59428830",
+    "longitude": "-90.14949880"
+  },
+  {
+    "id": 3674,
+    "name": "Baja Verapaz Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "BV",
+    "type": null,
+    "latitude": "15.12558670",
+    "longitude": "-90.37483540"
+  },
+  {
+    "id": 3675,
+    "name": "Chimaltenango Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "CM",
+    "type": null,
+    "latitude": "14.56347870",
+    "longitude": "-90.98206680"
+  },
+  {
+    "id": 3666,
+    "name": "Chiquimula Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "CQ",
+    "type": null,
+    "latitude": "14.75149990",
+    "longitude": "-89.47421770"
+  },
+  {
+    "id": 3662,
+    "name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "PR",
+    "type": null,
+    "latitude": "14.93887320",
+    "longitude": "-90.07467670"
+  },
+  {
+    "id": 3677,
+    "name": "Escuintla Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "ES",
+    "type": null,
+    "latitude": "14.19109120",
+    "longitude": "-90.98206680"
+  },
+  {
+    "id": 3672,
+    "name": "Guatemala Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "GU",
+    "type": null,
+    "latitude": "14.56494010",
+    "longitude": "-90.52578230"
+  },
+  {
+    "id": 3670,
+    "name": "Huehuetenango Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "HU",
+    "type": null,
+    "latitude": "15.58799140",
+    "longitude": "-91.67606910"
+  },
+  {
+    "id": 3659,
+    "name": "Izabal Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "IZ",
+    "type": null,
+    "latitude": "15.49765170",
+    "longitude": "-88.86469800"
+  },
+  {
+    "id": 3658,
+    "name": "Jalapa Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "JA",
+    "type": null,
+    "latitude": "14.61214460",
+    "longitude": "-89.96267990"
+  },
+  {
+    "id": 3673,
+    "name": "Jutiapa Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "JU",
+    "type": null,
+    "latitude": "14.19308020",
+    "longitude": "-89.92532330"
+  },
+  {
+    "id": 3669,
+    "name": "Pet\u00e9n Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "PE",
+    "type": null,
+    "latitude": "16.91203300",
+    "longitude": "-90.29957850"
+  },
+  {
+    "id": 3668,
+    "name": "Quetzaltenango Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "QZ",
+    "type": null,
+    "latitude": "14.79243300",
+    "longitude": "-91.71495800"
+  },
+  {
+    "id": 3657,
+    "name": "Quich\u00e9 Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "QC",
+    "type": null,
+    "latitude": "15.49838080",
+    "longitude": "-90.98206680"
+  },
+  {
+    "id": 3664,
+    "name": "Retalhuleu Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "RE",
+    "type": null,
+    "latitude": "14.52454850",
+    "longitude": "-91.68578800"
+  },
+  {
+    "id": 3676,
+    "name": "Sacatep\u00e9quez Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "SA",
+    "type": null,
+    "latitude": "14.51783790",
+    "longitude": "-90.71527490"
+  },
+  {
+    "id": 3667,
+    "name": "San Marcos Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "SM",
+    "type": null,
+    "latitude": "14.93095690",
+    "longitude": "-91.90992380"
+  },
+  {
+    "id": 3665,
+    "name": "Santa Rosa Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "SR",
+    "type": null,
+    "latitude": "38.44057590",
+    "longitude": "-122.70375430"
+  },
+  {
+    "id": 3661,
+    "name": "Solol\u00e1 Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "SO",
+    "type": null,
+    "latitude": "14.74852300",
+    "longitude": "-91.28910360"
+  },
+  {
+    "id": 3660,
+    "name": "Suchitep\u00e9quez Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "SU",
+    "type": null,
+    "latitude": "14.42159820",
+    "longitude": "-91.40482490"
+  },
+  {
+    "id": 3663,
+    "name": "Totonicap\u00e1n Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "state_code": "TO",
+    "type": null,
+    "latitude": "14.91734020",
+    "longitude": "-91.36139230"
+  }
+]

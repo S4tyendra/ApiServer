@@ -1,0 +1,41 @@
+[
+  {
+    "id": 104344,
+    "name": "\u0160empeter v Savinj. Dolini",
+    "state_id": 4258,
+    "state_code": "190",
+    "state_name": "\u017dalec Municipality",
+    "country_id": 201,
+    "country_code": "SI",
+    "country_name": "Slovenia",
+    "latitude": "46.25639000",
+    "longitude": "15.12194000",
+    "wikiDataId": "Q1858063"
+  },
+  {
+    "id": 104324,
+    "name": "Zabukovica",
+    "state_id": 4258,
+    "state_code": "190",
+    "state_name": "\u017dalec Municipality",
+    "country_id": 201,
+    "country_code": "SI",
+    "country_name": "Slovenia",
+    "latitude": "46.21408000",
+    "longitude": "15.15954000",
+    "wikiDataId": "Q3438143"
+  },
+  {
+    "id": 104364,
+    "name": "\u017dalec",
+    "state_id": 4258,
+    "state_code": "190",
+    "state_name": "\u017dalec Municipality",
+    "country_id": 201,
+    "country_code": "SI",
+    "country_name": "Slovenia",
+    "latitude": "46.25151000",
+    "longitude": "15.16482000",
+    "wikiDataId": "Q631387"
+  }
+]

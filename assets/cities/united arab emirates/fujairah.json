@@ -1,0 +1,67 @@
+[
+  {
+    "id": 21,
+    "name": "Al Fujairah Municipality",
+    "state_id": 3393,
+    "state_code": "FU",
+    "state_name": "Fujairah",
+    "country_id": 231,
+    "country_code": "AE",
+    "country_name": "United Arab Emirates",
+    "latitude": "25.13557000",
+    "longitude": "56.33279000",
+    "wikiDataId": "Q234600"
+  },
+  {
+    "id": 28,
+    "name": "Dibba Al Fujairah Municipality",
+    "state_id": 3393,
+    "state_code": "FU",
+    "state_name": "Fujairah",
+    "country_id": 231,
+    "country_code": "AE",
+    "country_name": "United Arab Emirates",
+    "latitude": "25.58580000",
+    "longitude": "56.24792000",
+    "wikiDataId": "Q1023786"
+  },
+  {
+    "id": 30,
+    "name": "Dibba Al-Fujairah",
+    "state_id": 3393,
+    "state_code": "FU",
+    "state_name": "Fujairah",
+    "country_id": 231,
+    "country_code": "AE",
+    "country_name": "United Arab Emirates",
+    "latitude": "25.59246000",
+    "longitude": "56.26176000",
+    "wikiDataId": "Q3696182"
+  },
+  {
+    "id": 31,
+    "name": "Dibba Al-Hisn",
+    "state_id": 3393,
+    "state_code": "FU",
+    "state_name": "Fujairah",
+    "country_id": 231,
+    "country_code": "AE",
+    "country_name": "United Arab Emirates",
+    "latitude": "25.61955000",
+    "longitude": "56.27291000",
+    "wikiDataId": "Q6742405"
+  },
+  {
+    "id": 45,
+    "name": "Reef Al Fujairah City",
+    "state_id": 3393,
+    "state_code": "FU",
+    "state_name": "Fujairah",
+    "country_id": 231,
+    "country_code": "AE",
+    "country_name": "United Arab Emirates",
+    "latitude": "25.14479000",
+    "longitude": "56.24764000",
+    "wikiDataId": "Q21735810"
+  }
+]

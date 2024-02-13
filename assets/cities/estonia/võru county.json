@@ -1,0 +1,93 @@
+[
+  {
+    "id": 31597,
+    "name": "Antsla vald",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.77738000",
+    "longitude": "26.59520000",
+    "wikiDataId": "Q305226"
+  },
+  {
+    "id": 31701,
+    "name": "R\u00f5uge",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.72778000",
+    "longitude": "26.90972000",
+    "wikiDataId": "Q3469834"
+  },
+  {
+    "id": 31702,
+    "name": "R\u00f5uge vald",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.72780000",
+    "longitude": "26.88033000",
+    "wikiDataId": "Q650698"
+  },
+  {
+    "id": 31736,
+    "name": "Vana-Antsla",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.86611000",
+    "longitude": "26.53222000",
+    "wikiDataId": "Q3477487"
+  },
+  {
+    "id": 31750,
+    "name": "V\u00e4rska",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.95806000",
+    "longitude": "27.63806000",
+    "wikiDataId": "Q3477635"
+  },
+  {
+    "id": 31752,
+    "name": "V\u00f5ru",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.83389000",
+    "longitude": "27.01944000",
+    "wikiDataId": "Q205271"
+  },
+  {
+    "id": 31753,
+    "name": "V\u00f5ru vald",
+    "state_id": 3560,
+    "state_code": "86",
+    "state_name": "V\u00f5ru County",
+    "country_id": 69,
+    "country_code": "EE",
+    "country_name": "Estonia",
+    "latitude": "57.86618000",
+    "longitude": "26.97418000",
+    "wikiDataId": "Q650672"
+  }
+]

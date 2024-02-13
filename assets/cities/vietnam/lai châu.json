@@ -1,0 +1,28 @@
+[
+  {
+    "id": 130431,
+    "name": "Huy\u1ec7n Tam \u0110\u01b0\u1eddng",
+    "state_id": 3825,
+    "state_code": "01",
+    "state_name": "Lai Ch\u00e2u",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.35391000",
+    "longitude": "103.59342000",
+    "wikiDataId": "Q3711485"
+  },
+  {
+    "id": 130433,
+    "name": "Huy\u1ec7n Than Uy\u00ean",
+    "state_id": 3825,
+    "state_code": "01",
+    "state_name": "Lai Ch\u00e2u",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.91424000",
+    "longitude": "103.82857000",
+    "wikiDataId": "Q7710095"
+  }
+]

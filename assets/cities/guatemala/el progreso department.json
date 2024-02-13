@@ -1,0 +1,93 @@
+[
+  {
+    "id": 53499,
+    "name": "Guastatoya",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.85417000",
+    "longitude": "-90.06944000",
+    "wikiDataId": "Q615633"
+  },
+  {
+    "id": 53538,
+    "name": "Moraz\u00e1n",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.93278000",
+    "longitude": "-90.14306000",
+    "wikiDataId": "Q1020416"
+  },
+  {
+    "id": 53648,
+    "name": "San Agust\u00edn Acasaguastl\u00e1n",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.95000000",
+    "longitude": "-89.96667000",
+    "wikiDataId": "Q1020409"
+  },
+  {
+    "id": 53658,
+    "name": "San Antonio La Paz",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.75888000",
+    "longitude": "-90.28485000",
+    "wikiDataId": "Q962852"
+  },
+  {
+    "id": 53668,
+    "name": "San Crist\u00f3bal Acasaguastl\u00e1n",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.91667000",
+    "longitude": "-89.88333000",
+    "wikiDataId": "Q1020799"
+  },
+  {
+    "id": 53741,
+    "name": "Sanarate",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.78828000",
+    "longitude": "-90.19876000",
+    "wikiDataId": "Q1757603"
+  },
+  {
+    "id": 53742,
+    "name": "Sansare",
+    "state_id": 3662,
+    "state_code": "PR",
+    "state_name": "El Progreso Department",
+    "country_id": 90,
+    "country_code": "GT",
+    "country_name": "Guatemala",
+    "latitude": "14.74572000",
+    "longitude": "-90.11615000",
+    "wikiDataId": "Q178569"
+  }
+]

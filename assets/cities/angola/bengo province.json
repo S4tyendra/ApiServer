@@ -1,0 +1,80 @@
+[
+  {
+    "id": 598,
+    "name": "Caxito",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-8.57848000",
+    "longitude": "13.66425000",
+    "wikiDataId": "Q956745"
+  },
+  {
+    "id": 153647,
+    "name": "Dande",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-8.11330000",
+    "longitude": "13.76520000",
+    "wikiDataId": "Q3835"
+  },
+  {
+    "id": 153648,
+    "name": "Muxima",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-9.58790000",
+    "longitude": "13.52510000",
+    "wikiDataId": "Q3836"
+  },
+  {
+    "id": 153649,
+    "name": "Nambuangongo",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-8.56560000",
+    "longitude": "13.65720000",
+    "wikiDataId": "Q3837"
+  },
+  {
+    "id": 153650,
+    "name": "Pango Aluqu\u00e9m",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-8.55440000",
+    "longitude": "13.58150000",
+    "wikiDataId": "Q3838"
+  },
+  {
+    "id": 153651,
+    "name": "\u00dacua",
+    "state_id": 221,
+    "state_code": "BGO",
+    "state_name": "Bengo Province",
+    "country_id": 7,
+    "country_code": "AO",
+    "country_name": "Angola",
+    "latitude": "-8.67240000",
+    "longitude": "13.68290000",
+    "wikiDataId": "Q3839"
+  }
+]

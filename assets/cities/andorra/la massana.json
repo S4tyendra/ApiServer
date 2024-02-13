@@ -1,0 +1,15 @@
+[
+  {
+    "id": 9,
+    "name": "la Massana",
+    "state_id": 493,
+    "state_code": "04",
+    "state_name": "La Massana",
+    "country_id": 6,
+    "country_code": "AD",
+    "country_name": "Andorra",
+    "latitude": "42.54499000",
+    "longitude": "1.51483000",
+    "wikiDataId": "Q3820973"
+  }
+]

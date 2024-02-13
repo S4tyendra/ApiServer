@@ -1,0 +1,67 @@
+[
+  {
+    "id": 81078,
+    "name": "Madang",
+    "state_id": 4843,
+    "state_code": "MPM",
+    "state_name": "Madang Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-5.22152000",
+    "longitude": "145.78695000",
+    "wikiDataId": "Q586673"
+  },
+  {
+    "id": 81084,
+    "name": "Middle Ramu",
+    "state_id": 4843,
+    "state_code": "MPM",
+    "state_name": "Madang Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-4.91667000",
+    "longitude": "144.75000000",
+    "wikiDataId": "Q3711164"
+  },
+  {
+    "id": 81103,
+    "name": "Rai Coast",
+    "state_id": 4843,
+    "state_code": "MPM",
+    "state_name": "Madang Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-5.72303000",
+    "longitude": "146.46149000",
+    "wikiDataId": "Q7278508"
+  },
+  {
+    "id": 81111,
+    "name": "Sumkar",
+    "state_id": 4843,
+    "state_code": "MPM",
+    "state_name": "Madang Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-4.80000000",
+    "longitude": "145.55000000",
+    "wikiDataId": "Q3711497"
+  },
+  {
+    "id": 81119,
+    "name": "Usino Bundi",
+    "state_id": 4843,
+    "state_code": "MPM",
+    "state_name": "Madang Province",
+    "country_id": 171,
+    "country_code": "PG",
+    "country_name": "Papua new Guinea",
+    "latitude": "-5.53333000",
+    "longitude": "145.16667000",
+    "wikiDataId": "Q3711569"
+  }
+]

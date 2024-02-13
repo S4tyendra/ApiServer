@@ -1,0 +1,156 @@
+[
+  {
+    "id": 3753,
+    "name": "Clarendon Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "13",
+    "type": null,
+    "latitude": "17.95571830",
+    "longitude": "-77.24051530"
+  },
+  {
+    "id": 3749,
+    "name": "Hanover Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "09",
+    "type": null,
+    "latitude": "18.40977070",
+    "longitude": "-78.13363800"
+  },
+  {
+    "id": 3748,
+    "name": "Kingston Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "01",
+    "type": null,
+    "latitude": "17.96832710",
+    "longitude": "-76.78270200"
+  },
+  {
+    "id": 3754,
+    "name": "Manchester Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "12",
+    "type": null,
+    "latitude": "18.06696540",
+    "longitude": "-77.51607880"
+  },
+  {
+    "id": 3752,
+    "name": "Portland Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "04",
+    "type": null,
+    "latitude": "18.08442740",
+    "longitude": "-76.41002670"
+  },
+  {
+    "id": 3751,
+    "name": "Saint Andrew",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "02",
+    "type": null,
+    "latitude": "37.22451030",
+    "longitude": "-95.70211890"
+  },
+  {
+    "id": 3744,
+    "name": "Saint Ann Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "06",
+    "type": null,
+    "latitude": "37.28714520",
+    "longitude": "-77.41035330"
+  },
+  {
+    "id": 3746,
+    "name": "Saint Catherine Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "14",
+    "type": null,
+    "latitude": "18.03641340",
+    "longitude": "-77.05644640"
+  },
+  {
+    "id": 3743,
+    "name": "Saint Elizabeth Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "11",
+    "type": null,
+    "latitude": "38.99253080",
+    "longitude": "-94.58992000"
+  },
+  {
+    "id": 3745,
+    "name": "Saint James Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "08",
+    "type": null,
+    "latitude": "30.01792920",
+    "longitude": "-90.79132270"
+  },
+  {
+    "id": 3747,
+    "name": "Saint Mary Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "05",
+    "type": null,
+    "latitude": "36.09252200",
+    "longitude": "-95.97384400"
+  },
+  {
+    "id": 3750,
+    "name": "Saint Thomas Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "03",
+    "type": null,
+    "latitude": "41.44253890",
+    "longitude": "-81.74022180"
+  },
+  {
+    "id": 3755,
+    "name": "Trelawny Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "07",
+    "type": null,
+    "latitude": "18.35261430",
+    "longitude": "-77.60778650"
+  },
+  {
+    "id": 3742,
+    "name": "Westmoreland Parish",
+    "country_id": 108,
+    "country_code": "JM",
+    "country_name": "Jamaica",
+    "state_code": "10",
+    "type": null,
+    "latitude": "18.29443780",
+    "longitude": "-78.15644320"
+  }
+]

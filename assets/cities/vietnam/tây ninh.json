@@ -1,0 +1,93 @@
+[
+  {
+    "id": 130282,
+    "name": "Huy\u1ec7n D\u01b0\u01a1ng Minh Ch\u00e2u",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.31833000",
+    "longitude": "106.25697000",
+    "wikiDataId": "Q3031197"
+  },
+  {
+    "id": 130294,
+    "name": "Huy\u1ec7n G\u00f2 D\u1ea7u",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.15737000",
+    "longitude": "106.27307000",
+    "wikiDataId": "Q3710927"
+  },
+  {
+    "id": 130306,
+    "name": "Huy\u1ec7n H\u00f2a Th\u00e0nh",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.26706000",
+    "longitude": "106.14486000",
+    "wikiDataId": "Q5874252"
+  },
+  {
+    "id": 130480,
+    "name": "Huy\u1ec7n T\u00e2n Ch\u00e2u",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.58739000",
+    "longitude": "106.28270000",
+    "wikiDataId": "Q3711512"
+  },
+  {
+    "id": 130472,
+    "name": "Huy\u1ec7n Tr\u1ea3ng B\u00e0ng",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.05720000",
+    "longitude": "106.37539000",
+    "wikiDataId": "Q286486"
+  },
+  {
+    "id": 130581,
+    "name": "Ph\u00fa Kh\u01b0\u01a1ng",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.28333000",
+    "longitude": "106.13333000",
+    "wikiDataId": "Q32224301"
+  },
+  {
+    "id": 130621,
+    "name": "T\u00e2y Ninh",
+    "state_id": 3826,
+    "state_code": "37",
+    "state_name": "T\u00e2y Ninh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.31004000",
+    "longitude": "106.09828000",
+    "wikiDataId": "Q130391"
+  }
+]

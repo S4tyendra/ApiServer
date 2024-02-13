@@ -1,0 +1,80 @@
+[
+  {
+    "id": 130360,
+    "name": "Huy\u1ec7n M\u00f9 Cang Ch\u1ea3i",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.78815000",
+    "longitude": "104.11998000",
+    "wikiDataId": "Q10796264"
+  },
+  {
+    "id": 130470,
+    "name": "Huy\u1ec7n Tr\u1ea1m T\u1ea5u",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.48553000",
+    "longitude": "104.42756000",
+    "wikiDataId": "Q7831038"
+  },
+  {
+    "id": 130473,
+    "name": "Huy\u1ec7n Tr\u1ea5n Y\u00ean",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.66586000",
+    "longitude": "104.79702000",
+    "wikiDataId": "Q286486"
+  },
+  {
+    "id": 130496,
+    "name": "Huy\u1ec7n V\u0103n Ch\u1ea5n",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.55722000",
+    "longitude": "104.64038000",
+    "wikiDataId": "Q7484836"
+  },
+  {
+    "id": 130497,
+    "name": "Huy\u1ec7n V\u0103n Y\u00ean",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.90022000",
+    "longitude": "104.56669000",
+    "wikiDataId": "Q7484836"
+  },
+  {
+    "id": 130628,
+    "name": "Y\u00ean B\u00e1i",
+    "state_id": 3784,
+    "state_code": "06",
+    "state_name": "Y\u00ean B\u00e1i",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.72288000",
+    "longitude": "104.91130000",
+    "wikiDataId": "Q26019"
+  }
+]

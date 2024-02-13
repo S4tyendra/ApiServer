@@ -1,0 +1,28 @@
+[
+  {
+    "id": 89773,
+    "name": "General Jos\u00e9 Eduvigis D\u00edaz",
+    "state_id": 2781,
+    "state_code": "12",
+    "state_name": "\u00d1eembuc\u00fa Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "latitude": "-27.20136000",
+    "longitude": "-58.36740000",
+    "wikiDataId": "Q47062"
+  },
+  {
+    "id": 89808,
+    "name": "Pilar",
+    "state_id": 2781,
+    "state_code": "12",
+    "state_name": "\u00d1eembuc\u00fa Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "latitude": "-26.85874000",
+    "longitude": "-58.30639000",
+    "wikiDataId": "Q135970"
+  }
+]

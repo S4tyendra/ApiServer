@@ -1,0 +1,93 @@
+[
+  {
+    "id": 77427,
+    "name": "Biddinghuizen",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.45500000",
+    "longitude": "5.69306000",
+    "wikiDataId": "Q599331"
+  },
+  {
+    "id": 77612,
+    "name": "Dronten",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.52500000",
+    "longitude": "5.71806000",
+    "wikiDataId": "Q578267"
+  },
+  {
+    "id": 77652,
+    "name": "Emmeloord",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.71083000",
+    "longitude": "5.74861000",
+    "wikiDataId": "Q60705"
+  },
+  {
+    "id": 77661,
+    "name": "Ens",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.63667000",
+    "longitude": "5.82778000",
+    "wikiDataId": "Q2805272"
+  },
+  {
+    "id": 78288,
+    "name": "Lelystad",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.50833000",
+    "longitude": "5.47500000",
+    "wikiDataId": "Q1019099"
+  },
+  {
+    "id": 78819,
+    "name": "Urk",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.66250000",
+    "longitude": "5.60139000",
+    "wikiDataId": "Q2331369"
+  },
+  {
+    "id": 79002,
+    "name": "Zeewolde",
+    "state_id": 2619,
+    "state_code": "FL",
+    "state_name": "Flevoland",
+    "country_id": 156,
+    "country_code": "NL",
+    "country_name": "Netherlands",
+    "latitude": "52.33000000",
+    "longitude": "5.54167000",
+    "wikiDataId": "Q2262442"
+  }
+]

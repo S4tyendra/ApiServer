@@ -1,0 +1,54 @@
+[
+  {
+    "id": 130407,
+    "name": "Huy\u1ec7n Qu\u1ea3ng Ninh",
+    "state_id": 3809,
+    "state_code": "24",
+    "state_name": "Qu\u1ea3ng B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "17.27067000",
+    "longitude": "106.51387000",
+    "wikiDataId": "Q596473"
+  },
+  {
+    "id": 130408,
+    "name": "Huy\u1ec7n Qu\u1ea3ng Tr\u1ea1ch",
+    "state_id": 3809,
+    "state_code": "24",
+    "state_name": "Qu\u1ea3ng B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "17.83447000",
+    "longitude": "106.36705000",
+    "wikiDataId": "Q596473"
+  },
+  {
+    "id": 130477,
+    "name": "Huy\u1ec7n Tuy\u00ean H\u00f3a",
+    "state_id": 3809,
+    "state_code": "24",
+    "state_name": "Qu\u1ea3ng B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "17.91323000",
+    "longitude": "106.02678000",
+    "wikiDataId": "Q2232329"
+  },
+  {
+    "id": 130566,
+    "name": "Kwang Binh",
+    "state_id": 3809,
+    "state_code": "24",
+    "state_name": "Qu\u1ea3ng B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "17.46885000",
+    "longitude": "106.62226000",
+    "wikiDataId": "Q1877"
+  }
+]

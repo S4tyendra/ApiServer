@@ -1,0 +1,67 @@
+[
+  {
+    "id": 130327,
+    "name": "Huy\u1ec7n Kim S\u01a1n",
+    "state_id": 3786,
+    "state_code": "18",
+    "state_name": "Ninh B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.06034000",
+    "longitude": "106.09863000",
+    "wikiDataId": "Q20025812"
+  },
+  {
+    "id": 130390,
+    "name": "Huy\u1ec7n Nho Quan",
+    "state_id": 3786,
+    "state_code": "18",
+    "state_name": "Ninh B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.27606000",
+    "longitude": "105.75442000",
+    "wikiDataId": "Q3711242"
+  },
+  {
+    "id": 130513,
+    "name": "Huy\u1ec7n Y\u00ean Kh\u00e1nh",
+    "state_id": 3786,
+    "state_code": "18",
+    "state_name": "Ninh B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.19017000",
+    "longitude": "106.09605000",
+    "wikiDataId": "Q8052181"
+  },
+  {
+    "id": 130517,
+    "name": "Huy\u1ec7n Y\u00ean M\u00f4",
+    "state_id": 3786,
+    "state_code": "18",
+    "state_name": "Ninh B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.12984000",
+    "longitude": "106.00199000",
+    "wikiDataId": "Q8052181"
+  },
+  {
+    "id": 130577,
+    "name": "Ninh B\u00ecnh",
+    "state_id": 3786,
+    "state_code": "18",
+    "state_name": "Ninh B\u00ecnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.25809000",
+    "longitude": "105.97965000",
+    "wikiDataId": "Q33929"
+  }
+]

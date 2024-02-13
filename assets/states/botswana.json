@@ -1,0 +1,112 @@
+[
+  {
+    "id": 3067,
+    "name": "Central District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "CE",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": 3061,
+    "name": "Ghanzi District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "GH",
+    "type": null,
+    "latitude": "-21.86523140",
+    "longitude": "21.85685860"
+  },
+  {
+    "id": 3066,
+    "name": "Kgalagadi District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "KG",
+    "type": null,
+    "latitude": "-24.75502850",
+    "longitude": "21.85685860"
+  },
+  {
+    "id": 3062,
+    "name": "Kgatleng District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "KL",
+    "type": null,
+    "latitude": "-24.19704450",
+    "longitude": "26.23046160"
+  },
+  {
+    "id": 3069,
+    "name": "Kweneng District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "KW",
+    "type": null,
+    "latitude": "-23.83672490",
+    "longitude": "25.28375850"
+  },
+  {
+    "id": 3060,
+    "name": "Ngamiland",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "NG",
+    "type": null,
+    "latitude": "-19.19053210",
+    "longitude": "23.00119890"
+  },
+  {
+    "id": 3068,
+    "name": "North-East District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "NE",
+    "type": null,
+    "latitude": "37.58844610",
+    "longitude": "-94.68637820"
+  },
+  {
+    "id": 3065,
+    "name": "North-West District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "NW",
+    "type": null,
+    "latitude": "39.34463070",
+    "longitude": "-76.68542830"
+  },
+  {
+    "id": 3064,
+    "name": "South-East District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "SE",
+    "type": null,
+    "latitude": "31.21637980",
+    "longitude": "-82.35270440"
+  },
+  {
+    "id": 3063,
+    "name": "Southern District",
+    "country_id": 29,
+    "country_code": "BW",
+    "country_name": "Botswana",
+    "state_code": "SO",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  }
+]

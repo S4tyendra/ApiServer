@@ -1,0 +1,93 @@
+[
+  {
+    "id": 135186,
+    "name": "Hafnarfj\u00f6r\u00f0ur",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.06710000",
+    "longitude": "-21.93774000",
+    "wikiDataId": "Q103725"
+  },
+  {
+    "id": 135196,
+    "name": "Kj\u00f3sarhreppur",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.30644000",
+    "longitude": "-21.49919000",
+    "wikiDataId": "Q1744094"
+  },
+  {
+    "id": 135197,
+    "name": "K\u00f3pavogur",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.11234000",
+    "longitude": "-21.91298000",
+    "wikiDataId": "Q163852"
+  },
+  {
+    "id": 135200,
+    "name": "Mosfellsbaer",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.15000000",
+    "longitude": "-21.65000000",
+    "wikiDataId": "Q829859"
+  },
+  {
+    "id": 135201,
+    "name": "Mosfellsb\u00e6r",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.16667000",
+    "longitude": "-21.70000000",
+    "wikiDataId": "Q829859"
+  },
+  {
+    "id": 135206,
+    "name": "Reykjav\u00edk",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.13548000",
+    "longitude": "-21.89541000",
+    "wikiDataId": "Q1764"
+  },
+  {
+    "id": 135211,
+    "name": "Seltjarnarnes",
+    "state_id": 3431,
+    "state_code": "1",
+    "state_name": "Capital Region",
+    "country_id": 100,
+    "country_code": "IS",
+    "country_name": "Iceland",
+    "latitude": "64.15309000",
+    "longitude": "-21.99499000",
+    "wikiDataId": "Q192898"
+  }
+]
