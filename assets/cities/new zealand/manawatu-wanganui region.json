@@ -1,0 +1,93 @@
+[
+  {
+    "id": 79794,
+    "name": "Foxton",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-40.46667000",
+    "longitude": "175.30000000",
+    "wikiDataId": "Q985095"
+  },
+  {
+    "id": 79803,
+    "name": "Horowhenua District",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-40.57733000",
+    "longitude": "175.38071000",
+    "wikiDataId": "Q1232367"
+  },
+  {
+    "id": 79817,
+    "name": "Levin",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-40.63333000",
+    "longitude": "175.27500000",
+    "wikiDataId": "Q985373"
+  },
+  {
+    "id": 79822,
+    "name": "Manawatu District",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-40.11979000",
+    "longitude": "175.67426000",
+    "wikiDataId": "Q613305"
+  },
+  {
+    "id": 79853,
+    "name": "Palmerston North",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-40.35636000",
+    "longitude": "175.61113000",
+    "wikiDataId": "Q212289"
+  },
+  {
+    "id": 79904,
+    "name": "Waiouru",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-39.47753000",
+    "longitude": "175.66834000",
+    "wikiDataId": "Q912379"
+  },
+  {
+    "id": 79913,
+    "name": "Wanganui",
+    "state_id": 4060,
+    "state_code": "MWT",
+    "state_name": "Manawatu-Wanganui Region",
+    "country_id": 158,
+    "country_code": "NZ",
+    "country_name": "New Zealand",
+    "latitude": "-39.93333000",
+    "longitude": "175.05000000",
+    "wikiDataId": "Q1015672"
+  }
+]

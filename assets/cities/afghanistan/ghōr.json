@@ -1,0 +1,15 @@
+[
+  {
+    "id": 121,
+    "name": "Shahrak",
+    "state_id": 3888,
+    "state_code": "GHO",
+    "state_name": "Gh\u014dr",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "34.10737000",
+    "longitude": "64.30520000",
+    "wikiDataId": "Q7461922"
+  }
+]

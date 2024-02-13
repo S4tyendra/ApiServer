@@ -1,0 +1,80 @@
+[
+  {
+    "id": 18899,
+    "name": "Gagnoa",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "6.13193000",
+    "longitude": "-5.95060000",
+    "wikiDataId": "Q1268139"
+  },
+  {
+    "id": 18909,
+    "name": "G\u00f4h",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "6.14459000",
+    "longitude": "-5.92644000",
+    "wikiDataId": "Q1553776"
+  },
+  {
+    "id": 18906,
+    "name": "Guib\u00e9roua",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "6.23869000",
+    "longitude": "-6.17147000",
+    "wikiDataId": "Q1102140"
+  },
+  {
+    "id": 18917,
+    "name": "Lakota",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "5.84752000",
+    "longitude": "-5.68200000",
+    "wikiDataId": "Q2409805"
+  },
+  {
+    "id": 18918,
+    "name": "L\u00f4h-Djiboua",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "5.82483000",
+    "longitude": "-5.47668000",
+    "wikiDataId": "Q2409805"
+  },
+  {
+    "id": 18926,
+    "name": "Oum\u00e9",
+    "state_id": 2651,
+    "state_code": "GD",
+    "state_name": "G\u00f4h-Djiboua District",
+    "country_id": 54,
+    "country_code": "CI",
+    "country_name": "Cote D'Ivoire (Ivory Coast)",
+    "latitude": "6.38309000",
+    "longitude": "-5.41759000",
+    "wikiDataId": "Q1102546"
+  }
+]

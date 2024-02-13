@@ -1,0 +1,41 @@
+[
+  {
+    "id": 67284,
+    "name": "Cead\u00eer-Lunga",
+    "state_id": 4385,
+    "state_code": "GA",
+    "state_name": "Gagauzia",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "46.06169000",
+    "longitude": "28.83078000",
+    "wikiDataId": "Q1012924"
+  },
+  {
+    "id": 67290,
+    "name": "Comrat",
+    "state_id": 4385,
+    "state_code": "GA",
+    "state_name": "Gagauzia",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "46.29456000",
+    "longitude": "28.65650000",
+    "wikiDataId": "Q241122"
+  },
+  {
+    "id": 67340,
+    "name": "Vulc\u0103ne\u015fti",
+    "state_id": 4385,
+    "state_code": "GA",
+    "state_name": "Gagauzia",
+    "country_id": 144,
+    "country_code": "MD",
+    "country_name": "Moldova",
+    "latitude": "45.68492000",
+    "longitude": "28.40613000",
+    "wikiDataId": "Q1012868"
+  }
+]

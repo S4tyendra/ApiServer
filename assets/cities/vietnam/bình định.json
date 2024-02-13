@@ -1,0 +1,80 @@
+[
+  {
+    "id": 130298,
+    "name": "Huy\u1ec7n Ho\u00e0i Nh\u01a1n",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "14.50535000",
+    "longitude": "109.02315000",
+    "wikiDataId": "Q3710927"
+  },
+  {
+    "id": 130397,
+    "name": "Huy\u1ec7n Ph\u00f9 M\u1ef9",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "14.22304000",
+    "longitude": "109.08611000",
+    "wikiDataId": "Q724739"
+  },
+  {
+    "id": 130490,
+    "name": "Huy\u1ec7n T\u00e2y S\u01a1n",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "13.94306000",
+    "longitude": "108.87999000",
+    "wikiDataId": "Q3711512"
+  },
+  {
+    "id": 130476,
+    "name": "Huy\u1ec7n Tuy Ph\u01b0\u1edbc",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "13.84564000",
+    "longitude": "109.15275000",
+    "wikiDataId": "Q286486"
+  },
+  {
+    "id": 130503,
+    "name": "Huy\u1ec7n V\u0129nh Th\u1ea1nh",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "14.21100000",
+    "longitude": "108.74389000",
+    "wikiDataId": "Q7932536"
+  },
+  {
+    "id": 130584,
+    "name": "Qui Nhon",
+    "state_id": 3830,
+    "state_code": "31",
+    "state_name": "B\u00ecnh \u0110\u1ecbnh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "13.77648000",
+    "longitude": "109.22367000",
+    "wikiDataId": "Q36081"
+  }
+]

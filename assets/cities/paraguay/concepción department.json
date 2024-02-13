@@ -1,0 +1,28 @@
+[
+  {
+    "id": 89755,
+    "name": "Concepci\u00f3n",
+    "state_id": 2779,
+    "state_code": "1",
+    "state_name": "Concepci\u00f3n Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "latitude": "-23.39985000",
+    "longitude": "-57.43236000",
+    "wikiDataId": "Q840962"
+  },
+  {
+    "id": 89777,
+    "name": "Horqueta",
+    "state_id": 2779,
+    "state_code": "1",
+    "state_name": "Concepci\u00f3n Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "latitude": "-23.34278000",
+    "longitude": "-57.05972000",
+    "wikiDataId": "Q47062"
+  }
+]

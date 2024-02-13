@@ -1,0 +1,211 @@
+[
+  {
+    "id": 982,
+    "name": "Attapeu Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "AT",
+    "type": null,
+    "latitude": "14.93634000",
+    "longitude": "107.10119310"
+  },
+  {
+    "id": 991,
+    "name": "Bokeo Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "BK",
+    "type": null,
+    "latitude": "20.28726620",
+    "longitude": "100.70978670"
+  },
+  {
+    "id": 985,
+    "name": "Bolikhamsai Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "BL",
+    "type": null,
+    "latitude": "18.43629240",
+    "longitude": "104.47233010"
+  },
+  {
+    "id": 996,
+    "name": "Champasak Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "CH",
+    "type": null,
+    "latitude": "14.65786640",
+    "longitude": "105.96998780"
+  },
+  {
+    "id": 989,
+    "name": "Houaphanh Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "HO",
+    "type": null,
+    "latitude": "20.32541750",
+    "longitude": "104.10013260"
+  },
+  {
+    "id": 986,
+    "name": "Khammouane Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "KH",
+    "type": null,
+    "latitude": "17.63840660",
+    "longitude": "105.21948080"
+  },
+  {
+    "id": 992,
+    "name": "Luang Namtha Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "LM",
+    "type": null,
+    "latitude": "20.91701870",
+    "longitude": "101.16173560"
+  },
+  {
+    "id": 978,
+    "name": "Luang Prabang Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "LP",
+    "type": null,
+    "latitude": "20.06562290",
+    "longitude": "102.62162110"
+  },
+  {
+    "id": 988,
+    "name": "Oudomxay Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "OU",
+    "type": null,
+    "latitude": "20.49219290",
+    "longitude": "101.88917210"
+  },
+  {
+    "id": 987,
+    "name": "Phongsaly Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "PH",
+    "type": null,
+    "latitude": "21.59193770",
+    "longitude": "102.25479190"
+  },
+  {
+    "id": 993,
+    "name": "Sainyabuli Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "XA",
+    "type": null,
+    "latitude": "19.39078860",
+    "longitude": "101.52480550"
+  },
+  {
+    "id": 981,
+    "name": "Salavan Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "SL",
+    "type": null,
+    "latitude": "15.81710730",
+    "longitude": "106.25221430"
+  },
+  {
+    "id": 990,
+    "name": "Savannakhet Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "SV",
+    "type": null,
+    "latitude": "16.50653810",
+    "longitude": "105.59433880"
+  },
+  {
+    "id": 984,
+    "name": "Sekong Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "XE",
+    "type": null,
+    "latitude": "15.57674460",
+    "longitude": "107.00670310"
+  },
+  {
+    "id": 979,
+    "name": "Vientiane Prefecture",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "VT",
+    "type": null,
+    "latitude": "18.11054100",
+    "longitude": "102.52980280"
+  },
+  {
+    "id": 980,
+    "name": "Vientiane Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "VI",
+    "type": null,
+    "latitude": "18.57050630",
+    "longitude": "102.62162110"
+  },
+  {
+    "id": 994,
+    "name": "Xaisomboun",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "XN",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": 983,
+    "name": "Xaisomboun Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "XS",
+    "type": null,
+    "latitude": "18.43629240",
+    "longitude": "104.47233010"
+  },
+  {
+    "id": 995,
+    "name": "Xiangkhouang Province",
+    "country_id": 119,
+    "country_code": "LA",
+    "country_name": "Laos",
+    "state_code": "XI",
+    "type": null,
+    "latitude": "19.60930030",
+    "longitude": "103.72891670"
+  }
+]

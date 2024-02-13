@@ -1,0 +1,93 @@
+[
+  {
+    "id": 130242,
+    "name": "Huy\u1ec7n Cam L\u1ed9",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.79335000",
+    "longitude": "106.96175000",
+    "wikiDataId": "Q4838559"
+  },
+  {
+    "id": 130527,
+    "name": "Huy\u1ec7n \u0110a Kr\u00f4ng",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.55543000",
+    "longitude": "106.97208000",
+    "wikiDataId": "Q5295738"
+  },
+  {
+    "id": 130288,
+    "name": "Huy\u1ec7n Gio Linh",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.91667000",
+    "longitude": "107.00000000",
+    "wikiDataId": "Q3031261"
+  },
+  {
+    "id": 130316,
+    "name": "Huy\u1ec7n H\u1ea3i L\u0103ng",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.67574000",
+    "longitude": "107.23388000",
+    "wikiDataId": "Q5942590"
+  },
+  {
+    "id": 130311,
+    "name": "Huy\u1ec7n H\u01b0\u1edbng H\u00f3a",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.70132000",
+    "longitude": "106.67036000",
+    "wikiDataId": "Q5942590"
+  },
+  {
+    "id": 130462,
+    "name": "Huy\u1ec7n Tri\u1ec7u Phong",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "16.78132000",
+    "longitude": "107.16034000",
+    "wikiDataId": "Q1320227"
+  },
+  {
+    "id": 130500,
+    "name": "Huy\u1ec7n V\u0129nh Linh",
+    "state_id": 3803,
+    "state_code": "25",
+    "state_name": "Qu\u1ea3ng Tr\u1ecb",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "17.01600000",
+    "longitude": "106.93384000",
+    "wikiDataId": "Q7932536"
+  }
+]

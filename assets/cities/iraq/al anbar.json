@@ -1,0 +1,93 @@
+[
+  {
+    "id": 134478,
+    "name": "Al Fall\u016bjah",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "33.34913000",
+    "longitude": "43.78599000",
+    "wikiDataId": "Q191170"
+  },
+  {
+    "id": 134495,
+    "name": "Ar Ru\u0163bah",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "33.03718000",
+    "longitude": "40.28586000",
+    "wikiDataId": "Q4532299"
+  },
+  {
+    "id": 134548,
+    "name": "\u1e28ad\u012bthah",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "34.13661000",
+    "longitude": "42.37727000",
+    "wikiDataId": "Q944368"
+  },
+  {
+    "id": 134514,
+    "name": "H\u012bt",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "33.63664000",
+    "longitude": "42.82768000",
+    "wikiDataId": "Q2422345"
+  },
+  {
+    "id": 134515,
+    "name": "H\u012bt District",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "33.73482000",
+    "longitude": "42.68228000",
+    "wikiDataId": "Q4119531"
+  },
+  {
+    "id": 134533,
+    "name": "Ramadi",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "33.42056000",
+    "longitude": "43.30778000",
+    "wikiDataId": "Q192961"
+  },
+  {
+    "id": 134535,
+    "name": "R\u0101wah",
+    "state_id": 3964,
+    "state_code": "AN",
+    "state_name": "Al Anbar",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "34.48229000",
+    "longitude": "41.91898000",
+    "wikiDataId": "Q2354244"
+  }
+]

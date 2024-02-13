@@ -1,0 +1,79 @@
+[
+  {
+    "id": 3867,
+    "name": "Carriacou and Petite Martinique",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "10",
+    "type": null,
+    "latitude": "12.47858880",
+    "longitude": "-61.44938420"
+  },
+  {
+    "id": 3865,
+    "name": "Saint Andrew Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "01",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": 3869,
+    "name": "Saint David Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "02",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": 3864,
+    "name": "Saint George Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "03",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "id": 3868,
+    "name": "Saint John Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "04",
+    "type": null,
+    "latitude": "30.11183310",
+    "longitude": "-90.48799160"
+  },
+  {
+    "id": 3866,
+    "name": "Saint Mark Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "05",
+    "type": null,
+    "latitude": "40.58818630",
+    "longitude": "-73.94957010"
+  },
+  {
+    "id": 3863,
+    "name": "Saint Patrick Parish",
+    "country_id": 87,
+    "country_code": "GD",
+    "country_name": "Grenada",
+    "state_code": "06",
+    "type": null,
+    "latitude": null,
+    "longitude": null
+  }
+]

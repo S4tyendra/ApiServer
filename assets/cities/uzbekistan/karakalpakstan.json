@@ -1,0 +1,93 @@
+[
+  {
+    "id": 129944,
+    "name": "Kegeyli Shahar",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "42.77667000",
+    "longitude": "59.60778000",
+    "wikiDataId": "Q3077975"
+  },
+  {
+    "id": 129947,
+    "name": "Kh\u016djayli",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "42.40043000",
+    "longitude": "59.46005000",
+    "wikiDataId": "Q1400173"
+  },
+  {
+    "id": 129954,
+    "name": "Manghit",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "42.11556000",
+    "longitude": "60.05972000",
+    "wikiDataId": "Q3544447"
+  },
+  {
+    "id": 129959,
+    "name": "M\u016dynoq",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "43.76833000",
+    "longitude": "59.02139000",
+    "wikiDataId": "Q750989"
+  },
+  {
+    "id": 129963,
+    "name": "Novyy Turtkul\u2019",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "41.55000000",
+    "longitude": "61.01667000",
+    "wikiDataId": "Q31972515"
+  },
+  {
+    "id": 129964,
+    "name": "Nukus",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "42.45306000",
+    "longitude": "59.61028000",
+    "wikiDataId": "Q489898"
+  },
+  {
+    "id": 129970,
+    "name": "Oltinko\u2018l",
+    "state_id": 2548,
+    "state_code": "QR",
+    "state_name": "Karakalpakstan",
+    "country_id": 236,
+    "country_code": "UZ",
+    "country_name": "Uzbekistan",
+    "latitude": "43.06874000",
+    "longitude": "58.90372000",
+    "wikiDataId": "Q31980284"
+  }
+]

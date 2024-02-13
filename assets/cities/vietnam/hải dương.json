@@ -1,0 +1,93 @@
+[
+  {
+    "id": 130221,
+    "name": "Huy\u1ec7n B\u00ecnh Giang",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.87586000",
+    "longitude": "106.19138000",
+    "wikiDataId": "Q3031078"
+  },
+  {
+    "id": 130274,
+    "name": "Huy\u1ec7n C\u1ea9m Gi\u00e0ng",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.95000000",
+    "longitude": "106.21667000",
+    "wikiDataId": "Q3031197"
+  },
+  {
+    "id": 130286,
+    "name": "Huy\u1ec7n Gia L\u1ed9c",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.85164000",
+    "longitude": "106.29130000",
+    "wikiDataId": "Q3031261"
+  },
+  {
+    "id": 130329,
+    "name": "Huy\u1ec7n Kinh M\u00f4n",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.01634000",
+    "longitude": "106.50384000",
+    "wikiDataId": "Q3031344"
+  },
+  {
+    "id": 130376,
+    "name": "Huy\u1ec7n Nam S\u00e1ch",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.00484000",
+    "longitude": "106.34042000",
+    "wikiDataId": "Q3031601"
+  },
+  {
+    "id": 130438,
+    "name": "Huy\u1ec7n Thanh Mi\u1ec7n",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "20.77953000",
+    "longitude": "106.22218000",
+    "wikiDataId": "Q3031911"
+  },
+  {
+    "id": 130609,
+    "name": "Th\u1ecb X\u00e3 Ch\u00ed Linh",
+    "state_id": 3827,
+    "state_code": "61",
+    "state_name": "H\u1ea3i D\u01b0\u01a1ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "21.13722000",
+    "longitude": "106.39638000",
+    "wikiDataId": "Q3031171"
+  }
+]

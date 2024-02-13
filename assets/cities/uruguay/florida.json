@@ -1,0 +1,80 @@
+[
+  {
+    "id": 129772,
+    "name": "25 de Mayo",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-34.18917000",
+    "longitude": "-56.33944000",
+    "wikiDataId": "Q218472"
+  },
+  {
+    "id": 129776,
+    "name": "Alejandro Gallinal",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-33.86252000",
+    "longitude": "-55.54264000",
+    "wikiDataId": "Q31892887"
+  },
+  {
+    "id": 129786,
+    "name": "Cardal",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-34.29056000",
+    "longitude": "-56.38889000",
+    "wikiDataId": "Q958365"
+  },
+  {
+    "id": 129791,
+    "name": "Casup\u00e1",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-34.09994000",
+    "longitude": "-55.64811000",
+    "wikiDataId": "Q1050009"
+  },
+  {
+    "id": 129805,
+    "name": "Florida",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-34.09556000",
+    "longitude": "-56.21417000",
+    "wikiDataId": "Q842472"
+  },
+  {
+    "id": 129872,
+    "name": "Sarand\u00ed Grande",
+    "state_id": 3217,
+    "state_code": "FD",
+    "state_name": "Florida",
+    "country_id": 235,
+    "country_code": "UY",
+    "country_name": "Uruguay",
+    "latitude": "-33.73333000",
+    "longitude": "-56.33333000",
+    "wikiDataId": "Q1783586"
+  }
+]

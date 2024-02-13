@@ -1,0 +1,28 @@
+[
+  {
+    "id": 130544,
+    "name": "Huy\u1ec7n \u0110\u1eafk R\u2019L\u1ea5p",
+    "state_id": 3823,
+    "state_code": "72",
+    "state_name": "\u0110\u1eafk N\u00f4ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "11.87990000",
+    "longitude": "107.52244000",
+    "wikiDataId": "Q3593897"
+  },
+  {
+    "id": 130333,
+    "name": "Huy\u1ec7n Kr\u00f4ng N\u00f4",
+    "state_id": 3823,
+    "state_code": "72",
+    "state_name": "\u0110\u1eafk N\u00f4ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "12.36285000",
+    "longitude": "107.83445000",
+    "wikiDataId": "Q6405298"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 131348,
+    "name": "Kalengwa",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-13.46586000",
+    "longitude": "25.00271000",
+    "wikiDataId": "Q31929243"
+  },
+  {
+    "id": 131350,
+    "name": "Kansanshi",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-12.09514000",
+    "longitude": "26.42727000",
+    "wikiDataId": "Q1014130"
+  },
+  {
+    "id": 131355,
+    "name": "Kasempa",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-13.45836000",
+    "longitude": "25.83380000",
+    "wikiDataId": "Q1734917"
+  },
+  {
+    "id": 131379,
+    "name": "Mufumbwe",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-13.68333000",
+    "longitude": "24.80000000",
+    "wikiDataId": "Q31960445"
+  },
+  {
+    "id": 131383,
+    "name": "Mwinilunga",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-11.73584000",
+    "longitude": "24.42926000",
+    "wikiDataId": "Q1956313"
+  },
+  {
+    "id": 131398,
+    "name": "Solwezi",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-12.16880000",
+    "longitude": "26.38938000",
+    "wikiDataId": "Q871209"
+  },
+  {
+    "id": 131399,
+    "name": "Zambezi",
+    "state_id": 1985,
+    "state_code": "06",
+    "state_name": "Northwestern Province",
+    "country_id": 246,
+    "country_code": "ZM",
+    "country_name": "Zambia",
+    "latitude": "-13.54323000",
+    "longitude": "23.10467000",
+    "wikiDataId": "Q145470"
+  }
+]

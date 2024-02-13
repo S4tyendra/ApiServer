@@ -1,0 +1,67 @@
+[
+  {
+    "id": 130272,
+    "name": "Huy\u1ec7n C\u1ea7u K\u00e8",
+    "state_id": 3805,
+    "state_code": "51",
+    "state_name": "Tr\u00e0 Vinh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.86738000",
+    "longitude": "106.07916000",
+    "wikiDataId": "Q800052"
+  },
+  {
+    "id": 130273,
+    "name": "Huy\u1ec7n C\u1ea7u Ngang",
+    "state_id": 3805,
+    "state_code": "51",
+    "state_name": "Tr\u00e0 Vinh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.77186000",
+    "longitude": "106.43654000",
+    "wikiDataId": "Q800052"
+  },
+  {
+    "id": 130460,
+    "name": "Huy\u1ec7n Ti\u1ec3u C\u1ea7n",
+    "state_id": 3805,
+    "state_code": "51",
+    "state_name": "Tr\u00e0 Vinh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.80350000",
+    "longitude": "106.20594000",
+    "wikiDataId": "Q3711538"
+  },
+  {
+    "id": 130465,
+    "name": "Huy\u1ec7n Tr\u00e0 C\u00fa",
+    "state_id": 3805,
+    "state_code": "51",
+    "state_name": "Tr\u00e0 Vinh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.69706000",
+    "longitude": "106.29423000",
+    "wikiDataId": "Q7831038"
+  },
+  {
+    "id": 130617,
+    "name": "Tr\u00e0 Vinh",
+    "state_id": 3805,
+    "state_code": "51",
+    "state_name": "Tr\u00e0 Vinh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.94719000",
+    "longitude": "106.34225000",
+    "wikiDataId": "Q36136"
+  }
+]

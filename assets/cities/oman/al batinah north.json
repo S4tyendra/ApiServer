@@ -1,0 +1,67 @@
+[
+  {
+    "id": 79929,
+    "name": "As Suwayq",
+    "state_id": 3048,
+    "state_code": "BS",
+    "state_name": "Al Batinah North",
+    "country_id": 166,
+    "country_code": "OM",
+    "country_name": "Oman",
+    "latitude": "23.84944000",
+    "longitude": "57.43861000",
+    "wikiDataId": "Q8032610"
+  },
+  {
+    "id": 79939,
+    "name": "Liw\u00e1",
+    "state_id": 3048,
+    "state_code": "BS",
+    "state_name": "Al Batinah North",
+    "country_id": 166,
+    "country_code": "OM",
+    "country_name": "Oman",
+    "latitude": "24.53077000",
+    "longitude": "56.56300000",
+    "wikiDataId": "Q426646"
+  },
+  {
+    "id": 79952,
+    "name": "\u015ea\u1e29am",
+    "state_id": 3048,
+    "state_code": "BS",
+    "state_name": "Al Batinah North",
+    "country_id": 166,
+    "country_code": "OM",
+    "country_name": "Oman",
+    "latitude": "24.17222000",
+    "longitude": "56.88861000",
+    "wikiDataId": "Q1294439"
+  },
+  {
+    "id": 79946,
+    "name": "Shin\u0101\u015f",
+    "state_id": 3048,
+    "state_code": "BS",
+    "state_name": "Al Batinah North",
+    "country_id": 166,
+    "country_code": "OM",
+    "country_name": "Oman",
+    "latitude": "24.74260000",
+    "longitude": "56.46698000",
+    "wikiDataId": "Q948050"
+  },
+  {
+    "id": 79947,
+    "name": "Sohar",
+    "state_id": 3048,
+    "state_code": "BS",
+    "state_name": "Al Batinah North",
+    "country_id": 166,
+    "country_code": "OM",
+    "country_name": "Oman",
+    "latitude": "24.34745000",
+    "longitude": "56.70937000",
+    "wikiDataId": "Q943270"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": 65585,
+    "name": "As S\u0101lim\u012byah",
+    "state_id": 973,
+    "state_code": "HA",
+    "state_name": "Hawalli",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "latitude": "29.33389000",
+    "longitude": "48.07611000",
+    "wikiDataId": "Q3505782"
+  },
+  {
+    "id": 65588,
+    "name": "Bay\u0101n",
+    "state_id": 973,
+    "state_code": "HA",
+    "state_name": "Hawalli",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "latitude": "29.30320000",
+    "longitude": "48.04881000",
+    "wikiDataId": "Q3505782"
+  },
+  {
+    "id": 65593,
+    "name": "\u1e28awall\u012b",
+    "state_id": 973,
+    "state_code": "HA",
+    "state_name": "Hawalli",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "latitude": "29.33278000",
+    "longitude": "48.02861000",
+    "wikiDataId": "Q3235220"
+  },
+  {
+    "id": 65591,
+    "name": "Salw\u00e1",
+    "state_id": 973,
+    "state_code": "HA",
+    "state_name": "Hawalli",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "latitude": "29.29583000",
+    "longitude": "48.07861000",
+    "wikiDataId": "Q1179881"
+  }
+]

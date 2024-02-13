@@ -1,0 +1,41 @@
+[
+  {
+    "id": 148323,
+    "name": "C\u1edd \u0110\u1ecf",
+    "state_id": 4925,
+    "state_code": "CT",
+    "state_name": "C\u1ea7n Th\u01a1",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.09472222",
+    "longitude": "105.43194444",
+    "wikiDataId": "Q10752716"
+  },
+  {
+    "id": 148324,
+    "name": "Th\u1edbi Lai",
+    "state_id": 4925,
+    "state_code": "CT",
+    "state_name": "C\u1ea7n Th\u01a1",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.06305556",
+    "longitude": "105.56083333",
+    "wikiDataId": "Q10826644"
+  },
+  {
+    "id": 148325,
+    "name": "V\u0129nh Th\u1ea1nh",
+    "state_id": 4925,
+    "state_code": "CT",
+    "state_name": "C\u1ea7n Th\u01a1",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.21916667",
+    "longitude": "105.40111111",
+    "wikiDataId": "Q10833701"
+  }
+]

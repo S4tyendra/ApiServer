@@ -1,0 +1,200 @@
+[
+  {
+    "id": 2785,
+    "name": "Alto Paraguay Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "16",
+    "type": null,
+    "latitude": "-20.08525080",
+    "longitude": "-59.47209040"
+  },
+  {
+    "id": 2784,
+    "name": "Alto Paran\u00e1 Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "10",
+    "type": null,
+    "latitude": "-25.60755460",
+    "longitude": "-54.96118360"
+  },
+  {
+    "id": 2782,
+    "name": "Amambay Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "13",
+    "type": null,
+    "latitude": "-22.55902720",
+    "longitude": "-56.02499820"
+  },
+  {
+    "id": 5221,
+    "name": "Asuncion",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "ASU",
+    "type": "capital",
+    "latitude": "-25.29682970",
+    "longitude": "-57.68066230"
+  },
+  {
+    "id": 2780,
+    "name": "Boquer\u00f3n Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "19",
+    "type": null,
+    "latitude": "-21.74492540",
+    "longitude": "-60.95400730"
+  },
+  {
+    "id": 2773,
+    "name": "Caaguaz\u00fa",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "5",
+    "type": null,
+    "latitude": "-25.46458180",
+    "longitude": "-56.01385100"
+  },
+  {
+    "id": 2775,
+    "name": "Caazap\u00e1",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "6",
+    "type": null,
+    "latitude": "-26.18277130",
+    "longitude": "-56.37123270"
+  },
+  {
+    "id": 2771,
+    "name": "Canindey\u00fa",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "14",
+    "type": null,
+    "latitude": "-24.13787350",
+    "longitude": "-55.66896360"
+  },
+  {
+    "id": 2777,
+    "name": "Central Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "11",
+    "type": null,
+    "latitude": "36.15592290",
+    "longitude": "-95.96620750"
+  },
+  {
+    "id": 2779,
+    "name": "Concepci\u00f3n Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "1",
+    "type": null,
+    "latitude": "-23.42142640",
+    "longitude": "-57.43444510"
+  },
+  {
+    "id": 2783,
+    "name": "Cordillera Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "3",
+    "type": null,
+    "latitude": "-25.22894910",
+    "longitude": "-57.01116810"
+  },
+  {
+    "id": 2772,
+    "name": "Guair\u00e1 Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "4",
+    "type": null,
+    "latitude": "-25.88109320",
+    "longitude": "-56.29293810"
+  },
+  {
+    "id": 2778,
+    "name": "Itap\u00faa",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "7",
+    "type": null,
+    "latitude": "-26.79236230",
+    "longitude": "-55.66896360"
+  },
+  {
+    "id": 2786,
+    "name": "Misiones Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "8",
+    "type": null,
+    "latitude": "-26.84335120",
+    "longitude": "-57.10131880"
+  },
+  {
+    "id": 2781,
+    "name": "\u00d1eembuc\u00fa Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "12",
+    "type": null,
+    "latitude": "-27.02991140",
+    "longitude": "-57.82539500"
+  },
+  {
+    "id": 2774,
+    "name": "Paraguar\u00ed Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "9",
+    "type": null,
+    "latitude": "-25.62621740",
+    "longitude": "-57.15206420"
+  },
+  {
+    "id": 2770,
+    "name": "Presidente Hayes Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "15",
+    "type": null,
+    "latitude": "-23.35126050",
+    "longitude": "-58.73736340"
+  },
+  {
+    "id": 2776,
+    "name": "San Pedro Department",
+    "country_id": 172,
+    "country_code": "PY",
+    "country_name": "Paraguay",
+    "state_code": "2",
+    "type": null,
+    "latitude": "-24.19486680",
+    "longitude": "-56.56164700"
+  }
+]

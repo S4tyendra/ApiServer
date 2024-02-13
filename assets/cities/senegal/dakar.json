@@ -1,0 +1,80 @@
+[
+  {
+    "id": 104716,
+    "name": "Gu\u00e9diawaye Department",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.77610000",
+    "longitude": "-17.39560000",
+    "wikiDataId": "Q957409"
+  },
+  {
+    "id": 104737,
+    "name": "Mermoz Boabab",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.70649000",
+    "longitude": "-17.47581000",
+    "wikiDataId": "Q2086960"
+  },
+  {
+    "id": 104744,
+    "name": "N\u2019diareme limamoulaye",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.78148000",
+    "longitude": "-17.38410000",
+    "wikiDataId": "Q3090358"
+  },
+  {
+    "id": 104748,
+    "name": "Pikine",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.76457000",
+    "longitude": "-17.39071000",
+    "wikiDataId": "Q1273644"
+  },
+  {
+    "id": 104749,
+    "name": "Pikine Department",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.76515000",
+    "longitude": "-17.35198000",
+    "wikiDataId": "Q255486"
+  },
+  {
+    "id": 104756,
+    "name": "Rufisque Department",
+    "state_id": 473,
+    "state_code": "DK",
+    "state_name": "Dakar",
+    "country_id": 195,
+    "country_code": "SN",
+    "country_name": "Senegal",
+    "latitude": "14.74339000",
+    "longitude": "-17.19841000",
+    "wikiDataId": "Q2067770"
+  }
+]

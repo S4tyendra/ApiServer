@@ -1,0 +1,93 @@
+[
+  {
+    "id": 130235,
+    "name": "Huy\u1ec7n B\u1eafc M\u00ea",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.75477000",
+    "longitude": "105.29023000",
+    "wikiDataId": "Q4838559"
+  },
+  {
+    "id": 130236,
+    "name": "Huy\u1ec7n B\u1eafc Quang",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.42301000",
+    "longitude": "104.91831000",
+    "wikiDataId": "Q4838559"
+  },
+  {
+    "id": 130548,
+    "name": "Huy\u1ec7n \u0110\u1ed3ng V\u0103n",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "23.25449000",
+    "longitude": "105.27626000",
+    "wikiDataId": "Q5295775"
+  },
+  {
+    "id": 130406,
+    "name": "Huy\u1ec7n Quang B\u00ecnh",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.41507000",
+    "longitude": "104.66018000",
+    "wikiDataId": "Q3091652"
+  },
+  {
+    "id": 130508,
+    "name": "Huy\u1ec7n V\u1ecb Xuy\u00ean",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.73096000",
+    "longitude": "104.90827000",
+    "wikiDataId": "Q7932536"
+  },
+  {
+    "id": 130511,
+    "name": "Huy\u1ec7n X\u00edn M\u1ea7n",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "22.64148000",
+    "longitude": "104.52089000",
+    "wikiDataId": "Q1758257"
+  },
+  {
+    "id": 130516,
+    "name": "Huy\u1ec7n Y\u00ean Minh",
+    "state_id": 3779,
+    "state_code": "03",
+    "state_name": "H\u00e0 Giang",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "23.06992000",
+    "longitude": "105.17865000",
+    "wikiDataId": "Q8052181"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 31779,
+    "name": "Al Qan\u0101\u0163ir al Khayr\u012byah",
+    "state_id": 3232,
+    "state_code": "KB",
+    "state_name": "Qalyubia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.19327000",
+    "longitude": "31.13703000",
+    "wikiDataId": "Q23955489"
+  },
+  {
+    "id": 31796,
+    "name": "Banh\u0101",
+    "state_id": 3232,
+    "state_code": "KB",
+    "state_name": "Qalyubia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.45977000",
+    "longitude": "31.18420000",
+    "wikiDataId": "Q336966"
+  },
+  {
+    "id": 31851,
+    "name": "Qaly\u016bb",
+    "state_id": 3232,
+    "state_code": "KB",
+    "state_name": "Qalyubia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.17922000",
+    "longitude": "31.20560000",
+    "wikiDataId": "Q336724"
+  },
+  {
+    "id": 31864,
+    "name": "Shib\u012bn al Qan\u0101\u1e6dir",
+    "state_id": 3232,
+    "state_code": "KB",
+    "state_name": "Qalyubia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.31269000",
+    "longitude": "31.32018000",
+    "wikiDataId": "Q31350"
+  },
+  {
+    "id": 31873,
+    "name": "Toukh",
+    "state_id": 3232,
+    "state_code": "KB",
+    "state_name": "Qalyubia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.35487000",
+    "longitude": "31.20105000",
+    "wikiDataId": "Q23934694"
+  }
+]

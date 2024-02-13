@@ -1,0 +1,80 @@
+[
+  {
+    "id": 130277,
+    "name": "Huy\u1ec7n C\u1ea9m Xuy\u00ean",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.19059000",
+    "longitude": "106.00186000",
+    "wikiDataId": "Q3031197"
+  },
+  {
+    "id": 130243,
+    "name": "Huy\u1ec7n Can L\u1ed9c",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.44414000",
+    "longitude": "105.76350000",
+    "wikiDataId": "Q4838559"
+  },
+  {
+    "id": 130525,
+    "name": "Huy\u1ec7n \u00d0\u1ee9c Th\u1ecd",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.49699000",
+    "longitude": "105.61016000",
+    "wikiDataId": "Q5295738"
+  },
+  {
+    "id": 130337,
+    "name": "Huy\u1ec7n K\u1ef3 Anh",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.05805000",
+    "longitude": "106.24580000",
+    "wikiDataId": "Q6405298"
+  },
+  {
+    "id": 130382,
+    "name": "Huy\u1ec7n Nghi Xu\u00e2n",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.62419000",
+    "longitude": "105.76829000",
+    "wikiDataId": "Q3031601"
+  },
+  {
+    "id": 130447,
+    "name": "Huy\u1ec7n Th\u1ea1ch H\u00e0",
+    "state_id": 3816,
+    "state_code": "23",
+    "state_name": "H\u00e0 T\u0129nh",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "18.35091000",
+    "longitude": "105.81123000",
+    "wikiDataId": "Q3711534"
+  }
+]

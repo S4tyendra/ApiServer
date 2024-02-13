@@ -1,0 +1,67 @@
+[
+  {
+    "id": 130357,
+    "name": "Huy\u1ec7n Mang Th\u00edt",
+    "state_id": 3790,
+    "state_code": "49",
+    "state_name": "V\u0129nh Long",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.18731000",
+    "longitude": "106.07472000",
+    "wikiDataId": "Q2226906"
+  },
+  {
+    "id": 130428,
+    "name": "Huy\u1ec7n Tam B\u00ecnh",
+    "state_id": 3790,
+    "state_code": "49",
+    "state_name": "V\u0129nh Long",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.08127000",
+    "longitude": "105.95352000",
+    "wikiDataId": "Q3711485"
+  },
+  {
+    "id": 130468,
+    "name": "Huy\u1ec7n Tr\u00e0 \u00d4n",
+    "state_id": 3790,
+    "state_code": "49",
+    "state_name": "V\u0129nh Long",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.97522000",
+    "longitude": "106.00957000",
+    "wikiDataId": "Q7831038"
+  },
+  {
+    "id": 130505,
+    "name": "Huy\u1ec7n V\u0169ng Li\u00eam",
+    "state_id": 3790,
+    "state_code": "49",
+    "state_name": "V\u0129nh Long",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.08717000",
+    "longitude": "106.16038000",
+    "wikiDataId": "Q7932536"
+  },
+  {
+    "id": 130624,
+    "name": "V\u0129nh Long",
+    "state_id": 3790,
+    "state_code": "49",
+    "state_name": "V\u0129nh Long",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "10.25369000",
+    "longitude": "105.97220000",
+    "wikiDataId": "Q34789"
+  }
+]

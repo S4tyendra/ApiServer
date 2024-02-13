@@ -1,0 +1,54 @@
+[
+  {
+    "id": 78,
+    "name": "Jurm",
+    "state_id": 3901,
+    "state_code": "BDS",
+    "state_name": "Badakhshan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "36.86477000",
+    "longitude": "70.83421000",
+    "wikiDataId": "Q10308323"
+  },
+  {
+    "id": 84,
+    "name": "Khand\u016bd",
+    "state_id": 3901,
+    "state_code": "BDS",
+    "state_name": "Badakhshan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "36.95127000",
+    "longitude": "72.31800000",
+    "wikiDataId": "Q3290334"
+  },
+  {
+    "id": 115,
+    "name": "R\u0101ghist\u0101n",
+    "state_id": 3901,
+    "state_code": "BDS",
+    "state_name": "Badakhshan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "37.66079000",
+    "longitude": "70.67346000",
+    "wikiDataId": "Q2670909"
+  },
+  {
+    "id": 131,
+    "name": "W\u0101kh\u0101n",
+    "state_id": 3901,
+    "state_code": "BDS",
+    "state_name": "Badakhshan",
+    "country_id": 1,
+    "country_code": "AF",
+    "country_name": "Afghanistan",
+    "latitude": "37.05710000",
+    "longitude": "73.34928000",
+    "wikiDataId": "Q2509959"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 31789,
+    "name": "Ash Shuhad\u0101\u2019",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.59683000",
+    "longitude": "30.89931000",
+    "wikiDataId": "Q7504702"
+  },
+  {
+    "id": 31790,
+    "name": "Ashm\u016bn",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.29735000",
+    "longitude": "30.97641000",
+    "wikiDataId": "Q951186"
+  },
+  {
+    "id": 31846,
+    "name": "Mun\u016bf",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.46597000",
+    "longitude": "30.93199000",
+    "wikiDataId": "Q951268"
+  },
+  {
+    "id": 31854,
+    "name": "Quwaysin\u0101",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.56482000",
+    "longitude": "31.15777000",
+    "wikiDataId": "Q7273033"
+  },
+  {
+    "id": 31863,
+    "name": "Shib\u012bn al Kawm",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.55258000",
+    "longitude": "31.00904000",
+    "wikiDataId": "Q31350"
+  },
+  {
+    "id": 31871,
+    "name": "Tal\u0101",
+    "state_id": 3228,
+    "state_code": "MNF",
+    "state_name": "Monufia",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "30.67980000",
+    "longitude": "30.94364000",
+    "wikiDataId": "Q7678737"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 107211,
+    "name": "Avanos",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.71500000",
+    "longitude": "34.84667000",
+    "wikiDataId": "Q780974"
+  },
+  {
+    "id": 107481,
+    "name": "Derinkuyu",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.37510000",
+    "longitude": "34.73419000",
+    "wikiDataId": "Q2000455"
+  },
+  {
+    "id": 107734,
+    "name": "G\u00fcl\u015fehir",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.74594000",
+    "longitude": "34.62524000",
+    "wikiDataId": "Q2670812"
+  },
+  {
+    "id": 107765,
+    "name": "Hac\u0131bekta\u015f",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.94077000",
+    "longitude": "34.55770000",
+    "wikiDataId": "Q1027277"
+  },
+  {
+    "id": 108032,
+    "name": "Kozakl\u0131",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "39.23204000",
+    "longitude": "34.85585000",
+    "wikiDataId": "Q1004520"
+  },
+  {
+    "id": 108192,
+    "name": "Merkez",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.60039000",
+    "longitude": "34.68537000",
+    "wikiDataId": "Q3055997"
+  },
+  {
+    "id": 108873,
+    "name": "\u00dcrg\u00fcp",
+    "state_id": 2196,
+    "state_code": "50",
+    "state_name": "Nev\u015fehir",
+    "country_id": 225,
+    "country_code": "TR",
+    "country_name": "Turkey",
+    "latitude": "38.57342000",
+    "longitude": "34.94020000",
+    "wikiDataId": "Q335010"
+  }
+]

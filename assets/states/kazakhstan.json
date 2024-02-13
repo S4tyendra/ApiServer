@@ -1,0 +1,189 @@
+[
+  {
+    "id": 145,
+    "name": "Akmola Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "AKM",
+    "type": null,
+    "latitude": "51.91653200",
+    "longitude": "69.41104940"
+  },
+  {
+    "id": 151,
+    "name": "Aktobe Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "AKT",
+    "type": null,
+    "latitude": "48.77970780",
+    "longitude": "57.99743780"
+  },
+  {
+    "id": 152,
+    "name": "Almaty",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "ALA",
+    "type": null,
+    "latitude": "43.22201460",
+    "longitude": "76.85124850"
+  },
+  {
+    "id": 143,
+    "name": "Almaty Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "ALM",
+    "type": null,
+    "latitude": "45.01192270",
+    "longitude": "78.42293920"
+  },
+  {
+    "id": 153,
+    "name": "Atyrau Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "ATY",
+    "type": null,
+    "latitude": "47.10761880",
+    "longitude": "51.91413300"
+  },
+  {
+    "id": 155,
+    "name": "Baikonur",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "BAY",
+    "type": null,
+    "latitude": "45.96458510",
+    "longitude": "63.30524280"
+  },
+  {
+    "id": 154,
+    "name": "East Kazakhstan Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "VOS",
+    "type": null,
+    "latitude": "48.70626870",
+    "longitude": "80.79225340"
+  },
+  {
+    "id": 147,
+    "name": "Jambyl Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "ZHA",
+    "type": null,
+    "latitude": "44.22203080",
+    "longitude": "72.36579670"
+  },
+  {
+    "id": 150,
+    "name": "Karaganda Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "KAR",
+    "type": null,
+    "latitude": "47.90221820",
+    "longitude": "71.77068070"
+  },
+  {
+    "id": 157,
+    "name": "Kostanay Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "KUS",
+    "type": null,
+    "latitude": "51.50770960",
+    "longitude": "64.04790730"
+  },
+  {
+    "id": 142,
+    "name": "Kyzylorda Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "KZY",
+    "type": null,
+    "latitude": "44.69226130",
+    "longitude": "62.65718850"
+  },
+  {
+    "id": 141,
+    "name": "Mangystau Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "MAN",
+    "type": null,
+    "latitude": "44.59080200",
+    "longitude": "53.84995080"
+  },
+  {
+    "id": 144,
+    "name": "North Kazakhstan Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "SEV",
+    "type": null,
+    "latitude": "54.16220660",
+    "longitude": "69.93870710"
+  },
+  {
+    "id": 156,
+    "name": "Nur-Sultan",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "AST",
+    "type": null,
+    "latitude": "51.16052270",
+    "longitude": "71.47035580"
+  },
+  {
+    "id": 146,
+    "name": "Pavlodar Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "PAV",
+    "type": null,
+    "latitude": "52.28784440",
+    "longitude": "76.97334530"
+  },
+  {
+    "id": 149,
+    "name": "Turkestan Region",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "YUZ",
+    "type": null,
+    "latitude": "43.36669580",
+    "longitude": "68.40944050"
+  },
+  {
+    "id": 148,
+    "name": "West Kazakhstan Province",
+    "country_id": 112,
+    "country_code": "KZ",
+    "country_name": "Kazakhstan",
+    "state_code": "ZAP",
+    "type": null,
+    "latitude": "49.56797270",
+    "longitude": "50.80666160"
+  }
+]

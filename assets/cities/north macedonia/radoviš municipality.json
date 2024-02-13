@@ -1,0 +1,28 @@
+[
+  {
+    "id": 67507,
+    "name": "Podare\u0161",
+    "state_id": 709,
+    "state_code": "64",
+    "state_name": "Radovi\u0161 Municipality",
+    "country_id": 129,
+    "country_code": "MK",
+    "country_name": "North Macedonia",
+    "latitude": "41.61389000",
+    "longitude": "22.54222000",
+    "wikiDataId": "Q3134776"
+  },
+  {
+    "id": 67514,
+    "name": "Radovis",
+    "state_id": 709,
+    "state_code": "64",
+    "state_name": "Radovi\u0161 Municipality",
+    "country_id": 129,
+    "country_code": "MK",
+    "country_name": "North Macedonia",
+    "latitude": "41.63833000",
+    "longitude": "22.46472000",
+    "wikiDataId": "Q991318"
+  }
+]

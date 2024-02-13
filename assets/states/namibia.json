@@ -1,0 +1,156 @@
+[
+  {
+    "id": 43,
+    "name": "Erongo Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "ER",
+    "type": null,
+    "latitude": "-22.25656820",
+    "longitude": "15.40680790"
+  },
+  {
+    "id": 38,
+    "name": "Hardap Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "HA",
+    "type": null,
+    "latitude": "-24.23101340",
+    "longitude": "17.66888700"
+  },
+  {
+    "id": 45,
+    "name": "Karas Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "KA",
+    "type": null,
+    "latitude": "-26.84296450",
+    "longitude": "17.29028390"
+  },
+  {
+    "id": 36,
+    "name": "Kavango East Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "KE",
+    "type": null,
+    "latitude": "-18.27104800",
+    "longitude": "18.42760470"
+  },
+  {
+    "id": 35,
+    "name": "Kavango West Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "KW",
+    "type": null,
+    "latitude": "-18.27104800",
+    "longitude": "18.42760470"
+  },
+  {
+    "id": 44,
+    "name": "Khomas Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "KH",
+    "type": null,
+    "latitude": "-22.63778540",
+    "longitude": "17.10119310"
+  },
+  {
+    "id": 34,
+    "name": "Kunene Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "KU",
+    "type": null,
+    "latitude": "-19.40863170",
+    "longitude": "13.91439900"
+  },
+  {
+    "id": 40,
+    "name": "Ohangwena Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "OW",
+    "type": null,
+    "latitude": "-17.59792910",
+    "longitude": "16.81783770"
+  },
+  {
+    "id": 41,
+    "name": "Omaheke Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "OH",
+    "type": null,
+    "latitude": "-21.84666510",
+    "longitude": "19.18800470"
+  },
+  {
+    "id": 39,
+    "name": "Omusati Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "OS",
+    "type": null,
+    "latitude": "-18.40702940",
+    "longitude": "14.84546190"
+  },
+  {
+    "id": 37,
+    "name": "Oshana Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "ON",
+    "type": null,
+    "latitude": "-18.43050640",
+    "longitude": "15.68817880"
+  },
+  {
+    "id": 42,
+    "name": "Oshikoto Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "OT",
+    "type": null,
+    "latitude": "-18.41525750",
+    "longitude": "16.91225100"
+  },
+  {
+    "id": 46,
+    "name": "Otjozondjupa Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "OD",
+    "type": null,
+    "latitude": "-20.54869160",
+    "longitude": "17.66888700"
+  },
+  {
+    "id": 47,
+    "name": "Zambezi Region",
+    "country_id": 152,
+    "country_code": "NA",
+    "country_name": "Namibia",
+    "state_code": "CA",
+    "type": null,
+    "latitude": "-17.81934190",
+    "longitude": "23.95364660"
+  }
+]

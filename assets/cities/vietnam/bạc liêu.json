@@ -1,0 +1,28 @@
+[
+  {
+    "id": 130289,
+    "name": "Huy\u1ec7n Gi\u00e1 Rai",
+    "state_id": 3804,
+    "state_code": "55",
+    "state_name": "B\u1ea1c Li\u00eau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.27162000",
+    "longitude": "105.40017000",
+    "wikiDataId": "Q3031261"
+  },
+  {
+    "id": 130318,
+    "name": "Huy\u1ec7n H\u1ed3ng D\u00e2n",
+    "state_id": 3804,
+    "state_code": "55",
+    "state_name": "B\u1ea1c Li\u00eau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.53822000",
+    "longitude": "105.42242000",
+    "wikiDataId": "Q5942590"
+  }
+]

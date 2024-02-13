@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1217,
+    "name": "Belait District",
+    "country_id": 33,
+    "country_code": "BN",
+    "country_name": "Brunei",
+    "state_code": "BE",
+    "type": null,
+    "latitude": "4.37507490",
+    "longitude": "114.61928990"
+  },
+  {
+    "id": 1216,
+    "name": "Brunei-Muara District",
+    "country_id": 33,
+    "country_code": "BN",
+    "country_name": "Brunei",
+    "state_code": "BM",
+    "type": null,
+    "latitude": "4.93112060",
+    "longitude": "114.95168690"
+  },
+  {
+    "id": 1218,
+    "name": "Temburong District",
+    "country_id": 33,
+    "country_code": "BN",
+    "country_name": "Brunei",
+    "state_code": "TE",
+    "type": null,
+    "latitude": "4.62041280",
+    "longitude": "115.14148400"
+  },
+  {
+    "id": 1219,
+    "name": "Tutong District",
+    "country_id": 33,
+    "country_code": "BN",
+    "country_name": "Brunei",
+    "state_code": "TU",
+    "type": null,
+    "latitude": "4.71403730",
+    "longitude": "114.66679390"
+  }
+]

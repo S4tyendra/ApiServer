@@ -1,0 +1,79 @@
+[
+  {
+    "id": 4876,
+    "name": "\u0110akovica District (Gjakove)",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XDG",
+    "type": null,
+    "latitude": "42.43757560",
+    "longitude": "20.37854380"
+  },
+  {
+    "id": 4877,
+    "name": "Gjilan District",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XGJ",
+    "type": null,
+    "latitude": "42.46352060",
+    "longitude": "21.46940110"
+  },
+  {
+    "id": 4878,
+    "name": "Kosovska Mitrovica District",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XKM",
+    "type": null,
+    "latitude": "42.89139090",
+    "longitude": "20.86599950"
+  },
+  {
+    "id": 3738,
+    "name": "Pe\u0107 District",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XPE",
+    "type": null,
+    "latitude": "42.65921550",
+    "longitude": "20.28876240"
+  },
+  {
+    "id": 4879,
+    "name": "Pristina (Pri\u015ftine)",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XPI",
+    "type": null,
+    "latitude": "42.66291380",
+    "longitude": "21.16550280"
+  },
+  {
+    "id": 3723,
+    "name": "Prizren District",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XPR",
+    "type": null,
+    "latitude": "42.21525220",
+    "longitude": "20.74147720"
+  },
+  {
+    "id": 4874,
+    "name": "Uro\u0161evac District (Ferizaj)",
+    "country_id": 248,
+    "country_code": "XK",
+    "country_name": "Kosovo",
+    "state_code": "XUF",
+    "type": null,
+    "latitude": "42.37018440",
+    "longitude": "21.14832810"
+  }
+]

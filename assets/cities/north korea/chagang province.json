@@ -1,0 +1,28 @@
+[
+  {
+    "id": 65208,
+    "name": "Kanggye",
+    "state_id": 3998,
+    "state_code": "04",
+    "state_name": "Chagang Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "latitude": "40.96946000",
+    "longitude": "126.58523000",
+    "wikiDataId": "Q489825"
+  },
+  {
+    "id": 65221,
+    "name": "Manp\u2019o",
+    "state_id": 3998,
+    "state_code": "04",
+    "state_name": "Chagang Province",
+    "country_id": 115,
+    "country_code": "KP",
+    "country_name": "North Korea",
+    "latitude": "41.15472000",
+    "longitude": "126.28944000",
+    "wikiDataId": "Q698064"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 105007,
+    "name": "Jablah",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.36211000",
+    "longitude": "35.92759000",
+    "wikiDataId": "Q175923"
+  },
+  {
+    "id": 105008,
+    "name": "Jableh District",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.29048000",
+    "longitude": "36.04490000",
+    "wikiDataId": "Q4115831"
+  },
+  {
+    "id": 105021,
+    "name": "Kassab",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.92639000",
+    "longitude": "35.98970000",
+    "wikiDataId": "Q1026301"
+  },
+  {
+    "id": 105024,
+    "name": "Latakia",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.53168000",
+    "longitude": "35.79011000",
+    "wikiDataId": "Q200030"
+  },
+  {
+    "id": 105025,
+    "name": "Latakia District",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.72426000",
+    "longitude": "35.94150000",
+    "wikiDataId": "Q2229628"
+  },
+  {
+    "id": 105039,
+    "name": "Qardaha District",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.39593000",
+    "longitude": "36.08603000",
+    "wikiDataId": "Q2611794"
+  },
+  {
+    "id": 105071,
+    "name": "\u015elinfah",
+    "state_id": 2938,
+    "state_code": "LA",
+    "state_name": "Latakia",
+    "country_id": 215,
+    "country_code": "SY",
+    "country_name": "Syria",
+    "latitude": "35.59822000",
+    "longitude": "36.18770000",
+    "wikiDataId": "Q986334"
+  }
+]

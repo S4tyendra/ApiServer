@@ -1,0 +1,41 @@
+[
+  {
+    "id": 52048,
+    "name": "Ambrolauris Munitsip\u2019alit\u2019et\u2019i",
+    "state_id": 909,
+    "state_code": "RL",
+    "state_name": "Racha-Lechkhumi and Kvemo Svaneti",
+    "country_id": 81,
+    "country_code": "GE",
+    "country_name": "Georgia",
+    "latitude": "42.56667000",
+    "longitude": "43.10000000",
+    "wikiDataId": "Q2464159"
+  },
+  {
+    "id": 52092,
+    "name": "Lent\u2019ekhi",
+    "state_id": 909,
+    "state_code": "RL",
+    "state_name": "Racha-Lechkhumi and Kvemo Svaneti",
+    "country_id": 81,
+    "country_code": "GE",
+    "country_name": "Georgia",
+    "latitude": "42.78893000",
+    "longitude": "42.72226000",
+    "wikiDataId": "Q956922"
+  },
+  {
+    "id": 52106,
+    "name": "Oni",
+    "state_id": 909,
+    "state_code": "RL",
+    "state_name": "Racha-Lechkhumi and Kvemo Svaneti",
+    "country_id": 81,
+    "country_code": "GE",
+    "country_name": "Georgia",
+    "latitude": "42.57944000",
+    "longitude": "43.44250000",
+    "wikiDataId": "Q941948"
+  }
+]

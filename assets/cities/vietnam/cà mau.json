@@ -1,0 +1,54 @@
+[
+  {
+    "id": 130267,
+    "name": "Huy\u1ec7n C\u00e1i N\u01b0\u1edbc",
+    "state_id": 3778,
+    "state_code": "59",
+    "state_name": "C\u00e0 Mau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.00094000",
+    "longitude": "105.04201000",
+    "wikiDataId": "Q800052"
+  },
+  {
+    "id": 130540,
+    "name": "Huy\u1ec7n \u0110\u1ea7m D\u01a1i",
+    "state_id": 3778,
+    "state_code": "59",
+    "state_name": "C\u00e0 Mau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "8.96029000",
+    "longitude": "105.24107000",
+    "wikiDataId": "Q3593897"
+  },
+  {
+    "id": 130204,
+    "name": "Huyen Nam Can",
+    "state_id": 3778,
+    "state_code": "59",
+    "state_name": "C\u00e0 Mau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "8.81531000",
+    "longitude": "105.05574000",
+    "wikiDataId": "Q724711"
+  },
+  {
+    "id": 130453,
+    "name": "Huy\u1ec7n Th\u1edbi B\u00ecnh",
+    "state_id": 3778,
+    "state_code": "59",
+    "state_name": "C\u00e0 Mau",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.35790000",
+    "longitude": "105.16023000",
+    "wikiDataId": "Q7786654"
+  }
+]

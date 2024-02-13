@@ -1,0 +1,80 @@
+[
+  {
+    "id": 130343,
+    "name": "Huy\u1ec7n Long Ph\u00fa",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.63715000",
+    "longitude": "106.08226000",
+    "wikiDataId": "Q3711115"
+  },
+  {
+    "id": 130371,
+    "name": "Huy\u1ec7n M\u1ef9 T\u00fa",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.60849000",
+    "longitude": "105.80681000",
+    "wikiDataId": "Q10796264"
+  },
+  {
+    "id": 130372,
+    "name": "Huy\u1ec7n M\u1ef9 Xuy\u00ean",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.44200000",
+    "longitude": "105.88546000",
+    "wikiDataId": "Q10796264"
+  },
+  {
+    "id": 130205,
+    "name": "Huyen Nga Nam",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.56127000",
+    "longitude": "105.59476000",
+    "wikiDataId": "Q724711"
+  },
+  {
+    "id": 130450,
+    "name": "Huy\u1ec7n Th\u1ea1nh Tr\u1ecb",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.46939000",
+    "longitude": "105.71196000",
+    "wikiDataId": "Q3711530"
+  },
+  {
+    "id": 130592,
+    "name": "S\u00f3c Tr\u0103ng",
+    "state_id": 3819,
+    "state_code": "52",
+    "state_name": "S\u00f3c Tr\u0103ng",
+    "country_id": 240,
+    "country_code": "VN",
+    "country_name": "Vietnam",
+    "latitude": "9.59995000",
+    "longitude": "105.97193000",
+    "wikiDataId": "Q33418"
+  }
+]

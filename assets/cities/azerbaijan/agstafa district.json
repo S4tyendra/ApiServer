@@ -1,0 +1,28 @@
+[
+  {
+    "id": 8163,
+    "name": "Salo\u011flu",
+    "state_id": 543,
+    "state_code": "AGA",
+    "state_name": "Agstafa District",
+    "country_id": 16,
+    "country_code": "AZ",
+    "country_name": "Azerbaijan",
+    "latitude": "41.27524000",
+    "longitude": "45.35293000",
+    "wikiDataId": "Q4618136"
+  },
+  {
+    "id": 8188,
+    "name": "Vur\u011fun",
+    "state_id": 543,
+    "state_code": "AGA",
+    "state_name": "Agstafa District",
+    "country_id": 16,
+    "country_code": "AZ",
+    "country_name": "Azerbaijan",
+    "latitude": "41.09524000",
+    "longitude": "45.47111000",
+    "wikiDataId": "Q4120923"
+  }
+]

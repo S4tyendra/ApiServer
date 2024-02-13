@@ -1,0 +1,80 @@
+[
+  {
+    "id": 80858,
+    "name": "Provincia de Man\u00fa",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-12.25000000",
+    "longitude": "-71.00000000",
+    "wikiDataId": "Q2320717"
+  },
+  {
+    "id": 80898,
+    "name": "Provincia de Tahuaman\u00fa",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-11.25000000",
+    "longitude": "-70.50000000",
+    "wikiDataId": "Q945636"
+  },
+  {
+    "id": 80900,
+    "name": "Provincia de Tambopata",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-12.19948000",
+    "longitude": "-70.05006000",
+    "wikiDataId": "Q1999122"
+  },
+  {
+    "id": 80918,
+    "name": "Puerto Maldonado",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-12.59331000",
+    "longitude": "-69.18913000",
+    "wikiDataId": "Q541435"
+  },
+  {
+    "id": 80939,
+    "name": "Salvaci\u00f3n",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-12.83605000",
+    "longitude": "-71.36490000",
+    "wikiDataId": "Q3348291"
+  },
+  {
+    "id": 80987,
+    "name": "Tambopata",
+    "state_id": 3678,
+    "state_code": "MDD",
+    "state_name": "Madre de Dios",
+    "country_id": 173,
+    "country_code": "PE",
+    "country_name": "Peru",
+    "latitude": "-12.67191000",
+    "longitude": "-69.35547000",
+    "wikiDataId": "Q723584"
+  }
+]

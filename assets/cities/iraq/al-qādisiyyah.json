@@ -1,0 +1,54 @@
+[
+  {
+    "id": 134476,
+    "name": "Ad D\u012bw\u0101n\u012byah",
+    "state_id": 3956,
+    "state_code": "QA",
+    "state_name": "Al-Q\u0101disiyyah",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "31.99289000",
+    "longitude": "44.92552000",
+    "wikiDataId": "Q694939"
+  },
+  {
+    "id": 134501,
+    "name": "Ash Sh\u0101m\u012byah",
+    "state_id": 3956,
+    "state_code": "QA",
+    "state_name": "Al-Q\u0101disiyyah",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "31.96257000",
+    "longitude": "44.60075000",
+    "wikiDataId": "Q2669841"
+  },
+  {
+    "id": 134530,
+    "name": "N\u0101\u1e29iyat ash Shin\u0101f\u012byah",
+    "state_id": 3956,
+    "state_code": "QA",
+    "state_name": "Al-Q\u0101disiyyah",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "31.58376000",
+    "longitude": "44.64675000",
+    "wikiDataId": "Q38811"
+  },
+  {
+    "id": 134526,
+    "name": "Nahiyat Ghammas",
+    "state_id": 3956,
+    "state_code": "QA",
+    "state_name": "Al-Q\u0101disiyyah",
+    "country_id": 104,
+    "country_code": "IQ",
+    "country_name": "Iraq",
+    "latitude": "31.74311000",
+    "longitude": "44.61960000",
+    "wikiDataId": "Q4133105"
+  }
+]

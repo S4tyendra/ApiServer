@@ -1,0 +1,93 @@
+[
+  {
+    "id": 105337,
+    "name": "Amphoe Dong Luang",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.79649000",
+    "longitude": "104.35562000",
+    "wikiDataId": "Q475490"
+  },
+  {
+    "id": 105388,
+    "name": "Amphoe Khamcha-i",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.61452000",
+    "longitude": "104.35929000",
+    "wikiDataId": "Q475644"
+  },
+  {
+    "id": 105552,
+    "name": "Amphoe Mueang Mukdahan",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.55110000",
+    "longitude": "104.64605000",
+    "wikiDataId": "Q476032"
+  },
+  {
+    "id": 105643,
+    "name": "Amphoe Nikhom Kham Soi",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.35375000",
+    "longitude": "104.55864000",
+    "wikiDataId": "Q476203"
+  },
+  {
+    "id": 105683,
+    "name": "Amphoe Nong Sung",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.44759000",
+    "longitude": "104.33649000",
+    "wikiDataId": "Q476286"
+  },
+  {
+    "id": 106333,
+    "name": "Amphoe Wan Yai",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.72030000",
+    "longitude": "104.72865000",
+    "wikiDataId": "Q476993"
+  },
+  {
+    "id": 106574,
+    "name": "Mukdahan",
+    "state_id": 3546,
+    "state_code": "49",
+    "state_name": "Mukdahan",
+    "country_id": 219,
+    "country_code": "TH",
+    "country_name": "Thailand",
+    "latitude": "16.54531000",
+    "longitude": "104.72351000",
+    "wikiDataId": "Q1017743"
+  }
+]

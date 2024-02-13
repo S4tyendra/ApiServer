@@ -1,0 +1,1 @@
+2024-02-13 16:01:51,552 - INFO - Job "clear_log (trigger: interval[0:00:10], next run at: 2024-02-13 16:01:57 IST)" executed successfully

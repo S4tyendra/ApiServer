@@ -1,0 +1,41 @@
+[
+  {
+    "id": 31798,
+    "name": "Ban\u012b Suwayf",
+    "state_id": 3230,
+    "state_code": "BNS",
+    "state_name": "Beni Suef",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "29.07441000",
+    "longitude": "31.09785000",
+    "wikiDataId": "Q394080"
+  },
+  {
+    "id": 31801,
+    "name": "B\u016bsh",
+    "state_id": 3230,
+    "state_code": "BNS",
+    "state_name": "Beni Suef",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "29.14816000",
+    "longitude": "31.12733000",
+    "wikiDataId": "Q63233"
+  },
+  {
+    "id": 31869,
+    "name": "Sumus\u0163\u0101 as Sul\u0163\u0101n\u012b",
+    "state_id": 3230,
+    "state_code": "BNS",
+    "state_name": "Beni Suef",
+    "country_id": 65,
+    "country_code": "EG",
+    "country_name": "Egypt",
+    "latitude": "28.91667000",
+    "longitude": "30.85000000",
+    "wikiDataId": "Q23935303"
+  }
+]

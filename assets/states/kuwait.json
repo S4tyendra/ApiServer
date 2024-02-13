@@ -1,0 +1,68 @@
+[
+  {
+    "id": 977,
+    "name": "Al Ahmadi",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "AH",
+    "type": null,
+    "latitude": "28.57451250",
+    "longitude": "48.10247430"
+  },
+  {
+    "id": 975,
+    "name": "Al Farwaniyah",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "FA",
+    "type": null,
+    "latitude": "29.27335700",
+    "longitude": "47.94001540"
+  },
+  {
+    "id": 972,
+    "name": "Al Jahra",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "JA",
+    "type": null,
+    "latitude": "29.99318310",
+    "longitude": "47.76347310"
+  },
+  {
+    "id": 976,
+    "name": "Capital",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "KU",
+    "type": null,
+    "latitude": "26.22851610",
+    "longitude": "50.58604970"
+  },
+  {
+    "id": 973,
+    "name": "Hawalli",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "HA",
+    "type": null,
+    "latitude": "29.30567160",
+    "longitude": "48.03076130"
+  },
+  {
+    "id": 974,
+    "name": "Mubarak Al-Kabeer",
+    "country_id": 117,
+    "country_code": "KW",
+    "country_name": "Kuwait",
+    "state_code": "MU",
+    "type": null,
+    "latitude": "29.21224000",
+    "longitude": "48.06051080"
+  }
+]

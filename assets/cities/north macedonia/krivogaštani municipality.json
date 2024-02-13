@@ -1,0 +1,28 @@
+[
+  {
+    "id": 67495,
+    "name": "Obr\u0161ani",
+    "state_id": 647,
+    "state_code": "45",
+    "state_name": "Krivoga\u0161tani Municipality",
+    "country_id": 129,
+    "country_code": "MK",
+    "country_name": "North Macedonia",
+    "latitude": "41.28168000",
+    "longitude": "21.36150000",
+    "wikiDataId": "Q3074771"
+  },
+  {
+    "id": 67576,
+    "name": "\u041a\u043b\u0435\u0447\u043e\u0432\u0446\u0435",
+    "state_id": 647,
+    "state_code": "45",
+    "state_name": "Krivoga\u0161tani Municipality",
+    "country_id": 129,
+    "country_code": "MK",
+    "country_name": "North Macedonia",
+    "latitude": "42.11611000",
+    "longitude": "21.85722000",
+    "wikiDataId": "Q3072576"
+  }
+]
