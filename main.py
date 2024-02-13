@@ -32,7 +32,16 @@ scheduler = AsyncIOScheduler()
 scheduler.add_job(clear_log, 'interval', minutes=10)
 scheduler.start()
 logging.info("Scheduler started!")
+from fastapi.middleware.cors import CORSMiddleware
 
+    # Add CORS middleware
+app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 @app.middleware("http")
 async def log_request(request: Request, call_next):
