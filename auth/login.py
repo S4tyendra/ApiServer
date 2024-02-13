@@ -62,10 +62,10 @@ async def verify(response: Response, verify: Verify):
             else:
                 cookie = secrets.token_hex(32)
                 await db.users.update_one({"email": verify.email}, {"$set": {"otp": []}})
-                response.set_cookie(key="_id-c", value=cookie, httponly=True, secure=True)
                 await db.sessions.insert_one(
                     {"_id": cookie, "email": verify.email, "created_at": datetime.now().timestamp()})
-                return {"message": "OTP verified"}
+                response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+                return {"message": "OTP verified", "cookie": cookie}
 
     raise HTTPException(status_code=400, detail="Invalid OTP")
 
