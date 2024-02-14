@@ -1,10 +1,11 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
-
+from fastapi import APIRouter, HTTPException, Depends
+from functions.apiwrapper import api_key_auth
 router = APIRouter()
 
 
-@router.get("/getstatesincountry")
+@router.get("/getstatesincountry", dependencies=[Depends(api_key_auth)])
 async def get_states(country: str):
     country_list = ['afghanistan',
                     'albania',
