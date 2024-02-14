@@ -232,3 +232,4 @@ fabric.properties
 .idea/
 venv
 ./database.py
+./applog.txt

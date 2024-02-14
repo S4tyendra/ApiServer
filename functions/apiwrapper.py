@@ -15,6 +15,8 @@ async def api_key_auth(api_key: str = Depends(api_key_header)):
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
     db = await connect_to_database()
     user = await db.sessions.find_one({"_id": api_key, "type": "api_key"})
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized, api key invalid")
     email = user['email']
     await db.users.update_one({"email": email}, {"$set":
                                                      {"last_accessed": time.time()}

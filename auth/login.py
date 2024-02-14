@@ -151,12 +151,79 @@ submit_otp_html = """
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>OTP Verification</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2b2b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top:10%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+h1 {
+    text-align: center;
+}
+p {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+</style>
 </head>
 <body>
+    <h1>OTP Verification</h1>
     <form action="/auth/otp-verify" method="post">
+        <p>Enter the OTP sent to your email</p>
         <label for="email">EMAIL:</label>
-        <input type="email" id="email" name="email" value="{email}" readonly>
+        <input type="email" id="email" name="email" value="${email}" readonly>
         <label for="otp">OTP:</label>
         <input type="text" id="otp" name="otp" required>
         <button type="submit">Submit</button>
@@ -185,7 +252,7 @@ async def login_post(
         otp.append(generated_otp)
         await db.users.update_one({"email": email}, {"$set": {"otp": otp}})
         send_otp(email, generated_otp.get('otp'))
-    return HTMLResponse(content=submit_otp_html.format(email=email), status_code=200)
+    return HTMLResponse(content=submit_otp_html.replace("${email}",email), status_code=200)
 
 @router.post("/otp-verify")
 async def verify(response: Response, email: str = Form(...), otp: str = Form(...) ):
@@ -204,7 +271,10 @@ async def verify(response: Response, email: str = Form(...), otp: str = Form(...
                 await db.users.update_one({"email": email}, {"$set": {"otp": []}})
                 await db.sessions.insert_one(
                     {"_id": cookie, "email": email, "created_at": datetime.now().timestamp()})
-                response.set_cookie(key="_id-c", value=cookie, httponly=True, secure=True)
-                return RedirectResponse(url="/", status_code=302)
+                response = HTMLResponse(f"""<script>
+                                        document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
+                                        window.location.href = '/';</script>""", status_code=200)
+                response.set_cookie(key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True)
+                return response
 
     raise HTTPException(status_code=400, detail="Invalid OTP")

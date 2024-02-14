@@ -35,6 +35,8 @@ async def me(request: Request, response: Response):
     cookie = request.cookies.get("_id-c")
     db = await connect_to_database()
     requester_data = await db.sessions.find_one({"_id": cookie})
+    if requester_data is None:
+        raise HTTPException(status_code=400, detail="Invalid user")
     requester_email = requester_data.get("email")
     responser_data = await db.users.find_one({"email": requester_email})
     return responser_data
