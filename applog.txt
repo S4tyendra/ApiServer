@@ -1,1 +1,1795 @@
 2024-02-13 16:01:51,552 - INFO - Job "clear_log (trigger: interval[0:00:10], next run at: 2024-02-13 16:01:57 IST)" executed successfully
+2024-02-14 11:15:11,604 - DEBUG - /etc/localtime found
+2024-02-14 11:15:11,607 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:15:11,609 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:15:11,610 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:15:11,611 - INFO - Scheduler started
+2024-02-14 11:15:11,611 - INFO - Scheduler started!
+2024-02-14 11:15:11,623 - DEBUG - Looking for jobs to run
+2024-02-14 11:15:11,623 - DEBUG - Next wakeup is due at 2024-02-14 11:25:11.609295+05:30 (in 599.985871 seconds)
+2024-02-14 11:15:23,828 - DEBUG - GET - http://0.0.0.0:8000/favicon.ico / None /None
+2024-02-14 11:17:32,212 - DEBUG - /etc/localtime found
+2024-02-14 11:17:32,213 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:17:32,214 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:17:32,215 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:17:32,215 - INFO - Scheduler started
+2024-02-14 11:17:32,215 - INFO - Scheduler started!
+2024-02-14 11:17:32,225 - DEBUG - Looking for jobs to run
+2024-02-14 11:17:32,226 - DEBUG - Next wakeup is due at 2024-02-14 11:27:32.214425+05:30 (in 599.988314 seconds)
+2024-02-14 11:17:36,346 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-02-14 11:17:54,484 - DEBUG - /etc/localtime found
+2024-02-14 11:17:54,486 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:17:54,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:17:54,490 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:17:54,490 - INFO - Scheduler started
+2024-02-14 11:17:54,491 - INFO - Scheduler started!
+2024-02-14 11:17:54,506 - DEBUG - Looking for jobs to run
+2024-02-14 11:17:54,506 - DEBUG - Next wakeup is due at 2024-02-14 11:27:54.488314+05:30 (in 599.981560 seconds)
+2024-02-14 11:18:02,595 - DEBUG - /etc/localtime found
+2024-02-14 11:18:02,597 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:18:02,598 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:18:02,599 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:18:02,600 - INFO - Scheduler started
+2024-02-14 11:18:02,600 - INFO - Scheduler started!
+2024-02-14 11:18:02,611 - DEBUG - Looking for jobs to run
+2024-02-14 11:18:02,611 - DEBUG - Next wakeup is due at 2024-02-14 11:28:02.598391+05:30 (in 599.986798 seconds)
+2024-02-14 11:18:08,431 - DEBUG - /etc/localtime found
+2024-02-14 11:18:08,432 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:18:08,434 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:18:08,435 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:18:08,436 - INFO - Scheduler started
+2024-02-14 11:18:08,436 - INFO - Scheduler started!
+2024-02-14 11:18:08,447 - DEBUG - Looking for jobs to run
+2024-02-14 11:18:08,448 - DEBUG - Next wakeup is due at 2024-02-14 11:28:08.434056+05:30 (in 599.986047 seconds)
+2024-02-14 11:18:13,503 - DEBUG - /etc/localtime found
+2024-02-14 11:18:13,504 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:18:13,505 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:18:13,506 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:18:13,507 - INFO - Scheduler started
+2024-02-14 11:18:13,507 - INFO - Scheduler started!
+2024-02-14 11:18:13,518 - DEBUG - Looking for jobs to run
+2024-02-14 11:18:13,518 - DEBUG - Next wakeup is due at 2024-02-14 11:28:13.505424+05:30 (in 599.986933 seconds)
+2024-02-14 11:18:50,504 - DEBUG - /etc/localtime found
+2024-02-14 11:18:50,506 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:18:50,507 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:18:50,508 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:18:50,508 - INFO - Scheduler started
+2024-02-14 11:18:50,509 - INFO - Scheduler started!
+2024-02-14 11:18:50,520 - DEBUG - Looking for jobs to run
+2024-02-14 11:18:50,520 - DEBUG - Next wakeup is due at 2024-02-14 11:28:50.507153+05:30 (in 599.986824 seconds)
+2024-02-14 11:19:00,028 - DEBUG - /etc/localtime found
+2024-02-14 11:19:00,029 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:19:00,030 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:19:00,032 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:19:00,032 - INFO - Scheduler started
+2024-02-14 11:19:00,032 - INFO - Scheduler started!
+2024-02-14 11:19:00,043 - DEBUG - Looking for jobs to run
+2024-02-14 11:19:00,044 - DEBUG - Next wakeup is due at 2024-02-14 11:29:00.030566+05:30 (in 599.986510 seconds)
+2024-02-14 11:19:09,136 - DEBUG - /etc/localtime found
+2024-02-14 11:19:09,138 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:19:09,139 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:19:09,140 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:19:09,140 - INFO - Scheduler started
+2024-02-14 11:19:09,140 - INFO - Scheduler started!
+2024-02-14 11:19:09,154 - DEBUG - Looking for jobs to run
+2024-02-14 11:19:09,155 - DEBUG - Next wakeup is due at 2024-02-14 11:29:09.139150+05:30 (in 599.984042 seconds)
+2024-02-14 11:19:09,166 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-02-14 11:19:14,793 - DEBUG - POST - http://0.0.0.0:8000/auth/login / None /None
+2024-02-14 11:19:53,248 - DEBUG - /etc/localtime found
+2024-02-14 11:19:53,249 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:19:53,251 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:19:53,252 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:19:53,252 - INFO - Scheduler started
+2024-02-14 11:19:53,252 - INFO - Scheduler started!
+2024-02-14 11:19:53,267 - DEBUG - Looking for jobs to run
+2024-02-14 11:19:53,267 - DEBUG - Next wakeup is due at 2024-02-14 11:29:53.250800+05:30 (in 599.982875 seconds)
+2024-02-14 11:19:59,858 - DEBUG - /etc/localtime found
+2024-02-14 11:19:59,860 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:19:59,862 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:19:59,863 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:19:59,863 - INFO - Scheduler started
+2024-02-14 11:19:59,863 - INFO - Scheduler started!
+2024-02-14 11:19:59,876 - DEBUG - Looking for jobs to run
+2024-02-14 11:19:59,876 - DEBUG - Next wakeup is due at 2024-02-14 11:29:59.861790+05:30 (in 599.985028 seconds)
+2024-02-14 11:20:04,524 - DEBUG - /etc/localtime found
+2024-02-14 11:20:04,525 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:20:04,527 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:20:04,528 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:20:04,528 - INFO - Scheduler started
+2024-02-14 11:20:04,528 - INFO - Scheduler started!
+2024-02-14 11:20:04,543 - DEBUG - Looking for jobs to run
+2024-02-14 11:20:04,544 - DEBUG - Next wakeup is due at 2024-02-14 11:30:04.527108+05:30 (in 599.982866 seconds)
+2024-02-14 11:21:44,548 - DEBUG - /etc/localtime found
+2024-02-14 11:21:44,550 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:21:44,552 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:21:44,553 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:21:44,553 - INFO - Scheduler started
+2024-02-14 11:21:44,553 - INFO - Scheduler started!
+2024-02-14 11:21:44,569 - DEBUG - Looking for jobs to run
+2024-02-14 11:21:44,570 - DEBUG - Next wakeup is due at 2024-02-14 11:31:44.551705+05:30 (in 599.981230 seconds)
+2024-02-14 11:21:48,728 - DEBUG - POST - http://0.0.0.0:8000/auth/login / None /None
+2024-02-14 11:22:04,437 - DEBUG - /etc/localtime found
+2024-02-14 11:22:04,438 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:22:04,439 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:22:04,440 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:22:04,440 - INFO - Scheduler started
+2024-02-14 11:22:04,440 - INFO - Scheduler started!
+2024-02-14 11:22:04,455 - DEBUG - Looking for jobs to run
+2024-02-14 11:22:04,455 - DEBUG - Next wakeup is due at 2024-02-14 11:32:04.439240+05:30 (in 599.983396 seconds)
+2024-02-14 11:22:04,473 - DEBUG - POST - http://0.0.0.0:8000/auth/login / None /None
+2024-02-14 11:22:15,417 - DEBUG - POST - http://0.0.0.0:8000/auth/login / None /None
+2024-02-14 11:22:16,682 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-02-14 11:22:18,178 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:22:18,179 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:22:18,179 - DEBUG - Calling on_field_data with data[6:30]
+2024-02-14 11:22:18,179 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:22:18,179 - DEBUG - Calling on_end with no data
+2024-02-14 11:22:23,245 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:23:51,749 - DEBUG - /etc/localtime found
+2024-02-14 11:23:51,750 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:23:51,751 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:23:51,752 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:23:51,752 - INFO - Scheduler started
+2024-02-14 11:23:51,752 - INFO - Scheduler started!
+2024-02-14 11:23:51,765 - DEBUG - Looking for jobs to run
+2024-02-14 11:23:51,766 - DEBUG - Next wakeup is due at 2024-02-14 11:33:51.751119+05:30 (in 599.985034 seconds)
+2024-02-14 11:24:12,409 - DEBUG - /etc/localtime found
+2024-02-14 11:24:12,411 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:24:12,412 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:24:12,413 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:24:12,413 - INFO - Scheduler started
+2024-02-14 11:24:12,414 - INFO - Scheduler started!
+2024-02-14 11:24:12,428 - DEBUG - Looking for jobs to run
+2024-02-14 11:24:12,428 - DEBUG - Next wakeup is due at 2024-02-14 11:34:12.412372+05:30 (in 599.983978 seconds)
+2024-02-14 11:24:18,477 - DEBUG - /etc/localtime found
+2024-02-14 11:24:18,478 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:24:18,480 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:24:18,481 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:24:18,481 - INFO - Scheduler started
+2024-02-14 11:24:18,481 - INFO - Scheduler started!
+2024-02-14 11:24:18,494 - DEBUG - Looking for jobs to run
+2024-02-14 11:24:18,495 - DEBUG - Next wakeup is due at 2024-02-14 11:34:18.479777+05:30 (in 599.984592 seconds)
+2024-02-14 11:24:52,448 - DEBUG - /etc/localtime found
+2024-02-14 11:24:52,449 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:24:52,450 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:24:52,450 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:24:52,450 - INFO - Scheduler started
+2024-02-14 11:24:52,451 - INFO - Scheduler started!
+2024-02-14 11:24:52,459 - DEBUG - Looking for jobs to run
+2024-02-14 11:24:52,460 - DEBUG - Next wakeup is due at 2024-02-14 11:34:52.449974+05:30 (in 599.989884 seconds)
+2024-02-14 11:25:01,718 - DEBUG - /etc/localtime found
+2024-02-14 11:25:01,719 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:25:01,719 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:25:01,720 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:25:01,720 - INFO - Scheduler started
+2024-02-14 11:25:01,720 - INFO - Scheduler started!
+2024-02-14 11:25:01,728 - DEBUG - Looking for jobs to run
+2024-02-14 11:25:01,728 - DEBUG - Next wakeup is due at 2024-02-14 11:35:01.719815+05:30 (in 599.990908 seconds)
+2024-02-14 11:26:54,206 - DEBUG - /etc/localtime found
+2024-02-14 11:26:54,207 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:26:54,207 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:26:54,208 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:26:54,208 - INFO - Scheduler started
+2024-02-14 11:26:54,208 - INFO - Scheduler started!
+2024-02-14 11:26:54,218 - DEBUG - Looking for jobs to run
+2024-02-14 11:26:54,218 - DEBUG - Next wakeup is due at 2024-02-14 11:36:54.207455+05:30 (in 599.989229 seconds)
+2024-02-14 11:27:01,476 - DEBUG - /etc/localtime found
+2024-02-14 11:27:01,477 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:27:01,478 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:27:01,478 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:27:01,478 - INFO - Scheduler started
+2024-02-14 11:27:01,478 - INFO - Scheduler started!
+2024-02-14 11:27:01,486 - DEBUG - Looking for jobs to run
+2024-02-14 11:27:01,487 - DEBUG - Next wakeup is due at 2024-02-14 11:37:01.477990+05:30 (in 599.990856 seconds)
+2024-02-14 11:27:30,114 - DEBUG - /etc/localtime found
+2024-02-14 11:27:30,115 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:27:30,116 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:27:30,116 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:27:30,116 - INFO - Scheduler started
+2024-02-14 11:27:30,116 - INFO - Scheduler started!
+2024-02-14 11:27:30,125 - DEBUG - Looking for jobs to run
+2024-02-14 11:27:30,125 - DEBUG - Next wakeup is due at 2024-02-14 11:37:30.116122+05:30 (in 599.990735 seconds)
+2024-02-14 11:27:54,363 - DEBUG - /etc/localtime found
+2024-02-14 11:27:54,364 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:27:54,364 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:27:54,365 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:27:54,365 - INFO - Scheduler started
+2024-02-14 11:27:54,365 - INFO - Scheduler started!
+2024-02-14 11:27:54,374 - DEBUG - Looking for jobs to run
+2024-02-14 11:27:54,374 - DEBUG - Next wakeup is due at 2024-02-14 11:37:54.364689+05:30 (in 599.990300 seconds)
+2024-02-14 11:28:06,469 - DEBUG - /etc/localtime found
+2024-02-14 11:28:06,470 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:06,471 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:06,471 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:06,472 - INFO - Scheduler started
+2024-02-14 11:28:06,472 - INFO - Scheduler started!
+2024-02-14 11:28:06,482 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:06,482 - DEBUG - Next wakeup is due at 2024-02-14 11:38:06.470990+05:30 (in 599.988423 seconds)
+2024-02-14 11:28:12,722 - DEBUG - /etc/localtime found
+2024-02-14 11:28:12,723 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:12,724 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:12,724 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:12,724 - INFO - Scheduler started
+2024-02-14 11:28:12,725 - INFO - Scheduler started!
+2024-02-14 11:28:12,732 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:12,732 - DEBUG - Next wakeup is due at 2024-02-14 11:38:12.724197+05:30 (in 599.991431 seconds)
+2024-02-14 11:28:13,916 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:28:13,916 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:28:13,916 - DEBUG - Calling on_field_data with data[6:30]
+2024-02-14 11:28:13,916 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:28:13,916 - DEBUG - Calling on_end with no data
+2024-02-14 11:28:18,283 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:28:34,690 - DEBUG - /etc/localtime found
+2024-02-14 11:28:34,690 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:34,691 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:34,691 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:34,691 - INFO - Scheduler started
+2024-02-14 11:28:34,692 - INFO - Scheduler started!
+2024-02-14 11:28:34,700 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:34,700 - DEBUG - Next wakeup is due at 2024-02-14 11:38:34.691214+05:30 (in 599.990923 seconds)
+2024-02-14 11:28:39,223 - DEBUG - /etc/localtime found
+2024-02-14 11:28:39,224 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:39,225 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:39,225 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:39,226 - INFO - Scheduler started
+2024-02-14 11:28:39,226 - INFO - Scheduler started!
+2024-02-14 11:28:39,234 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:39,234 - DEBUG - Next wakeup is due at 2024-02-14 11:38:39.225171+05:30 (in 599.990297 seconds)
+2024-02-14 11:28:45,228 - DEBUG - /etc/localtime found
+2024-02-14 11:28:45,229 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:45,230 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:45,230 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:45,230 - INFO - Scheduler started
+2024-02-14 11:28:45,231 - INFO - Scheduler started!
+2024-02-14 11:28:45,239 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:45,239 - DEBUG - Next wakeup is due at 2024-02-14 11:38:45.230016+05:30 (in 599.990129 seconds)
+2024-02-14 11:28:51,275 - DEBUG - /etc/localtime found
+2024-02-14 11:28:51,276 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:51,277 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:51,277 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:51,277 - INFO - Scheduler started
+2024-02-14 11:28:51,277 - INFO - Scheduler started!
+2024-02-14 11:28:51,285 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:51,285 - DEBUG - Next wakeup is due at 2024-02-14 11:38:51.276914+05:30 (in 599.991184 seconds)
+2024-02-14 11:28:56,555 - DEBUG - /etc/localtime found
+2024-02-14 11:28:56,555 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:56,556 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:56,557 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:56,557 - INFO - Scheduler started
+2024-02-14 11:28:56,557 - INFO - Scheduler started!
+2024-02-14 11:28:56,567 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:56,567 - DEBUG - Next wakeup is due at 2024-02-14 11:38:56.556523+05:30 (in 599.989088 seconds)
+2024-02-14 11:28:59,893 - DEBUG - /etc/localtime found
+2024-02-14 11:28:59,893 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:28:59,894 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:28:59,895 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:28:59,895 - INFO - Scheduler started
+2024-02-14 11:28:59,895 - INFO - Scheduler started!
+2024-02-14 11:28:59,903 - DEBUG - Looking for jobs to run
+2024-02-14 11:28:59,903 - DEBUG - Next wakeup is due at 2024-02-14 11:38:59.894403+05:30 (in 599.991220 seconds)
+2024-02-14 11:29:02,284 - DEBUG - /etc/localtime found
+2024-02-14 11:29:02,285 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:29:02,285 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:29:02,286 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:29:02,286 - INFO - Scheduler started
+2024-02-14 11:29:02,286 - INFO - Scheduler started!
+2024-02-14 11:29:02,293 - DEBUG - Looking for jobs to run
+2024-02-14 11:29:02,294 - DEBUG - Next wakeup is due at 2024-02-14 11:39:02.285723+05:30 (in 599.991589 seconds)
+2024-02-14 11:29:02,504 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:29:02,505 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:29:02,505 - DEBUG - Calling on_field_data with data[6:30]
+2024-02-14 11:29:02,505 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:29:02,505 - DEBUG - Calling on_end with no data
+2024-02-14 11:29:06,605 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:29:18,259 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-02-14 11:29:23,143 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:29:23,143 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:29:23,143 - DEBUG - Calling on_field_data with data[6:35]
+2024-02-14 11:29:23,144 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:29:23,144 - DEBUG - Calling on_end with no data
+2024-02-14 11:29:23,145 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:29:41,396 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:29:41,396 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:29:41,396 - DEBUG - Calling on_field_data with data[6:35]
+2024-02-14 11:29:41,396 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:29:41,396 - DEBUG - Calling on_end with no data
+2024-02-14 11:29:41,396 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:29:49,496 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:29:49,496 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:29:49,496 - DEBUG - Calling on_field_data with data[6:27]
+2024-02-14 11:29:49,496 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:29:49,496 - DEBUG - Calling on_end with no data
+2024-02-14 11:29:53,897 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / None /None
+2024-02-14 11:30:10,720 - DEBUG - POST - http://0.0.0.0:8000/auth/otp-verify / None /None
+2024-02-14 11:30:36,532 - DEBUG - /etc/localtime found
+2024-02-14 11:30:36,533 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:30:36,534 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:30:36,534 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:30:36,535 - INFO - Scheduler started
+2024-02-14 11:30:36,535 - INFO - Scheduler started!
+2024-02-14 11:30:36,544 - DEBUG - Looking for jobs to run
+2024-02-14 11:30:36,544 - DEBUG - Next wakeup is due at 2024-02-14 11:40:36.534105+05:30 (in 599.989917 seconds)
+2024-02-14 11:30:40,015 - DEBUG - /etc/localtime found
+2024-02-14 11:30:40,016 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:30:40,017 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:30:40,018 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:30:40,018 - INFO - Scheduler started
+2024-02-14 11:30:40,018 - INFO - Scheduler started!
+2024-02-14 11:30:40,032 - DEBUG - Looking for jobs to run
+2024-02-14 11:30:40,032 - DEBUG - Next wakeup is due at 2024-02-14 11:40:40.017061+05:30 (in 599.984469 seconds)
+2024-02-14 11:30:44,781 - DEBUG - /etc/localtime found
+2024-02-14 11:30:44,782 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:30:44,783 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:30:44,783 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:30:44,784 - INFO - Scheduler started
+2024-02-14 11:30:44,784 - INFO - Scheduler started!
+2024-02-14 11:30:44,793 - DEBUG - Looking for jobs to run
+2024-02-14 11:30:44,793 - DEBUG - Next wakeup is due at 2024-02-14 11:40:44.782888+05:30 (in 599.988983 seconds)
+2024-02-14 11:30:52,510 - DEBUG - /etc/localtime found
+2024-02-14 11:30:52,511 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:30:52,512 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:30:52,513 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:30:52,513 - INFO - Scheduler started
+2024-02-14 11:30:52,514 - INFO - Scheduler started!
+2024-02-14 11:30:52,524 - DEBUG - Looking for jobs to run
+2024-02-14 11:30:52,524 - DEBUG - Next wakeup is due at 2024-02-14 11:40:52.512381+05:30 (in 599.987791 seconds)
+2024-02-14 11:30:56,435 - DEBUG - /etc/localtime found
+2024-02-14 11:30:56,436 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:30:56,437 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:30:56,438 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:30:56,439 - INFO - Scheduler started
+2024-02-14 11:30:56,439 - INFO - Scheduler started!
+2024-02-14 11:30:56,451 - DEBUG - Looking for jobs to run
+2024-02-14 11:30:56,451 - DEBUG - Next wakeup is due at 2024-02-14 11:40:56.437493+05:30 (in 599.986234 seconds)
+2024-02-14 11:31:04,644 - DEBUG - /etc/localtime found
+2024-02-14 11:31:04,645 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:04,646 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:04,647 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:04,647 - INFO - Scheduler started
+2024-02-14 11:31:04,647 - INFO - Scheduler started!
+2024-02-14 11:31:04,661 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:04,661 - DEBUG - Next wakeup is due at 2024-02-14 11:41:04.645847+05:30 (in 599.984454 seconds)
+2024-02-14 11:31:08,695 - DEBUG - /etc/localtime found
+2024-02-14 11:31:08,696 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:08,696 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:08,697 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:08,697 - INFO - Scheduler started
+2024-02-14 11:31:08,698 - INFO - Scheduler started!
+2024-02-14 11:31:08,708 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:08,708 - DEBUG - Next wakeup is due at 2024-02-14 11:41:08.696715+05:30 (in 599.988203 seconds)
+2024-02-14 11:31:38,149 - DEBUG - /etc/localtime found
+2024-02-14 11:31:38,150 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:38,150 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:38,151 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:38,151 - INFO - Scheduler started
+2024-02-14 11:31:38,151 - INFO - Scheduler started!
+2024-02-14 11:31:38,159 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:38,160 - DEBUG - Next wakeup is due at 2024-02-14 11:41:38.150543+05:30 (in 599.990556 seconds)
+2024-02-14 11:31:40,959 - DEBUG - /etc/localtime found
+2024-02-14 11:31:40,960 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:40,961 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:40,961 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:40,961 - INFO - Scheduler started
+2024-02-14 11:31:40,961 - INFO - Scheduler started!
+2024-02-14 11:31:40,973 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:40,973 - DEBUG - Next wakeup is due at 2024-02-14 11:41:40.961066+05:30 (in 599.987812 seconds)
+2024-02-14 11:31:49,839 - DEBUG - /etc/localtime found
+2024-02-14 11:31:49,840 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:49,841 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:49,842 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:49,842 - INFO - Scheduler started
+2024-02-14 11:31:49,842 - INFO - Scheduler started!
+2024-02-14 11:31:49,853 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:49,854 - DEBUG - Next wakeup is due at 2024-02-14 11:41:49.841197+05:30 (in 599.987061 seconds)
+2024-02-14 11:31:53,386 - DEBUG - /etc/localtime found
+2024-02-14 11:31:53,387 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:53,387 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:53,388 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:53,388 - INFO - Scheduler started
+2024-02-14 11:31:53,388 - INFO - Scheduler started!
+2024-02-14 11:31:53,399 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:53,399 - DEBUG - Next wakeup is due at 2024-02-14 11:41:53.387808+05:30 (in 599.988409 seconds)
+2024-02-14 11:31:56,422 - DEBUG - /etc/localtime found
+2024-02-14 11:31:56,423 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:31:56,423 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:31:56,424 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:31:56,424 - INFO - Scheduler started
+2024-02-14 11:31:56,424 - INFO - Scheduler started!
+2024-02-14 11:31:56,433 - DEBUG - Looking for jobs to run
+2024-02-14 11:31:56,433 - DEBUG - Next wakeup is due at 2024-02-14 11:41:56.423712+05:30 (in 599.989866 seconds)
+2024-02-14 11:32:00,644 - DEBUG - /etc/localtime found
+2024-02-14 11:32:00,645 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:32:00,646 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:32:00,647 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:32:00,647 - INFO - Scheduler started
+2024-02-14 11:32:00,647 - INFO - Scheduler started!
+2024-02-14 11:32:00,657 - DEBUG - Looking for jobs to run
+2024-02-14 11:32:00,657 - DEBUG - Next wakeup is due at 2024-02-14 11:42:00.646511+05:30 (in 599.989102 seconds)
+2024-02-14 11:32:02,786 - DEBUG - /etc/localtime found
+2024-02-14 11:32:02,787 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:32:02,787 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:32:02,788 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:32:02,788 - INFO - Scheduler started
+2024-02-14 11:32:02,788 - INFO - Scheduler started!
+2024-02-14 11:32:02,797 - DEBUG - Looking for jobs to run
+2024-02-14 11:32:02,797 - DEBUG - Next wakeup is due at 2024-02-14 11:42:02.787506+05:30 (in 599.990014 seconds)
+2024-02-14 11:32:05,092 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_data with data[6:27]
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_name with data[28:31]
+2024-02-14 11:32:05,093 - DEBUG - Calling on_field_data with data[32:38]
+2024-02-14 11:32:05,094 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:32:05,094 - DEBUG - Calling on_end with no data
+2024-02-14 11:32:05,724 - DEBUG - POST - http://0.0.0.0:8000/auth/otp-verify / None /None
+2024-02-14 11:32:48,146 - DEBUG - /etc/localtime found
+2024-02-14 11:32:48,148 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:32:48,149 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:32:48,151 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:32:48,151 - INFO - Scheduler started
+2024-02-14 11:32:48,152 - INFO - Scheduler started!
+2024-02-14 11:32:48,171 - DEBUG - Looking for jobs to run
+2024-02-14 11:32:48,171 - DEBUG - Next wakeup is due at 2024-02-14 11:42:48.149691+05:30 (in 599.978090 seconds)
+2024-02-14 11:32:51,192 - DEBUG - /etc/localtime found
+2024-02-14 11:32:51,193 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:32:51,194 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:32:51,194 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:32:51,195 - INFO - Scheduler started
+2024-02-14 11:32:51,195 - INFO - Scheduler started!
+2024-02-14 11:32:51,205 - DEBUG - Looking for jobs to run
+2024-02-14 11:32:51,205 - DEBUG - Next wakeup is due at 2024-02-14 11:42:51.194105+05:30 (in 599.988754 seconds)
+2024-02-14 11:32:58,865 - DEBUG - /etc/localtime found
+2024-02-14 11:32:58,866 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:32:58,867 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:32:58,868 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:32:58,868 - INFO - Scheduler started
+2024-02-14 11:32:58,868 - INFO - Scheduler started!
+2024-02-14 11:32:58,881 - DEBUG - Looking for jobs to run
+2024-02-14 11:32:58,881 - DEBUG - Next wakeup is due at 2024-02-14 11:42:58.867242+05:30 (in 599.985284 seconds)
+2024-02-14 11:33:01,271 - DEBUG - /etc/localtime found
+2024-02-14 11:33:01,272 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:33:01,273 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:33:01,273 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:33:01,273 - INFO - Scheduler started
+2024-02-14 11:33:01,274 - INFO - Scheduler started!
+2024-02-14 11:33:01,286 - DEBUG - Looking for jobs to run
+2024-02-14 11:33:01,287 - DEBUG - Next wakeup is due at 2024-02-14 11:43:01.273077+05:30 (in 599.985838 seconds)
+2024-02-14 11:33:05,014 - DEBUG - /etc/localtime found
+2024-02-14 11:33:05,015 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:33:05,016 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:33:05,016 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:33:05,016 - INFO - Scheduler started
+2024-02-14 11:33:05,017 - INFO - Scheduler started!
+2024-02-14 11:33:05,026 - DEBUG - Looking for jobs to run
+2024-02-14 11:33:05,026 - DEBUG - Next wakeup is due at 2024-02-14 11:43:05.016129+05:30 (in 599.989222 seconds)
+2024-02-14 11:33:06,604 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:33:06,605 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:33:06,605 - DEBUG - Calling on_field_data with data[6:27]
+2024-02-14 11:33:06,605 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:33:06,605 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:33:06,606 - DEBUG - Calling on_field_name with data[28:31]
+2024-02-14 11:33:06,606 - DEBUG - Calling on_field_data with data[32:38]
+2024-02-14 11:33:06,607 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:33:06,607 - DEBUG - Calling on_end with no data
+2024-02-14 11:33:07,156 - DEBUG - POST - http://0.0.0.0:8000/auth/otp-verify / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:33:14,807 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:33:14,808 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:33:14,808 - DEBUG - Calling on_field_data with data[6:27]
+2024-02-14 11:33:14,808 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:33:14,808 - DEBUG - Calling on_end with no data
+2024-02-14 11:33:19,174 - DEBUG - POST - http://0.0.0.0:8000/auth/login-post / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:33:28,936 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_name with data[0:5]
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_data with data[6:27]
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_start with no data
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_name with data[28:31]
+2024-02-14 11:33:28,937 - DEBUG - Calling on_field_data with data[32:38]
+2024-02-14 11:33:28,938 - DEBUG - Calling on_field_end with no data
+2024-02-14 11:33:28,938 - DEBUG - Calling on_end with no data
+2024-02-14 11:33:29,392 - DEBUG - POST - http://0.0.0.0:8000/auth/otp-verify / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:33:29,405 - DEBUG - POST - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:33:57,288 - DEBUG - /etc/localtime found
+2024-02-14 11:33:57,289 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:33:57,289 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:33:57,290 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:33:57,290 - INFO - Scheduler started
+2024-02-14 11:33:57,290 - INFO - Scheduler started!
+2024-02-14 11:33:57,308 - DEBUG - Looking for jobs to run
+2024-02-14 11:33:57,308 - DEBUG - Next wakeup is due at 2024-02-14 11:43:57.289606+05:30 (in 599.981018 seconds)
+2024-02-14 11:34:00,468 - DEBUG - /etc/localtime found
+2024-02-14 11:34:00,469 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:34:00,469 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:34:00,470 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:34:00,471 - INFO - Scheduler started
+2024-02-14 11:34:00,471 - INFO - Scheduler started!
+2024-02-14 11:34:00,488 - DEBUG - Looking for jobs to run
+2024-02-14 11:34:00,488 - DEBUG - Next wakeup is due at 2024-02-14 11:44:00.469726+05:30 (in 599.981435 seconds)
+2024-02-14 11:34:00,497 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:34:24,345 - DEBUG - /etc/localtime found
+2024-02-14 11:34:24,346 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:34:24,347 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:34:24,348 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:34:24,348 - INFO - Scheduler started
+2024-02-14 11:34:24,348 - INFO - Scheduler started!
+2024-02-14 11:34:24,364 - DEBUG - Looking for jobs to run
+2024-02-14 11:34:24,364 - DEBUG - Next wakeup is due at 2024-02-14 11:44:24.347600+05:30 (in 599.982899 seconds)
+2024-02-14 11:34:37,651 - DEBUG - /etc/localtime found
+2024-02-14 11:34:37,652 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:34:37,652 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:34:37,653 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:34:37,653 - INFO - Scheduler started
+2024-02-14 11:34:37,653 - INFO - Scheduler started!
+2024-02-14 11:34:37,663 - DEBUG - Looking for jobs to run
+2024-02-14 11:34:37,663 - DEBUG - Next wakeup is due at 2024-02-14 11:44:37.652565+05:30 (in 599.989183 seconds)
+2024-02-14 11:34:40,080 - DEBUG - /etc/localtime found
+2024-02-14 11:34:40,081 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:34:40,082 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:34:40,082 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:34:40,083 - INFO - Scheduler started
+2024-02-14 11:34:40,083 - INFO - Scheduler started!
+2024-02-14 11:34:40,093 - DEBUG - Looking for jobs to run
+2024-02-14 11:34:40,093 - DEBUG - Next wakeup is due at 2024-02-14 11:44:40.082242+05:30 (in 599.988991 seconds)
+2024-02-14 11:34:47,319 - DEBUG - /etc/localtime found
+2024-02-14 11:34:47,320 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:34:47,321 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:34:47,321 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:34:47,321 - INFO - Scheduler started
+2024-02-14 11:34:47,321 - INFO - Scheduler started!
+2024-02-14 11:34:47,330 - DEBUG - Looking for jobs to run
+2024-02-14 11:34:47,330 - DEBUG - Next wakeup is due at 2024-02-14 11:44:47.320978+05:30 (in 599.990519 seconds)
+2024-02-14 11:35:02,207 - DEBUG - /etc/localtime found
+2024-02-14 11:35:02,209 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:02,209 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:02,210 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:02,211 - INFO - Scheduler started
+2024-02-14 11:35:02,211 - INFO - Scheduler started!
+2024-02-14 11:35:02,229 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:02,229 - DEBUG - Next wakeup is due at 2024-02-14 11:45:02.209707+05:30 (in 599.980025 seconds)
+2024-02-14 11:35:05,144 - DEBUG - /etc/localtime found
+2024-02-14 11:35:05,145 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:05,147 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:05,148 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:05,148 - INFO - Scheduler started
+2024-02-14 11:35:05,148 - INFO - Scheduler started!
+2024-02-14 11:35:05,171 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:05,171 - DEBUG - Next wakeup is due at 2024-02-14 11:45:05.146776+05:30 (in 599.975149 seconds)
+2024-02-14 11:35:17,049 - DEBUG - /etc/localtime found
+2024-02-14 11:35:17,050 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:17,051 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:17,051 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:17,051 - INFO - Scheduler started
+2024-02-14 11:35:17,051 - INFO - Scheduler started!
+2024-02-14 11:35:17,060 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:17,060 - DEBUG - Next wakeup is due at 2024-02-14 11:45:17.050944+05:30 (in 599.990119 seconds)
+2024-02-14 11:35:25,122 - DEBUG - /etc/localtime found
+2024-02-14 11:35:25,123 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:25,124 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:25,124 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:25,124 - INFO - Scheduler started
+2024-02-14 11:35:25,124 - INFO - Scheduler started!
+2024-02-14 11:35:25,133 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:25,134 - DEBUG - Next wakeup is due at 2024-02-14 11:45:25.123893+05:30 (in 599.989888 seconds)
+2024-02-14 11:35:30,615 - DEBUG - /etc/localtime found
+2024-02-14 11:35:30,616 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:30,617 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:30,618 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:30,618 - INFO - Scheduler started
+2024-02-14 11:35:30,618 - INFO - Scheduler started!
+2024-02-14 11:35:30,633 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:30,634 - DEBUG - Next wakeup is due at 2024-02-14 11:45:30.617054+05:30 (in 599.982989 seconds)
+2024-02-14 11:35:35,985 - DEBUG - /etc/localtime found
+2024-02-14 11:35:35,986 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:35,986 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:35,987 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:35,987 - INFO - Scheduler started
+2024-02-14 11:35:35,987 - INFO - Scheduler started!
+2024-02-14 11:35:35,995 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:35,996 - DEBUG - Next wakeup is due at 2024-02-14 11:45:35.986830+05:30 (in 599.990835 seconds)
+2024-02-14 11:35:38,877 - DEBUG - /etc/localtime found
+2024-02-14 11:35:38,878 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:38,878 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:38,879 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:38,879 - INFO - Scheduler started
+2024-02-14 11:35:38,879 - INFO - Scheduler started!
+2024-02-14 11:35:38,889 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:38,889 - DEBUG - Next wakeup is due at 2024-02-14 11:45:38.878525+05:30 (in 599.989190 seconds)
+2024-02-14 11:35:42,030 - DEBUG - /etc/localtime found
+2024-02-14 11:35:42,031 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:42,031 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:42,032 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:42,032 - INFO - Scheduler started
+2024-02-14 11:35:42,032 - INFO - Scheduler started!
+2024-02-14 11:35:42,040 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:42,040 - DEBUG - Next wakeup is due at 2024-02-14 11:45:42.031460+05:30 (in 599.990627 seconds)
+2024-02-14 11:35:47,059 - DEBUG - /etc/localtime found
+2024-02-14 11:35:47,060 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:47,061 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:47,061 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:47,061 - INFO - Scheduler started
+2024-02-14 11:35:47,061 - INFO - Scheduler started!
+2024-02-14 11:35:47,070 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:47,070 - DEBUG - Next wakeup is due at 2024-02-14 11:45:47.061091+05:30 (in 599.990806 seconds)
+2024-02-14 11:35:53,504 - DEBUG - /etc/localtime found
+2024-02-14 11:35:53,504 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:53,505 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:53,505 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:53,506 - INFO - Scheduler started
+2024-02-14 11:35:53,506 - INFO - Scheduler started!
+2024-02-14 11:35:53,514 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:53,515 - DEBUG - Next wakeup is due at 2024-02-14 11:45:53.505298+05:30 (in 599.990183 seconds)
+2024-02-14 11:35:56,643 - DEBUG - /etc/localtime found
+2024-02-14 11:35:56,644 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:35:56,645 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:35:56,645 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:35:56,645 - INFO - Scheduler started
+2024-02-14 11:35:56,645 - INFO - Scheduler started!
+2024-02-14 11:35:56,654 - DEBUG - Looking for jobs to run
+2024-02-14 11:35:56,654 - DEBUG - Next wakeup is due at 2024-02-14 11:45:56.644905+05:30 (in 599.990187 seconds)
+2024-02-14 11:36:14,008 - DEBUG - /etc/localtime found
+2024-02-14 11:36:14,009 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:36:14,009 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:36:14,010 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:36:14,010 - INFO - Scheduler started
+2024-02-14 11:36:14,010 - INFO - Scheduler started!
+2024-02-14 11:36:14,020 - DEBUG - Looking for jobs to run
+2024-02-14 11:36:14,020 - DEBUG - Next wakeup is due at 2024-02-14 11:46:14.009557+05:30 (in 599.989135 seconds)
+2024-02-14 11:36:29,085 - DEBUG - /etc/localtime found
+2024-02-14 11:36:29,086 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:36:29,087 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:36:29,087 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:36:29,087 - INFO - Scheduler started
+2024-02-14 11:36:29,087 - INFO - Scheduler started!
+2024-02-14 11:36:29,097 - DEBUG - Looking for jobs to run
+2024-02-14 11:36:29,097 - DEBUG - Next wakeup is due at 2024-02-14 11:46:29.087068+05:30 (in 599.989755 seconds)
+2024-02-14 11:36:38,193 - DEBUG - /etc/localtime found
+2024-02-14 11:36:38,194 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:36:38,194 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:36:38,195 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:36:38,195 - INFO - Scheduler started
+2024-02-14 11:36:38,195 - INFO - Scheduler started!
+2024-02-14 11:36:38,204 - DEBUG - Looking for jobs to run
+2024-02-14 11:36:38,204 - DEBUG - Next wakeup is due at 2024-02-14 11:46:38.194743+05:30 (in 599.990376 seconds)
+2024-02-14 11:36:39,524 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:36:50,532 - DEBUG - /etc/localtime found
+2024-02-14 11:36:50,532 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:36:50,533 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:36:50,534 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:36:50,534 - INFO - Scheduler started
+2024-02-14 11:36:50,534 - INFO - Scheduler started!
+2024-02-14 11:36:50,543 - DEBUG - Looking for jobs to run
+2024-02-14 11:36:50,543 - DEBUG - Next wakeup is due at 2024-02-14 11:46:50.533352+05:30 (in 599.989893 seconds)
+2024-02-14 11:36:50,945 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:37:18,111 - DEBUG - /etc/localtime found
+2024-02-14 11:37:18,113 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:37:18,113 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:37:18,114 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:37:18,114 - INFO - Scheduler started
+2024-02-14 11:37:18,114 - INFO - Scheduler started!
+2024-02-14 11:37:18,124 - DEBUG - Looking for jobs to run
+2024-02-14 11:37:18,124 - DEBUG - Next wakeup is due at 2024-02-14 11:47:18.113580+05:30 (in 599.988653 seconds)
+2024-02-14 11:37:19,910 - DEBUG - /etc/localtime found
+2024-02-14 11:37:19,912 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:37:19,913 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:37:19,914 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:37:19,915 - INFO - Scheduler started
+2024-02-14 11:37:19,915 - INFO - Scheduler started!
+2024-02-14 11:37:19,930 - DEBUG - Looking for jobs to run
+2024-02-14 11:37:19,930 - DEBUG - Next wakeup is due at 2024-02-14 11:47:19.913469+05:30 (in 599.983049 seconds)
+2024-02-14 11:37:27,061 - DEBUG - /etc/localtime found
+2024-02-14 11:37:27,062 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:37:27,063 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:37:27,063 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:37:27,064 - INFO - Scheduler started
+2024-02-14 11:37:27,064 - INFO - Scheduler started!
+2024-02-14 11:37:27,072 - DEBUG - Looking for jobs to run
+2024-02-14 11:37:27,073 - DEBUG - Next wakeup is due at 2024-02-14 11:47:27.063214+05:30 (in 599.990227 seconds)
+2024-02-14 11:37:30,185 - DEBUG - /etc/localtime found
+2024-02-14 11:37:30,186 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:37:30,186 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:37:30,187 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:37:30,187 - INFO - Scheduler started
+2024-02-14 11:37:30,187 - INFO - Scheduler started!
+2024-02-14 11:37:30,195 - DEBUG - Looking for jobs to run
+2024-02-14 11:37:30,195 - DEBUG - Next wakeup is due at 2024-02-14 11:47:30.186695+05:30 (in 599.990979 seconds)
+2024-02-14 11:39:55,183 - DEBUG - /etc/localtime found
+2024-02-14 11:39:55,184 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:39:55,184 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:39:55,185 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:39:55,185 - INFO - Scheduler started
+2024-02-14 11:39:55,185 - INFO - Scheduler started!
+2024-02-14 11:39:55,194 - DEBUG - Looking for jobs to run
+2024-02-14 11:39:55,194 - DEBUG - Next wakeup is due at 2024-02-14 11:49:55.184504+05:30 (in 599.990247 seconds)
+2024-02-14 11:40:02,561 - DEBUG - /etc/localtime found
+2024-02-14 11:40:02,562 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:02,563 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:02,563 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:02,563 - INFO - Scheduler started
+2024-02-14 11:40:02,564 - INFO - Scheduler started!
+2024-02-14 11:40:02,573 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:02,574 - DEBUG - Next wakeup is due at 2024-02-14 11:50:02.562949+05:30 (in 599.988824 seconds)
+2024-02-14 11:40:04,395 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:40:04,605 - DEBUG - GET - http://0.0.0.0:8000/favicon.ico / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:40:39,954 - DEBUG - /etc/localtime found
+2024-02-14 11:40:39,955 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:39,956 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:39,956 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:39,956 - INFO - Scheduler started
+2024-02-14 11:40:39,956 - INFO - Scheduler started!
+2024-02-14 11:40:39,966 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:39,966 - DEBUG - Next wakeup is due at 2024-02-14 11:50:39.955921+05:30 (in 599.989246 seconds)
+2024-02-14 11:40:41,681 - DEBUG - /etc/localtime found
+2024-02-14 11:40:41,682 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:41,682 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:41,683 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:41,683 - INFO - Scheduler started
+2024-02-14 11:40:41,683 - INFO - Scheduler started!
+2024-02-14 11:40:41,693 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:41,693 - DEBUG - Next wakeup is due at 2024-02-14 11:50:41.682812+05:30 (in 599.989479 seconds)
+2024-02-14 11:40:51,880 - DEBUG - /etc/localtime found
+2024-02-14 11:40:51,881 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:51,882 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:51,883 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:51,883 - INFO - Scheduler started
+2024-02-14 11:40:51,883 - INFO - Scheduler started!
+2024-02-14 11:40:51,899 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:51,899 - DEBUG - Next wakeup is due at 2024-02-14 11:50:51.882213+05:30 (in 599.982695 seconds)
+2024-02-14 11:40:54,149 - DEBUG - /etc/localtime found
+2024-02-14 11:40:54,150 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:54,151 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:54,152 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:54,152 - INFO - Scheduler started
+2024-02-14 11:40:54,152 - INFO - Scheduler started!
+2024-02-14 11:40:54,166 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:54,166 - DEBUG - Next wakeup is due at 2024-02-14 11:50:54.151446+05:30 (in 599.985119 seconds)
+2024-02-14 11:40:59,017 - DEBUG - /etc/localtime found
+2024-02-14 11:40:59,018 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:40:59,019 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:40:59,020 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:40:59,020 - INFO - Scheduler started
+2024-02-14 11:40:59,020 - INFO - Scheduler started!
+2024-02-14 11:40:59,030 - DEBUG - Looking for jobs to run
+2024-02-14 11:40:59,030 - DEBUG - Next wakeup is due at 2024-02-14 11:50:59.019313+05:30 (in 599.988846 seconds)
+2024-02-14 11:41:22,726 - DEBUG - /etc/localtime found
+2024-02-14 11:41:22,727 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:41:22,728 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:41:22,728 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:41:22,729 - INFO - Scheduler started
+2024-02-14 11:41:22,729 - INFO - Scheduler started!
+2024-02-14 11:41:22,743 - DEBUG - Looking for jobs to run
+2024-02-14 11:41:22,743 - DEBUG - Next wakeup is due at 2024-02-14 11:51:22.728001+05:30 (in 599.984102 seconds)
+2024-02-14 11:41:26,674 - DEBUG - /etc/localtime found
+2024-02-14 11:41:26,675 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:41:26,675 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:41:26,676 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:41:26,676 - INFO - Scheduler started
+2024-02-14 11:41:26,676 - INFO - Scheduler started!
+2024-02-14 11:41:26,686 - DEBUG - Looking for jobs to run
+2024-02-14 11:41:26,687 - DEBUG - Next wakeup is due at 2024-02-14 11:51:26.675747+05:30 (in 599.988656 seconds)
+2024-02-14 11:41:27,496 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:41:28,094 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:41:55,905 - DEBUG - /etc/localtime found
+2024-02-14 11:41:55,906 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:41:55,907 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:41:55,907 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:41:55,907 - INFO - Scheduler started
+2024-02-14 11:41:55,907 - INFO - Scheduler started!
+2024-02-14 11:41:55,918 - DEBUG - Looking for jobs to run
+2024-02-14 11:41:55,918 - DEBUG - Next wakeup is due at 2024-02-14 11:51:55.906891+05:30 (in 599.988704 seconds)
+2024-02-14 11:42:00,390 - DEBUG - GET - http://0.0.0.0:8000/auth/generateApiKey() / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:42:07,058 - DEBUG - GET - http://0.0.0.0:8000/auth/generateapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:42:20,389 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:42:25,597 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:42:26,179 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:42:43,734 - DEBUG - /etc/localtime found
+2024-02-14 11:42:43,735 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:42:43,735 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:42:43,736 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:42:43,736 - INFO - Scheduler started
+2024-02-14 11:42:43,736 - INFO - Scheduler started!
+2024-02-14 11:42:43,745 - DEBUG - Looking for jobs to run
+2024-02-14 11:42:43,746 - DEBUG - Next wakeup is due at 2024-02-14 11:52:43.735674+05:30 (in 599.989550 seconds)
+2024-02-14 11:42:46,895 - DEBUG - /etc/localtime found
+2024-02-14 11:42:46,895 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:42:46,896 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:42:46,896 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:42:46,896 - INFO - Scheduler started
+2024-02-14 11:42:46,897 - INFO - Scheduler started!
+2024-02-14 11:42:46,905 - DEBUG - Looking for jobs to run
+2024-02-14 11:42:46,906 - DEBUG - Next wakeup is due at 2024-02-14 11:52:46.896247+05:30 (in 599.990094 seconds)
+2024-02-14 11:42:49,017 - DEBUG - /etc/localtime found
+2024-02-14 11:42:49,018 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:42:49,018 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:42:49,019 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:42:49,019 - INFO - Scheduler started
+2024-02-14 11:42:49,019 - INFO - Scheduler started!
+2024-02-14 11:42:49,028 - DEBUG - Looking for jobs to run
+2024-02-14 11:42:49,028 - DEBUG - Next wakeup is due at 2024-02-14 11:52:49.018776+05:30 (in 599.990524 seconds)
+2024-02-14 11:42:53,540 - DEBUG - /etc/localtime found
+2024-02-14 11:42:53,541 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:42:53,542 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:42:53,542 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:42:53,542 - INFO - Scheduler started
+2024-02-14 11:42:53,543 - INFO - Scheduler started!
+2024-02-14 11:42:53,555 - DEBUG - Looking for jobs to run
+2024-02-14 11:42:53,555 - DEBUG - Next wakeup is due at 2024-02-14 11:52:53.541966+05:30 (in 599.986534 seconds)
+2024-02-14 11:42:57,417 - DEBUG - /etc/localtime found
+2024-02-14 11:42:57,418 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:42:57,419 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:42:57,420 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:42:57,420 - INFO - Scheduler started
+2024-02-14 11:42:57,420 - INFO - Scheduler started!
+2024-02-14 11:42:57,432 - DEBUG - Looking for jobs to run
+2024-02-14 11:42:57,433 - DEBUG - Next wakeup is due at 2024-02-14 11:52:57.419551+05:30 (in 599.986523 seconds)
+2024-02-14 11:43:00,420 - DEBUG - /etc/localtime found
+2024-02-14 11:43:00,421 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:00,421 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:00,422 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:00,422 - INFO - Scheduler started
+2024-02-14 11:43:00,422 - INFO - Scheduler started!
+2024-02-14 11:43:00,431 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:00,432 - DEBUG - Next wakeup is due at 2024-02-14 11:53:00.421689+05:30 (in 599.989626 seconds)
+2024-02-14 11:43:05,838 - DEBUG - /etc/localtime found
+2024-02-14 11:43:05,838 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:05,839 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:05,839 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:05,840 - INFO - Scheduler started
+2024-02-14 11:43:05,840 - INFO - Scheduler started!
+2024-02-14 11:43:05,848 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:05,849 - DEBUG - Next wakeup is due at 2024-02-14 11:53:05.839283+05:30 (in 599.990159 seconds)
+2024-02-14 11:43:18,561 - DEBUG - /etc/localtime found
+2024-02-14 11:43:18,562 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:18,562 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:18,563 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:18,563 - INFO - Scheduler started
+2024-02-14 11:43:18,563 - INFO - Scheduler started!
+2024-02-14 11:43:18,575 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:18,575 - DEBUG - Next wakeup is due at 2024-02-14 11:53:18.562726+05:30 (in 599.987277 seconds)
+2024-02-14 11:43:26,274 - DEBUG - /etc/localtime found
+2024-02-14 11:43:26,275 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:26,276 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:26,277 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:26,277 - INFO - Scheduler started
+2024-02-14 11:43:26,277 - INFO - Scheduler started!
+2024-02-14 11:43:26,288 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:26,289 - DEBUG - Next wakeup is due at 2024-02-14 11:53:26.276338+05:30 (in 599.987335 seconds)
+2024-02-14 11:43:31,222 - DEBUG - /etc/localtime found
+2024-02-14 11:43:31,223 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:31,224 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:31,224 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:31,224 - INFO - Scheduler started
+2024-02-14 11:43:31,225 - INFO - Scheduler started!
+2024-02-14 11:43:31,239 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:31,239 - DEBUG - Next wakeup is due at 2024-02-14 11:53:31.223904+05:30 (in 599.984514 seconds)
+2024-02-14 11:43:35,216 - DEBUG - /etc/localtime found
+2024-02-14 11:43:35,217 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:35,218 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:35,218 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:35,218 - INFO - Scheduler started
+2024-02-14 11:43:35,219 - INFO - Scheduler started!
+2024-02-14 11:43:35,227 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:35,227 - DEBUG - Next wakeup is due at 2024-02-14 11:53:35.218134+05:30 (in 599.990286 seconds)
+2024-02-14 11:43:37,233 - DEBUG - /etc/localtime found
+2024-02-14 11:43:37,234 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:37,234 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:37,235 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:37,235 - INFO - Scheduler started
+2024-02-14 11:43:37,235 - INFO - Scheduler started!
+2024-02-14 11:43:37,244 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:37,244 - DEBUG - Next wakeup is due at 2024-02-14 11:53:37.234840+05:30 (in 599.990111 seconds)
+2024-02-14 11:43:42,490 - DEBUG - /etc/localtime found
+2024-02-14 11:43:42,491 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:42,492 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:42,492 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:42,492 - INFO - Scheduler started
+2024-02-14 11:43:42,492 - INFO - Scheduler started!
+2024-02-14 11:43:42,501 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:42,501 - DEBUG - Next wakeup is due at 2024-02-14 11:53:42.491890+05:30 (in 599.990219 seconds)
+2024-02-14 11:43:44,594 - DEBUG - /etc/localtime found
+2024-02-14 11:43:44,595 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:44,595 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:44,596 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:44,596 - INFO - Scheduler started
+2024-02-14 11:43:44,596 - INFO - Scheduler started!
+2024-02-14 11:43:44,606 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:44,606 - DEBUG - Next wakeup is due at 2024-02-14 11:53:44.595739+05:30 (in 599.989350 seconds)
+2024-02-14 11:43:54,777 - DEBUG - /etc/localtime found
+2024-02-14 11:43:54,778 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:54,779 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:54,780 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:54,780 - INFO - Scheduler started
+2024-02-14 11:43:54,780 - INFO - Scheduler started!
+2024-02-14 11:43:54,793 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:54,793 - DEBUG - Next wakeup is due at 2024-02-14 11:53:54.779037+05:30 (in 599.985564 seconds)
+2024-02-14 11:43:57,939 - DEBUG - /etc/localtime found
+2024-02-14 11:43:57,940 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:43:57,940 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:43:57,941 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:43:57,941 - INFO - Scheduler started
+2024-02-14 11:43:57,941 - INFO - Scheduler started!
+2024-02-14 11:43:57,950 - DEBUG - Looking for jobs to run
+2024-02-14 11:43:57,950 - DEBUG - Next wakeup is due at 2024-02-14 11:53:57.940832+05:30 (in 599.990273 seconds)
+2024-02-14 11:44:01,873 - DEBUG - /etc/localtime found
+2024-02-14 11:44:01,874 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:44:01,874 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:44:01,875 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:44:01,875 - INFO - Scheduler started
+2024-02-14 11:44:01,875 - INFO - Scheduler started!
+2024-02-14 11:44:01,884 - DEBUG - Looking for jobs to run
+2024-02-14 11:44:01,885 - DEBUG - Next wakeup is due at 2024-02-14 11:54:01.874458+05:30 (in 599.989304 seconds)
+2024-02-14 11:44:05,077 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:05,701 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:07,712 - DEBUG - GET - http://0.0.0.0:8000/auth/generateapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:12,459 - DEBUG - GET - http://0.0.0.0:8000/auth/generateapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:29,109 - DEBUG - /etc/localtime found
+2024-02-14 11:44:29,110 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:44:29,110 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:44:29,111 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:44:29,111 - INFO - Scheduler started
+2024-02-14 11:44:29,111 - INFO - Scheduler started!
+2024-02-14 11:44:29,121 - DEBUG - Looking for jobs to run
+2024-02-14 11:44:29,121 - DEBUG - Next wakeup is due at 2024-02-14 11:54:29.110702+05:30 (in 599.989326 seconds)
+2024-02-14 11:44:30,385 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:31,018 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:44:32,551 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:15,500 - DEBUG - /etc/localtime found
+2024-02-14 11:45:15,501 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:45:15,502 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:45:15,503 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:45:15,503 - INFO - Scheduler started
+2024-02-14 11:45:15,504 - INFO - Scheduler started!
+2024-02-14 11:45:15,522 - DEBUG - Looking for jobs to run
+2024-02-14 11:45:15,522 - DEBUG - Next wakeup is due at 2024-02-14 11:55:15.502367+05:30 (in 599.979618 seconds)
+2024-02-14 11:45:17,484 - DEBUG - /etc/localtime found
+2024-02-14 11:45:17,486 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:45:17,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:45:17,491 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:45:17,491 - INFO - Scheduler started
+2024-02-14 11:45:17,492 - INFO - Scheduler started!
+2024-02-14 11:45:17,516 - DEBUG - Looking for jobs to run
+2024-02-14 11:45:17,516 - DEBUG - Next wakeup is due at 2024-02-14 11:55:17.488501+05:30 (in 599.971860 seconds)
+2024-02-14 11:45:19,575 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:21,268 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:21,931 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:23,782 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:38,526 - DEBUG - /etc/localtime found
+2024-02-14 11:45:38,527 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:45:38,528 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:45:38,529 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:45:38,529 - INFO - Scheduler started
+2024-02-14 11:45:38,529 - INFO - Scheduler started!
+2024-02-14 11:45:38,545 - DEBUG - Looking for jobs to run
+2024-02-14 11:45:38,545 - DEBUG - Next wakeup is due at 2024-02-14 11:55:38.528066+05:30 (in 599.982645 seconds)
+2024-02-14 11:45:40,702 - DEBUG - /etc/localtime found
+2024-02-14 11:45:40,703 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:45:40,704 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:45:40,705 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:45:40,705 - INFO - Scheduler started
+2024-02-14 11:45:40,705 - INFO - Scheduler started!
+2024-02-14 11:45:40,717 - DEBUG - Looking for jobs to run
+2024-02-14 11:45:40,717 - DEBUG - Next wakeup is due at 2024-02-14 11:55:40.704515+05:30 (in 599.987137 seconds)
+2024-02-14 11:45:41,147 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:41,801 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:45:43,838 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:46:05,250 - DEBUG - /etc/localtime found
+2024-02-14 11:46:05,251 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:05,252 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:05,252 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:05,252 - INFO - Scheduler started
+2024-02-14 11:46:05,253 - INFO - Scheduler started!
+2024-02-14 11:46:05,268 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:05,269 - DEBUG - Next wakeup is due at 2024-02-14 11:56:05.251999+05:30 (in 599.983015 seconds)
+2024-02-14 11:46:08,893 - DEBUG - /etc/localtime found
+2024-02-14 11:46:08,894 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:08,895 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:08,895 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:08,895 - INFO - Scheduler started
+2024-02-14 11:46:08,896 - INFO - Scheduler started!
+2024-02-14 11:46:08,908 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:08,908 - DEBUG - Next wakeup is due at 2024-02-14 11:56:08.894978+05:30 (in 599.986088 seconds)
+2024-02-14 11:46:10,608 - DEBUG - /etc/localtime found
+2024-02-14 11:46:10,609 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:10,609 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:10,610 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:10,610 - INFO - Scheduler started
+2024-02-14 11:46:10,610 - INFO - Scheduler started!
+2024-02-14 11:46:10,618 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:10,618 - DEBUG - Next wakeup is due at 2024-02-14 11:56:10.609478+05:30 (in 599.990554 seconds)
+2024-02-14 11:46:13,360 - DEBUG - /etc/localtime found
+2024-02-14 11:46:13,361 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:13,362 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:13,363 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:13,363 - INFO - Scheduler started
+2024-02-14 11:46:13,363 - INFO - Scheduler started!
+2024-02-14 11:46:13,375 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:13,375 - DEBUG - Next wakeup is due at 2024-02-14 11:56:13.362446+05:30 (in 599.986494 seconds)
+2024-02-14 11:46:17,102 - DEBUG - /etc/localtime found
+2024-02-14 11:46:17,103 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:17,104 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:17,104 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:17,104 - INFO - Scheduler started
+2024-02-14 11:46:17,104 - INFO - Scheduler started!
+2024-02-14 11:46:17,118 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:17,118 - DEBUG - Next wakeup is due at 2024-02-14 11:56:17.104044+05:30 (in 599.985542 seconds)
+2024-02-14 11:46:27,475 - DEBUG - /etc/localtime found
+2024-02-14 11:46:27,476 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:27,477 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:27,477 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:27,477 - INFO - Scheduler started
+2024-02-14 11:46:27,477 - INFO - Scheduler started!
+2024-02-14 11:46:27,488 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:27,488 - DEBUG - Next wakeup is due at 2024-02-14 11:56:27.476915+05:30 (in 599.988060 seconds)
+2024-02-14 11:46:30,606 - DEBUG - /etc/localtime found
+2024-02-14 11:46:30,606 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:30,607 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:30,607 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:30,607 - INFO - Scheduler started
+2024-02-14 11:46:30,608 - INFO - Scheduler started!
+2024-02-14 11:46:30,617 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:30,617 - DEBUG - Next wakeup is due at 2024-02-14 11:56:30.607252+05:30 (in 599.989368 seconds)
+2024-02-14 11:46:33,413 - DEBUG - /etc/localtime found
+2024-02-14 11:46:33,414 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:33,415 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:33,415 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:33,416 - INFO - Scheduler started
+2024-02-14 11:46:33,416 - INFO - Scheduler started!
+2024-02-14 11:46:33,424 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:33,425 - DEBUG - Next wakeup is due at 2024-02-14 11:56:33.415338+05:30 (in 599.990323 seconds)
+2024-02-14 11:46:37,926 - DEBUG - /etc/localtime found
+2024-02-14 11:46:37,927 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:37,927 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:37,928 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:37,928 - INFO - Scheduler started
+2024-02-14 11:46:37,928 - INFO - Scheduler started!
+2024-02-14 11:46:37,937 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:37,937 - DEBUG - Next wakeup is due at 2024-02-14 11:56:37.927545+05:30 (in 599.989791 seconds)
+2024-02-14 11:46:41,831 - DEBUG - /etc/localtime found
+2024-02-14 11:46:41,832 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:41,832 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:41,833 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:41,833 - INFO - Scheduler started
+2024-02-14 11:46:41,833 - INFO - Scheduler started!
+2024-02-14 11:46:41,842 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:41,843 - DEBUG - Next wakeup is due at 2024-02-14 11:56:41.832503+05:30 (in 599.989333 seconds)
+2024-02-14 11:46:44,185 - DEBUG - /etc/localtime found
+2024-02-14 11:46:44,186 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:44,186 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:44,187 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:44,187 - INFO - Scheduler started
+2024-02-14 11:46:44,187 - INFO - Scheduler started!
+2024-02-14 11:46:44,199 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:44,199 - DEBUG - Next wakeup is due at 2024-02-14 11:56:44.186759+05:30 (in 599.987375 seconds)
+2024-02-14 11:46:46,113 - DEBUG - /etc/localtime found
+2024-02-14 11:46:46,113 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:46,114 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:46,115 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:46,115 - INFO - Scheduler started
+2024-02-14 11:46:46,115 - INFO - Scheduler started!
+2024-02-14 11:46:46,124 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:46,124 - DEBUG - Next wakeup is due at 2024-02-14 11:56:46.114389+05:30 (in 599.990125 seconds)
+2024-02-14 11:46:51,301 - DEBUG - /etc/localtime found
+2024-02-14 11:46:51,302 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:51,303 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:51,303 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:51,303 - INFO - Scheduler started
+2024-02-14 11:46:51,304 - INFO - Scheduler started!
+2024-02-14 11:46:51,312 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:51,313 - DEBUG - Next wakeup is due at 2024-02-14 11:56:51.303139+05:30 (in 599.989997 seconds)
+2024-02-14 11:46:53,184 - DEBUG - /etc/localtime found
+2024-02-14 11:46:53,185 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:53,185 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:53,186 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:53,186 - INFO - Scheduler started
+2024-02-14 11:46:53,186 - INFO - Scheduler started!
+2024-02-14 11:46:53,198 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:53,198 - DEBUG - Next wakeup is due at 2024-02-14 11:56:53.185596+05:30 (in 599.987169 seconds)
+2024-02-14 11:46:54,969 - DEBUG - /etc/localtime found
+2024-02-14 11:46:54,970 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:54,971 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:54,971 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:54,971 - INFO - Scheduler started
+2024-02-14 11:46:54,971 - INFO - Scheduler started!
+2024-02-14 11:46:54,980 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:54,980 - DEBUG - Next wakeup is due at 2024-02-14 11:56:54.970888+05:30 (in 599.989965 seconds)
+2024-02-14 11:46:57,120 - DEBUG - /etc/localtime found
+2024-02-14 11:46:57,121 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:46:57,122 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:46:57,122 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:46:57,122 - INFO - Scheduler started
+2024-02-14 11:46:57,123 - INFO - Scheduler started!
+2024-02-14 11:46:57,132 - DEBUG - Looking for jobs to run
+2024-02-14 11:46:57,132 - DEBUG - Next wakeup is due at 2024-02-14 11:56:57.122197+05:30 (in 599.989686 seconds)
+2024-02-14 11:47:00,611 - DEBUG - /etc/localtime found
+2024-02-14 11:47:00,612 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:00,612 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:00,613 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:00,613 - INFO - Scheduler started
+2024-02-14 11:47:00,613 - INFO - Scheduler started!
+2024-02-14 11:47:00,625 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:00,625 - DEBUG - Next wakeup is due at 2024-02-14 11:57:00.612607+05:30 (in 599.987191 seconds)
+2024-02-14 11:47:05,179 - DEBUG - /etc/localtime found
+2024-02-14 11:47:05,180 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:05,180 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:05,181 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:05,181 - INFO - Scheduler started
+2024-02-14 11:47:05,181 - INFO - Scheduler started!
+2024-02-14 11:47:05,190 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:05,190 - DEBUG - Next wakeup is due at 2024-02-14 11:57:05.180458+05:30 (in 599.989942 seconds)
+2024-02-14 11:47:07,043 - DEBUG - /etc/localtime found
+2024-02-14 11:47:07,043 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:07,044 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:07,045 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:07,045 - INFO - Scheduler started
+2024-02-14 11:47:07,045 - INFO - Scheduler started!
+2024-02-14 11:47:07,055 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:07,055 - DEBUG - Next wakeup is due at 2024-02-14 11:57:07.044379+05:30 (in 599.988571 seconds)
+2024-02-14 11:47:10,993 - DEBUG - /etc/localtime found
+2024-02-14 11:47:10,994 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:10,995 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:10,995 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:10,996 - INFO - Scheduler started
+2024-02-14 11:47:10,996 - INFO - Scheduler started!
+2024-02-14 11:47:11,010 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:11,010 - DEBUG - Next wakeup is due at 2024-02-14 11:57:10.995085+05:30 (in 599.984742 seconds)
+2024-02-14 11:47:13,317 - DEBUG - /etc/localtime found
+2024-02-14 11:47:13,318 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:13,319 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:13,320 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:13,320 - INFO - Scheduler started
+2024-02-14 11:47:13,320 - INFO - Scheduler started!
+2024-02-14 11:47:13,329 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:13,329 - DEBUG - Next wakeup is due at 2024-02-14 11:57:13.319273+05:30 (in 599.989566 seconds)
+2024-02-14 11:47:15,487 - DEBUG - /etc/localtime found
+2024-02-14 11:47:15,487 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:15,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:15,488 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:15,489 - INFO - Scheduler started
+2024-02-14 11:47:15,489 - INFO - Scheduler started!
+2024-02-14 11:47:15,497 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:15,497 - DEBUG - Next wakeup is due at 2024-02-14 11:57:15.488315+05:30 (in 599.990664 seconds)
+2024-02-14 11:47:18,753 - DEBUG - /etc/localtime found
+2024-02-14 11:47:18,753 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:18,754 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:18,754 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:18,754 - INFO - Scheduler started
+2024-02-14 11:47:18,755 - INFO - Scheduler started!
+2024-02-14 11:47:18,766 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:18,766 - DEBUG - Next wakeup is due at 2024-02-14 11:57:18.754203+05:30 (in 599.987602 seconds)
+2024-02-14 11:47:29,071 - DEBUG - /etc/localtime found
+2024-02-14 11:47:29,072 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:29,072 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:29,073 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:29,073 - INFO - Scheduler started
+2024-02-14 11:47:29,073 - INFO - Scheduler started!
+2024-02-14 11:47:29,084 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:29,084 - DEBUG - Next wakeup is due at 2024-02-14 11:57:29.072544+05:30 (in 599.987696 seconds)
+2024-02-14 11:47:31,307 - DEBUG - /etc/localtime found
+2024-02-14 11:47:31,308 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:31,309 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:31,309 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:31,309 - INFO - Scheduler started
+2024-02-14 11:47:31,310 - INFO - Scheduler started!
+2024-02-14 11:47:31,319 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:31,319 - DEBUG - Next wakeup is due at 2024-02-14 11:57:31.309001+05:30 (in 599.989396 seconds)
+2024-02-14 11:47:33,989 - DEBUG - /etc/localtime found
+2024-02-14 11:47:33,990 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:33,990 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:33,991 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:33,991 - INFO - Scheduler started
+2024-02-14 11:47:33,991 - INFO - Scheduler started!
+2024-02-14 11:47:34,002 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:34,002 - DEBUG - Next wakeup is due at 2024-02-14 11:57:33.990536+05:30 (in 599.987884 seconds)
+2024-02-14 11:47:36,573 - DEBUG - /etc/localtime found
+2024-02-14 11:47:36,574 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:36,574 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:36,575 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:36,575 - INFO - Scheduler started
+2024-02-14 11:47:36,575 - INFO - Scheduler started!
+2024-02-14 11:47:36,584 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:36,584 - DEBUG - Next wakeup is due at 2024-02-14 11:57:36.574679+05:30 (in 599.990262 seconds)
+2024-02-14 11:47:39,675 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:47:40,327 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:47:41,820 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:47:57,613 - DEBUG - /etc/localtime found
+2024-02-14 11:47:57,614 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:47:57,614 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:47:57,615 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:47:57,615 - INFO - Scheduler started
+2024-02-14 11:47:57,615 - INFO - Scheduler started!
+2024-02-14 11:47:57,624 - DEBUG - Looking for jobs to run
+2024-02-14 11:47:57,624 - DEBUG - Next wakeup is due at 2024-02-14 11:57:57.614825+05:30 (in 599.990420 seconds)
+2024-02-14 11:48:07,843 - DEBUG - /etc/localtime found
+2024-02-14 11:48:07,843 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:07,844 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:07,844 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:07,845 - INFO - Scheduler started
+2024-02-14 11:48:07,845 - INFO - Scheduler started!
+2024-02-14 11:48:07,854 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:07,854 - DEBUG - Next wakeup is due at 2024-02-14 11:58:07.844305+05:30 (in 599.989725 seconds)
+2024-02-14 11:48:20,086 - DEBUG - /etc/localtime found
+2024-02-14 11:48:20,087 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:20,088 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:20,089 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:20,089 - INFO - Scheduler started
+2024-02-14 11:48:20,089 - INFO - Scheduler started!
+2024-02-14 11:48:20,100 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:20,100 - DEBUG - Next wakeup is due at 2024-02-14 11:58:20.088335+05:30 (in 599.988012 seconds)
+2024-02-14 11:48:24,737 - DEBUG - /etc/localtime found
+2024-02-14 11:48:24,738 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:24,738 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:24,739 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:24,739 - INFO - Scheduler started
+2024-02-14 11:48:24,739 - INFO - Scheduler started!
+2024-02-14 11:48:24,749 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:24,749 - DEBUG - Next wakeup is due at 2024-02-14 11:58:24.738549+05:30 (in 599.989037 seconds)
+2024-02-14 11:48:26,873 - DEBUG - /etc/localtime found
+2024-02-14 11:48:26,874 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:26,875 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:26,875 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:26,875 - INFO - Scheduler started
+2024-02-14 11:48:26,875 - INFO - Scheduler started!
+2024-02-14 11:48:26,884 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:26,885 - DEBUG - Next wakeup is due at 2024-02-14 11:58:26.875006+05:30 (in 599.989929 seconds)
+2024-02-14 11:48:29,607 - DEBUG - /etc/localtime found
+2024-02-14 11:48:29,607 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:29,608 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:29,609 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:29,609 - INFO - Scheduler started
+2024-02-14 11:48:29,609 - INFO - Scheduler started!
+2024-02-14 11:48:29,618 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:29,618 - DEBUG - Next wakeup is due at 2024-02-14 11:58:29.608400+05:30 (in 599.990183 seconds)
+2024-02-14 11:48:33,822 - DEBUG - /etc/localtime found
+2024-02-14 11:48:33,823 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:33,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:33,824 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:33,824 - INFO - Scheduler started
+2024-02-14 11:48:33,824 - INFO - Scheduler started!
+2024-02-14 11:48:33,832 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:33,832 - DEBUG - Next wakeup is due at 2024-02-14 11:58:33.823588+05:30 (in 599.990688 seconds)
+2024-02-14 11:48:39,399 - DEBUG - /etc/localtime found
+2024-02-14 11:48:39,400 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:39,401 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:39,402 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:39,402 - INFO - Scheduler started
+2024-02-14 11:48:39,402 - INFO - Scheduler started!
+2024-02-14 11:48:39,412 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:39,412 - DEBUG - Next wakeup is due at 2024-02-14 11:58:39.401107+05:30 (in 599.988708 seconds)
+2024-02-14 11:48:46,513 - DEBUG - /etc/localtime found
+2024-02-14 11:48:46,514 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:46,514 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:46,515 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:46,515 - INFO - Scheduler started
+2024-02-14 11:48:46,515 - INFO - Scheduler started!
+2024-02-14 11:48:46,525 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:46,525 - DEBUG - Next wakeup is due at 2024-02-14 11:58:46.514771+05:30 (in 599.989534 seconds)
+2024-02-14 11:48:52,156 - DEBUG - /etc/localtime found
+2024-02-14 11:48:52,157 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:52,158 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:52,158 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:52,158 - INFO - Scheduler started
+2024-02-14 11:48:52,158 - INFO - Scheduler started!
+2024-02-14 11:48:52,168 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:52,168 - DEBUG - Next wakeup is due at 2024-02-14 11:58:52.157858+05:30 (in 599.989677 seconds)
+2024-02-14 11:48:56,380 - DEBUG - /etc/localtime found
+2024-02-14 11:48:56,381 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:48:56,381 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:48:56,382 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:48:56,382 - INFO - Scheduler started
+2024-02-14 11:48:56,382 - INFO - Scheduler started!
+2024-02-14 11:48:56,394 - DEBUG - Looking for jobs to run
+2024-02-14 11:48:56,394 - DEBUG - Next wakeup is due at 2024-02-14 11:58:56.381567+05:30 (in 599.987280 seconds)
+2024-02-14 11:49:00,533 - DEBUG - /etc/localtime found
+2024-02-14 11:49:00,533 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:49:00,534 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:49:00,535 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:49:00,535 - INFO - Scheduler started
+2024-02-14 11:49:00,535 - INFO - Scheduler started!
+2024-02-14 11:49:00,545 - DEBUG - Looking for jobs to run
+2024-02-14 11:49:00,545 - DEBUG - Next wakeup is due at 2024-02-14 11:59:00.534494+05:30 (in 599.989011 seconds)
+2024-02-14 11:49:01,397 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:49:08,612 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:50:15,565 - DEBUG - /etc/localtime found
+2024-02-14 11:50:15,566 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:50:15,566 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:50:15,567 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:50:15,567 - INFO - Scheduler started
+2024-02-14 11:50:15,567 - INFO - Scheduler started!
+2024-02-14 11:50:15,576 - DEBUG - Looking for jobs to run
+2024-02-14 11:50:15,576 - DEBUG - Next wakeup is due at 2024-02-14 12:00:15.566655+05:30 (in 599.989704 seconds)
+2024-02-14 11:50:18,363 - DEBUG - /etc/localtime found
+2024-02-14 11:50:18,364 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:50:18,365 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:50:18,365 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:50:18,365 - INFO - Scheduler started
+2024-02-14 11:50:18,365 - INFO - Scheduler started!
+2024-02-14 11:50:18,376 - DEBUG - Looking for jobs to run
+2024-02-14 11:50:18,376 - DEBUG - Next wakeup is due at 2024-02-14 12:00:18.364882+05:30 (in 599.988301 seconds)
+2024-02-14 11:50:18,866 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:50:25,778 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:50:57,810 - DEBUG - /etc/localtime found
+2024-02-14 11:50:57,811 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:50:57,812 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:50:57,812 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:50:57,812 - INFO - Scheduler started
+2024-02-14 11:50:57,812 - INFO - Scheduler started!
+2024-02-14 11:50:57,822 - DEBUG - Looking for jobs to run
+2024-02-14 11:50:57,822 - DEBUG - Next wakeup is due at 2024-02-14 12:00:57.812103+05:30 (in 599.989665 seconds)
+2024-02-14 11:50:59,553 - DEBUG - /etc/localtime found
+2024-02-14 11:50:59,553 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:50:59,554 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:50:59,554 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:50:59,555 - INFO - Scheduler started
+2024-02-14 11:50:59,555 - INFO - Scheduler started!
+2024-02-14 11:50:59,563 - DEBUG - Looking for jobs to run
+2024-02-14 11:50:59,563 - DEBUG - Next wakeup is due at 2024-02-14 12:00:59.554307+05:30 (in 599.990333 seconds)
+2024-02-14 11:51:02,351 - DEBUG - /etc/localtime found
+2024-02-14 11:51:02,352 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:02,353 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:02,353 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:02,353 - INFO - Scheduler started
+2024-02-14 11:51:02,353 - INFO - Scheduler started!
+2024-02-14 11:51:02,363 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:02,363 - DEBUG - Next wakeup is due at 2024-02-14 12:01:02.353083+05:30 (in 599.989297 seconds)
+2024-02-14 11:51:07,340 - DEBUG - /etc/localtime found
+2024-02-14 11:51:07,340 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:07,341 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:07,342 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:07,342 - INFO - Scheduler started
+2024-02-14 11:51:07,342 - INFO - Scheduler started!
+2024-02-14 11:51:07,351 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:07,351 - DEBUG - Next wakeup is due at 2024-02-14 12:01:07.341390+05:30 (in 599.989528 seconds)
+2024-02-14 11:51:10,599 - DEBUG - /etc/localtime found
+2024-02-14 11:51:10,600 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:10,600 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:10,601 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:10,601 - INFO - Scheduler started
+2024-02-14 11:51:10,601 - INFO - Scheduler started!
+2024-02-14 11:51:10,612 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:10,612 - DEBUG - Next wakeup is due at 2024-02-14 12:01:10.600730+05:30 (in 599.987980 seconds)
+2024-02-14 11:51:14,802 - DEBUG - /etc/localtime found
+2024-02-14 11:51:14,803 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:14,803 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:14,804 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:14,804 - INFO - Scheduler started
+2024-02-14 11:51:14,804 - INFO - Scheduler started!
+2024-02-14 11:51:14,813 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:14,813 - DEBUG - Next wakeup is due at 2024-02-14 12:01:14.803688+05:30 (in 599.990485 seconds)
+2024-02-14 11:51:19,850 - DEBUG - /etc/localtime found
+2024-02-14 11:51:19,851 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:19,852 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:19,853 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:19,853 - INFO - Scheduler started
+2024-02-14 11:51:19,853 - INFO - Scheduler started!
+2024-02-14 11:51:19,862 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:19,862 - DEBUG - Next wakeup is due at 2024-02-14 12:01:19.852041+05:30 (in 599.989254 seconds)
+2024-02-14 11:51:22,634 - DEBUG - /etc/localtime found
+2024-02-14 11:51:22,635 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:22,635 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:22,636 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:22,636 - INFO - Scheduler started
+2024-02-14 11:51:22,636 - INFO - Scheduler started!
+2024-02-14 11:51:22,645 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:22,645 - DEBUG - Next wakeup is due at 2024-02-14 12:01:22.635739+05:30 (in 599.990582 seconds)
+2024-02-14 11:51:23,114 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:51:23,794 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:51:40,396 - DEBUG - /etc/localtime found
+2024-02-14 11:51:40,397 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:40,398 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:40,398 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:40,398 - INFO - Scheduler started
+2024-02-14 11:51:40,398 - INFO - Scheduler started!
+2024-02-14 11:51:40,407 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:40,407 - DEBUG - Next wakeup is due at 2024-02-14 12:01:40.397961+05:30 (in 599.990261 seconds)
+2024-02-14 11:51:47,213 - DEBUG - /etc/localtime found
+2024-02-14 11:51:47,214 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:51:47,215 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:51:47,215 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:51:47,215 - INFO - Scheduler started
+2024-02-14 11:51:47,215 - INFO - Scheduler started!
+2024-02-14 11:51:47,224 - DEBUG - Looking for jobs to run
+2024-02-14 11:51:47,225 - DEBUG - Next wakeup is due at 2024-02-14 12:01:47.215021+05:30 (in 599.989843 seconds)
+2024-02-14 11:51:47,807 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:51:48,405 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:04,858 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:17,473 - DEBUG - /etc/localtime found
+2024-02-14 11:52:17,474 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:52:17,474 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:52:17,475 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:52:17,475 - INFO - Scheduler started
+2024-02-14 11:52:17,475 - INFO - Scheduler started!
+2024-02-14 11:52:17,486 - DEBUG - Looking for jobs to run
+2024-02-14 11:52:17,487 - DEBUG - Next wakeup is due at 2024-02-14 12:02:17.474742+05:30 (in 599.987746 seconds)
+2024-02-14 11:52:19,538 - DEBUG - /etc/localtime found
+2024-02-14 11:52:19,539 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:52:19,539 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:52:19,540 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:52:19,540 - INFO - Scheduler started
+2024-02-14 11:52:19,540 - INFO - Scheduler started!
+2024-02-14 11:52:19,549 - DEBUG - Looking for jobs to run
+2024-02-14 11:52:19,549 - DEBUG - Next wakeup is due at 2024-02-14 12:02:19.539468+05:30 (in 599.989764 seconds)
+2024-02-14 11:52:28,865 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:29,830 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:41,665 - DEBUG - /etc/localtime found
+2024-02-14 11:52:41,666 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:52:41,666 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:52:41,667 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:52:41,667 - INFO - Scheduler started
+2024-02-14 11:52:41,667 - INFO - Scheduler started!
+2024-02-14 11:52:41,678 - DEBUG - Looking for jobs to run
+2024-02-14 11:52:41,678 - DEBUG - Next wakeup is due at 2024-02-14 12:02:41.666479+05:30 (in 599.987623 seconds)
+2024-02-14 11:52:42,104 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:42,995 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:52:44,882 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:53:21,556 - DEBUG - /etc/localtime found
+2024-02-14 11:53:21,557 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:21,558 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:21,558 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:21,559 - INFO - Scheduler started
+2024-02-14 11:53:21,559 - INFO - Scheduler started!
+2024-02-14 11:53:21,573 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:21,573 - DEBUG - Next wakeup is due at 2024-02-14 12:03:21.557898+05:30 (in 599.984216 seconds)
+2024-02-14 11:53:27,006 - DEBUG - /etc/localtime found
+2024-02-14 11:53:27,007 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:27,007 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:27,008 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:27,008 - INFO - Scheduler started
+2024-02-14 11:53:27,008 - INFO - Scheduler started!
+2024-02-14 11:53:27,017 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:27,018 - DEBUG - Next wakeup is due at 2024-02-14 12:03:27.007720+05:30 (in 599.989731 seconds)
+2024-02-14 11:53:30,559 - DEBUG - /etc/localtime found
+2024-02-14 11:53:30,559 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:30,560 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:30,560 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:30,561 - INFO - Scheduler started
+2024-02-14 11:53:30,561 - INFO - Scheduler started!
+2024-02-14 11:53:30,570 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:30,570 - DEBUG - Next wakeup is due at 2024-02-14 12:03:30.560318+05:30 (in 599.990132 seconds)
+2024-02-14 11:53:35,656 - DEBUG - /etc/localtime found
+2024-02-14 11:53:35,657 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:35,658 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:35,658 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:35,659 - INFO - Scheduler started
+2024-02-14 11:53:35,659 - INFO - Scheduler started!
+2024-02-14 11:53:35,670 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:35,671 - DEBUG - Next wakeup is due at 2024-02-14 12:03:35.657956+05:30 (in 599.986944 seconds)
+2024-02-14 11:53:42,590 - DEBUG - /etc/localtime found
+2024-02-14 11:53:42,591 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:42,592 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:42,593 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:42,593 - INFO - Scheduler started
+2024-02-14 11:53:42,593 - INFO - Scheduler started!
+2024-02-14 11:53:42,604 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:42,605 - DEBUG - Next wakeup is due at 2024-02-14 12:03:42.592634+05:30 (in 599.987490 seconds)
+2024-02-14 11:53:44,926 - DEBUG - /etc/localtime found
+2024-02-14 11:53:44,927 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:53:44,928 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:53:44,929 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:53:44,929 - INFO - Scheduler started
+2024-02-14 11:53:44,929 - INFO - Scheduler started!
+2024-02-14 11:53:44,940 - DEBUG - Looking for jobs to run
+2024-02-14 11:53:44,941 - DEBUG - Next wakeup is due at 2024-02-14 12:03:44.928360+05:30 (in 599.987203 seconds)
+2024-02-14 11:53:45,476 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:53:46,166 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:53:47,668 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:01,958 - DEBUG - /etc/localtime found
+2024-02-14 11:54:01,959 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:54:01,960 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:54:01,960 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:54:01,960 - INFO - Scheduler started
+2024-02-14 11:54:01,960 - INFO - Scheduler started!
+2024-02-14 11:54:01,970 - DEBUG - Looking for jobs to run
+2024-02-14 11:54:01,970 - DEBUG - Next wakeup is due at 2024-02-14 12:04:01.960073+05:30 (in 599.989569 seconds)
+2024-02-14 11:54:03,081 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:03,775 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:05,939 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:17,969 - DEBUG - /etc/localtime found
+2024-02-14 11:54:17,970 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:54:17,971 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:54:17,971 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:54:17,971 - INFO - Scheduler started
+2024-02-14 11:54:17,971 - INFO - Scheduler started!
+2024-02-14 11:54:17,983 - DEBUG - Looking for jobs to run
+2024-02-14 11:54:17,984 - DEBUG - Next wakeup is due at 2024-02-14 12:04:17.970984+05:30 (in 599.986826 seconds)
+2024-02-14 11:54:22,199 - DEBUG - /etc/localtime found
+2024-02-14 11:54:22,199 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:54:22,200 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:54:22,201 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:54:22,201 - INFO - Scheduler started
+2024-02-14 11:54:22,201 - INFO - Scheduler started!
+2024-02-14 11:54:22,211 - DEBUG - Looking for jobs to run
+2024-02-14 11:54:22,211 - DEBUG - Next wakeup is due at 2024-02-14 12:04:22.200501+05:30 (in 599.988960 seconds)
+2024-02-14 11:54:45,047 - DEBUG - /etc/localtime found
+2024-02-14 11:54:45,048 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:54:45,049 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:54:45,049 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:54:45,049 - INFO - Scheduler started
+2024-02-14 11:54:45,050 - INFO - Scheduler started!
+2024-02-14 11:54:45,060 - DEBUG - Looking for jobs to run
+2024-02-14 11:54:45,060 - DEBUG - Next wakeup is due at 2024-02-14 12:04:45.049004+05:30 (in 599.988499 seconds)
+2024-02-14 11:54:48,119 - DEBUG - /etc/localtime found
+2024-02-14 11:54:48,120 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:54:48,121 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:54:48,121 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:54:48,121 - INFO - Scheduler started
+2024-02-14 11:54:48,122 - INFO - Scheduler started!
+2024-02-14 11:54:48,133 - DEBUG - Looking for jobs to run
+2024-02-14 11:54:48,134 - DEBUG - Next wakeup is due at 2024-02-14 12:04:48.121210+05:30 (in 599.987183 seconds)
+2024-02-14 11:54:48,593 - DEBUG - GET - http://0.0.0.0:8000/ / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:49,386 - DEBUG - GET - http://0.0.0.0:8000/auth/listapikeys / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:54:50,912 - DEBUG - GET - http://0.0.0.0:8000/auth/createapikey / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:55:05,742 - DEBUG - /etc/localtime found
+2024-02-14 11:55:05,742 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:55:05,743 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:55:05,744 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:55:05,744 - INFO - Scheduler started
+2024-02-14 11:55:05,744 - INFO - Scheduler started!
+2024-02-14 11:55:05,753 - DEBUG - Looking for jobs to run
+2024-02-14 11:55:05,753 - DEBUG - Next wakeup is due at 2024-02-14 12:05:05.743347+05:30 (in 599.989867 seconds)
+2024-02-14 11:55:42,418 - DEBUG - /etc/localtime found
+2024-02-14 11:55:42,419 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:55:42,420 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:55:42,421 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:55:42,421 - INFO - Scheduler started
+2024-02-14 11:55:42,421 - INFO - Scheduler started!
+2024-02-14 11:55:42,436 - DEBUG - Looking for jobs to run
+2024-02-14 11:55:42,436 - DEBUG - Next wakeup is due at 2024-02-14 12:05:42.420337+05:30 (in 599.983805 seconds)
+2024-02-14 11:55:44,887 - DEBUG - /etc/localtime found
+2024-02-14 11:55:44,888 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:55:44,888 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:55:44,889 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:55:44,889 - INFO - Scheduler started
+2024-02-14 11:55:44,889 - INFO - Scheduler started!
+2024-02-14 11:55:44,900 - DEBUG - Looking for jobs to run
+2024-02-14 11:55:44,900 - DEBUG - Next wakeup is due at 2024-02-14 12:05:44.888569+05:30 (in 599.987806 seconds)
+2024-02-14 11:55:49,625 - DEBUG - /etc/localtime found
+2024-02-14 11:55:49,626 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:55:49,627 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:55:49,627 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:55:49,627 - INFO - Scheduler started
+2024-02-14 11:55:49,627 - INFO - Scheduler started!
+2024-02-14 11:55:49,638 - DEBUG - Looking for jobs to run
+2024-02-14 11:55:49,638 - DEBUG - Next wakeup is due at 2024-02-14 12:05:49.627095+05:30 (in 599.988299 seconds)
+2024-02-14 11:55:53,388 - DEBUG - GET - http://0.0.0.0:8000/docs / _id-c=1bce0e84a48b46eb81f2b374432548a8e23dfa42eb8f7cda3d8c4d82507a91cb /None
+2024-02-14 11:56:11,605 - DEBUG - /etc/localtime found
+2024-02-14 11:56:11,607 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:11,608 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:11,608 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:11,609 - INFO - Scheduler started
+2024-02-14 11:56:11,609 - INFO - Scheduler started!
+2024-02-14 11:56:11,623 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:11,623 - DEBUG - Next wakeup is due at 2024-02-14 12:06:11.607927+05:30 (in 599.984016 seconds)
+2024-02-14 11:56:13,895 - DEBUG - /etc/localtime found
+2024-02-14 11:56:13,897 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:13,897 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:13,898 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:13,898 - INFO - Scheduler started
+2024-02-14 11:56:13,898 - INFO - Scheduler started!
+2024-02-14 11:56:13,911 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:13,912 - DEBUG - Next wakeup is due at 2024-02-14 12:06:13.897727+05:30 (in 599.985600 seconds)
+2024-02-14 11:56:17,610 - DEBUG - /etc/localtime found
+2024-02-14 11:56:17,611 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:17,612 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:17,613 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:17,613 - INFO - Scheduler started
+2024-02-14 11:56:17,613 - INFO - Scheduler started!
+2024-02-14 11:56:17,628 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:17,629 - DEBUG - Next wakeup is due at 2024-02-14 12:06:17.612439+05:30 (in 599.983323 seconds)
+2024-02-14 11:56:23,099 - DEBUG - /etc/localtime found
+2024-02-14 11:56:23,100 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:23,101 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:23,101 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:23,102 - INFO - Scheduler started
+2024-02-14 11:56:23,102 - INFO - Scheduler started!
+2024-02-14 11:56:23,111 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:23,111 - DEBUG - Next wakeup is due at 2024-02-14 12:06:23.101182+05:30 (in 599.989472 seconds)
+2024-02-14 11:56:27,423 - DEBUG - /etc/localtime found
+2024-02-14 11:56:27,424 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:27,425 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:27,425 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:27,425 - INFO - Scheduler started
+2024-02-14 11:56:27,425 - INFO - Scheduler started!
+2024-02-14 11:56:27,434 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:27,434 - DEBUG - Next wakeup is due at 2024-02-14 12:06:27.425144+05:30 (in 599.990379 seconds)
+2024-02-14 11:56:30,432 - DEBUG - /etc/localtime found
+2024-02-14 11:56:30,433 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:30,434 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:30,434 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:30,434 - INFO - Scheduler started
+2024-02-14 11:56:30,434 - INFO - Scheduler started!
+2024-02-14 11:56:30,445 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:30,445 - DEBUG - Next wakeup is due at 2024-02-14 12:06:30.434007+05:30 (in 599.988366 seconds)
+2024-02-14 11:56:33,235 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-02-14 11:56:55,521 - DEBUG - /etc/localtime found
+2024-02-14 11:56:55,522 - DEBUG - 1 found:
+ {'/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-02-14 11:56:55,523 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-02-14 11:56:55,523 - INFO - Added job "clear_log" to job store "default"
+2024-02-14 11:56:55,523 - INFO - Scheduler started
+2024-02-14 11:56:55,523 - INFO - Scheduler started!
+2024-02-14 11:56:55,532 - DEBUG - Looking for jobs to run
+2024-02-14 11:56:55,532 - DEBUG - Next wakeup is due at 2024-02-14 12:06:55.522898+05:30 (in 599.989979 seconds)
+2024-02-14 11:57:21,006 - DEBUG - GET - http://localhost:8000/ / next-auth.csrf-token=ff61c4cbab32ba187ff1edc5b38ad94a4f1d383e6c088596c2ae9ee59c4aad79%7C33448c957a47aadc730a1f38ed44a2f39bbef425f9fa8ec15c26fb11558c0fce; next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard%2Faccount /None

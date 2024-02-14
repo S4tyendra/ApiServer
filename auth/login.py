@@ -1,8 +1,8 @@
 import secrets
 from datetime import datetime
 
-from fastapi import APIRouter, HTTPException, Response
-from fastapi.responses import RedirectResponse
+from fastapi import APIRouter, Form, HTTPException, Response
+from fastapi.responses import HTMLResponse, RedirectResponse
 from pydantic import BaseModel
 from starlette.requests import Request
 
@@ -134,3 +134,77 @@ async def list_api_keys(request: Request):
     async for i in api_keys_cursor:
         api_keys.append(i["_id"][:4] + '*' * (len(i["_id"]) - 4))
     return {"api_keys": api_keys}
+
+#
+#
+#
+#
+# Routes to handle events with HTML forms
+#
+#
+#
+#
+#
+
+submit_otp_html = """
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+</head>
+<body>
+    <form action="/auth/otp-verify" method="post">
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="email" value="{email}" readonly>
+        <label for="otp">OTP:</label>
+        <input type="text" id="otp" name="otp" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+"""
+
+@router.post("/login-post")
+async def login_post(
+    email: str = Form(...),
+):
+    if not is_valid_email(email, ["gmail.com", "yahoo.com", "hotmail.com"]):
+        raise HTTPException(status_code=400, detail="Invalid email")
+    db = await connect_to_database()
+    user = await db.users.find_one({"email": email})
+    if user is None:
+        id = str(datetime.now().timestamp()).replace(".", "")
+        otp = [{"otp": generate_random_otp(), "created_at": datetime.now().timestamp()}]
+        await db.users.insert_one({"_id": id, "email": email, "otp": otp})
+        send_otp(email, otp[0].get('otp'))
+    else:
+        otp: list = user["otp"]
+        generated_otp = {"otp": generate_random_otp(
+        ), "created_at": datetime.now().timestamp(), }
+        otp.append(generated_otp)
+        await db.users.update_one({"email": email}, {"$set": {"otp": otp}})
+        send_otp(email, generated_otp.get('otp'))
+    return HTMLResponse(content=submit_otp_html.format(email=email), status_code=200)
+
+@router.post("/otp-verify")
+async def verify(response: Response, email: str = Form(...), otp: str = Form(...) ):
+    db = await connect_to_database()
+    user = await db.users.find_one({"email": email})
+    if user is None:
+        raise HTTPException(status_code=400, detail="Invalid email")
+    otps = user["otp"]
+    otps.reverse()
+    for i in range(len(otps)):
+        if otps[i].get("otp") == otp:
+            if datetime.now().timestamp() - otps[i].get("created_at") > 300:
+                raise HTTPException(status_code=400, detail="OTP expired")
+            else:
+                cookie = secrets.token_hex(32)
+                await db.users.update_one({"email": email}, {"$set": {"otp": []}})
+                await db.sessions.insert_one(
+                    {"_id": cookie, "email": email, "created_at": datetime.now().timestamp()})
+                response.set_cookie(key="_id-c", value=cookie, httponly=True, secure=True)
+                return RedirectResponse(url="/", status_code=302)
+
+    raise HTTPException(status_code=400, detail="Invalid OTP")
