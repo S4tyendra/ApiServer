@@ -8,8 +8,8 @@ app = APIRouter()
 
 templates = Jinja2Templates(directory="templates")
 
-STRIPE_PUBLIC_KEY = '***'
-STRIPE_SECRET_KEY = '***'
+STRIPE_PUBLIC_KEY = 'pk_live_51MsIyDSGMujHlWLW0Ja6bhr1e6TjCqdAb1gvTJRFeqBoUQr8kd2td1PDGXpDH2OLJy4Mrxe4bIzMjLZJcDoQCMs100L0UyWCm7'
+STRIPE_SECRET_KEY = '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'
 
 stripe.api_key = STRIPE_SECRET_KEY
 
@@ -22,7 +22,7 @@ def stripe_pay(request: Request):
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
         line_items=[{
-            'price': 'price_1Og3uJSGMujHlWLWkuIUkBaa',
+            'price': 'price_1OeameSGMujHlWLWSX9Hemlj',
             'quantity': 1,
         }],
         mode='payment',
