@@ -1,0 +1,73 @@
+from fastapi import APIRouter, Request, HTTPException
+from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.templating import Jinja2Templates
+
+import stripe
+
+app = APIRouter()
+
+templates = Jinja2Templates(directory="templates")
+
+STRIPE_PUBLIC_KEY = '***'
+STRIPE_SECRET_KEY = '***'
+
+stripe.api_key = STRIPE_SECRET_KEY
+
+@app.get("/", response_class=HTMLResponse)
+async def read_item(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/stripe_pay", response_class=JSONResponse)
+def stripe_pay(request: Request):
+    session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=[{
+            'price': 'price_1Og3uJSGMujHlWLWkuIUkBaa',
+            'quantity': 1,
+        }],
+        mode='payment',
+        success_url=str(request.base_url) + '/thanks' + '?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url=str(request.base_url),
+    )
+    return {
+        'checkout_session_id': session['id'],
+        'checkout_public_key': STRIPE_PUBLIC_KEY
+    }
+
+@app.get("/thanks", response_class=HTMLResponse)
+async def thanks(request: Request):
+    return templates.TemplateResponse("thanks.html", {"request": request})
+
+@app.post("/stripe_webhook")
+async def stripe_webhook(request: Request):
+    print('WEBHOOK CALLED')
+
+    if request.headers.get("content-length") > '1048576':
+        print('REQUEST TOO BIG')
+        raise HTTPException(status_code=400, detail='REQUEST TOO BIG')
+
+    payload = await request.body()
+    sig_header = request.headers.get('stripe-signature')
+    endpoint_secret = 'YOUR_ENDPOINT_SECRET'
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret
+        )
+    except ValueError as e:
+        # Invalid payload
+        print('INVALID PAYLOAD')
+        raise HTTPException(status_code=400, detail='INVALID PAYLOAD')
+    except stripe.error.SignatureVerificationError as e:
+        # Invalid signature
+        print('INVALID SIGNATURE')
+        raise HTTPException(status_code=400, detail='INVALID SIGNATURE')
+
+    # Handle the checkout.session.completed event
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
+        print(session)
+        line_items = stripe.checkout.Session.list_line_items(session['id'], limit=1)
+        print(line_items['data'][0]['description'])
+
+    return {}

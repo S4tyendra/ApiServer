@@ -1,3 +1,4 @@
+from fastapi.middleware.cors import CORSMiddleware
 import logging
 import os
 import time
@@ -6,18 +7,20 @@ import aiofiles
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from pyrogram import Client
 
 from api.countrystatesapi import router as countrystates_router
 from auth.login import router as auth_router
 from database import connect_to_database
 from user.profile import router as user_router
+from stripe_pay.payments import app as stripe_router
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('applog.txt'), logging.StreamHandler()])
 
 app = FastAPI()
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 bot = Client("satya", api_id=***, api_hash="***",
              bot_token="5511597285:AAH8Z_qAcjRBf9N5TcELOdtd_D1B5GFvzrA")
 
@@ -34,16 +37,16 @@ scheduler = AsyncIOScheduler()
 scheduler.add_job(clear_log, 'interval', minutes=10)
 scheduler.start()
 logging.info("Scheduler started!")
-from fastapi.middleware.cors import CORSMiddleware
 
-    # Add CORS middleware
+# Add CORS middleware
 app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.middleware("http")
 async def log_request(request: Request, call_next):
@@ -61,10 +64,12 @@ if os.path.exists(".env"):
     load_dotenv()
 
 # Include routers
-app.include_router(auth_router, tags=["auth"], prefix="/auth", include_in_schema=False)
+app.include_router(auth_router, tags=[
+                   "auth"], prefix="/auth", include_in_schema=False)
 app.include_router(user_router, tags=["user"], prefix="/user")
-app.include_router(countrystates_router, tags=["World cities api", ], prefix="/api")
-
+app.include_router(countrystates_router, tags=[
+                   "World cities api", ], prefix="/api")
+app.include_router(stripe_router, tags=["stripe"], prefix="/stripe")
 
 login_page_html = """
 <!DOCTYPE html>
@@ -283,7 +288,6 @@ home_page_html = """
             fetch("/auth/createapikey")
                 .then(response => response.json())
                 .then(data => {
-                    
                     const apiKey = data.api_key;
                     if  (data.detail) {
                     alert(data.detail);
@@ -324,7 +328,7 @@ async def root(request: Request, response: Response):
             response.status_code = 401
             return HTMLResponse(content=login_page_html, status_code=401)
         cookie_user_email = cookie_user.get("email")
-        return HTMLResponse(content=home_page_html.replace("${email}",cookie_user_email), status_code=200)
+        return HTMLResponse(content=home_page_html.replace("${email}", cookie_user_email), status_code=200)
 
 
 @app.post("/", include_in_schema=False)
