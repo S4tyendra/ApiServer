@@ -42,9 +42,9 @@ async def thanks(request: Request):
 async def stripe_webhook(request: Request):
     print('WEBHOOK CALLED')
 
-    if request.headers.get("content-length") > '1048576':
-        print('REQUEST TOO BIG')
-        raise HTTPException(status_code=400, detail='REQUEST TOO BIG')
+    # if request.headers.get("content-length") > '1048576':
+    #     print('REQUEST TOO BIG')
+    #     raise HTTPException(status_code=400, detail='REQUEST TOO BIG')
 
     payload = await request.body()
     sig_header = request.headers.get('stripe-signature')

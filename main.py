@@ -8,7 +8,9 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from pyrogram import Client
+from pyrogram import idle
+
+from tgbot.main import bot
 
 from api.countrystatesapi import router as countrystates_router
 from auth.login import router as auth_router
@@ -21,13 +23,16 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
-bot = Client("satya", api_id=2171111, api_hash="fd7acd07303760c52dcc0ed8b2f73086",
-             bot_token="5511597285:AAH8Z_qAcjRBf9N5TcELOdtd_D1B5GFvzrA")
+
+
+@app.on_event("startup")
+async def startup_event():
+    await bot.start()
+    logging.info("Bot started!")
 
 
 async def clear_log():
-    async with bot:
-        await bot.send_document(-1001543238877, "applog.txt")
+    await bot.send_document(-1001543238877, "applog.txt")
     async with aiofiles.open('applog.txt', 'w') as f:
         pass
 
@@ -65,11 +70,11 @@ if os.path.exists(".env"):
 
 # Include routers
 app.include_router(auth_router, tags=[
-                   "auth"], prefix="/auth", include_in_schema=False)
+    "auth"], prefix="/auth", include_in_schema=False)
 app.include_router(user_router, tags=["user"], prefix="/user")
 app.include_router(countrystates_router, tags=[
-                   "World cities api", ], prefix="/api")
-app.include_router(stripe_router, tags=["stripe"], prefix="/stripe")
+    "World cities api", ], prefix="/api")
+app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
 
 login_page_html = """
 <!DOCTYPE html>
@@ -315,7 +320,7 @@ home_page_html = """
 """
 
 
-@app.get("/",    include_in_schema=False)
+@app.get("/", include_in_schema=False)
 async def root(request: Request, response: Response):
     cookie = request.cookies.get("_id-c")
     if cookie is None:

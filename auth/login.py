@@ -8,7 +8,7 @@ from starlette.requests import Request
 
 from database import connect_to_database
 from functions.email_funcs import is_valid_email, send_otp
-
+import html  # For HTML escaping
 router = APIRouter()
 
 
@@ -135,6 +135,7 @@ async def list_api_keys(request: Request):
         api_keys.append(i["_id"][:4] + '*' * (len(i["_id"]) - 4))
     return {"api_keys": api_keys}
 
+
 #
 #
 #
@@ -232,9 +233,10 @@ p {
 </html>
 """
 
+
 @router.post("/login-post")
 async def login_post(
-    email: str = Form(...),
+        email: str = Form(...),
 ):
     if not is_valid_email(email, ["gmail.com", "yahoo.com", "hotmail.com"]):
         raise HTTPException(status_code=400, detail="Invalid email")
@@ -252,10 +254,11 @@ async def login_post(
         otp.append(generated_otp)
         await db.users.update_one({"email": email}, {"$set": {"otp": otp}})
         send_otp(email, generated_otp.get('otp'))
-    return HTMLResponse(content=submit_otp_html.replace("${email}",email), status_code=200)
+    return HTMLResponse(content=submit_otp_html.replace("${email}", email), status_code=200)
+
 
 @router.post("/otp-verify")
-async def verify(response: Response, email: str = Form(...), otp: str = Form(...) ):
+async def verify(response: Response, email: str = Form(...), otp: str = Form(...)):
     db = await connect_to_database()
     user = await db.users.find_one({"email": email})
     if user is None:
@@ -278,3 +281,140 @@ async def verify(response: Response, email: str = Form(...), otp: str = Form(...
                 return response
 
     raise HTTPException(status_code=400, detail="Invalid OTP")
+
+
+connect_to_3rd_party_html = """
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>${app} X DEVH.IN</title>
+</head>
+<body>
+<div class="
+flex items-center justify-center min-h-screen bg-background-foreground
+">
+    <div class="rounded-lg text-card-foreground w-full max-w-md mx-auto bg-white border border-gray-200 shadow-sm"
+         data-v0-t="card">
+        <div class="space-y-1.5 flex flex-col items-center p-6">
+            <div class="space-y-2 text-center"><h1 class="text-2xl font-bold">Connection Request</h1>
+                <p class="text-sm text-gray-500">
+                    ${app} is requesting access to your account.
+                </p>
+                <sub>
+                    ${app_info}
+                </sub>
+            </div>
+        </div>
+        <div class="flex flex-col p-6 gap-4">
+            <div class="flex items-center gap-4"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">  <path fill="currentColor" d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1L3 5v6c0 5.55 3.84 10.73 9 12c5.16-1.27 9-6.45 9-12V5z" /> </svg>
+                <div class="grid gap-1.5"><h3 class="text-base font-semibold"><b>Access Everything of your account</b></h3>
+                    <p class="text-sm text-gray-500">
+                        This application will be granted access to manage your account.
+                    </p></div>
+            </div>
+<!--            <div class="flex items-center gap-4"><img src="/placeholder.svg" width="64" height="64" alt="App Icon"-->
+<!--                                                      class="rounded-md border"-->
+<!--                                                      style="aspect-ratio:64/64;object-fit:cover">-->
+<!--                <div class="grid gap-1.5"><h3 class="text-base font-semibold">Access your email address</h3>-->
+<!--                    <p class="text-sm text-gray-500">-->
+<!--                        This application will be able to access your email address.-->
+<!--                    </p></div>-->
+<!--            </div>-->
+        </div>
+        <div class="items-center flex p-6 border-t justify-end">
+            <a href="/">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-accent-foreground h-10 px-4 py-2 mr-2.5 bg-white border-gray-200 text-gray-900 shadow-sm hover:bg-gray-50">
+                Deny
+            </button>
+                </a>
+            <form method="post">
+            <button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-gray-900 text-gray-50 shadow hover:bg-gray-900/90">
+                Allow
+            </button>
+                </form>
+        </div>
+        <div class="p-4 text-sm text-gray-500">
+            Your data is handled securely. We respect your privacy.
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+"""
+
+
+@router.get("/connect")
+async def connect(request: Request, app: str, _hash: str, state: str):
+    apps = ['telegram@devh.in?app=telegram']
+    if app not in apps:
+        return RedirectResponse(url="/auth/connectionerror?error=Invalid app")
+    cookie = request.cookies.get("_id-c")
+    if cookie is None:
+        return RedirectResponse(url="/")
+    return HTMLResponse(content=connect_to_3rd_party_html.replace("${app}", "<b>Intelligent</b>").replace("${app_info}","<b>Intelligent </b><sup> devh.in</sup> Is an official bot from devh.in"), status_code=200)
+
+
+@router.post("/connect")
+async def connect_post(request: Request, app: str, _hash: str, state: str):
+    apps = ['telegram@devh.in?app=telegram']
+    if app not in apps:
+        return RedirectResponse(url="/auth/connectionerror?error=Invalid app")
+    cookie = request.cookies.get("_id-c")
+    if cookie is None:
+        return RedirectResponse(url="/")
+    db = await connect_to_database()
+    user = await db.sessions.find_one({"_id": cookie})
+    if user is None:
+        return RedirectResponse(url="/")
+    email = user.get("email")
+    new_cookie = secrets.token_hex(32)
+    await db.users.update_one({"email": email}, {"$set": {"otp": []}})
+    try:
+
+        v = await db.tg_sessions.update_one(
+            {"_hash": _hash, "state": state}, {
+                "$set": {"cookie": new_cookie, "email": email, "created_at": datetime.now().timestamp()},
+                "$unset": {"_hash": "", "state": ""}
+            })
+        print(v)
+        await db.sessions.insert_one(
+            {"_id": new_cookie, "email": email, "created_at": datetime.now().timestamp()})
+        return RedirectResponse(url="/auth/connectionsuccess?app=telegram")
+    except:
+        return RedirectResponse(url="/auth/connectionerror?error=Error occured")
+
+
+@router.get("/connectionerror")
+async def connection_error(request: Request, error: str):
+    escaped_error = html.escape(error)  # Escape potential HTML characters
+    return HTMLResponse(content=f"<code><h1>{escaped_error}</h1></code>", status_code=400)
+@router.post("/connectionerror")
+async def connection_error_post(request: Request, error: str):
+    escaped_error = html.escape(error)  # Escape potential HTML characters
+    return HTMLResponse(content=f"<code><h1>{escaped_error}</h1></code>", status_code=400)
+
+@router.get("/connectionsuccess")
+async def connection_success(request: Request, app: str):
+    if app == "telegram":
+        return HTMLResponse(content="""<code><h1>Connected to Intelligent</h1></code><script>setTimeout(function() {
+        // Redirect to the specified URL
+        window.location.href = 'https://t.me/iSatyaBot';
+      }, 3000); </script>""", status_code=200)
+    else:
+        return RedirectResponse(url="/auth/connectionerror?error=Invalid app")
+
+@router.post("/connectionsuccess")
+async def connection_success(request: Request, app: str):
+    if app == "telegram":
+        return HTMLResponse(content="""<code><h1>Connected to Intelligent</h1></code><script>setTimeout(function() {
+        // Redirect to the specified URL
+        window.location.href = 'https://t.me/iSatyaBot';
+      }, 3000); </script>""", status_code=200)
+    else:
+        return RedirectResponse(url="/auth/connectionerror?error=Invalid app")
