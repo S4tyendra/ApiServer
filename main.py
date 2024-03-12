@@ -5,8 +5,8 @@ import time
 
 import aiofiles
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from fastapi import FastAPI, Request, Response
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import FastAPI, Form, Request, Response
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pyrogram import idle
 
@@ -36,10 +36,15 @@ async def clear_log():
     async with aiofiles.open('applog.txt', 'w') as f:
         pass
 
+def delete_temp():
+    for file in os.listdir("temp"):
+        if file.endswith(".pdf"):
+            os.remove(f"temp/{file}")
 
 # Set up scheduler
 scheduler = AsyncIOScheduler()
 scheduler.add_job(clear_log, 'interval', minutes=10)
+scheduler.add_job(delete_temp, 'interval', minutes=5)
 scheduler.start()
 logging.info("Scheduler started!")
 
@@ -339,3 +344,27 @@ async def root(request: Request, response: Response):
 @app.post("/", include_in_schema=False)
 async def root_post():
     return RedirectResponse("<script>window.location.href = '/';</script>")
+
+
+def convert_to_pdf(mdc,title):
+    from markdown_pdf import MarkdownPdf
+    from markdown_pdf import Section
+    pdf = MarkdownPdf(toc_level=1)
+    pdf.add_section(Section(mdc))
+    pdf.meta["title"] = title
+    pdf.save(f"temp/{title}.pdf")
+    return f"temp/{title}.pdf"
+
+async def delete_file(file_path: str):
+    try:
+        os.remove(file_path)
+    except FileNotFoundError:
+        pass  # If the file doesn't exist, ignore the error
+
+@app.post("/sendpdf", include_in_schema=False)
+async def send_pdf(request: Request, mdc=Form(...), title=Form(...)):
+    file_name = convert_to_pdf(mdc, title)
+    response = FileResponse(file_name, media_type="application/pdf", filename=file_name)
+    return response
+
+
