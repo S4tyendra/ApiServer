@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pyrogram import idle
 
-from tgbot.main import bot
+# from tgbot.main import bot
 
 from api.countrystatesapi import router as countrystates_router
 from auth.login import router as auth_router
@@ -25,14 +25,14 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-@app.on_event("startup")
-async def startup_event():
-    await bot.start()
-    logging.info("Bot started!")
+# @app.on_event("startup")
+# async def startup_event():
+#     await bot.start()
+#     logging.info("Bot started!")
 
 
 async def clear_log():
-    await bot.send_document(-1001543238877, "applog.txt")
+    # await bot.send_document(-1001543238877, "applog.txt")
     async with aiofiles.open('applog.txt', 'w') as f:
         pass
 
