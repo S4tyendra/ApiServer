@@ -347,23 +347,12 @@ async def root_post():
 
 
 def convert_to_pdf(mdc,title):
-    from md2pdf.core import md2pdf
-    md2pdf(
-    pdf=f"temp/{title}.pdf",
-    raw = mdc,
-    extras = [
-    "markdown.extensions.tables",
-    "markdown.extensions.codehilite",
-    "pymdownx.magiclink",
-    "pymdownx.betterem",
-    "pymdownx.superfences",
-    "pymdownx.highlight",
-    "pymdownx.snippets",
-    "markdown.extensions.wikilinks",
-    "markdown.extensions.toc",
-    ]
-
-    )
+    from markdown_pdf import MarkdownPdf
+    from markdown_pdf import Section
+    pdf = MarkdownPdf(toc_level=1)
+    pdf.add_section(Section(mdc))
+    pdf.meta["title"] = title
+    pdf.save(f"temp/{title}.pdf")
     return f"temp/{title}.pdf"
 
 async def delete_file(file_path: str):
