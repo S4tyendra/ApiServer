@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Form
 from pydantic import BaseModel
+from starlette.responses import HTMLResponse, Response
 
 router = APIRouter()
 
@@ -120,4 +121,6 @@ Hello, note maker! Let's dive into the details. Remember to keep your explanatio
 Remember to maintain a friendly and approachable tone throughout the notes. Let's get started!
 
     """
-    return generate_ai_content(prompt)
+    rawData = generate_ai_content(prompt)
+    return Response(content=rawData, media_type="text/plain")
+
