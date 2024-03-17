@@ -86,8 +86,8 @@ app.include_router(user_router, tags=["user"], prefix="/user")
 app.include_router(countrystates_router, tags=[
     "World cities api", ], prefix="/api")
 app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
-app.include_router(iiitk_delete_router, tags=["IIITK"], prefix="/iiitk",)
-app.include_router(iiitk_router, tags=["IIITK"], prefix="/iiitk",)
+app.include_router(iiitk_delete_router, tags=["IIITK"], prefix="/iiitk",include_in_schema=False)
+app.include_router(iiitk_router, tags=["IIITK"], prefix="/iiitk", include_in_schema=False)
 
 
 
