@@ -188,3 +188,59 @@ class EditData(BaseModel):
 async def edit__file(data: EditData):
     rt = edit_file(data.user_id, data.file_path, data.new_content)
     return rt
+
+def create_file_or_folder(branch_name, file_path, file_name, content, _id):
+    BASE_URL = "https://api.github.com"
+    REPO = "S4tyendra/4thsemnotes"
+    TOKEN = "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"
+    headers = {"Authorization": f"token {TOKEN}"}
+
+    response = requests.get(
+        f"{BASE_URL}/repos/{REPO}/contents{file_path}?ref={branch_name}",
+        headers=headers
+    )
+    if response.status_code == 200:
+        print(f"File or folder '{file_path}' already exists. Aborting creation.")
+        return
+    elif response.status_code == 404:
+        # Prepare the new file content
+        content_encoded = base64.b64encode(content.encode()).decode()
+        create_payload = {
+            "branch": branch_name,
+            "message": f"Create {file_name}",
+            "content": content_encoded,
+            "committer": {"name": _id, "email": f"{_id}@iiitkota.ac.in"}
+        }
+        # Send a PUT request to create the file
+        create_response = requests.put(
+            f"{BASE_URL}/repos/{REPO}/contents{file_path}",
+            headers=headers,
+            json=create_payload,
+        )
+        if create_response.status_code == 201:
+            print(f"File '{file_name}' created successfully!")
+        else:
+            print(f"Failed to create file '{file_name}'. Status code: {create_response.status_code}")
+    else:
+        print(f"Failed to check if file/folder exists. Status code: {response.status_code}")
+
+def create_file(user_id, path, file_name, content):
+    branch_name = create_branch(user_id)
+    if branch_name:
+        file_path = f"{path}/{file_name}"
+        create_file_or_folder(branch_name, file_path, file_name, content, user_id)
+        create_pull_request(branch_name, f"Create {file_name}")
+        return "File created successfully!"
+    else:
+        return "Failed to create branch. File creation aborted."
+
+class CreateFileData(BaseModel):
+    user_id: str
+    path: str
+    file_name: str
+    content: str
+
+@router.put("/create_file")
+async def create__file(data: CreateFileData):
+    rt = create_file(data.user_id, data.path, data.file_name, data.content)
+    return rt
