@@ -1,0 +1,5 @@
+2024-03-17 06:15:17,538 - INFO - Job "clear_log (trigger: interval[0:10:00], next run at: 2024-03-17 06:25:17 UTC)" executed successfully
+2024-03-17 06:20:17,537 - DEBUG - Looking for jobs to run
+2024-03-17 06:20:17,538 - DEBUG - Next wakeup is due at 2024-03-17 06:25:17.535720+00:00 (in 299.997333 seconds)
+2024-03-17 06:20:17,538 - INFO - Running job "delete_temp (trigger: interval[0:05:00], next run at: 2024-03-17 06:25:17 UTC)" (scheduled at 2024-03-17 06:20:17.536096+00:00)
+2024-03-17 06:20:17,538 - INFO - Job "delete_temp (trigger: interval[0:05:00], next run at: 2024-03-17 06:25:17 UTC)" executed successfully
