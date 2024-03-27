@@ -28,7 +28,7 @@ def generate_random_otp():
 
 @router.post("/login")
 async def login(email: Email):
-    if not is_valid_email(email.email, ["gmail.com", "yahoo.com", "hotmail.com"]):
+    if not is_valid_email(email.email, ["gmail.com", "iiitkota.ac.in", "devh.in", "satyendra.in"]):
         raise HTTPException(status_code=400, detail="Invalid email")
     db = await connect_to_database()
     user = await db.users.find_one({"email": email.email})
@@ -238,8 +238,8 @@ p {
 async def login_post(
         email: str = Form(...),
 ):
-    if not is_valid_email(email, ["gmail.com", "yahoo.com", "hotmail.com"]):
-        raise HTTPException(status_code=400, detail="Invalid email")
+    if not is_valid_email(email, ["gmail.com",  "iiitkota.ac.in", "devh.in", "satyendra.in"]):
+        raise HTTPException(status_code=400, detail="Invalid email, We dont accept these type of emails yet. please use gmail")
     db = await connect_to_database()
     user = await db.users.find_one({"email": email})
     if user is None:
