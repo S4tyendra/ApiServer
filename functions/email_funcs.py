@@ -9,7 +9,7 @@ def is_valid_email(email, domains):
     return True
 
 
-sender_email = "s4tyendra@gmail.com"
+sender_email = "verify@devh.in"
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
 smtp_username = "s4tyendra"
