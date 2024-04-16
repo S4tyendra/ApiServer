@@ -11,7 +11,10 @@ from fastapi.staticfiles import StaticFiles
 # from pyrogram import idle
 
 # from tgbot.main import bot
-
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
+from fastapi.responses import JSONResponse
+import google.generativeai as genai
 from api.countrystatesapi import router as countrystates_router
 from auth.login import router as auth_router
 from database import connect_to_database
@@ -389,3 +392,53 @@ async def send_pdf(request: Request, mdc=Form(...), title=Form(...)):
     file_name = convert_to_pdf(mdc, title)
     response = FileResponse(file_name, media_type="application/pdf", filename=file_name)
     return response
+
+genai.configure(api_key="AIzaSyDhHXRkHjTYBUV9crg_EZ8E-XbuNyl1YQU")
+
+# Set up the model
+generation_config = {
+    "temperature": 0.7,
+    "top_p": 1,
+    "top_k": 1,
+    "max_output_tokens": 2048,
+}
+
+safety_settings = [
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_NONE",
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_NONE",
+    },
+]
+
+model = genai.GenerativeModel(
+    model_name="gemini-1.0-pro",
+    generation_config=generation_config,
+    safety_settings=safety_settings,
+)
+
+class PromptData(BaseModel):
+    new_prompt: str
+    history: list = []
+
+@app.post("/generate")
+async def generate(data: PromptData):
+    new_prompt = data.new_prompt
+    history = data.history
+    convo = model.start_chat(history=history)
+    convo.send_message(new_prompt)
+    response_text = convo.last.text
+
+    # Return the response as JSON
+    return JSONResponse({"response": response_text})
