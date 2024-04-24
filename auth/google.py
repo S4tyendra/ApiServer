@@ -26,7 +26,7 @@ from google.oauth2 import id_token as google_id_token
 @router.get('/googlesignin')
 async def callback(request: Request):
     state = request.query_params.get('state')  # Extract state parameter
-    redirect_uri = "http://localhost:8000/auth/googlesignin"  # Update with your FastAPI server's callback URL
+    redirect_uri = "https://aws-api.devh.in/auth/googlesignin"  # Update with your FastAPI server's callback URL
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
     )
