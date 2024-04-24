@@ -22,6 +22,7 @@ from user.profile import router as user_router
 from stripe_pay.payments import app as stripe_router
 from iiitk.delete_file import router as iiitk_delete_router
 from iiitk.list_pending_pulls import router as iiitk_router
+from auth.google import router as google_router
 
 
 
@@ -91,6 +92,7 @@ app.include_router(countrystates_router, tags=[
 app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
 app.include_router(iiitk_delete_router, tags=["IIITK"], prefix="/iiitk",include_in_schema=False)
 app.include_router(iiitk_router, tags=["IIITK"], prefix="/iiitk", include_in_schema=False)
+app.include_router(google_router, tags=["GAUTH"], prefix="/auth")
 
 
 
@@ -361,10 +363,12 @@ async def root_post():
 
 def convert_to_pdf(mdc, title):
     from md2pdf.core import md2pdf
+    
     md2pdf(
         pdf=f"temp/{title}.pdf",
         raw=mdc,
         css="font.css",
+        
         extras=[
             "markdown.extensions.tables",
             "markdown.extensions.codehilite",
@@ -375,6 +379,7 @@ def convert_to_pdf(mdc, title):
             "pymdownx.snippets",
             "markdown.extensions.wikilinks",
             "markdown.extensions.toc",
+            "pymdownx.arithmatex",
         ]
     )
     return f"temp/{title}.pdf"
