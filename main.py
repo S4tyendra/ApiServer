@@ -24,6 +24,7 @@ from iiitk.delete_file import router as iiitk_delete_router
 from iiitk.list_pending_pulls import router as iiitk_router
 from auth.google import router as google_router
 
+os.system("git pull ")
 
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
