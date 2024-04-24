@@ -14,7 +14,7 @@ SCOPES = ['https://www.googleapis.com/auth/userinfo.email',
 @router.get('/glogin')
 async def login():
     flow = Flow.from_client_secrets_file(
-        CLIENT_SECRETS_FILE, scopes=SCOPES, redirect_uri="http://localhost:8000/auth/googlesignin" 
+        CLIENT_SECRETS_FILE, scopes=SCOPES, redirect_uri="https://aws-api.devh.in/auth/googlesignin" 
     )  # Use your FastAPI server's callback URL
     authorization_url, state = flow.authorization_url(
         access_type='offline', include_granted_scopes='true'
