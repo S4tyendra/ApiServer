@@ -1,6 +1,6 @@
 import os
 from fastapi import APIRouter, Request, Depends, HTTPException
-from fastapi.responses import RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
@@ -23,6 +23,7 @@ async def login():
     return RedirectResponse(authorization_url)
 
 from google.oauth2 import id_token as google_id_token
+import base64
 
 @router.get('/googlesignin')
 async def callback(request: Request):
@@ -41,11 +42,15 @@ async def callback(request: Request):
     name = id_token_data['name']
     picture = id_token_data['picture']
 
-    return xor_encrypt({"email": email, "name": name, "picture": picture}, key ="x7Saty@3")
+    data = xor_encrypt(str({"email": email, "name": name, "picture": picture}), key ="x7Saty@3")
+    
+    return RedirectResponse(f"https://iiitk.devh.in/auth?token={data}")
     
     
 def xor_encrypt(data, key):
     encrypted_data = ""
     for i in range(len(data)):
         encrypted_data += chr(ord(data[i]) ^ ord(key[i % len(key)]))
-    return encrypted_data
+    return base64.b64encode(encrypted_data.encode()).decode()
+
+xor_encrypt(str({"email": "email", "name": "name", "picture": "picture"}), key ="x7Saty@3")
