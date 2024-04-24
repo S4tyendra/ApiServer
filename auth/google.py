@@ -41,4 +41,11 @@ async def callback(request: Request):
     name = id_token_data['name']
     picture = id_token_data['picture']
 
-    return {"email": email, "name": name, "picture": picture}
+    return xor_encrypt({"email": email, "name": name, "picture": picture}, key ="x7Saty@3")
+    
+    
+def xor_encrypt(data, key):
+    encrypted_data = ""
+    for i in range(len(data)):
+        encrypted_data += chr(ord(data[i]) ^ ord(key[i % len(key)]))
+    return encrypted_data
