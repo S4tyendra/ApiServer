@@ -10,6 +10,7 @@ CLIENT_SECRETS_FILE = "auth/clientsecret.json"
 SCOPES = ['https://www.googleapis.com/auth/userinfo.email', 
           'https://www.googleapis.com/auth/userinfo.profile',
           'openid']
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 @router.get('/glogin')
 async def login():
