@@ -63,13 +63,10 @@ async def callback(request: Request, response: Response):
         if user is None:
             id = str(datetime.now().timestamp()).replace(".", "")
             await db.users.insert_one({"_id":id,"email": email, "name": name, "picture": picture, "role": "user"})
-            await db.sessions.insert_one(
-                        {"_id": cookie, "email": email, "created_at": datetime.now().timestamp()})
-            response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
-        else:
-            id = user["_id"]
-            await db.sessions.update_one({"email": email}, {"$set": {"created_at": datetime.now().timestamp()}})
-            response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+        user = await db.users.find_one({"email": email})
+        id = user["_id"]
+        await db.sessions.update_one({"email": email}, {"$set": {"created_at": datetime.now().timestamp()}})
+        response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
         
         red_url = red_map.get(state)
         if red_url is not None:
