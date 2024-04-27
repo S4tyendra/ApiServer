@@ -26,8 +26,8 @@ red_map = {}
 async def login(redirect = None):
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE, scopes=SCOPES,
-        # redirect_uri="http://localhost:8000/auth/googlesignin" 
-        redirect_uri="https://aws-api.devh.in/auth/googlesignin" 
+        redirect_uri="http://localhost:8000/auth/googlesignin" 
+        # redirect_uri="https://aws-api.devh.in/auth/googlesignin" 
     )  # Use your FastAPI server's callback URL
     authorization_url, state = flow.authorization_url(
         access_type='offline', include_granted_scopes='true'
@@ -41,8 +41,8 @@ async def login(redirect = None):
 async def callback(request: Request, response: Response):
     state = request.query_params.get('state')  # Extract state parameter
     if state in red_map:
-        # redirect_uri="http://localhost:8000/auth/googlesignin" 
-        redirect_uri = "https://aws-api.devh.in/auth/googlesignin"  # Update with your FastAPI server's callback URL
+        redirect_uri="http://localhost:8000/auth/googlesignin" 
+        # redirect_uri = "https://aws-api.devh.in/auth/googlesignin"  # Update with your FastAPI server's callback URL
         flow = Flow.from_client_secrets_file(
             CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
         )
@@ -59,6 +59,8 @@ async def callback(request: Request, response: Response):
         db = await connect_to_database()
         user = await db.users.find_one({"email": email})
         cookie = secrets.token_hex(32)
+        
+        print(str(user) + "#######")
         
         if user is None:
             print(f"User not found, creating new user, {email}")
