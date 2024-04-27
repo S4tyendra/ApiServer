@@ -61,9 +61,13 @@ async def callback(request: Request, response: Response):
         cookie = secrets.token_hex(32)
         
         if user is None:
+            print(f"User not found, creating new user, {email}")
+            # Create new user
             id = str(datetime.now().timestamp()).replace(".", "")
             await db.users.insert_one({"_id":id,"email": email, "name": name, "picture": picture, "role": "user"})
         user = await db.users.find_one({"email": email})
+        print(user)
+    
         id = user["_id"]
         await db.sessions.update_one({"email": email}, {"$set": {"created_at": datetime.now().timestamp()}})
         response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
