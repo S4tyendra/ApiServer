@@ -3,3 +3,213 @@
 2024-03-17 06:20:17,538 - DEBUG - Next wakeup is due at 2024-03-17 06:25:17.535720+00:00 (in 299.997333 seconds)
 2024-03-17 06:20:17,538 - INFO - Running job "delete_temp (trigger: interval[0:05:00], next run at: 2024-03-17 06:25:17 UTC)" (scheduled at 2024-03-17 06:20:17.536096+00:00)
 2024-03-17 06:20:17,538 - INFO - Job "delete_temp (trigger: interval[0:05:00], next run at: 2024-03-17 06:25:17 UTC)" executed successfully
+2024-04-27 17:35:13,865 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-27 17:35:13,866 - DEBUG - /etc/localtime found
+2024-04-27 17:35:13,868 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-27 17:35:13,870 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:35:13,870 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:35:13,871 - INFO - Added job "clear_log" to job store "default"
+2024-04-27 17:35:13,871 - INFO - Added job "delete_temp" to job store "default"
+2024-04-27 17:35:13,871 - INFO - Scheduler started
+2024-04-27 17:35:13,871 - INFO - Scheduler started!
+2024-04-27 17:35:13,903 - DEBUG - Looking for jobs to run
+2024-04-27 17:35:13,903 - DEBUG - Next wakeup is due at 2024-04-27 17:40:13.870613+05:30 (in 299.967057 seconds)
+2024-04-27 17:35:16,523 - DEBUG - GET - http://127.0.0.1:8000/docs / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:35:16,669 - DEBUG - GET - http://127.0.0.1:8000/openapi.json / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:35:34,277 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:36:11,746 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:36:14,009 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:36:22,597 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-27 17:36:22,598 - DEBUG - /etc/localtime found
+2024-04-27 17:36:22,600 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-27 17:36:22,601 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:36:22,602 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:36:22,604 - INFO - Added job "clear_log" to job store "default"
+2024-04-27 17:36:22,605 - INFO - Added job "delete_temp" to job store "default"
+2024-04-27 17:36:22,605 - INFO - Scheduler started
+2024-04-27 17:36:22,605 - INFO - Scheduler started!
+2024-04-27 17:36:22,629 - DEBUG - Looking for jobs to run
+2024-04-27 17:36:22,629 - DEBUG - Next wakeup is due at 2024-04-27 17:41:22.602244+05:30 (in 299.972757 seconds)
+2024-04-27 17:36:25,050 - DEBUG - Generated new state 7psbvlDR9vsoCz6j6QZ9Gc9kUwhgGG.
+2024-04-27 17:36:25,051 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:37:41,458 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-27 17:37:41,459 - DEBUG - /etc/localtime found
+2024-04-27 17:37:41,460 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-27 17:37:41,462 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:37:41,462 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:37:41,464 - INFO - Added job "clear_log" to job store "default"
+2024-04-27 17:37:41,464 - INFO - Added job "delete_temp" to job store "default"
+2024-04-27 17:37:41,464 - INFO - Scheduler started
+2024-04-27 17:37:41,464 - INFO - Scheduler started!
+2024-04-27 17:37:41,484 - DEBUG - Looking for jobs to run
+2024-04-27 17:37:41,484 - DEBUG - Next wakeup is due at 2024-04-27 17:42:41.462307+05:30 (in 299.977835 seconds)
+2024-04-27 17:37:59,198 - DEBUG - GET - http://127.0.0.1:8000/docs / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:37:59,298 - DEBUG - GET - http://127.0.0.1:8000/openapi.json / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:38:02,662 - DEBUG - Generated new state YDILSZMIDqStDpFQDfPEE7ySlrCBDj.
+2024-04-27 17:38:02,662 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:38:07,621 - DEBUG - Generated new state AZJvkuHIp4KjZecYEVVgKgAVAJwxPz.
+2024-04-27 17:38:07,622 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:40:04,036 - DEBUG - Generated new state 6ct4Wuj1TZEOwsoyOBxUzII6FORlop.
+2024-04-27 17:40:04,037 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:40:13,111 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-27 17:40:13,112 - DEBUG - /etc/localtime found
+2024-04-27 17:40:13,114 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-27 17:40:13,114 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:40:13,114 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-27 17:40:13,115 - INFO - Added job "clear_log" to job store "default"
+2024-04-27 17:40:13,115 - INFO - Added job "delete_temp" to job store "default"
+2024-04-27 17:40:13,115 - INFO - Scheduler started
+2024-04-27 17:40:13,115 - INFO - Scheduler started!
+2024-04-27 17:40:13,130 - DEBUG - Looking for jobs to run
+2024-04-27 17:40:13,130 - DEBUG - Next wakeup is due at 2024-04-27 17:45:13.114621+05:30 (in 299.983753 seconds)
+2024-04-27 17:40:16,653 - DEBUG - Generated new state laqikDqpTpu5Li6svVC3CxuvmeyrPF.
+2024-04-27 17:40:16,653 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:40:34,381 - DEBUG - GET - http://localhost:8000/auth/googlesignin / None /None
+2024-04-27 17:40:52,216 - DEBUG - GET - http://localhost:8000/auth/googlesignin / None /None
+2024-04-27 17:41:00,367 - DEBUG - Generated new state 6erXiswGHEHDZPmPbCC3aM6ka4i4Xg.
+2024-04-27 17:41:00,367 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:41:04,606 - DEBUG - Generated new state iFZBgdBrUta2lD5UAwKrBxyLlOSamW.
+2024-04-27 17:41:04,607 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:41:13,298 - DEBUG - Generated new state VscteXEFwfNBTDmh8bpAEWp5gdrPgq.
+2024-04-27 17:41:13,298 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / None /None
+2024-04-27 17:42:10,571 - DEBUG - Encoding `client_id` "***" with `client_secret` as Basic auth credentials.
+2024-04-27 17:42:10,572 - DEBUG - Requesting url https://oauth2.googleapis.com/token using method POST.
+2024-04-27 17:42:10,572 - DEBUG - Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AeaYSHAwBXaX6tLWKJnEs4yxMB3GbgUKx-VWTgEGDxpCLHtxB7L3thz6y1yvhLsIvKxKww', 'redirect_uri': 'http://localhost:8000/auth/googlesignin'}
+2024-04-27 17:42:10,572 - DEBUG - Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x732ce23932b0>, 'verify': None, 'proxies': None, 'cert': None}.
+2024-04-27 17:42:10,574 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-04-27 17:42:11,278 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-04-27 17:42:11,340 - DEBUG - Request to fetch token completed with status 200.
+2024-04-27 17:42:11,341 - DEBUG - Request url was https://oauth2.googleapis.com/token
+2024-04-27 17:42:11,341 - DEBUG - Request headers were {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175', 'Authorization': 'Basic MjAyOTU2ODY1MTA1LXNtbmgyczI4NjVuNDE3bGVuOG9lNWFrdWdscHVhc2g0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC00bW5tbzJNREwzUGhJclJ4bEZTZ0JfUi1VMHRT'}
+2024-04-27 17:42:11,341 - DEBUG - Request body was grant_type=authorization_code&code=4%2F0AeaYSHAwBXaX6tLWKJnEs4yxMB3GbgUKx-VWTgEGDxpCLHtxB7L3thz6y1yvhLsIvKxKww&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgooglesignin
+2024-04-27 17:42:11,341 - DEBUG - Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sat, 27 Apr 2024 12:12:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0Ad52N3865gA1NwEyfSMG1i1z9kyyYp81mDMOOZZB0smiWEkvlEPbC84tRZkPDEesCFCz9hIkX-F7mLs1_XLVINVdYMvpQ243mGTa88ZqKaB9NEb78_2Ysd59_OyfQF3SBI_C87z9NBSBGyHnzfbli20LQM2dIR5Ljc4_aCgYKAS4SARISFQHGX2MiTjdVKJPqxgH3UJjX_LZXbw0171",
+  "expires_in": 3599,
+  "refresh_token": "1//0gLW6SYC2x0M9CgYIARAAGBASNwF-L9IrnvWO2j4sFvGeSjFbmnyBXJRmyu8jXRjRwAtV6c4jZFixXe34tZnj5UmqHq2tr292too",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Iks4a2xjWkZHWC1PcGFab0ZYdnFmUHciLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTMxLCJleHAiOjE3MTQyMjM1MzF9.Xx9k6pDy4mexYH21UVL2GTOBUAQ44T8RiYMbhXI9Znb1U7ctmsKA3zoAxd6jKi4zyAaIDDlbNCLfioEfd6wmCXaTKQ5myiYbz03KxdV_IgDtGZb7YC1gbuON6KcGDpu4o7voPQrNBcySc0VwRRSS_tua1493TWSKz7lPYNeT5MK1mH9Wft8_IXUXlnPPPeNFa3ppv9VNTNVIrFZXUAEK4levieKT6GQPv9RG8OJORKmWOGRi9xoI-XFuhlD8TQSGFSDplunLAECMlWE-v0hgL_QgMiw7rAPV6n1PedyvFFrD5jo8OcXxPfg1yLacPTrKYLlNYADOOs42J_0cXSd7Vw"
+}.
+2024-04-27 17:42:11,342 - DEBUG - Invoking 0 token response hooks.
+2024-04-27 17:42:11,342 - DEBUG - Obtained token {'access_token': 'ya29.a0Ad52N3865gA1NwEyfSMG1i1z9kyyYp81mDMOOZZB0smiWEkvlEPbC84tRZkPDEesCFCz9hIkX-F7mLs1_XLVINVdYMvpQ243mGTa88ZqKaB9NEb78_2Ysd59_OyfQF3SBI_C87z9NBSBGyHnzfbli20LQM2dIR5Ljc4_aCgYKAS4SARISFQHGX2MiTjdVKJPqxgH3UJjX_LZXbw0171', 'expires_in': 3599, 'refresh_token': '1//0gLW6SYC2x0M9CgYIARAAGBASNwF-L9IrnvWO2j4sFvGeSjFbmnyBXJRmyu8jXRjRwAtV6c4jZFixXe34tZnj5UmqHq2tr292too', 'scope': ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Iks4a2xjWkZHWC1PcGFab0ZYdnFmUHciLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTMxLCJleHAiOjE3MTQyMjM1MzF9.Xx9k6pDy4mexYH21UVL2GTOBUAQ44T8RiYMbhXI9Znb1U7ctmsKA3zoAxd6jKi4zyAaIDDlbNCLfioEfd6wmCXaTKQ5myiYbz03KxdV_IgDtGZb7YC1gbuON6KcGDpu4o7voPQrNBcySc0VwRRSS_tua1493TWSKz7lPYNeT5MK1mH9Wft8_IXUXlnPPPeNFa3ppv9VNTNVIrFZXUAEK4levieKT6GQPv9RG8OJORKmWOGRi9xoI-XFuhlD8TQSGFSDplunLAECMlWE-v0hgL_QgMiw7rAPV6n1PedyvFFrD5jo8OcXxPfg1yLacPTrKYLlNYADOOs42J_0cXSd7Vw', 'expires_at': 1714223530.3424234}.
+2024-04-27 17:42:11,343 - DEBUG - Making request: GET https://www.googleapis.com/oauth2/v1/certs
+2024-04-27 17:42:11,347 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-27 17:42:11,647 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1752
+2024-04-27 17:42:15,742 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=VscteXEFwfNBTDmh8bpAEWp5gdrPgq&code=4%2F0AeaYSHAwBXaX6tLWKJnEs4yxMB3GbgUKx-VWTgEGDxpCLHtxB7L3thz6y1yvhLsIvKxKww&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&hd=iiitkota.ac.in&prompt=consent / None /None
+2024-04-27 17:42:15,751 - DEBUG - GET - http://localhost:8000/ / None /None
+2024-04-27 17:42:15,792 - DEBUG - GET - http://localhost:8000/favicon.ico / None /None
+2024-04-27 17:42:35,524 - DEBUG - Encoding `client_id` "***" with `client_secret` as Basic auth credentials.
+2024-04-27 17:42:35,524 - DEBUG - Requesting url https://oauth2.googleapis.com/token using method POST.
+2024-04-27 17:42:35,524 - DEBUG - Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AeaYSHCaI67QSke_JH_hSyziYZ3ZmSFUFCCw6sCFq12z86UDLl_-GoFB7OeY2at46yEchA', 'redirect_uri': 'http://localhost:8000/auth/googlesignin'}
+2024-04-27 17:42:35,524 - DEBUG - Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x732ce2551a50>, 'verify': None, 'proxies': None, 'cert': None}.
+2024-04-27 17:42:35,526 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-04-27 17:42:35,924 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-04-27 17:42:35,926 - DEBUG - Request to fetch token completed with status 200.
+2024-04-27 17:42:35,926 - DEBUG - Request url was https://oauth2.googleapis.com/token
+2024-04-27 17:42:35,926 - DEBUG - Request headers were {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175', 'Authorization': 'Basic MjAyOTU2ODY1MTA1LXNtbmgyczI4NjVuNDE3bGVuOG9lNWFrdWdscHVhc2g0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC00bW5tbzJNREwzUGhJclJ4bEZTZ0JfUi1VMHRT'}
+2024-04-27 17:42:35,927 - DEBUG - Request body was grant_type=authorization_code&code=4%2F0AeaYSHCaI67QSke_JH_hSyziYZ3ZmSFUFCCw6sCFq12z86UDLl_-GoFB7OeY2at46yEchA&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgooglesignin
+2024-04-27 17:42:35,927 - DEBUG - Response headers were {'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sat, 27 Apr 2024 12:12:35 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0Ad52N3-eQzb4kkO_cdq266Djpd3I-Ge82cMJt_Yf6k_CYgRA-FdEH8l3M6MrJ1Tle34qm0fU_0wLryTqfjr_5HkMiEuNrJ8V7N24euyrwkoQgtJt0kRN4s4_1XpelokQKfOOjTmiyD9yUDQ5tnq2cKmQtYCwCjAaNQaCgYKAfgSARISFQHGX2MinuQvEJ-CK0YMTjoTmEyzYw0169",
+  "expires_in": 3599,
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Im9qa2hSNnBkNVh6V2QwcWh2bTc4SWciLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTU1LCJleHAiOjE3MTQyMjM1NTV9.I-2cfkuY0HAq18dsWtujPVpx2_g87Ovexx6btEGWEJvqUWXs_mGJP5tAIzDO22_FUCsbLFc1DzGo5XLQ17DiA9-vQsSfDPBO37nrGULHSfeMMny3AzVyQ6EiTtEw4noriM47DCmIgn5zCdkRCCQbL4VEWJmlbxHgClyoO3XF_kqQpdRqxZWrD0jCuxFUNk35D-kqxH59jjoe7hm8aZe9Oqj8Dh-97xv1fslVkfe7mkiktRvXUkaNC-X2J843y7WH00DMhlrw9llrNEsA-fD3FzYWJG5rs8eY0WlG14Nx5wlNYlmOHZ6d_YcLlZS4CUmGqqVAhWXdyTs5jZuwxw2tTQ"
+}.
+2024-04-27 17:42:35,927 - DEBUG - Invoking 0 token response hooks.
+2024-04-27 17:42:35,927 - DEBUG - Obtained token {'access_token': 'ya29.a0Ad52N3-eQzb4kkO_cdq266Djpd3I-Ge82cMJt_Yf6k_CYgRA-FdEH8l3M6MrJ1Tle34qm0fU_0wLryTqfjr_5HkMiEuNrJ8V7N24euyrwkoQgtJt0kRN4s4_1XpelokQKfOOjTmiyD9yUDQ5tnq2cKmQtYCwCjAaNQaCgYKAfgSARISFQHGX2MinuQvEJ-CK0YMTjoTmEyzYw0169', 'expires_in': 3599, 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Im9qa2hSNnBkNVh6V2QwcWh2bTc4SWciLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTU1LCJleHAiOjE3MTQyMjM1NTV9.I-2cfkuY0HAq18dsWtujPVpx2_g87Ovexx6btEGWEJvqUWXs_mGJP5tAIzDO22_FUCsbLFc1DzGo5XLQ17DiA9-vQsSfDPBO37nrGULHSfeMMny3AzVyQ6EiTtEw4noriM47DCmIgn5zCdkRCCQbL4VEWJmlbxHgClyoO3XF_kqQpdRqxZWrD0jCuxFUNk35D-kqxH59jjoe7hm8aZe9Oqj8Dh-97xv1fslVkfe7mkiktRvXUkaNC-X2J843y7WH00DMhlrw9llrNEsA-fD3FzYWJG5rs8eY0WlG14Nx5wlNYlmOHZ6d_YcLlZS4CUmGqqVAhWXdyTs5jZuwxw2tTQ', 'expires_at': 1714223554.9275508}.
+2024-04-27 17:42:35,928 - DEBUG - Making request: GET https://www.googleapis.com/oauth2/v1/certs
+2024-04-27 17:42:35,930 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-27 17:42:36,627 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1752
+2024-04-27 17:42:37,269 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=VscteXEFwfNBTDmh8bpAEWp5gdrPgq&code=4%2F0AeaYSHCaI67QSke_JH_hSyziYZ3ZmSFUFCCw6sCFq12z86UDLl_-GoFB7OeY2at46yEchA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&hd=iiitkota.ac.in&prompt=none / None /None
+2024-04-27 17:42:37,278 - DEBUG - GET - http://localhost:8000/ / None /None
+2024-04-27 17:42:38,419 - DEBUG - Generated new state 24cCjwsuZHUreilF3o9NUgmuEuHlFI.
+2024-04-27 17:42:38,419 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / None /None
+2024-04-27 17:42:38,805 - DEBUG - Encoding `client_id` "***" with `client_secret` as Basic auth credentials.
+2024-04-27 17:42:38,806 - DEBUG - Requesting url https://oauth2.googleapis.com/token using method POST.
+2024-04-27 17:42:38,806 - DEBUG - Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AeaYSHAvj6CWLqyqIEyG14zSCRQwrHoe63lPTpHee7LNr1ac2QsSVPK-hOEpIfnpefltBA', 'redirect_uri': 'http://localhost:8000/auth/googlesignin'}
+2024-04-27 17:42:38,806 - DEBUG - Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x732ce2550070>, 'verify': None, 'proxies': None, 'cert': None}.
+2024-04-27 17:42:38,808 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-04-27 17:42:39,233 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-04-27 17:42:39,235 - DEBUG - Request to fetch token completed with status 200.
+2024-04-27 17:42:39,235 - DEBUG - Request url was https://oauth2.googleapis.com/token
+2024-04-27 17:42:39,235 - DEBUG - Request headers were {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175', 'Authorization': 'Basic MjAyOTU2ODY1MTA1LXNtbmgyczI4NjVuNDE3bGVuOG9lNWFrdWdscHVhc2g0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC00bW5tbzJNREwzUGhJclJ4bEZTZ0JfUi1VMHRT'}
+2024-04-27 17:42:39,235 - DEBUG - Request body was grant_type=authorization_code&code=4%2F0AeaYSHAvj6CWLqyqIEyG14zSCRQwrHoe63lPTpHee7LNr1ac2QsSVPK-hOEpIfnpefltBA&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgooglesignin
+2024-04-27 17:42:39,235 - DEBUG - Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Date': 'Sat, 27 Apr 2024 12:12:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0Ad52N3-cUnCow1w5ZHe8IwO-r6wwLVUnWQH4IlFgiM6flP4nSNg3AoxGR_IeUJjIlDA_zU34ykiH4Tt1tQMdaASP5kw6lVuaKIYuACofl0bewpO4YzCqNRDGDn_4WjiUig7tuhhR9lYibCFwiIoYghDL_XAZBSpw2QaCgYKAZQSARISFQHGX2Mi7xuvFX1PUEWY38kvQ--UYg0169",
+  "expires_in": 3599,
+  "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImRCZk9uVTZvYnFMVUxsbEpwQzFaZ0EiLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTU5LCJleHAiOjE3MTQyMjM1NTl9.RDC5bZrOrdMY-dE1S2UQgCGxdrc6YwnmyHjQyTUZxxGfGBhaIeYveYe9Ht9HlB0VxlJeBhh1cO1lOO--1C-uFYymNHUuidOOCRV-zlG8U-shBLMg_LAySy3sDQPTmBkcngC7mab2yWiwezVg83XUnoJywI6LvTJo3lIqtlkrKh-p9adS8Z8Xmk3PyI4IruSfd5A9yRmSL-IT3Uw1nvZJ2a8Jr8nyvjp4Z5giMmP7WZNp58RFlyKraf09w7eVgGkd3uaXgtW1-epTD8awxhrImDvRMaTGuJ3_Soxd63eI-UEZO_69BimF47tEV_hCLJm6w_cCzgR6a8xIcUj60oPm1A"
+}.
+2024-04-27 17:42:39,236 - DEBUG - Invoking 0 token response hooks.
+2024-04-27 17:42:39,236 - DEBUG - Obtained token {'access_token': 'ya29.a0Ad52N3-cUnCow1w5ZHe8IwO-r6wwLVUnWQH4IlFgiM6flP4nSNg3AoxGR_IeUJjIlDA_zU34ykiH4Tt1tQMdaASP5kw6lVuaKIYuACofl0bewpO4YzCqNRDGDn_4WjiUig7tuhhR9lYibCFwiIoYghDL_XAZBSpw2QaCgYKAZQSARISFQHGX2Mi7xuvFX1PUEWY38kvQ--UYg0169', 'expires_in': 3599, 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'openid', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImRCZk9uVTZvYnFMVUxsbEpwQzFaZ0EiLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTU5LCJleHAiOjE3MTQyMjM1NTl9.RDC5bZrOrdMY-dE1S2UQgCGxdrc6YwnmyHjQyTUZxxGfGBhaIeYveYe9Ht9HlB0VxlJeBhh1cO1lOO--1C-uFYymNHUuidOOCRV-zlG8U-shBLMg_LAySy3sDQPTmBkcngC7mab2yWiwezVg83XUnoJywI6LvTJo3lIqtlkrKh-p9adS8Z8Xmk3PyI4IruSfd5A9yRmSL-IT3Uw1nvZJ2a8Jr8nyvjp4Z5giMmP7WZNp58RFlyKraf09w7eVgGkd3uaXgtW1-epTD8awxhrImDvRMaTGuJ3_Soxd63eI-UEZO_69BimF47tEV_hCLJm6w_cCzgR6a8xIcUj60oPm1A', 'expires_at': 1714223558.236371}.
+2024-04-27 17:42:39,236 - DEBUG - Making request: GET https://www.googleapis.com/oauth2/v1/certs
+2024-04-27 17:42:39,238 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-27 17:42:39,513 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1752
+2024-04-27 17:42:40,252 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=24cCjwsuZHUreilF3o9NUgmuEuHlFI&code=4%2F0AeaYSHAvj6CWLqyqIEyG14zSCRQwrHoe63lPTpHee7LNr1ac2QsSVPK-hOEpIfnpefltBA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&hd=iiitkota.ac.in&prompt=none / None /None
+2024-04-27 17:42:40,260 - DEBUG - GET - http://localhost:8000/ / None /None
+2024-04-27 17:42:43,298 - DEBUG - Generated new state Hw3OU2H93xLK8M8AYIErylMa84KA8C.
+2024-04-27 17:42:43,299 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / None /None
+2024-04-27 17:42:43,710 - DEBUG - Encoding `client_id` "***" with `client_secret` as Basic auth credentials.
+2024-04-27 17:42:43,710 - DEBUG - Requesting url https://oauth2.googleapis.com/token using method POST.
+2024-04-27 17:42:43,711 - DEBUG - Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AeaYSHB4rv58UHx9hl9VnS2maw0L9gG2SGaXVrmNAGF3l-qW19xB-QiQghtqPs28759a1w', 'redirect_uri': 'http://localhost:8000/auth/googlesignin'}
+2024-04-27 17:42:43,711 - DEBUG - Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x732ce2551e10>, 'verify': None, 'proxies': None, 'cert': None}.
+2024-04-27 17:42:43,713 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-04-27 17:42:44,035 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-04-27 17:42:44,037 - DEBUG - Request to fetch token completed with status 200.
+2024-04-27 17:42:44,037 - DEBUG - Request url was https://oauth2.googleapis.com/token
+2024-04-27 17:42:44,037 - DEBUG - Request headers were {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175', 'Authorization': 'Basic MjAyOTU2ODY1MTA1LXNtbmgyczI4NjVuNDE3bGVuOG9lNWFrdWdscHVhc2g0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC00bW5tbzJNREwzUGhJclJ4bEZTZ0JfUi1VMHRT'}
+2024-04-27 17:42:44,037 - DEBUG - Request body was grant_type=authorization_code&code=4%2F0AeaYSHB4rv58UHx9hl9VnS2maw0L9gG2SGaXVrmNAGF3l-qW19xB-QiQghtqPs28759a1w&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgooglesignin
+2024-04-27 17:42:44,037 - DEBUG - Response headers were {'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Sat, 27 Apr 2024 12:12:43 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0Ad52N39_AweFygGIGBsHayaQd-9sTDVj3D3YJZpHa6Nb4lcnEWfE5-sX1_sYjMhjpehvBdgvmm_lS6OL9XKdKaOZ0ZqHY07pYV0MWFEKv5Ju003AR9fB3KVI-JGabVqPHIM66LNhLgLIQpa--1XvWrfJML0DMcJV7waCgYKAVgSARISFQHGX2Mi59nxXvL13-_OGq3ZBSAtWw0169",
+  "expires_in": 3599,
+  "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6InNzcDdKMDJseHIza3VMOWd3X25yVlEiLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTYzLCJleHAiOjE3MTQyMjM1NjN9.nX9nfcZC1sPjDC9R6-GrAf-h6dpi2ISXz8sIkg8QG59OzMUW2vRu6Cm1xbchpuiSlrO5feCN2M1rWos_xmC30RAPiryGg5jmkvbcqPoCO0S9Or-HVTNz3HEUDw5SmhEGF9eHgKKypBjRZcyRx04M7c_jEx2DM3EUdUFCgInz14q01SFq-sknjLjq7cxwA-7Bcm-kKSOe84pL0zj_Wh4yoyiqOoLaCSwSdelhlDt9PO2fpCmbYmVAGvFgQ2ZAIu7IRuMsaJFW7jNxt5zZSR2H6iVALEaCdojS3FfR5EdPiJXTLxzd7FGDb5g-X5U4Ng2UTOo2CTJ9FUF2rSc6FY_wpw"
+}.
+2024-04-27 17:42:44,038 - DEBUG - Invoking 0 token response hooks.
+2024-04-27 17:42:44,038 - DEBUG - Obtained token {'access_token': 'ya29.a0Ad52N39_AweFygGIGBsHayaQd-9sTDVj3D3YJZpHa6Nb4lcnEWfE5-sX1_sYjMhjpehvBdgvmm_lS6OL9XKdKaOZ0ZqHY07pYV0MWFEKv5Ju003AR9fB3KVI-JGabVqPHIM66LNhLgLIQpa--1XvWrfJML0DMcJV7waCgYKAVgSARISFQHGX2Mi59nxXvL13-_OGq3ZBSAtWw0169', 'expires_in': 3599, 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'openid', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNTcxNzA5MTI3NzA3NzYwNDMiLCJoZCI6ImlpaXRrb3RhLmFjLmluIiwiZW1haWwiOiIyMDIya3VjcDEwMzNAaWlpdGtvdGEuYWMuaW4iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6InNzcDdKMDJseHIza3VMOWd3X25yVlEiLCJuYW1lIjoiU2F0eWVuZHJhIEJvbmdpIChLVUNQMTAzMykiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1RUdlhlRTNVT2Z0VGlRNkhiWnI2OXkxLVBORWNDbFRORVdyX2Y4RDY3OXRUcjFjaHZSUT1zOTYtYyIsImdpdmVuX25hbWUiOiJTYXR5ZW5kcmEiLCJmYW1pbHlfbmFtZSI6IkJvbmdpIiwiaWF0IjoxNzE0MjE5OTYzLCJleHAiOjE3MTQyMjM1NjN9.nX9nfcZC1sPjDC9R6-GrAf-h6dpi2ISXz8sIkg8QG59OzMUW2vRu6Cm1xbchpuiSlrO5feCN2M1rWos_xmC30RAPiryGg5jmkvbcqPoCO0S9Or-HVTNz3HEUDw5SmhEGF9eHgKKypBjRZcyRx04M7c_jEx2DM3EUdUFCgInz14q01SFq-sknjLjq7cxwA-7Bcm-kKSOe84pL0zj_Wh4yoyiqOoLaCSwSdelhlDt9PO2fpCmbYmVAGvFgQ2ZAIu7IRuMsaJFW7jNxt5zZSR2H6iVALEaCdojS3FfR5EdPiJXTLxzd7FGDb5g-X5U4Ng2UTOo2CTJ9FUF2rSc6FY_wpw', 'expires_at': 1714223563.038415}.
+2024-04-27 17:42:44,038 - DEBUG - Making request: GET https://www.googleapis.com/oauth2/v1/certs
+2024-04-27 17:42:44,041 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-27 17:42:44,391 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1752
+2024-04-27 17:42:44,944 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=Hw3OU2H93xLK8M8AYIErylMa84KA8C&code=4%2F0AeaYSHB4rv58UHx9hl9VnS2maw0L9gG2SGaXVrmNAGF3l-qW19xB-QiQghtqPs28759a1w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&hd=iiitkota.ac.in&prompt=none / None /None
+2024-04-27 17:42:44,953 - DEBUG - GET - http://localhost:8000/ / None /None
+2024-04-27 17:42:53,043 - DEBUG - Generated new state MeGwKYVtTn48YVkKYuRz38i0IOspzz.
+2024-04-27 17:42:53,044 - DEBUG - GET - http://127.0.0.1:8000/auth/glogin / _ga_69MPZE94D5=GS1.1.1713426271.2.1.1713426309.0.0.0; _ga=GA1.1.1421007893.1712818389 /None
+2024-04-27 17:43:03,093 - DEBUG - Encoding `client_id` "***" with `client_secret` as Basic auth credentials.
+2024-04-27 17:43:03,094 - DEBUG - Requesting url https://oauth2.googleapis.com/token using method POST.
+2024-04-27 17:43:03,094 - DEBUG - Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AeaYSHAQU3KKrNUmx5k6M4oh4SvJ1dwzSh197ZL9SH2q6fCNXbkkZYfcwTR8JwA9Q3sDdg', 'redirect_uri': 'http://localhost:8000/auth/googlesignin'}
+2024-04-27 17:43:03,094 - DEBUG - Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x732ce2550e80>, 'verify': None, 'proxies': None, 'cert': None}.
+2024-04-27 17:43:03,095 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-04-27 17:43:03,484 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-04-27 17:43:03,486 - DEBUG - Request to fetch token completed with status 200.
+2024-04-27 17:43:03,486 - DEBUG - Request url was https://oauth2.googleapis.com/token
+2024-04-27 17:43:03,486 - DEBUG - Request headers were {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175', 'Authorization': 'Basic MjAyOTU2ODY1MTA1LXNtbmgyczI4NjVuNDE3bGVuOG9lNWFrdWdscHVhc2g0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC00bW5tbzJNREwzUGhJclJ4bEZTZ0JfUi1VMHRT'}
+2024-04-27 17:43:03,487 - DEBUG - Request body was grant_type=authorization_code&code=4%2F0AeaYSHAQU3KKrNUmx5k6M4oh4SvJ1dwzSh197ZL9SH2q6fCNXbkkZYfcwTR8JwA9Q3sDdg&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgooglesignin
+2024-04-27 17:43:03,487 - DEBUG - Response headers were {'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Date': 'Sat, 27 Apr 2024 12:13:03 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0Ad52N39ABQ3Hj_Uq5TDKEtoA-uOXYCmgR6dCZcTRj5tzaOaETKjqDR7Fqlv1XygHEyDsyBcXPPZnO_Zn0AjNRWFp-1EhvFLBChv-AMkt-F8Ig9wHn_ad89-pzngiclqHnTzWVoz-GCmk9YmUacTd5IlzVs8ZV7oLL0cIaCgYKAbQSARISFQHGX2MiOXjiHqvf8uotX_jCDAR0HQ0171",
+  "expires_in": 3599,
+  "refresh_token": "1//0g0E6V7MBPwnsCgYIARAAGBASNwF-L9Ir1JC1Cawg4nQ_KsdhQ7j4Dkgc1npNK4DhFJKAsUo1tlDRLqx7C0Hng5sqqjeeoKfyjWQ",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNzc4NDQ1MzUxNDEwNjYyMzMiLCJlbWFpbCI6Im1hbmp1bGFib25naUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlVuZ2dXX3FHLWFMWFYxZVJYUHBWRlEiLCJuYW1lIjoiTWFuanVsYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NJX3hiVDBjZWNUczhYbWM3S1Z4Y3RkTlVaNVVzclBJMEZuNWRydTE3UnRIQ1lmeDdZPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1hbmp1bGEiLCJpYXQiOjE3MTQyMTk5ODMsImV4cCI6MTcxNDIyMzU4M30.W60eTmgS8jqQN6YqMmzc0aQ--9pzRHX_NtrEF9RZK-kAIy1uNhv37YAmdZUJwEVjP7cfWbGzDVwg741Ke5H21lsQIJtUUdte07WN7BMqRpmpOmiKh62V3cZDQf5H40yoRakqYDJmRSU6EFZQo65BxQ8bMK1EBTpfizryaFknCpYCMxstybIuqmLfJ2zxe4KQnxkiVftI3hKSjVYdmBuikB1Vc0mo77lwfbpLXMZxyNjJYKfQvEmLWcg1O-AHvI3LxfN3-xS-MDat271Lzhh_hE26AQqlL1Yx46UItOp5wG9HuVbfkWvyGxvTZJETOCRBj99pg34KssSQhv3pcB2lJQ"
+}.
+2024-04-27 17:43:03,487 - DEBUG - Invoking 0 token response hooks.
+2024-04-27 17:43:03,487 - DEBUG - Obtained token {'access_token': 'ya29.a0Ad52N39ABQ3Hj_Uq5TDKEtoA-uOXYCmgR6dCZcTRj5tzaOaETKjqDR7Fqlv1XygHEyDsyBcXPPZnO_Zn0AjNRWFp-1EhvFLBChv-AMkt-F8Ig9wHn_ad89-pzngiclqHnTzWVoz-GCmk9YmUacTd5IlzVs8ZV7oLL0cIaCgYKAbQSARISFQHGX2MiOXjiHqvf8uotX_jCDAR0HQ0171', 'expires_in': 3599, 'refresh_token': '1//0g0E6V7MBPwnsCgYIARAAGBASNwF-L9Ir1JC1Cawg4nQ_KsdhQ7j4Dkgc1npNK4DhFJKAsUo1tlDRLqx7C0Hng5sqqjeeoKfyjWQ', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMDI5NTY4NjUxMDUtc21uaDJzMjg2NW40MTdsZW44b2U1YWt1Z2xwdWFzaDQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAwNzc4NDQ1MzUxNDEwNjYyMzMiLCJlbWFpbCI6Im1hbmp1bGFib25naUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlVuZ2dXX3FHLWFMWFYxZVJYUHBWRlEiLCJuYW1lIjoiTWFuanVsYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NJX3hiVDBjZWNUczhYbWM3S1Z4Y3RkTlVaNVVzclBJMEZuNWRydTE3UnRIQ1lmeDdZPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik1hbmp1bGEiLCJpYXQiOjE3MTQyMTk5ODMsImV4cCI6MTcxNDIyMzU4M30.W60eTmgS8jqQN6YqMmzc0aQ--9pzRHX_NtrEF9RZK-kAIy1uNhv37YAmdZUJwEVjP7cfWbGzDVwg741Ke5H21lsQIJtUUdte07WN7BMqRpmpOmiKh62V3cZDQf5H40yoRakqYDJmRSU6EFZQo65BxQ8bMK1EBTpfizryaFknCpYCMxstybIuqmLfJ2zxe4KQnxkiVftI3hKSjVYdmBuikB1Vc0mo77lwfbpLXMZxyNjJYKfQvEmLWcg1O-AHvI3LxfN3-xS-MDat271Lzhh_hE26AQqlL1Yx46UItOp5wG9HuVbfkWvyGxvTZJETOCRBj99pg34KssSQhv3pcB2lJQ', 'expires_at': 1714223582.4877293}.
+2024-04-27 17:43:03,488 - DEBUG - Making request: GET https://www.googleapis.com/oauth2/v1/certs
+2024-04-27 17:43:03,490 - DEBUG - Starting new HTTPS connection (1): www.googleapis.com:443
+2024-04-27 17:43:04,113 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1757
+2024-04-27 17:43:04,640 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=MeGwKYVtTn48YVkKYuRz38i0IOspzz&code=4%2F0AeaYSHAQU3KKrNUmx5k6M4oh4SvJ1dwzSh197ZL9SH2q6fCNXbkkZYfcwTR8JwA9Q3sDdg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=1&prompt=consent / None /None
+2024-04-27 17:43:04,663 - DEBUG - GET - http://localhost:8000/ / None /None
