@@ -233,3 +233,4 @@ fabric.properties
 venv
 ./database.py
 ./applog.txt
+applog.txt
