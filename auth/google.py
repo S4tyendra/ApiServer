@@ -75,13 +75,20 @@ async def callback(request: Request, response: Response):
         id = user["_id"]
         await db.sessions.insert_one(
         {"_id": cookie, "email": user.get("email"), "created_at": datetime.now().timestamp()})
-        await db.sessions.insert_one({"email": email, "created_at": datetime.now().timestamp()})
         response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
         red_url = red_map.get(state)
         if red_url is not None:
             del red_map[state]
-            return RedirectResponse(f"{red_url}?token={cookie}")
-        return RedirectResponse("/")
+            response = HTMLResponse(f"""<script>
+                                        document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
+                                        window.location.href = "{red_url}?token={cookie}";</script>""", status_code=200)
+            response.set_cookie(key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True)
+            return response
+        response = HTMLResponse(f"""<script>
+                                        document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
+                                        window.location.href = '/';</script>""", status_code=200)
+        response.set_cookie(key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True)
+        return response
         
     else:
         raise HTTPException(status_code=400, detail="Invalid state")
