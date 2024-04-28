@@ -8,6 +8,11 @@ from google_auth_oauthlib.flow import Flow
 from google.oauth2 import id_token as google_id_token
 import base64
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv(".env")
+
+local = bool(os.getenv("LOCAL", False))
 
 from database import connect_to_database 
 
@@ -24,9 +29,10 @@ red_map = {}
 
 @router.get('/glogin')
 async def login(redirect = None):
+    redirect_uri="http://localhost:8000/auth/googlesignin" if local else "https://aws-api.devh.in/auth/googlesignin" 
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE, scopes=SCOPES,
-        redirect_uri="http://localhost:8000/auth/googlesignin" 
+        redirect_uri = redirect_uri
         # redirect_uri="https://aws-api.devh.in/auth/googlesignin" 
     )  # Use your FastAPI server's callback URL
     authorization_url, state = flow.authorization_url(
@@ -40,9 +46,9 @@ async def login(redirect = None):
 @router.get('/googlesignin')
 async def callback(request: Request, response: Response):
     state = request.query_params.get('state')  # Extract state parameter
+    redirect_uri="http://localhost:8000/auth/googlesignin" if local else "https://aws-api.devh.in/auth/googlesignin" 
     if state in red_map:
-        redirect_uri="http://localhost:8000/auth/googlesignin" 
-        # redirect_uri = "https://aws-api.devh.in/auth/googlesignin"  # Update with your FastAPI server's callback URL
+        redirect_uri = redirect_uri
         flow = Flow.from_client_secrets_file(
             CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
         )
