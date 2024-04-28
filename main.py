@@ -454,3 +454,8 @@ async def generate(data: PromptData):
 async def pull():
     os.system("git pull")
     return {"message": "Pulled successfully!"}
+
+
+@app.get("/test", include_in_schema=False)
+async def test():
+    return {"message": "Test successful!"}
