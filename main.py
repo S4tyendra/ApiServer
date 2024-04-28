@@ -456,6 +456,3 @@ async def pull():
     return {"message": "Pulled successfully!"}
 
 
-@app.get("/test", include_in_schema=False)
-async def test():
-    return {"message": "Test successful!"}
