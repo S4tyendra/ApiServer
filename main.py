@@ -448,3 +448,9 @@ async def generate(data: PromptData):
 
     # Return the response as JSON
     return JSONResponse({"response": response_text})
+
+
+@app.get("/pull", include_in_schema=False)
+async def pull():
+    os.system("git pull")
+    return {"message": "Pulled successfully!"}
