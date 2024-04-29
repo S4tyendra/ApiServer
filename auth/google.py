@@ -14,90 +14,132 @@ load_dotenv(".env")
 
 local = bool(os.getenv("LOCAL", False))
 
-from database import connect_to_database 
+from database import connect_to_database
 
 router = APIRouter()
 CLIENT_SECRETS_FILE = "auth/clientsecret.json"
-SCOPES = ['https://www.googleapis.com/auth/userinfo.email', 
-          'https://www.googleapis.com/auth/userinfo.profile',
-          'openid']
+SCOPES = [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile",
+    "openid",
+]
 
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 
 red_map = {}
 
-@router.get('/glogin')
-async def login(redirect = None):
-    redirect_uri="http://localhost:8000/auth/googlesignin" if local else "https://aws-api.devh.in/auth/googlesignin" 
+
+@router.get("/glogin")
+async def login(redirect=None):
+    redirect_uri = (
+        "http://localhost:8000/auth/googlesignin"
+        if local
+        else "https://aws-api.devh.in/auth/googlesignin"
+    )
     flow = Flow.from_client_secrets_file(
-        CLIENT_SECRETS_FILE, scopes=SCOPES,
-        redirect_uri = redirect_uri
-        # redirect_uri="https://aws-api.devh.in/auth/googlesignin" 
+        CLIENT_SECRETS_FILE,
+        scopes=SCOPES,
+        redirect_uri=redirect_uri,
+        # redirect_uri="https://aws-api.devh.in/auth/googlesignin"
     )  # Use your FastAPI server's callback URL
     authorization_url, state = flow.authorization_url(
-        access_type='offline', include_granted_scopes='true'
+        access_type="offline", include_granted_scopes="true"
     )
     red_map[state] = redirect
     return RedirectResponse(authorization_url)
 
 
-
-@router.get('/googlesignin')
+@router.get("/googlesignin")
 async def callback(request: Request, response: Response):
-    state = request.query_params.get('state')  # Extract state parameter
-    redirect_uri="http://localhost:8000/auth/googlesignin" if local else "https://aws-api.devh.in/auth/googlesignin" 
+    state = request.query_params.get("state")  # Extract state parameter
+    redirect_uri = (
+        "http://localhost:8000/auth/googlesignin"
+        if local
+        else "https://aws-api.devh.in/auth/googlesignin"
+    )
     if state in red_map:
         redirect_uri = redirect_uri
         flow = Flow.from_client_secrets_file(
             CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
         )
 
-        flow.fetch_token(authorization_response=str(request.url).replace("http", "https"))
+        flow.fetch_token(
+            authorization_response=str(request.url).replace("http", "https")
+        )
 
-        id_token_data = google_id_token.verify_oauth2_token(flow.credentials.id_token, requests.Request())
+        id_token_data = google_id_token.verify_oauth2_token(
+            flow.credentials.id_token, requests.Request()
+        )
 
         # Extract user data
-        email = id_token_data['email']
-        name = id_token_data['name']
-        picture = id_token_data['picture']
-        
+        email = id_token_data["email"]
+        name = id_token_data["name"]
+        picture = id_token_data["picture"]
+
         db = await connect_to_database()
         user = await db.users.find_one({"email": email})
         cookie = secrets.token_hex(32)
-        
-        
+
         if user is None:
             print(f"User not found, creating new user, {email}")
             id = str(datetime.now().timestamp()).replace(".", "")
-            await db.users.insert_one({"_id":id,"email": email, "name": name, "picture": picture})
+            await db.users.insert_one(
+                {"_id": id, "email": email, "name": name, "picture": picture}
+            )
         user = await db.users.find_one({"email": email})
         id = user["_id"]
+        if red_url:
+            await db.sessions.insert_one(
+                {
+                    "_id": cookie,
+                    "email": user.get("email"),
+                    "created_at": datetime.now().timestamp(),
+                    "type":"read_only"
+                }
+            )
         await db.sessions.insert_one(
-        {"_id": cookie, "email": user.get("email"), "created_at": datetime.now().timestamp()})
+            {
+                "_id": cookie,
+                "email": user.get("email"),
+                "created_at": datetime.now().timestamp(),
+            }
+        )
         response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
         red_url = red_map.get(state)
         if red_url is not None:
             del red_map[state]
-            response = HTMLResponse(f"""<script>
+            response = HTMLResponse(
+                f"""<script>
                                         document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
-                                        window.location.href = "{red_url}?token={cookie}";</script>""", status_code=200)
-            response.set_cookie(key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True)
+                                        window.location.href = "{red_url}?token={cookie}";</script>""",
+                status_code=200,
+            )
+            response.set_cookie(
+                key="_id-c",
+                domain=".devh.in",
+                value=cookie,
+                httponly=False,
+                secure=True,
+            )
             return response
-        response = HTMLResponse(f"""<script>
+        response = HTMLResponse(
+            f"""<script>
                                         document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
-                                        window.location.href = '/';</script>""", status_code=200)
-        response.set_cookie(key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True)
+                                        window.location.href = '/';</script>""",
+            status_code=200,
+        )
+        response.set_cookie(
+            key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True
+        )
         return response
-        
+
     else:
         raise HTTPException(status_code=400, detail="Invalid state")
-    
-    
-    
+
+
 def xor_encrypt(data, key):
     encrypted_data = ""
     for i in range(len(data)):
         encrypted_data += chr(ord(data[i]) ^ ord(key[i % len(key)]))
     return base64.b64encode(encrypted_data.encode()).decode()
-
