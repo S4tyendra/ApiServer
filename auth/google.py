@@ -99,6 +99,7 @@ async def callback(request: Request, response: Response):
             )
         user = await db.users.find_one({"email": email})
         id = user["_id"]
+        red_url = red_map.get(state)
         if red_url:
             await db.sessions.insert_one(
                 {
@@ -116,7 +117,7 @@ async def callback(request: Request, response: Response):
             }
         )
         response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
-        red_url = red_map.get(state)
+        
         if red_url is not None:
             del red_map[state]
             response = HTMLResponse(
