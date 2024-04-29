@@ -15,6 +15,7 @@ load_dotenv(".env")
 local = bool(os.getenv("LOCAL", False))
 
 from database import connect_to_database
+from urllib.parse import urlparse
 
 router = APIRouter()
 CLIENT_SECRETS_FILE = "auth/clientsecret.json"
@@ -32,6 +33,11 @@ red_map = {}
 
 @router.get("/glogin")
 async def login(redirect=None):
+    valid_domains = ['iiitk.devh.in', '127.0.0.1:23368', 'account.devh.in']
+    if redirect:
+        parsed_url = urlparse(redirect)
+        if parsed_url.hostname not in valid_domains:
+            raise HTTPException(status_code=400, detail="Request Blocked")
     redirect_uri = (
         "http://localhost:8000/auth/googlesignin"
         if local
