@@ -33,9 +33,13 @@ red_map = {}
 
 @router.get("/glogin")
 async def login(redirect=None):
-    valid_domains = ['iiitk.devh.in', '127.0.0.1:23368', 'account.devh.in']
+    valid_domains = ['iiitk.devh.in', '127.0.0.1', 'account.devh.in']
     if redirect:
         parsed_url = urlparse(redirect)
+        p_port = parsed_url.port
+        if parsed_url.hostname == "127.0.0.1:23368" and p_port is not None:
+            if p_port != 23368:
+                raise HTTPException(status_code=400, detail="Request Blocked")
         if parsed_url.hostname not in valid_domains:
             raise HTTPException(status_code=400, detail="Request Blocked")
     redirect_uri = (
