@@ -109,13 +109,14 @@ async def callback(request: Request, response: Response):
                     "type":"read_only"
                 }
             )
-        await db.sessions.insert_one(
-            {
-                "_id": cookie,
-                "email": user.get("email"),
-                "created_at": datetime.now().timestamp(),
-            }
-        )
+        else :
+            await db.sessions.insert_one(
+                {
+                    "_id": cookie,
+                    "email": user.get("email"),
+                    "created_at": datetime.now().timestamp(),
+                }
+            )
         response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
         
         if red_url is not None:
