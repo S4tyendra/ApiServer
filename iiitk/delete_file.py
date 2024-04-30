@@ -6,7 +6,7 @@ import base64
 
 def get_main_branch_sha():
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
@@ -23,7 +23,7 @@ def get_main_branch_sha():
 
 def create_branch(_id):
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     BRANCH_NAME = _id + "-" + str(random.randint(1000, 9999))
     headers = {"Authorization": f"token {TOKEN}"}
@@ -45,7 +45,7 @@ def create_branch(_id):
 
 def delete_file_or_folder(branch_name, file_path, _id):
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
@@ -81,7 +81,7 @@ def delete_file_or_folder(branch_name, file_path, _id):
 
 def create_pull_request(branch_name, pull_request_title):
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
@@ -130,7 +130,7 @@ async def delete__file(data: DeleteData):
 
 def edit_file_or_folder(branch_name, file_path, new_content, _id):
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
@@ -191,7 +191,7 @@ async def edit__file(data: EditData):
 
 def create_file_or_folder(branch_name, file_path, file_name, content, _id):
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 

@@ -8,7 +8,6 @@ from fastapi import APIRouter, HTTPException, Depends
 from functions.apiwrapper import api_key_auth
 from api.countrystatesapi.datab import world_db
 from bson import ObjectId
-router = APIRouter()
 
 
 router = APIRouter()
