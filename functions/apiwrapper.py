@@ -32,7 +32,7 @@ async def api_key_auth(request:Request, call_next,  api_key: str = Depends(api_k
     path = request.url.path
     print(path)
     tc = None
-    if path.endswith("generate"):
+    if path.endswith("generate") or path.endswith("sendpdf"):
         tc = 2
     await db.users.update_one({"email": email}, {"$set":
                                                         {"last_accessed": time.time()},
