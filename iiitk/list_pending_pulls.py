@@ -10,7 +10,7 @@ import requests
 def get_pull_requests(user_name: str):
     data = []
     BASE_URL = "https://api.github.com"
-    REPO = "S4tyendra/4thsemnotes"
+    REPO = "S4tyendra/NOTES-res"
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
