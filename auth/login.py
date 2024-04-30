@@ -142,7 +142,7 @@ async def get_tokens(request: Request):
     db = await connect_to_database()
     cookie = request.cookies.get("_id-c")
     if cookie is None:
-        raise HTTPException(status_code=401, detail="Unauthorized")
+        raise HTTPException(status_code=401, detail="Unauthorized, Please login first")
     cookie_user = await db.sessions.find_one({"_id": cookie})
     if cookie_user is None:
         raise HTTPException(status_code=401, detail="Unauthorized")

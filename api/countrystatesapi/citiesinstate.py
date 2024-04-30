@@ -1,8 +1,7 @@
 import os.path
 
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, Request
 from fastapi.responses import FileResponse
-from flask import request
 
 from api.countrystatesapi.datab import world_db
 from functions.apiwrapper import api_key_auth, tokenconsuption
@@ -11,7 +10,7 @@ router = APIRouter()
 
 
 @router.get("/getcitiesinstate", dependencies=[Depends(api_key_auth)])
-async def get_cities(country: str, state: str):
+async def get_cities(country: str, state: str, request: Request):
     api_key = request.headers.get("X-API-KEY")
     try:
         contry = sanitise(country)
