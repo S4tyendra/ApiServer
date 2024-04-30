@@ -213,3 +213,587 @@
 2024-04-27 17:43:04,113 - DEBUG - https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1757
 2024-04-27 17:43:04,640 - DEBUG - GET - http://localhost:8000/auth/googlesignin?state=MeGwKYVtTn48YVkKYuRz38i0IOspzz&code=4%2F0AeaYSHAQU3KKrNUmx5k6M4oh4SvJ1dwzSh197ZL9SH2q6fCNXbkkZYfcwTR8JwA9Q3sDdg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=1&prompt=consent / None /None
 2024-04-27 17:43:04,663 - DEBUG - GET - http://localhost:8000/ / None /None
+2024-04-30 10:01:37,149 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:01:37,151 - DEBUG - /etc/localtime found
+2024-04-30 10:01:37,154 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:01:37,155 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:01:37,156 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:01:37,158 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:01:37,158 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:01:37,158 - INFO - Scheduler started
+2024-04-30 10:01:37,158 - INFO - Scheduler started!
+2024-04-30 10:01:37,178 - DEBUG - Looking for jobs to run
+2024-04-30 10:01:37,178 - DEBUG - Next wakeup is due at 2024-04-30 10:06:37.156161+05:30 (in 299.977943 seconds)
+2024-04-30 10:02:12,773 - DEBUG - GET - http://0.0.0.0:8000/ / None /None
+2024-04-30 10:02:22,188 - DEBUG - GET - http://0.0.0.0:8000/docs / None /None
+2024-04-30 10:02:22,801 - DEBUG - GET - http://0.0.0.0:8000/openapi.json / None /None
+2024-04-30 10:02:44,367 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /None
+2024-04-30 10:03:49,650 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:03:49,651 - DEBUG - /etc/localtime found
+2024-04-30 10:03:49,652 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:03:49,654 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:03:49,654 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:03:49,655 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:03:49,656 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:03:49,656 - INFO - Scheduler started
+2024-04-30 10:03:49,656 - INFO - Scheduler started!
+2024-04-30 10:03:49,675 - DEBUG - Looking for jobs to run
+2024-04-30 10:03:49,675 - DEBUG - Next wakeup is due at 2024-04-30 10:08:49.654510+05:30 (in 299.978787 seconds)
+2024-04-30 10:03:55,625 - DEBUG - GET - http://0.0.0.0:8000/docs / None /None
+2024-04-30 10:03:55,813 - DEBUG - GET - http://0.0.0.0:8000/openapi.json / None /None
+2024-04-30 10:03:58,984 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /None
+2024-04-30 10:04:37,149 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:04:37,149 - DEBUG - /etc/localtime found
+2024-04-30 10:04:37,150 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:04:37,150 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:04:37,151 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:04:37,151 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:04:37,151 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:04:37,151 - INFO - Scheduler started
+2024-04-30 10:04:37,151 - INFO - Scheduler started!
+2024-04-30 10:04:37,167 - DEBUG - Looking for jobs to run
+2024-04-30 10:04:37,168 - DEBUG - Next wakeup is due at 2024-04-30 10:09:37.150943+05:30 (in 299.982922 seconds)
+2024-04-30 10:04:40,023 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:05:30,504 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:05:30,505 - DEBUG - /etc/localtime found
+2024-04-30 10:05:30,507 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:05:30,508 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:05:30,508 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:05:30,510 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:05:30,510 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:05:30,510 - INFO - Scheduler started
+2024-04-30 10:05:30,510 - INFO - Scheduler started!
+2024-04-30 10:05:30,534 - DEBUG - Looking for jobs to run
+2024-04-30 10:05:30,534 - DEBUG - Next wakeup is due at 2024-04-30 10:10:30.508830+05:30 (in 299.973839 seconds)
+2024-04-30 10:05:31,241 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:05:45,172 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:05:45,173 - DEBUG - /etc/localtime found
+2024-04-30 10:05:45,174 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:05:45,174 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:05:45,174 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:05:45,175 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:05:45,175 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:05:45,175 - INFO - Scheduler started
+2024-04-30 10:05:45,175 - INFO - Scheduler started!
+2024-04-30 10:05:45,193 - DEBUG - Looking for jobs to run
+2024-04-30 10:05:45,194 - DEBUG - Next wakeup is due at 2024-04-30 10:10:45.174879+05:30 (in 299.980803 seconds)
+2024-04-30 10:05:53,798 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:06:05,906 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:06:05,906 - DEBUG - /etc/localtime found
+2024-04-30 10:06:05,907 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:06:05,907 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:05,907 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:05,908 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:06:05,908 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:06:05,908 - INFO - Scheduler started
+2024-04-30 10:06:05,908 - INFO - Scheduler started!
+2024-04-30 10:06:05,925 - DEBUG - Looking for jobs to run
+2024-04-30 10:06:05,925 - DEBUG - Next wakeup is due at 2024-04-30 10:11:05.907672+05:30 (in 299.981760 seconds)
+2024-04-30 10:06:45,099 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:06:45,100 - DEBUG - /etc/localtime found
+2024-04-30 10:06:45,103 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:06:45,104 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:45,104 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:45,104 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:06:45,104 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:06:45,104 - INFO - Scheduler started
+2024-04-30 10:06:45,104 - INFO - Scheduler started!
+2024-04-30 10:06:45,135 - DEBUG - Looking for jobs to run
+2024-04-30 10:06:45,136 - DEBUG - Next wakeup is due at 2024-04-30 10:11:45.104239+05:30 (in 299.968192 seconds)
+2024-04-30 10:06:59,313 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:06:59,313 - DEBUG - /etc/localtime found
+2024-04-30 10:06:59,314 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:06:59,314 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:59,314 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:06:59,315 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:06:59,315 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:06:59,315 - INFO - Scheduler started
+2024-04-30 10:06:59,315 - INFO - Scheduler started!
+2024-04-30 10:06:59,331 - DEBUG - Looking for jobs to run
+2024-04-30 10:06:59,331 - DEBUG - Next wakeup is due at 2024-04-30 10:11:59.314824+05:30 (in 299.983375 seconds)
+2024-04-30 10:08:19,204 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:08:19,205 - DEBUG - /etc/localtime found
+2024-04-30 10:08:19,207 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:08:19,208 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:19,209 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:19,210 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:08:19,210 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:08:19,210 - INFO - Scheduler started
+2024-04-30 10:08:19,210 - INFO - Scheduler started!
+2024-04-30 10:08:19,235 - DEBUG - Looking for jobs to run
+2024-04-30 10:08:19,235 - DEBUG - Next wakeup is due at 2024-04-30 10:13:19.209171+05:30 (in 299.973844 seconds)
+2024-04-30 10:08:40,252 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:08:40,253 - DEBUG - /etc/localtime found
+2024-04-30 10:08:40,255 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:08:40,257 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:40,257 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:40,258 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:08:40,258 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:08:40,259 - INFO - Scheduler started
+2024-04-30 10:08:40,259 - INFO - Scheduler started!
+2024-04-30 10:08:40,282 - DEBUG - Looking for jobs to run
+2024-04-30 10:08:40,283 - DEBUG - Next wakeup is due at 2024-04-30 10:13:40.257252+05:30 (in 299.974189 seconds)
+2024-04-30 10:08:45,032 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:08:45,033 - DEBUG - /etc/localtime found
+2024-04-30 10:08:45,035 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:08:45,037 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:45,037 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:08:45,039 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:08:45,039 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:08:45,039 - INFO - Scheduler started
+2024-04-30 10:08:45,040 - INFO - Scheduler started!
+2024-04-30 10:08:45,064 - DEBUG - Looking for jobs to run
+2024-04-30 10:08:45,064 - DEBUG - Next wakeup is due at 2024-04-30 10:13:45.037471+05:30 (in 299.972668 seconds)
+2024-04-30 10:09:10,848 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:09:10,849 - DEBUG - /etc/localtime found
+2024-04-30 10:09:10,851 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:09:10,852 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:09:10,852 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:09:10,853 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:09:10,854 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:09:10,854 - INFO - Scheduler started
+2024-04-30 10:09:10,854 - INFO - Scheduler started!
+2024-04-30 10:09:10,883 - DEBUG - Looking for jobs to run
+2024-04-30 10:09:10,883 - DEBUG - Next wakeup is due at 2024-04-30 10:14:10.852581+05:30 (in 299.968721 seconds)
+2024-04-30 10:09:32,319 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:09:32,320 - DEBUG - /etc/localtime found
+2024-04-30 10:09:32,321 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:09:32,321 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:09:32,321 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:09:32,322 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:09:32,322 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:09:32,322 - INFO - Scheduler started
+2024-04-30 10:09:32,322 - INFO - Scheduler started!
+2024-04-30 10:09:32,338 - DEBUG - Looking for jobs to run
+2024-04-30 10:09:32,338 - DEBUG - Next wakeup is due at 2024-04-30 10:14:32.321909+05:30 (in 299.983426 seconds)
+2024-04-30 10:10:11,593 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:10:11,594 - DEBUG - /etc/localtime found
+2024-04-30 10:10:11,595 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:10:11,596 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:10:11,597 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:10:11,598 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:10:11,599 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:10:11,599 - INFO - Scheduler started
+2024-04-30 10:10:11,599 - INFO - Scheduler started!
+2024-04-30 10:10:11,623 - DEBUG - Looking for jobs to run
+2024-04-30 10:10:11,623 - DEBUG - Next wakeup is due at 2024-04-30 10:15:11.597153+05:30 (in 299.973831 seconds)
+2024-04-30 10:12:36,584 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:12:36,585 - DEBUG - /etc/localtime found
+2024-04-30 10:12:36,587 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:12:36,588 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:12:36,589 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:12:36,590 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:12:36,590 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:12:36,591 - INFO - Scheduler started
+2024-04-30 10:12:36,591 - INFO - Scheduler started!
+2024-04-30 10:12:36,614 - DEBUG - Looking for jobs to run
+2024-04-30 10:12:36,614 - DEBUG - Next wakeup is due at 2024-04-30 10:17:36.588873+05:30 (in 299.974651 seconds)
+2024-04-30 10:12:41,399 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:13:01,056 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:13:01,057 - DEBUG - /etc/localtime found
+2024-04-30 10:13:01,059 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:13:01,061 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:01,061 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:01,062 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:13:01,063 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:13:01,063 - INFO - Scheduler started
+2024-04-30 10:13:01,063 - INFO - Scheduler started!
+2024-04-30 10:13:01,086 - DEBUG - Looking for jobs to run
+2024-04-30 10:13:01,087 - DEBUG - Next wakeup is due at 2024-04-30 10:18:01.061571+05:30 (in 299.974512 seconds)
+2024-04-30 10:13:13,987 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:13:13,987 - DEBUG - /etc/localtime found
+2024-04-30 10:13:13,989 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:13:13,990 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:13,990 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:13,991 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:13:13,991 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:13:13,991 - INFO - Scheduler started
+2024-04-30 10:13:13,991 - INFO - Scheduler started!
+2024-04-30 10:13:14,007 - DEBUG - Looking for jobs to run
+2024-04-30 10:13:14,007 - DEBUG - Next wakeup is due at 2024-04-30 10:18:13.990718+05:30 (in 299.983097 seconds)
+2024-04-30 10:13:51,267 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:13:51,268 - DEBUG - /etc/localtime found
+2024-04-30 10:13:51,271 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:13:51,272 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:51,272 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:51,274 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:13:51,274 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:13:51,275 - INFO - Scheduler started
+2024-04-30 10:13:51,275 - INFO - Scheduler started!
+2024-04-30 10:13:51,296 - DEBUG - Looking for jobs to run
+2024-04-30 10:13:51,296 - DEBUG - Next wakeup is due at 2024-04-30 10:18:51.272824+05:30 (in 299.976133 seconds)
+2024-04-30 10:13:54,318 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:13:54,319 - DEBUG - /etc/localtime found
+2024-04-30 10:13:54,321 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:13:54,322 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:54,323 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:54,324 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:13:54,324 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:13:54,325 - INFO - Scheduler started
+2024-04-30 10:13:54,325 - INFO - Scheduler started!
+2024-04-30 10:13:54,365 - DEBUG - Looking for jobs to run
+2024-04-30 10:13:54,365 - DEBUG - Next wakeup is due at 2024-04-30 10:18:54.323285+05:30 (in 299.957844 seconds)
+2024-04-30 10:13:59,342 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:13:59,343 - DEBUG - /etc/localtime found
+2024-04-30 10:13:59,344 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:13:59,346 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:59,346 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:13:59,347 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:13:59,347 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:13:59,348 - INFO - Scheduler started
+2024-04-30 10:13:59,348 - INFO - Scheduler started!
+2024-04-30 10:13:59,369 - DEBUG - Looking for jobs to run
+2024-04-30 10:13:59,369 - DEBUG - Next wakeup is due at 2024-04-30 10:18:59.346325+05:30 (in 299.976498 seconds)
+2024-04-30 10:14:27,387 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:14:27,388 - DEBUG - /etc/localtime found
+2024-04-30 10:14:27,390 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:14:27,391 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:14:27,392 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:14:27,393 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:14:27,393 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:14:27,393 - INFO - Scheduler started
+2024-04-30 10:14:27,393 - INFO - Scheduler started!
+2024-04-30 10:14:27,417 - DEBUG - Looking for jobs to run
+2024-04-30 10:14:27,417 - DEBUG - Next wakeup is due at 2024-04-30 10:19:27.392026+05:30 (in 299.974751 seconds)
+2024-04-30 10:15:02,644 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:15:02,645 - DEBUG - /etc/localtime found
+2024-04-30 10:15:02,647 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:15:02,648 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:15:02,649 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:15:02,650 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:15:02,650 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:15:02,650 - INFO - Scheduler started
+2024-04-30 10:15:02,650 - INFO - Scheduler started!
+2024-04-30 10:15:02,688 - DEBUG - Looking for jobs to run
+2024-04-30 10:15:02,688 - DEBUG - Next wakeup is due at 2024-04-30 10:20:02.649160+05:30 (in 299.960519 seconds)
+2024-04-30 10:15:06,689 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:15:42,623 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:15:42,624 - DEBUG - /etc/localtime found
+2024-04-30 10:15:42,626 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:15:42,627 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:15:42,628 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:15:42,629 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:15:42,629 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:15:42,629 - INFO - Scheduler started
+2024-04-30 10:15:42,629 - INFO - Scheduler started!
+2024-04-30 10:15:42,651 - DEBUG - Looking for jobs to run
+2024-04-30 10:15:42,651 - DEBUG - Next wakeup is due at 2024-04-30 10:20:42.627918+05:30 (in 299.976765 seconds)
+2024-04-30 10:16:39,214 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:16:39,215 - DEBUG - /etc/localtime found
+2024-04-30 10:16:39,217 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:16:39,218 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:16:39,218 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:16:39,218 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:16:39,218 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:16:39,218 - INFO - Scheduler started
+2024-04-30 10:16:39,218 - INFO - Scheduler started!
+2024-04-30 10:16:39,234 - DEBUG - Looking for jobs to run
+2024-04-30 10:16:39,234 - DEBUG - Next wakeup is due at 2024-04-30 10:21:39.218470+05:30 (in 299.983488 seconds)
+2024-04-30 10:16:42,524 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:17:56,772 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:19:04,374 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:19:04,375 - DEBUG - /etc/localtime found
+2024-04-30 10:19:04,376 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:19:04,378 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:19:04,378 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:19:04,379 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:19:04,380 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:19:04,380 - INFO - Scheduler started
+2024-04-30 10:19:04,380 - INFO - Scheduler started!
+2024-04-30 10:19:04,402 - DEBUG - Looking for jobs to run
+2024-04-30 10:19:04,402 - DEBUG - Next wakeup is due at 2024-04-30 10:24:04.378463+05:30 (in 299.975590 seconds)
+2024-04-30 10:19:10,124 - DEBUG - GET - http://0.0.0.0:8000/api/wca/countrieslist / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:19:59,406 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:19:59,407 - DEBUG - /etc/localtime found
+2024-04-30 10:19:59,407 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:19:59,408 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:19:59,408 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:19:59,408 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:19:59,408 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:19:59,408 - INFO - Scheduler started
+2024-04-30 10:19:59,408 - INFO - Scheduler started!
+2024-04-30 10:19:59,426 - DEBUG - Looking for jobs to run
+2024-04-30 10:19:59,426 - DEBUG - Next wakeup is due at 2024-04-30 10:24:59.408232+05:30 (in 299.981653 seconds)
+2024-04-30 10:20:21,624 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:20:21,624 - DEBUG - /etc/localtime found
+2024-04-30 10:20:21,626 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:20:21,628 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:20:21,628 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:20:21,630 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:20:21,630 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:20:21,630 - INFO - Scheduler started
+2024-04-30 10:20:21,630 - INFO - Scheduler started!
+2024-04-30 10:20:21,665 - DEBUG - Looking for jobs to run
+2024-04-30 10:20:21,665 - DEBUG - Next wakeup is due at 2024-04-30 10:25:21.628582+05:30 (in 299.963052 seconds)
+2024-04-30 10:20:53,266 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:20:53,267 - DEBUG - /etc/localtime found
+2024-04-30 10:20:53,269 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:20:53,271 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:20:53,271 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:20:53,272 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:20:53,272 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:20:53,272 - INFO - Scheduler started
+2024-04-30 10:20:53,272 - INFO - Scheduler started!
+2024-04-30 10:20:53,290 - DEBUG - Looking for jobs to run
+2024-04-30 10:20:53,290 - DEBUG - Next wakeup is due at 2024-04-30 10:25:53.271355+05:30 (in 299.981153 seconds)
+2024-04-30 10:21:29,906 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:21:29,907 - DEBUG - /etc/localtime found
+2024-04-30 10:21:29,907 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:21:29,908 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:21:29,908 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:21:29,909 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:21:29,909 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:21:29,909 - INFO - Scheduler started
+2024-04-30 10:21:29,909 - INFO - Scheduler started!
+2024-04-30 10:21:29,931 - DEBUG - Looking for jobs to run
+2024-04-30 10:21:29,931 - DEBUG - Next wakeup is due at 2024-04-30 10:26:29.908627+05:30 (in 299.977168 seconds)
+2024-04-30 10:22:03,707 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:22:03,708 - DEBUG - /etc/localtime found
+2024-04-30 10:22:03,710 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:22:03,711 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:03,712 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:03,713 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:22:03,713 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:22:03,713 - INFO - Scheduler started
+2024-04-30 10:22:03,713 - INFO - Scheduler started!
+2024-04-30 10:22:03,734 - DEBUG - Looking for jobs to run
+2024-04-30 10:22:03,734 - DEBUG - Next wakeup is due at 2024-04-30 10:27:03.711866+05:30 (in 299.977168 seconds)
+2024-04-30 10:22:13,911 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:22:13,912 - DEBUG - /etc/localtime found
+2024-04-30 10:22:13,914 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:22:13,915 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:13,916 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:13,917 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:22:13,917 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:22:13,917 - INFO - Scheduler started
+2024-04-30 10:22:13,918 - INFO - Scheduler started!
+2024-04-30 10:22:13,944 - DEBUG - Looking for jobs to run
+2024-04-30 10:22:13,944 - DEBUG - Next wakeup is due at 2024-04-30 10:27:13.916102+05:30 (in 299.971791 seconds)
+2024-04-30 10:22:29,638 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:22:29,639 - DEBUG - /etc/localtime found
+2024-04-30 10:22:29,641 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:22:29,642 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:29,642 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:22:29,643 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:22:29,643 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:22:29,643 - INFO - Scheduler started
+2024-04-30 10:22:29,643 - INFO - Scheduler started!
+2024-04-30 10:22:29,659 - DEBUG - Looking for jobs to run
+2024-04-30 10:22:29,659 - DEBUG - Next wakeup is due at 2024-04-30 10:27:29.642841+05:30 (in 299.983720 seconds)
+2024-04-30 10:23:08,726 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:23:08,727 - DEBUG - /etc/localtime found
+2024-04-30 10:23:08,729 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:23:08,730 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:23:08,730 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:23:08,732 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:23:08,732 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:23:08,732 - INFO - Scheduler started
+2024-04-30 10:23:08,732 - INFO - Scheduler started!
+2024-04-30 10:23:08,754 - DEBUG - Looking for jobs to run
+2024-04-30 10:23:08,754 - DEBUG - Next wakeup is due at 2024-04-30 10:28:08.730654+05:30 (in 299.975691 seconds)
+2024-04-30 10:23:14,772 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=Algeria / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:24:41,555 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:24:41,556 - DEBUG - /etc/localtime found
+2024-04-30 10:24:41,558 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:24:41,559 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:24:41,560 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:24:41,561 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:24:41,561 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:24:41,561 - INFO - Scheduler started
+2024-04-30 10:24:41,561 - INFO - Scheduler started!
+2024-04-30 10:24:41,592 - DEBUG - Looking for jobs to run
+2024-04-30 10:24:41,592 - DEBUG - Next wakeup is due at 2024-04-30 10:29:41.559966+05:30 (in 299.967162 seconds)
+2024-04-30 10:24:44,806 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=Algeria / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:25:28,278 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:25:28,279 - DEBUG - /etc/localtime found
+2024-04-30 10:25:28,281 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:25:28,283 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:25:28,283 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:25:28,284 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:25:28,285 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:25:28,285 - INFO - Scheduler started
+2024-04-30 10:25:28,285 - INFO - Scheduler started!
+2024-04-30 10:25:28,314 - DEBUG - Looking for jobs to run
+2024-04-30 10:25:28,314 - DEBUG - Next wakeup is due at 2024-04-30 10:30:28.283219+05:30 (in 299.968878 seconds)
+2024-04-30 10:25:29,450 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=Algeria / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:25:33,039 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=Algeria / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:25:59,483 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:25:59,484 - DEBUG - /etc/localtime found
+2024-04-30 10:25:59,487 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:25:59,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:25:59,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:25:59,488 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:25:59,488 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:25:59,488 - INFO - Scheduler started
+2024-04-30 10:25:59,488 - INFO - Scheduler started!
+2024-04-30 10:25:59,513 - DEBUG - Looking for jobs to run
+2024-04-30 10:25:59,514 - DEBUG - Next wakeup is due at 2024-04-30 10:30:59.488529+05:30 (in 299.974493 seconds)
+2024-04-30 10:26:10,391 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:26:10,392 - DEBUG - /etc/localtime found
+2024-04-30 10:26:10,393 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:26:10,395 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:26:10,395 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:26:10,396 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:26:10,396 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:26:10,397 - INFO - Scheduler started
+2024-04-30 10:26:10,397 - INFO - Scheduler started!
+2024-04-30 10:26:10,422 - DEBUG - Looking for jobs to run
+2024-04-30 10:26:10,422 - DEBUG - Next wakeup is due at 2024-04-30 10:31:10.395462+05:30 (in 299.973229 seconds)
+2024-04-30 10:26:15,196 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=Algeria / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:26:25,859 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=India / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:26:36,057 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getstatesincountry?country=United%20States / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:27:32,206 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:27:32,207 - DEBUG - /etc/localtime found
+2024-04-30 10:27:32,209 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:27:32,210 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:27:32,210 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:27:32,211 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:27:32,211 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:27:32,211 - INFO - Scheduler started
+2024-04-30 10:27:32,211 - INFO - Scheduler started!
+2024-04-30 10:27:32,227 - DEBUG - Looking for jobs to run
+2024-04-30 10:27:32,227 - DEBUG - Next wakeup is due at 2024-04-30 10:32:32.210854+05:30 (in 299.983702 seconds)
+2024-04-30 10:29:25,485 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:29:25,486 - DEBUG - /etc/localtime found
+2024-04-30 10:29:25,486 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:29:25,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:29:25,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:29:25,487 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:29:25,487 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:29:25,487 - INFO - Scheduler started
+2024-04-30 10:29:25,487 - INFO - Scheduler started!
+2024-04-30 10:29:25,504 - DEBUG - Looking for jobs to run
+2024-04-30 10:29:25,504 - DEBUG - Next wakeup is due at 2024-04-30 10:34:25.487375+05:30 (in 299.983043 seconds)
+2024-04-30 10:29:56,809 - DEBUG - /etc/timezone found, contents:
+ Asia/Kolkata
+
+2024-04-30 10:29:56,810 - DEBUG - /etc/localtime found
+2024-04-30 10:29:56,812 - DEBUG - 2 found:
+ {'/etc/timezone': 'Asia/Kolkata', '/etc/localtime is a symlink to': 'Asia/Kolkata'}
+2024-04-30 10:29:56,814 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:29:56,815 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-04-30 10:29:56,816 - INFO - Added job "clear_log" to job store "default"
+2024-04-30 10:29:56,816 - INFO - Added job "delete_temp" to job store "default"
+2024-04-30 10:29:56,816 - INFO - Scheduler started
+2024-04-30 10:29:56,816 - INFO - Scheduler started!
+2024-04-30 10:29:56,843 - DEBUG - Looking for jobs to run
+2024-04-30 10:29:56,843 - DEBUG - Next wakeup is due at 2024-04-30 10:34:56.814881+05:30 (in 299.971042 seconds)
+2024-04-30 10:30:19,797 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getcitiesinstate?country=United%20States&state=Alabama / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
+2024-04-30 10:30:39,144 - DEBUG - GET - http://0.0.0.0:8000/api/wca/getcitiesinstate?country=INdiA&state=Andhra%20Pradesh / None /848c2136f23143dd44c4a066b0040e6b9a110b62cbfcfe9cf700412626ea542a
