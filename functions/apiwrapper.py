@@ -31,9 +31,12 @@ async def api_key_auth(request:Request, call_next,  api_key: str = Depends(api_k
     
     path = request.url.path
     print(path)
+    tc = None
+    if path.endswith("generate"):
+        tc = 2
     await db.users.update_one({"email": email}, {"$set":
                                                         {"last_accessed": time.time()},
-                                                        "$inc": {"tokens": -1}
+                                                        "$inc": {"tokens": tc or 1}
                                                     })
         
 async def tokenconsuption(api_key, tokens):

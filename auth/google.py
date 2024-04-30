@@ -106,7 +106,7 @@ async def callback(request: Request, response: Response):
                     "_id": cookie,
                     "email": user.get("email"),
                     "created_at": datetime.now().timestamp(),
-                    "type":"read_only"
+                    "type":"api_key"
                 }
             )
         else :
