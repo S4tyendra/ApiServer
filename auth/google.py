@@ -62,7 +62,7 @@ async def login(redirect=None):
 
 @router.get("/googlesignin")
 async def callback(request: Request, response: Response):
-    state = request.query_params.get("state")  # Extract state parameter
+    state = request.query_params.get("state")  
     redirect_uri = (
         "http://localhost:8000/auth/googlesignin"
         if local

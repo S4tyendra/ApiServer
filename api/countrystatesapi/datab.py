@@ -1,0 +1,12 @@
+import asyncio
+from xml.dom.minidom import DocumentType
+from motor.motor_asyncio import AsyncIOMotorClient
+
+# MongoDB connection URL
+MONGODB_URL ="mongodb+srv://***:***@***.cbvk0so.mongodb.net/?retryWrites=true&w=majority&appName=devh" # "mongodb+srv://***:***@***/?retryWrites=true&w=majority"
+
+async def connect_to_database():
+    client = AsyncIOMotorClient(MONGODB_URL)
+    db = client["WorldDB"]
+    return db
+
