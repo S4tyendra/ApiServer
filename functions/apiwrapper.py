@@ -29,7 +29,6 @@ async def api_key_auth(
     email = user["email"]
     user_in_db = await db.users.find_one({"email": email})
     tokens = user_in_db.get("tokens", None)
-    print(tokens)
     if tokens is None:
         await db.users.update_one(
             {"email": email},
@@ -46,10 +45,7 @@ async def api_key_auth(
         tc = -2
     else:
         tc = -1
-    print(tc)
-    print(tokens + tc)
-    print(tokens + tc >= 0)
-    if tokens + tc <= 0:
+    if tokens + tc < 0:
         raise HTTPException(status_code=401, detail="Not enough Tokens")
 
     
