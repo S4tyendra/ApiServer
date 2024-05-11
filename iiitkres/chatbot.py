@@ -1,6 +1,6 @@
 from fastapi.responses import JSONResponse
 import google.generativeai as genai
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
 
 from functions.apiwrapper import api_key_auth, tokenconsuption
@@ -53,15 +53,19 @@ async def generate(data: PromptData, request:Request):
     try:
         new_prompt = data.new_prompt
         history = data.history
+        if len(history) == 1:
+            history = []
         convo = model.start_chat(history=history)
         convo.send_message(new_prompt)
         response_text = convo.last.text
 
         # Return the response as JSON
         return JSONResponse({"response": response_text})
-    except:
+    except Exception as e:
+        print(e)
         if api_key:
+            print("Returning tokens")
             await tokenconsuption(api_key, 2)
-        return JSONResponse({"response": "Error occurred!"})
+        return HTTPException(status_code=400, detail="Error occurred!")
     
     
