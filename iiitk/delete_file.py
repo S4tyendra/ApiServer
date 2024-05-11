@@ -10,14 +10,14 @@ def get_main_branch_sha():
     TOKEN = "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"
     headers = {"Authorization": f"token {TOKEN}"}
 
-    response = requests.get(f"{BASE_URL}/repos/{REPO}/branches/main", headers=headers)
+    response = requests.get(f"{BASE_URL}/repos/{REPO}/branches/new", headers=headers)
     response_json = response.json()
 
     if response.status_code == 200:
         sha = response_json["commit"]["sha"]
         return sha
     else:
-        print(f"Failed to get SHA of the main branch. Status code: {response.status_code}")
+        print(f"Failed to get SHA of the new branch. Status code: {response.status_code}")
         return None
 
 
@@ -88,7 +88,7 @@ def create_pull_request(branch_name, pull_request_title):
     payload = {
         "title": pull_request_title,
         "head": branch_name,
-        "base": "main",
+        "base": "new",
         "body": f"Generated pull request of {pull_request_title}",
     }
     response = requests.post(
