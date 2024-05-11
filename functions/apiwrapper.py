@@ -8,7 +8,7 @@ API_KEY_NAME = "X-API-KEY"
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False, scheme_name="API Key", description="API Key for authentication")
 
 
-async def api_key_auth(request:Request, call_next,  api_key: str = Depends(api_key_header), ):
+async def api_key_auth(request:Request,  api_key: str = Depends(api_key_header), ):
     if api_key is None:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
     db = await connect_to_database()
