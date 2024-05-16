@@ -38,7 +38,7 @@ async def login(email: Email):
         await db.users.insert_one({"_id": id, "email": email.email, "otp": otp})
         send_otp(email.email, otp[0].get('otp'))
     else:
-        otp: list = user["otp"]
+        otp: list = user.get("otp", [])
         generated_otp = {"otp": generate_random_otp(
         ), "created_at": datetime.now().timestamp(), }
         otp.append(generated_otp)
