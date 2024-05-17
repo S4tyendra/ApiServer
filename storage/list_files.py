@@ -31,8 +31,6 @@ async def get_files(request:Request):
             drive_id = create_folder_and_get_id(base_user.get("_id"),"1p90vuxE8jp7mBwW63qj7rIwpiCuaYMEP")
             await db.users.update_one({'_id':base_user.get('_id')}, {'$set':{'drive_id':drive_id }})
         drive_service = authenticate()
-        print(drive_id)
-        print("##########")
         files = await list_files(drive_service, drive_id)
         if not files:
             return {'message': 'No files found in the folder.'}
