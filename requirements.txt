@@ -39,3 +39,9 @@ googleapis-common-protos
 
 
 git+https://github.com/jmaupetit/md2pdf.git
+
+#pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+google-auth 
+google-auth-oauthlib 
+google-auth-httplib2 
+google-api-python-client
