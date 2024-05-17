@@ -15,3 +15,20 @@ def authenticate():
         SERVICE_ACCOUNT_FILE, subject=SERVICE_ACCOUNT_EMAIL, scopes=SCOPES)
     drive_service = build('drive', 'v3', credentials=credentials)
     return drive_service    
+
+
+
+
+def create_folder_and_get_id(folder_name, parent_folder_id):
+    drive_service = authenticate()
+    file_metadata = {
+        'name': folder_name,
+        'mimeType': 'application/vnd.google-apps.folder',
+        'parents': [parent_folder_id]
+    }
+    folder = drive_service.files().create(body=file_metadata,
+                                          fields='id').execute()
+    folder_id = folder.get('id')
+
+    return folder_id
+

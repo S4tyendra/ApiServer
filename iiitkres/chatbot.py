@@ -3,7 +3,7 @@ import google.generativeai as genai
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
 
-from functions.apiwrapper import api_key_auth, tokenconsuption
+from functions.apiwrapper import api_key_auth, iiitk_auth, tokenconsuption
 
 router = APIRouter()
 
@@ -46,7 +46,7 @@ class PromptData(BaseModel):
     new_prompt: str
     history: list = []
 
-@router.post("/generate", dependencies=[Depends(api_key_auth)] )
+@router.post("/generate", dependencies=[Depends(iiitk_auth)] )
 async def generate(data: PromptData, request:Request):
     
     api_key = request.headers.get("X-API-KEY")
