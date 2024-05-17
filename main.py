@@ -3,7 +3,6 @@ import logging
 import os
 import time
 
-import aiofiles
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import FastAPI, Form, Request, Response
 from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
@@ -13,14 +12,13 @@ from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 from api.countrystatesapi import router as countrystates_router
-from auth.login import router as auth_router
+# from auth.login import router as auth_router
 from database import connect_to_database
 from user.profile import router as user_router
 from stripe_pay.payments import app as stripe_router
-from iiitk.delete_file import router as iiitk_delete_router
-from iiitk.list_pending_pulls import router as iiitk_router
 from auth.google import router as google_router
 from iiitkres import router as iiitkres_router
+from storage import router as drive_router
 os.system("git pull ")
 
 
@@ -81,28 +79,18 @@ if os.path.exists(".env"):
 
     load_dotenv()
 
-# Include routers
-app.include_router(auth_router, tags=[
-    "auth"], prefix="/auth", include_in_schema=False)
 app.include_router(user_router, tags=["user"], prefix="/user")
 app.include_router(countrystates_router, tags=[
     "World cities api", ], prefix="/api")
 app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
-app.include_router(iiitk_delete_router, tags=["IIITK"], prefix="/iiitk",include_in_schema=False)
-app.include_router(iiitk_router, tags=["IIITK"], prefix="/iiitk", include_in_schema=False)
 app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_schema=False)
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
-
+app.include_router(drive_router, tags=["Storage"], prefix="/storage")
 
 
 @app.get("/", include_in_schema=False)
 async def root(request: Request, response: Response):
     return RedirectResponse("https://account.devh.in/")
-
-
-@app.post("/", include_in_schema=False)
-async def root_post():
-    return RedirectResponse("<script>window.location.href = '/';</script>")
 
 
 
@@ -111,7 +99,7 @@ async def delete_file(file_path: str, ):
     try:
         os.remove(file_path)
     except FileNotFoundError:
-        pass  # If the file doesn't exist, ignore the error
+        pass 
 
 
 

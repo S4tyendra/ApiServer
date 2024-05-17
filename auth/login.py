@@ -12,63 +12,6 @@ import html  # For HTML escaping
 router = APIRouter()
 
 
-class Email(BaseModel):
-    email: str
-
-
-class Verify(BaseModel):
-    email: str
-    otp: str
-
-
-def generate_random_otp():
-    import random
-    return str(random.randint(100000, 999999))
-
-
-@router.post("/login")
-async def login(email: Email):
-    if not is_valid_email(email.email, ["gmail.com", "iiitkota.ac.in", "devh.in", "***.in"]):
-        raise HTTPException(status_code=400, detail="Invalid email")
-    db = await connect_to_database()
-    user = await db.users.find_one({"email": email.email})
-    if user is None:
-        id = str(datetime.now().timestamp()).replace(".", "")
-        otp = [{"otp": generate_random_otp(), "created_at": datetime.now().timestamp()}]
-        await db.users.insert_one({"_id": id, "email": email.email, "otp": otp})
-        send_otp(email.email, otp[0].get('otp'))
-    else:
-        otp: list = user.get("otp", [])
-        generated_otp = {"otp": generate_random_otp(
-        ), "created_at": datetime.now().timestamp(), }
-        otp.append(generated_otp)
-        await db.users.update_one({"email": email.email}, {"$set": {"otp": otp}})
-        send_otp(email.email, generated_otp.get('otp'))
-    return {"message": "OTP sent"}
-
-
-@router.post("/verify")
-async def verify(response: Response, verify: Verify):
-    db = await connect_to_database()
-    user = await db.users.find_one({"email": verify.email})
-    if user is None:
-        raise HTTPException(status_code=400, detail="Invalid email")
-    otps = user["otp"]
-    otps.reverse()
-    for i in range(len(otps)):
-        if otps[i].get("otp") == verify.otp:
-            if datetime.now().timestamp() - otps[i].get("created_at") > 300:
-                raise HTTPException(status_code=400, detail="OTP expired")
-            else:
-                cookie = secrets.token_hex(32)
-                await db.users.update_one({"email": verify.email}, {"$set": {"otp": []}})
-                await db.sessions.insert_one(
-                    {"_id": cookie, "email": verify.email, "created_at": datetime.now().timestamp()})
-                response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
-                return {"message": "OTP verified", "cookie": cookie}
-
-    raise HTTPException(status_code=400, detail="Invalid OTP")
-
 
 @router.get("/logout")
 async def logout(response: Response, request: Request, all_sessions: bool = False):

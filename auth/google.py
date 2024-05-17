@@ -9,11 +9,13 @@ from google.oauth2 import id_token as google_id_token
 import base64
 from datetime import datetime
 from dotenv import load_dotenv
+from icecream import ic
 
 load_dotenv(".env")
 
 local = bool(os.getenv("LOCAL", False))
 
+from auth.authapps import getApp
 from database import connect_to_database
 from urllib.parse import urlparse
 
@@ -28,35 +30,26 @@ SCOPES = [
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 
-red_map = {}
+app_map = {}
 
 
 @router.get("/glogin")
-async def login(redirect=None):
-    valid_domains = ['iiitk.devh.in', '127.0.0.1', 'account.devh.in']
-    if redirect:
-        parsed_url = urlparse(redirect)
-        p_port = parsed_url.port
-        if parsed_url.hostname == "127.0.0.1:23368" and p_port is not None:
-            if p_port != 23368:
-                raise HTTPException(status_code=400, detail="Request Blocked")
-        if parsed_url.hostname not in valid_domains:
-            raise HTTPException(status_code=400, detail="Request Blocked")
-    redirect_uri = (
+async def login(app_id=None):
+    if app_id is None:
+        return HTTPException(400,"App Requred")
+    flow = Flow.from_client_secrets_file(
+        CLIENT_SECRETS_FILE,
+        scopes=SCOPES,
+        redirect_uri=(
         "http://localhost:8000/auth/googlesignin"
         if local
         else "https://aws-api.devh.in/auth/googlesignin"
     )
-    flow = Flow.from_client_secrets_file(
-        CLIENT_SECRETS_FILE,
-        scopes=SCOPES,
-        redirect_uri=redirect_uri,
-        # redirect_uri="https://aws-api.devh.in/auth/googlesignin"
-    )  # Use your FastAPI server's callback URL
+    )
     authorization_url, state = flow.authorization_url(
         access_type="offline", include_granted_scopes="true"
     )
-    red_map[state] = redirect
+    app_map[state] = app_id
     return RedirectResponse(authorization_url)
 
 
@@ -68,7 +61,7 @@ async def callback(request: Request, response: Response):
         if local
         else "https://aws-api.devh.in/auth/googlesignin"
     )
-    if state in red_map:
+    if state in app_map.keys():
         redirect_uri = redirect_uri
         flow = Flow.from_client_secrets_file(
             CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
@@ -82,7 +75,6 @@ async def callback(request: Request, response: Response):
             flow.credentials.id_token, requests.Request()
         )
 
-        # Extract user data
         email = id_token_data["email"]
         name = id_token_data["name"]
         picture = id_token_data["picture"]
@@ -99,59 +91,22 @@ async def callback(request: Request, response: Response):
             )
         user = await db.users.find_one({"email": email})
         id = user["_id"]
-        red_url = red_map.get(state)
-        if red_url:
-            await db.sessions.insert_one(
-                {
-                    "_id": cookie,
-                    "email": user.get("email"),
-                    "created_at": datetime.now().timestamp(),
-                    "type":"api_key"
-                }
-            )
-        else :
-            await db.sessions.insert_one(
-                {
-                    "_id": cookie,
-                    "email": user.get("email"),
-                    "created_at": datetime.now().timestamp(),
-                }
-            )
-        response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+        app = app_map.get(state)
+        if app:
+            app_ = await getApp(app)
+            if app_:
+                await db.sessions.insert_one(
+                    {
+                        "_id": cookie,
+                        "email": user.get("email"),
+                        "created_at": datetime.now().timestamp(),
+                        "type":app_.get('_id')
+                    }
+                )
+                response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+                return RedirectResponse(f"{app_.get('redirect_url')}?token={cookie}")
+            else:
+                return HTTPException(400,"No such app to login!")
+        return HTTPException(400,"Seems like you didnt passed any app!")
         
-        if red_url is not None:
-            del red_map[state]
-            response = HTMLResponse(
-                f"""<script>
-                                        document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
-                                        window.location.href = "{red_url}?token={cookie}";</script>""",
-                status_code=200,
-            )
-            response.set_cookie(
-                key="_id-c",
-                domain=".devh.in",
-                value=cookie,
-                httponly=False,
-                secure=True,
-            )
-            return response
-        response = HTMLResponse(
-            f"""<script>
-                                        document.cookie = "_id-c={cookie}; domain=.devh.in; secure; httponly";
-                                        window.location.href = '/';</script>""",
-            status_code=200,
-        )
-        response.set_cookie(
-            key="_id-c", domain=".devh.in", value=cookie, httponly=False, secure=True
-        )
-        return response
 
-    else:
-        raise HTTPException(status_code=400, detail="Invalid state")
-
-
-def xor_encrypt(data, key):
-    encrypted_data = ""
-    for i in range(len(data)):
-        encrypted_data += chr(ord(data[i]) ^ ord(key[i % len(key)]))
-    return base64.b64encode(encrypted_data.encode()).decode()
