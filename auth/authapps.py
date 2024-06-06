@@ -9,12 +9,3 @@ async def getApp(app_id):
 
 
 router = APIRouter()
-
-
-@router.get("/app")
-async def app(appurl: str):
-    db = await connect_to_database()
-    app = await db.apps.find_one({"app_url": appurl})
-    if app is None:
-        raise HTTPException(status_code=400, detail="App not found")
-    return app
