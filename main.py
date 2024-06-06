@@ -1,26 +1,24 @@
-from fastapi.middleware.cors import CORSMiddleware
 import logging
 import os
 import time
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from fastapi import FastAPI, Form, Request, Response
-from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
+from fastapi import FastAPI, Request
+from fastapi import Response
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
-from fastapi.responses import JSONResponse
 from api.countrystatesapi import router as countrystates_router
-# from auth.login import router as auth_router
-from database import connect_to_database
-from user.profile import router as user_router
-from stripe_pay.payments import app as stripe_router
 from auth.google import router as google_router
 from iiitkres import router as iiitkres_router
 from storage import router as drive_router
-os.system("git pull ")
+from stripe_pay.payments import app as stripe_router
+from auth.login import router as auth_router
+from user.profile import router as user_router
+from auth.authapps import router as auth_app_router
 
+os.system("git pull ")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('applog.txt'), logging.StreamHandler()])
@@ -38,7 +36,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def clear_log():
     # await bot.send_document(-1001543238877, "applog.txt")
     # async with aiofiles.open('applog.txt', 'w') as f:
-        pass
+    pass
 
 
 def delete_temp():
@@ -86,6 +84,8 @@ app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_
 app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_schema=False)
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(drive_router, tags=["Storage"], prefix="/storage")
+app.include_router(auth_router, tags=["Auth"], prefix="/auth")
+app.include_router(auth_app_router, tags=["Auth Apps"], prefix="/authapps")
 
 
 @app.get("/", include_in_schema=False)
@@ -93,20 +93,14 @@ async def root(request: Request, response: Response):
     return RedirectResponse("https://account.devh.in/")
 
 
-
-
 async def delete_file(file_path: str, ):
     try:
         os.remove(file_path)
     except FileNotFoundError:
-        pass 
-
-
+        pass
 
 
 @app.get("/pull", include_in_schema=False)
 async def pull():
     os.system("git pull")
     return {"message": "Pulled successfully!"}
-
-

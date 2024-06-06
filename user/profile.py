@@ -26,13 +26,15 @@ async def profile(request: Request, response: Response, _id: str):
                 raise HTTPException(status_code=400, detail="Private user")
         else:
             return responser_data
-        
-        
+
+
 
 
 @router.get("/me")
 async def me(request: Request, response: Response):
     cookie = request.cookies.get("_id-c")
+    api_key = request.headers.get("X-API-KEY")
+    cookie = api_key or cookie
     db = await connect_to_database()
     requester_data = await db.sessions.find_one({"_id": cookie})
     if requester_data is None:

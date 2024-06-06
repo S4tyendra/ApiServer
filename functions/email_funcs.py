@@ -1,4 +1,5 @@
-import re, os
+import re
+
 
 def is_valid_email(email, domains):
     if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
@@ -13,7 +14,8 @@ sender_email = "verify@devh.in"
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
 smtp_username = "s4tyendra"
-smtp_password = "grtcoffxecgsycbg" #os.getenv("SMTP_PASS", "vydaxnyxyvprmctp")
+smtp_password = "grtcoffxecgsycbg"  # os.getenv("SMTP_PASS", "vydaxnyxyvprmctp")
+
 
 def send_otp(receiver_email, otp):
     import smtplib
@@ -25,7 +27,8 @@ def send_otp(receiver_email, otp):
     message["To"] = receiver_email
     message["Subject"] = "Your OTP"
 
-    message.attach(MIMEText(f"<strong><b><h3>Your OTP is {otp}</b></h3></strong><ul><li>Will expire in 5 mins</li></ul>", "html"))
+    message.attach(
+        MIMEText(f"<strong><b><h3>Your OTP is {otp}</b></h3></strong><ul><li>Will expire in 5 mins</li></ul>", "html"))
 
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()

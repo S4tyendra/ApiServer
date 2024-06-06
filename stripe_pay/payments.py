@@ -1,8 +1,7 @@
+import stripe
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
-
-import stripe
 
 app = APIRouter()
 
@@ -13,9 +12,11 @@ STRIPE_SECRET_KEY = 'sk_live_51MsIyDSGMujHlWLW990aqvcEJ9DJJ2OQiBJSeqBhrkMPWhZ0sJ
 
 stripe.api_key = STRIPE_SECRET_KEY
 
+
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
 
 @app.get("/stripe_pay", response_class=JSONResponse)
 def stripe_pay(request: Request):
@@ -34,9 +35,11 @@ def stripe_pay(request: Request):
         'checkout_public_key': STRIPE_PUBLIC_KEY
     }
 
+
 @app.get("/thanks", response_class=HTMLResponse)
 async def thanks(request: Request):
     return templates.TemplateResponse("thanks.html", {"request": request})
+
 
 @app.post("/stripe_webhook")
 async def stripe_webhook(request: Request):

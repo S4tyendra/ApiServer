@@ -1,9 +1,9 @@
-from fastapi.responses import JSONResponse
 import google.generativeai as genai
 from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
-from functions.apiwrapper import api_key_auth, iiitk_auth, tokenconsuption
+from functions.apiwrapper import iiitk_auth, tokenconsuption
 
 router = APIRouter()
 
@@ -42,13 +42,14 @@ model = genai.GenerativeModel(
     safety_settings=safety_settings,
 )
 
+
 class PromptData(BaseModel):
     new_prompt: str
     history: list = []
 
-@router.post("/generate", dependencies=[Depends(iiitk_auth)] )
-async def generate(data: PromptData, request:Request):
-    
+
+@router.post("/generate", dependencies=[Depends(iiitk_auth)])
+async def generate(data: PromptData, request: Request):
     api_key = request.headers.get("X-API-KEY")
     try:
         new_prompt = data.new_prompt
@@ -67,5 +68,3 @@ async def generate(data: PromptData, request:Request):
             print("Returning tokens")
             await tokenconsuption(api_key, 2)
         return HTTPException(status_code=400, detail="Error occurred!")
-    
-    

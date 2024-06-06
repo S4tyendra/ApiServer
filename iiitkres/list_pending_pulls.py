@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Depends, Form
-from pydantic import BaseModel
-from starlette.responses import HTMLResponse, Response
+from starlette.responses import Response
 
 from functions.apiwrapper import iiitk_auth
 
@@ -33,7 +32,7 @@ def get_pull_requests(user_name: str):
     return data
 
 
-@router.get("/list_pending_pulls", dependencies=[Depends(iiitk_auth)] )
+@router.get("/list_pending_pulls", dependencies=[Depends(iiitk_auth)])
 async def list_pending_pulls(user_id: str):
     return get_pull_requests(user_id)
 
@@ -125,4 +124,3 @@ Remember to maintain a friendly and approachable tone throughout the notes. Let'
     """
     # rawData = generate_ai_content(prompt)
     return Response(content="rawData", media_type="text/plain")
-

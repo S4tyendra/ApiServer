@@ -1,14 +1,15 @@
-from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import FileResponse
 from fastapi import APIRouter, HTTPException, Depends
+from fastapi import Request
+
 from api.countrystatesapi.citiesinstate import sanitise
 from api.countrystatesapi.datab import world_db
 from functions.apiwrapper import api_key_auth, tokenconsuption
+
 router = APIRouter()
 
 
 @router.get("/getstatesincountry", dependencies=[Depends(api_key_auth)])
-async def get_states(country: str, req:Request):
+async def get_states(country: str, req: Request):
     api_key = req.headers.get("X-API-KEY")
     try:
         contry = sanitise(country)
