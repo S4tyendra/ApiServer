@@ -18,9 +18,9 @@ async def approve_app(request: Request, response: Response, app_id: str):
 
     token = request.headers.get("WEB-KEY")
     if not token:
-        raise HTTPException(status_code = 401, detail="Unauthorized")
+        raise HTTPException(status_code = 401, detail="Not Authorized")
 
-    sessn = await db.session.find_one({"_id": token})
+    sessn = await db.sessions.find_one({"_id": token})
     if not sessn:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
@@ -29,7 +29,7 @@ async def approve_app(request: Request, response: Response, app_id: str):
         raise HTTPException(status_code=404, detail="User not found")
 
     new_token = secrets.token_hex(32)
-    await db.session.insert_one({"_id": new_token, "email": email, "type": f"{app.get('_id')}"})
+    await db.sessions.insert_one({"_id": new_token, "email": email, "type": f"{app.get('_id')}"})
 
     return RedirectResponse(url=f"{app.get('redirect_url')}?token={new_token}", status_code=302)
 
