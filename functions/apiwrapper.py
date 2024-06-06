@@ -1,7 +1,9 @@
 import time
-from fastapi import Depends, HTTPException, Response
+
+from fastapi import Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from starlette.requests import Request
+
 from database import connect_to_database
 
 API_KEY_NAME = "X-API-KEY"
@@ -12,9 +14,10 @@ api_key_header = APIKeyHeader(
     description="API Key for authentication",
 )
 
+
 async def iiitk_auth(
-    request: Request,
-    api_key: str = Depends(api_key_header),
+        request: Request,
+        api_key: str = Depends(api_key_header),
 ):
     if api_key is None:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
@@ -47,7 +50,6 @@ async def iiitk_auth(
     if tokens + tc < 0:
         raise HTTPException(status_code=401, detail="Not enough Tokens")
 
-    
     print(path)
     await db.users.update_one(
         {"email": email},
@@ -55,10 +57,9 @@ async def iiitk_auth(
     )
 
 
-
 async def api_key_auth(
-    request: Request,
-    api_key: str = Depends(api_key_header),
+        request: Request,
+        api_key: str = Depends(api_key_header),
 ):
     if api_key is None:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
@@ -91,7 +92,6 @@ async def api_key_auth(
     if tokens + tc < 0:
         raise HTTPException(status_code=401, detail="Not enough Tokens")
 
-    
     print(path)
     await db.users.update_one(
         {"email": email},

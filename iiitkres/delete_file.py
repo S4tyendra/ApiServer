@@ -1,10 +1,11 @@
+import base64
 import random
 
 import requests
 from pydantic import BaseModel
-import base64
 
 from functions.apiwrapper import iiitk_auth
+
 
 def get_main_branch_sha():
     BASE_URL = "https://api.github.com"
@@ -124,7 +125,7 @@ from fastapi import APIRouter, Depends
 router = APIRouter()
 
 
-@router.delete("/delete_file", dependencies=[Depends(iiitk_auth)] )
+@router.delete("/delete_file", dependencies=[Depends(iiitk_auth)])
 async def delete__file(data: DeleteData):
     rt = delete_file(data.user_id, data.file_path)
     return rt
@@ -186,10 +187,11 @@ class EditData(BaseModel):
     new_content: str
 
 
-@router.put("/edit_file", dependencies=[Depends(iiitk_auth)] )
+@router.put("/edit_file", dependencies=[Depends(iiitk_auth)])
 async def edit__file(data: EditData):
     rt = edit_file(data.user_id, data.file_path, data.new_content)
     return rt
+
 
 def create_file_or_folder(branch_name, file_path, file_name, content, _id):
     BASE_URL = "https://api.github.com"
@@ -226,6 +228,7 @@ def create_file_or_folder(branch_name, file_path, file_name, content, _id):
     else:
         print(f"Failed to check if file/folder exists. Status code: {response.status_code}")
 
+
 def create_file(user_id, path, file_name, content):
     branch_name = create_branch(user_id)
     if branch_name:
@@ -236,13 +239,15 @@ def create_file(user_id, path, file_name, content):
     else:
         return "Failed to create branch. File creation aborted."
 
+
 class CreateFileData(BaseModel):
     user_id: str
     path: str
     file_name: str
     content: str
 
-@router.put("/create_file", dependencies=[Depends(iiitk_auth)] )
+
+@router.put("/create_file", dependencies=[Depends(iiitk_auth)])
 async def create__file(data: CreateFileData):
     rt = create_file(data.user_id, data.path, data.file_name, data.content)
     return rt

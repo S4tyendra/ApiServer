@@ -1,7 +1,4 @@
-import os.path
-
 from fastapi import APIRouter, HTTPException, Depends, Request
-from fastapi.responses import FileResponse
 
 from api.countrystatesapi.datab import world_db
 from functions.apiwrapper import api_key_auth, tokenconsuption
