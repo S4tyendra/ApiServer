@@ -82,4 +82,4 @@ async def callback(request: Request, response: Response):
                 {"_id": id, **id_token_data}
             )
         await db.sessions.insert_one({"_id": cookie, "email": email})
-        return {'token': cookie}
+        return RedirectResponse("https://account.devh.in/auth?_id-c=" + cookie)
