@@ -31,7 +31,7 @@ async def approve_app(request: Request, response: Response, app_id: str):
     new_token = secrets.token_hex(32)
     await db.sessions.insert_one({"_id": new_token, "email": email, "type": f"{app.get('_id')}"})
 
-    return RedirectResponse(url=f"{app.get('redirect_url')}?token={new_token}", status_code=302)
+    return {"redirect_url": f"{app.get('redirect_url')}?token={new_token}"}
 
 
 @router.get("/appdetails")
