@@ -18,10 +18,13 @@ from auth.login import router as auth_router
 from user.profile import router as user_router
 from auth.authapps import router as auth_app_router
 
+#Print python version
+
+
 os.system("git pull ")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler('applog.txt'), logging.StreamHandler()])
+                    handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -119,3 +122,10 @@ async def delete_file(file_path: str, ):
 async def pull():
     os.system("git pull")
     return {"message": "Pulled successfully!"}
+
+
+
+# if __name__ == "__main__":
+#     import uvicorn
+
+#     uvicorn.run("main:app", reload=True, reload_excludes=['*.txt'])

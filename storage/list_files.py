@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, Request
-
 from database import connect_to_database
 from functions.apiwrapper import api_key_auth
 from storage.driveauth import authenticate
@@ -7,15 +6,13 @@ from storage.driveauth import create_folder_and_get_id
 
 router = APIRouter()
 
-
 async def list_files(drive_service, FOLDER_ID):
     results = drive_service.files().list(
         q=f"'{FOLDER_ID}' in parents",
-        fields="files(id, name)"
+        fields="files(id, name, size)"
     ).execute()
     files = results.get('files', [])
     return files
-
 
 @router.get("/files", dependencies=[Depends(api_key_auth)])
 async def get_files(request: Request):
