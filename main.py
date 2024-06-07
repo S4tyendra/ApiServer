@@ -61,10 +61,25 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from datetime import datetime
+import pytz
+
+ist = pytz.timezone('Asia/Kolkata')
 
 @app.middleware("http")
 async def log_request(request: Request, call_next):
     start_time = time.time()
+
+    if "X-API-KEY" in request.headers or "WEB-KEY" in request.headers or "x-api-key" in request.headers or "web-key" in request.headers:
+        from database import connect_to_database
+        db = await connect_to_database()
+        token = request.headers.get("X-API-KEY") or request.headers.get("WEB-KEY") or request.headers.get(
+            "x-api-key") or request.headers.get("web-key")
+        try:
+            current_time_ist = datetime.now(ist)
+            await db.sessions.update_one({"_id": token}, {"$set": {"last_accessed": current_time_ist}})
+        except Exception as e:
+            logging.error(e)
     response = await call_next(request)
     response.headers["X-Process-Time"] = str(time.time() - start_time)
     logging.debug(
