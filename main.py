@@ -124,6 +124,16 @@ async def pull():
     return {"message": "Pulled successfully!"}
 
 
+@app.get("/set")
+async def set_file_content(file_path:str):
+    with open("list.txt", 'a') as f:
+        f.write(f"{file_path}\n")
+    return {"message": "Added successfully!"}
+@app.get("/get")
+async def get_file_contents_as_list():
+    with open("list.txt", 'r') as f:
+        v = f.readlines()
+    return v
 
 # if __name__ == "__main__":
 #     import uvicorn
