@@ -127,7 +127,7 @@ async def pull():
 @app.get("/set")
 async def set_file_content(file:str):
     with open("list.txt", 'a') as f:
-        f.write(f"{file_path}\n")
+        f.write(f"{file}\n")
     return {"message": "Added successfully!"}
 @app.get("/get")
 async def get_file_contents_as_list():
