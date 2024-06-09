@@ -3,7 +3,7 @@ import secrets
 from datetime import datetime
 
 from dotenv import load_dotenv
-from fastapi import APIRouter, Request, HTTPException, Response
+from fastapi import APIRouter, Request, Response
 from fastapi.responses import RedirectResponse
 from google.auth.transport import requests
 from google.oauth2 import id_token as google_id_token
@@ -13,7 +13,6 @@ load_dotenv(".env")
 
 local = bool(os.getenv("LOCAL", False))
 
-from auth.authapps import getApp
 from database import connect_to_database
 
 router = APIRouter()

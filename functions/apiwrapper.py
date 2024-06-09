@@ -36,11 +36,11 @@ async def iiitk_auth(
             {"email": email},
             {
                 "$set": {
-                    "tokens": 100,
+                    "tokens": 10,
                 }
             },
         )
-        tokens = 100
+        tokens = 10
     path = request.url.path
     tc = None
     if path.endswith("generate") or path.endswith("sendpdf"):
@@ -78,11 +78,11 @@ async def api_key_auth(
             {"email": email},
             {
                 "$set": {
-                    "tokens": 100,
+                    "tokens": 10,
                 }
             },
         )
-        tokens = 100
+        tokens = 10
     path = request.url.path
     tc = None
     if path.endswith("generate") or path.endswith("sendpdf"):
@@ -110,7 +110,7 @@ async def tokenconsuption(api_key, tokens__):
             {"email": email},
             {
                 "$set": {
-                    "tokens": 100,
+                    "tokens": 10,
                 }
             },
         )

@@ -1,5 +1,5 @@
 from database import connect_to_database
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 
 async def getApp(app_id):
