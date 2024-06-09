@@ -48,7 +48,7 @@ async def get_tokens(request:Request):
     api_key = request.headers.get('X-API-KEY')
     if api_key:
         db = await connect_to_database()
-        session_user = await db.sessions.find_one({"_id": token})
+        session_user = await db.sessions.find_one({"_id": api_key})
         if session_user:
             email = session_user.get('email')
             user = await db.users.find_one({'email':email})
@@ -58,4 +58,4 @@ async def get_tokens(request:Request):
                     return {'tokens':tokens}
                 else:
                     await db.users.find_one({'email':email},{'tokens':10})
-                    return {'tokens':tokens}
+                    return {'tokens':'10'}
