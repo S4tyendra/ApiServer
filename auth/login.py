@@ -41,3 +41,21 @@ async def app_details(request: Request, response: Response, app_url: str):
     if app:
         return app
     return HTTPException(status_code=400, detail="App not found")
+
+@router.get("/tokens"):
+async def get_tokens(request:Request):
+    
+    api_key = request.headers.get('X-API-KEY')
+    if api_key:
+        db = await connect_to_database()
+        session_user = await db.sessions.find_one({"_id": token})
+        if session_user:
+            email = session_user.get('email')
+            user = await db.users.find_one({'email':email})
+            if user:
+                tokens = user.get('tokens')
+                if tokens:
+                    return {'tokens':tokens}
+                else:
+                    await db.users.find_one({'email':email},{'tokens':10})
+                    return {'tokens':tokens}
