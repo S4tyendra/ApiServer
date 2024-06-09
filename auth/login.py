@@ -42,7 +42,7 @@ async def app_details(request: Request, response: Response, app_url: str):
         return app
     return HTTPException(status_code=400, detail="App not found")
 
-@router.get("/tokens"):
+@router.get("/tokens")
 async def get_tokens(request:Request):
     
     api_key = request.headers.get('X-API-KEY')
