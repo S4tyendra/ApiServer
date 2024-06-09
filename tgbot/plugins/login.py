@@ -1,7 +1,6 @@
 import string
 import random
 
-from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from database import connect_to_database

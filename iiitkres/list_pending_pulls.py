@@ -90,37 +90,5 @@ def generate_ai_content(prompt):
 async def _generate_ai_content(
         data: str = Form(...)
 ):
-    prompt = f"""
-You're a friendly and helpful assistant tasked with creating comprehensive notes on various topics. Your notes should be concise, detailed, and easy to understand. Use Markdown to organize content effectively. Maintain a friendly tone throughout the notes and provide plenty of examples for each topic. Ensure clarity by breaking down each subtopic and providing clear explanations and examples.
-
----
-
-    {data}
-
-
----
-
-Hello, note maker! Let's dive into the details. Remember to keep your explanations concise yet informative. Utilize Markdown to structure the content effectively.I already shared you my basic notes above. Here's a breakdown of what's expected:
-
-1. **Introduction**
-       - Brief overview of the topic.
-       - Importance and relevance.
-
-2. **Main Content**
-       - Subtopics explained in detail.
-       - Use examples to clarify concepts.
-       - Provide step-by-step explanations where necessary.
-
-3. **Examples**
-       - Showcase real-life scenarios.
-       - Illustrate concepts with practical examples.
-
-4. **Conclusion**
-       - Summarize key points.
-       - Reinforce understanding.
-
-Remember to maintain a friendly and approachable tone throughout the notes. Let's get started!
-
-    """
     # rawData = generate_ai_content(prompt)
     return Response(content="rawData", media_type="text/plain")
