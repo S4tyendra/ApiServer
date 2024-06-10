@@ -7,6 +7,7 @@ from storage.driveauth import authenticate
 
 router = APIRouter()
 
+
 def download_file_generator(request: MediaIoBaseDownload, chunk_size: int = 1024 * 1024):
     """Generator that yields chunks of data, tracking progress."""
     buffer = io.BytesIO()
@@ -18,6 +19,7 @@ def download_file_generator(request: MediaIoBaseDownload, chunk_size: int = 1024
         yield buffer.read()
         buffer.seek(0)
         buffer.truncate(0)  # Clear the buffer after yielding its content
+
 
 @router.get("/download/{file_id}")
 async def download(request: Request, file_id: str):
@@ -39,7 +41,9 @@ async def download(request: Request, file_id: str):
     }
 
     media_request = drive_service.files().get_media(fileId=original_file_id)
-    return StreamingResponse(download_file_generator(media_request), headers=headers, media_type='application/octet-stream')
+    return StreamingResponse(download_file_generator(media_request), headers=headers,
+                             media_type='application/octet-stream')
+
 
 async def get_file_info(drive_service, file_id):
     """Helper function to get file information from Drive."""
