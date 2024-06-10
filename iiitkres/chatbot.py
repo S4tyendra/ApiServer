@@ -1,46 +1,82 @@
-import google.generativeai as genai
+# import google.generativeai as genai
+import traceback
+
 from fastapi import APIRouter, Depends, HTTPException, Request
-from fastapi.responses import JSONResponse
+
+from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
-
+from groq import Groq
 from functions.apiwrapper import iiitk_auth, tokenconsuption
-
+API_TOKEN = "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"
 router = APIRouter()
 
-genai.configure(api_key="AIzaSyDhHXRkHjTYBUV9crg_EZ8E-XbuNyl1YQU")
+# genai.configure(api_key="AIzaSyDhHXRkHjTYBUV9crg_EZ8E-XbuNyl1YQU")
 
 # Set up the model
-generation_config = {
-    "temperature": 0.7,
-    "top_p": 1,
-    "top_k": 1,
-    "max_output_tokens": 2048,
-}
+# generation_config = {
+#     "temperature": 0.7,
+#     "top_p": 1,
+#     "top_k": 1,
+#     "max_output_tokens": 2048,
+# }
+#
+# safety_settings = [
+#     {
+#         "category": "HARM_CATEGORY_HARASSMENT",
+#         "threshold": "BLOCK_NONE",
+#     },
+#     {
+#         "category": "HARM_CATEGORY_HATE_SPEECH",
+#         "threshold": "BLOCK_NONE",
+#     },
+#     {
+#         "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+#         "threshold": "BLOCK_NONE",
+#     },
+#     {
+#         "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+#         "threshold": "BLOCK_NONE",
+#     },
+# ]
+#
+# model = genai.GenerativeModel(
+#     model_name="gemini-1.0-pro",
+#     generation_config=generation_config,
+#     safety_settings=safety_settings,
+# )
 
-safety_settings = [
-    {
-        "category": "HARM_CATEGORY_HARASSMENT",
-        "threshold": "BLOCK_NONE",
-    },
-    {
-        "category": "HARM_CATEGORY_HATE_SPEECH",
-        "threshold": "BLOCK_NONE",
-    },
-    {
-        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-        "threshold": "BLOCK_NONE",
-    },
-    {
-        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-        "threshold": "BLOCK_NONE",
-    },
-]
+def _generate_response(prompt, history):
+    client = Groq(
+        api_key=API_TOKEN
+    )
+    completion = client.chat.completions.create(
+        model="mixtral-8x7b-32768",
+        messages=[
+            {
+                "role": "system",
+                "content": ""
+            },
+            *history,
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=1,
+        max_tokens=32768,
+        top_p=1,
+        stream=True,
+        stop=None,
+    )
 
-model = genai.GenerativeModel(
-    model_name="gemini-1.0-pro",
-    generation_config=generation_config,
-    safety_settings=safety_settings,
-)
+    for chunk in completion:
+        print (chunk.choices[0].delta.content or "", end="")
+        try:
+            yield chunk.choices[0].delta.content or ""
+        except:
+            traceback.print_exc()
+            pass
+
 
 
 class PromptData(BaseModel):
@@ -52,19 +88,15 @@ class PromptData(BaseModel):
 async def generate(data: PromptData, request: Request):
     api_key = request.headers.get("X-API-KEY")
     try:
+
         new_prompt = data.new_prompt
         history = data.history
-        if len(history) == 1:
-            history = []
-        convo = model.start_chat(history=history)
-        convo.send_message(new_prompt)
-        response_text = convo.last.text
+        return StreamingResponse(_generate_response(data.new_prompt, history))
 
-        # Return the response as JSON
-        return JSONResponse({"response": response_text})
+        # return JSONResponse({"response": response_text})
     except Exception as e:
         print(e)
-        if api_key:
-            print("Returning tokens")
-            await tokenconsuption(api_key, 2)
+        # if api_key:
+        #     print("Returning tokens")
+        #     await tokenconsuption(api_key, 2)
         return HTTPException(status_code=400, detail="Error occurred!")
