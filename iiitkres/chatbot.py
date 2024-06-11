@@ -45,7 +45,7 @@ router = APIRouter()
 #     safety_settings=safety_settings,
 # )
 
-def _generate_response(prompt, history):
+def _generate_response(history):
     client = Groq(
         api_key=API_TOKEN
     )
@@ -57,10 +57,6 @@ def _generate_response(prompt, history):
                 "content": ""
             },
             *history,
-            {
-                "role": "user",
-                "content": prompt
-            }
         ],
         temperature=1,
         max_tokens=32768,
@@ -80,7 +76,6 @@ def _generate_response(prompt, history):
 
 
 class PromptData(BaseModel):
-    new_prompt: str
     history: list = []
 
 
@@ -89,9 +84,8 @@ async def generate(data: PromptData, request: Request):
     api_key = request.headers.get("X-API-KEY")
     try:
 
-        new_prompt = data.new_prompt
         history = data.history
-        return StreamingResponse(_generate_response(data.new_prompt, history))
+        return StreamingResponse(_generate_response(history))
 
         # return JSONResponse({"response": response_text})
     except Exception as e:
