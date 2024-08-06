@@ -1,11 +1,13 @@
 from database import connect_to_database
-from fastapi import APIRouter
-
 
 async def getApp(app_id):
     db = await connect_to_database()
     app = await db.apps.find_one({"app_url": app_id})
     return app
-
-
-router = APIRouter()
+    
+    
+async def getApp_by_id(app_id):
+    db = await connect_to_database()
+    app = await db.apps.find_one({"_id": app_id})
+    return app
+    
