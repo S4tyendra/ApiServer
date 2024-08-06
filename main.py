@@ -16,7 +16,6 @@ from storage import router as drive_router
 from stripe_pay.payments import app as stripe_router
 from auth.login import router as auth_router
 from user.profile import router as user_router
-from auth.authapps import router as auth_app_router
 
 #Print python version
 
@@ -103,7 +102,6 @@ app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_sch
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(drive_router, tags=["Storage"], prefix="/storage")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
-app.include_router(auth_app_router, tags=["Auth Apps"], prefix="/authapps")
 
 
 @app.get("/", include_in_schema=False)
