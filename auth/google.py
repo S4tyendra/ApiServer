@@ -120,7 +120,7 @@ async def callback(request: Request, response: Response):
                         "type":"WEB-KEY"
                     }
                 )
-                response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+            response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
             return RedirectResponse("https://account.devh.in/auth?_id-c=" + cookie)
                 
     
