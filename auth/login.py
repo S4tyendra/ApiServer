@@ -20,7 +20,7 @@ async def approve_app(request: Request, response: Response, app_id: str):
     if not token:
         raise HTTPException(status_code = 401, detail="Not Authorized")
 
-    sessn = await db.sessions.find_one({"_id": token})
+    sessn = await db.sessions.find_one({"_id": token, "type":"WEB-KEY"})
     if not sessn:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
