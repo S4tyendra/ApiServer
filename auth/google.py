@@ -33,6 +33,7 @@ app_map = {}
 
 @router.get("/googlelogin")
 async def login(app_id = None):
+    app_ = None
     
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE,
