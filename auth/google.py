@@ -31,8 +31,8 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 app_map = {}
 
 
-@router.get("/glogin")
-async def login(app_id):
+@router.get("/googlelogin")
+async def login(app_id = None):
     
     flow = Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE,
@@ -43,18 +43,18 @@ async def login(app_id):
         else "https://aws-api.devh.in/auth/googlesignin"
     )
     )
-    app_ = await getApp_by_id(app_id)
-    if not app_:
-        return HTTPException(404, "App not found")
-    email = app_.get('email', None)
+    email = None
+    if app_id:
+        app_ = await getApp_by_id(app_id)
+        if not app_:
+            return HTTPException(404, "App not found")
+            email = app_.get('email', None)
     authorization_url, state = flow.authorization_url(
         access_type="offline",
         # include_granted_scopes="true",
         hd=email, #"iiitkota.ac.in",
         # prompt="consent",
         enable_incremental_authorization=True
-
-        
     )
     app_map[state] = app_
     print(authorization_url)
@@ -112,7 +112,17 @@ async def callback(request: Request, response: Response):
                 response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
                 return RedirectResponse(f"{app.get('redirect_url')}?token={cookie}")
         else:
-                return HTTPException(400,"No such app to login!")
+            await db.sessions.insert_one(
+                    {
+                        "_id": cookie,
+                        "email": user.get("email"),
+                        "created_at": datetime.now().timestamp(),
+                        "type":"WEB-KEY"
+                    }
+                )
+                response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
+            return RedirectResponse("https://account.devh.in/auth?_id-c=" + cookie)
+                
     
         
 
