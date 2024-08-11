@@ -28,8 +28,6 @@ async def profile(request: Request, response: Response, _id: str):
             return responser_data
 
 
-
-
 @router.get("/me")
 async def me(request: Request, response: Response):
     cookie = request.cookies.get("_id-c")
@@ -40,5 +38,5 @@ async def me(request: Request, response: Response):
     if requester_data is None:
         raise HTTPException(status_code=400, detail="Invalid user")
     requester_email = requester_data.get("email")
-    responser_data = await db.users.find_one({"email": requester_email})
+    responser_data = await db.users.find_one({"email": requester_email}, projection=["_id", "email", "name", "picture", "tokens"])
     return responser_data
