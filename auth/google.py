@@ -32,7 +32,7 @@ app_map = {}
 
 
 @router.get("/googlelogin")
-async def login(app_id = None):
+async def login(app_id = None, app_email=None):
     app_ = None
     
     flow = Flow.from_client_secrets_file(
@@ -45,7 +45,7 @@ async def login(app_id = None):
     )
     )
     email = None
-    if app_id:
+    if app_id and not app_email:
         app_ = await getApp_by_id(app_id)
         if not app_:
             return HTTPException(404, "App not found")
@@ -53,7 +53,7 @@ async def login(app_id = None):
     authorization_url, state = flow.authorization_url(
         access_type="offline",
         # include_granted_scopes="true",
-        hd=email, #"iiitkota.ac.in",
+        hd=app_email or email, #"iiitkota.ac.in",
         # prompt="consent",
         enable_incremental_authorization=True
     )
