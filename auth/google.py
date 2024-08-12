@@ -49,7 +49,8 @@ async def login(app_id = None, app_email=None):
         app_ = await getApp_by_id(app_id)
         if not app_:
             return HTTPException(404, "App not found")
-            email = app_.get('email', None)
+        email = app_.get('email', None)
+        print(app_email or email)
     authorization_url, state = flow.authorization_url(
         access_type="offline",
         # include_granted_scopes="true",
