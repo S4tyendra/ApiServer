@@ -133,7 +133,7 @@ async def get_file_contents_as_list():
         v = f.readlines()
     return v
 
-# if __name__ == "__main__":
-#     import uvicorn
+if __name__ == "__main__":
+    import uvicorn
 
-#     uvicorn.run("main:app", reload=True, reload_excludes=['*.txt'])
+    uvicorn.run("main:app", reload=True, port=8000)
