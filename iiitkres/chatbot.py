@@ -50,11 +50,11 @@ def _generate_response(history):
         api_key=API_TOKEN
     )
     completion = client.chat.completions.create(
-        model="mixtral-8x7b-32768",
+        model="llama-3.1-70b-versatile",
         messages=[
             {
                 "role": "system",
-                "content": ""
+                "content": "You are an AI tutor. You are helping a student. The student is asking you a question. You are answering the student's question, Don't answer any other questions that are unrelated to study. such as personal questions, etc.",
             },
             *history,
         ],
