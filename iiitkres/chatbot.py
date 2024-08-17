@@ -59,7 +59,7 @@ def _generate_response(history):
             *history,
         ],
         temperature=1,
-        max_tokens=32768,
+        max_tokens=8000,
         top_p=1,
         stream=True,
         stop=None,
