@@ -20,7 +20,7 @@ from user.profile import router as user_router
 #Print python version
 
 
-os.system("git pull ")
+# os.system("git pull ")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
