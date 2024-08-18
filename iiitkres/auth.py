@@ -89,7 +89,7 @@ async def auth(request: Request, response: Response, state: str = None, code: st
                 }
             )
             
-            return RedirectResponse("satya://iiitk/")
+            return RedirectResponse("https://iiitk.devh.in/aidone")
         else:
             raise HTTPException(status_code=400, detail="Failed to get user info")
     
