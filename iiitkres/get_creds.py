@@ -53,7 +53,7 @@ Your output should be a comprehensive, clear, and educational set of notes that 
 
 
 
-@router.post("/get_creds")
+@router.get("/get_creds")
 async def upload_content(request: Request):
     token = request.headers.get("X-API-KEY")
     if not token:
@@ -100,7 +100,6 @@ async def upload_content(request: Request):
             )
         except Exception as e:
             raise HTTPException(status_code=401, detail="Failed to refresh token")
-    
     try:
         return {
             "token": creds.token,
@@ -114,9 +113,7 @@ async def upload_content(request: Request):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error generating content: {str(e)}")
     
-    data = await request.json()
     
-    session_id = data.get('session_id')
     
 
     # file = genai.upload_file(path, mime_type=mime_type)
