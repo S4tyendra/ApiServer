@@ -102,12 +102,7 @@ async def upload_content(request: Request):
             raise HTTPException(status_code=401, detail="Failed to refresh token")
     try:
         return {
-            "token": creds.token,
-            "refresh_token": creds.refresh_token,
-            "token_uri": creds.token_uri,
-            "client_id": creds.client_id,
-            "client_secret": creds.client_secret,
-            "scopes": creds.scopes
+            "success": True,
         }
         
     except Exception as e:
