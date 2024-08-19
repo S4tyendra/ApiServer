@@ -39,10 +39,11 @@ def create_flow():
 
 @router.get("/auth")
 async def auth(
-    token: str, request: Request, response: Response, state: str = None, code: str = None, 
+     request: Request, response: Response, state: str = None, code: str = None, token: str = None,
 ):
     if not state and not code:
-
+        if not token:
+            raise HTTPException(status_code=400, detail="Token not provided")
         db = await connect_to_database()
         session = await db.sessions.find_one({"_id": token})
         if not session:
