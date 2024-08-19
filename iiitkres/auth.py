@@ -36,15 +36,16 @@ def create_flow():
         ),
     )
 
-
 @router.get("/auth")
 async def auth(
-     request: Request, response: Response, state: str = None, code: str = None, token: str = None,
+    request: Request, response: Response, state: str = None, code: str = None, token: str = None,
 ):
+    db = await connect_to_database()
+
     if not state and not code:
         if not token:
             raise HTTPException(status_code=400, detail="Token not provided")
-        db = await connect_to_database()
+
         session = await db.sessions.find_one({"_id": token})
         if not session:
             raise HTTPException(status_code=401, detail="Unauthorized")
@@ -58,16 +59,13 @@ async def auth(
             access_type="offline",
             login_hint=user.get("email"),
             enable_incremental_authorization=True,
+            prompt="consent"  # Add this to always get a refresh token
         )
 
-        # Store the state in the session for later verification
         await db.sessions.update_one({"_id": token}, {"$set": {"oauth_state": state}})
-        print(authorization_url)
         return RedirectResponse(authorization_url)
 
     elif state and code:
-        # Callback after user grants permission
-        db = await connect_to_database()
         session = await db.sessions.find_one({"oauth_state": state})
         if not session:
             raise HTTPException(status_code=400, detail="Invalid state parameter")
@@ -79,7 +77,6 @@ async def auth(
         user_info = await get_user_info(creds)
 
         if user_info:
-            # Update user in database
             await db.users.update_one(
                 {"email": user_info["email"]},
                 {
@@ -104,7 +101,8 @@ async def auth(
 
     else:
         raise HTTPException(status_code=400, detail="Invalid request")
-
+    
+    
 
 async def get_user_info(creds):
     try:
