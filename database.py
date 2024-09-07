@@ -5,7 +5,9 @@ MONGODB_URL = "mongodb+srv://***:***@***.cbvk0so.mongodb.net/?retryWrites=true&w
 
 
 # "mongodb+srv://***:***@***/?retryWrites=true&w=majority"
-NOTES_DB_URL="mongodb+srv://mongodb:***@mongodbdevh.9fqlqam.mongodb.net/?retryWrites=true&w=majority&appName=mongodbdevh"
+NOTES_DB_URL= MONGODB_URL
+
+# "mongodb+srv://mongodb:***@mongodbdevh.9fqlqam.mongodb.net/?retryWrites=true&w=majority&appName=mongodbdevh"
 
 async def connect_to_database(db_name = None):
     client = AsyncIOMotorClient(MONGODB_URL)
