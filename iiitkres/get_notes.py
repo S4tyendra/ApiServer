@@ -15,7 +15,7 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
         user = await users_db.sessions.find_one({"_id": token})
         if user:
             notes_db = await connect_to_notes_database()
-            notes = await notes_db.iiitkota.find_one({"_id": code.upper()})
+            notes = await notes_db.IIITKOTA.find_one({"_id": code.upper()})
             if notes:
                 response = JSONResponse(notes)
                 response.headers["Cache-Control"] = "public, max-age=3600"
