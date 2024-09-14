@@ -3,7 +3,7 @@ from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 
-app = APIRouter()
+router :APIRouter = APIRouter()
 
 templates = Jinja2Templates(directory="templates")
 
@@ -13,12 +13,12 @@ STRIPE_SECRET_KEY = 'sk_live_51MsIyDSGMujHlWLW990aqvcEJ9DJJ2OQiBJSeqBhrkMPWhZ0sJ
 stripe.api_key = STRIPE_SECRET_KEY
 
 
-@app.get("/", response_class=HTMLResponse)
+@router.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/stripe_pay", response_class=JSONResponse)
+@router.get("/stripe_pay", response_class=JSONResponse)
 def stripe_pay(request: Request):
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
@@ -36,12 +36,12 @@ def stripe_pay(request: Request):
     }
 
 
-@app.get("/thanks", response_class=HTMLResponse)
+@router.get("/thanks", response_class=HTMLResponse)
 async def thanks(request: Request):
     return templates.TemplateResponse("thanks.html", {"request": request})
 
 
-@app.post("/stripe_webhook")
+@router.post("/stripe_webhook")
 async def stripe_webhook(request: Request):
     print('WEBHOOK CALLED')
 

@@ -13,7 +13,7 @@ from api.countrystatesapi import router as countrystates_router
 from auth.google import router as google_router
 from iiitkres import router as iiitkres_router
 from storage import router as drive_router
-from stripe_pay.payments import app as stripe_router
+from stripe_pay.payments import router as stripe_router
 from auth.login import router as auth_router
 from user.profile import router as user_router
 
