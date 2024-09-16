@@ -1,17 +1,12 @@
-import traceback
-from fastapi import APIRouter, Request, Depends, HTTPException, Response
+from fastapi import APIRouter, Request, HTTPException, Response
 from fastapi.responses import RedirectResponse
 from google_auth_oauthlib.flow import Flow
-from google.oauth2.credentials import Credentials
-from google.auth.transport.requests import Request as GoogleRequest
 import requests
 from database import connect_to_database
 import os
-import json
 
 local = bool(os.getenv("LOCAL", False))
 router = APIRouter()
-from google.generativeai.types import file_types
 
 
 CLIENT_SECRETS_FILE = "iiitkres/clientsecret.json"

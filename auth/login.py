@@ -1,7 +1,6 @@
 import secrets
 
 from fastapi import APIRouter, Request, Response, HTTPException
-from fastapi.responses import RedirectResponse
 
 from database import connect_to_database
 

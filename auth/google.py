@@ -1,21 +1,18 @@
 import os
 import secrets
-from fastapi import APIRouter, Request, Depends, HTTPException, Response
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import APIRouter, Request, HTTPException, Response
+from fastapi.responses import RedirectResponse
 from google.auth.transport import requests
-from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from google.oauth2 import id_token as google_id_token
-import base64
 from datetime import datetime
 from dotenv import load_dotenv
 load_dotenv(".env")
 
 local = bool(os.getenv("LOCAL", False))
 
-from auth.authapps import getApp, getApp_by_id
+from auth.authapps import getApp_by_id
 from database import connect_to_database
-from urllib.parse import urlparse
 
 router = APIRouter()
 CLIENT_SECRETS_FILE = "auth/clientsecret.json"
