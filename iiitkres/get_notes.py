@@ -1,6 +1,5 @@
-import traceback
-from fastapi import APIRouter, Depends, HTTPException, Request, Response
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi import APIRouter, Request, Response
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from database import connect_to_database, connect_to_notes_database
 
