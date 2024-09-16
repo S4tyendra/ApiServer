@@ -3,10 +3,10 @@ import traceback
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
-from functions.apiwrapper import iiitk_auth, tokenconsuption
+from functions.apiwrapper import iiitk_auth
 API_TOKEN = "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"
 router = APIRouter()
 

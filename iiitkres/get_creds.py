@@ -1,17 +1,11 @@
-import secrets
 from fastapi import APIRouter, HTTPException, Request
 
 from database import connect_to_database
 
-from fastapi import APIRouter, Request, Depends, HTTPException, Response
-from fastapi.responses import RedirectResponse
-from google_auth_oauthlib.flow import Flow
+from fastapi import APIRouter, Request, HTTPException
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request as GoogleRequest
-import requests
 from database import connect_to_database
-import os
-import json
 import google.generativeai as genai
 from google.oauth2.credentials import Credentials
 
