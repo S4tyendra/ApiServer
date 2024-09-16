@@ -7,6 +7,7 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
 from functions.apiwrapper import iiitk_auth
+
 API_TOKEN = "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"
 router = APIRouter()
 
@@ -45,10 +46,9 @@ router = APIRouter()
 #     safety_settings=safety_settings,
 # )
 
+
 def _generate_response(history):
-    client = Groq(
-        api_key=API_TOKEN
-    )
+    client = Groq(api_key=API_TOKEN)
     completion = client.chat.completions.create(
         model="llama-3.1-70b-versatile",
         messages=[
@@ -58,7 +58,7 @@ def _generate_response(history):
             },
             *history,
         ],
-        temperature=0.5, # Less randomness
+        temperature=0.5,  # Less randomness
         max_tokens=8000,
         top_p=1,
         stream=True,
@@ -66,13 +66,12 @@ def _generate_response(history):
     )
 
     for chunk in completion:
-        print (chunk.choices[0].delta.content or "", end="")
+        print(chunk.choices[0].delta.content or "", end="")
         try:
             yield chunk.choices[0].delta.content or ""
         except:
             traceback.print_exc()
             pass
-
 
 
 class PromptData(BaseModel):
