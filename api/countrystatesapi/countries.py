@@ -13,8 +13,10 @@ async def get_countries(request: Request):
     try:
         db = await world_db()
         countries = db.countries.find()
-        country_list = [country async for country in countries if '_id' in country]
-        country_list = [{**country, '_id': str(country['_id'])} for country in country_list]
+        country_list = [country async for country in countries if "_id" in country]
+        country_list = [
+            {**country, "_id": str(country["_id"])} for country in country_list
+        ]
         return country_list
     except:
         api_key = request.headers.get("X-API-KEY")

@@ -16,13 +16,15 @@ api_key_header = APIKeyHeader(
 
 
 async def iiitk_auth(
-        request: Request,
-        api_key: str = Depends(api_key_header),
+    request: Request,
+    api_key: str = Depends(api_key_header),
 ):
     if api_key is None:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
     db = await connect_to_database()
-    user = await db.sessions.find_one({"_id": api_key, "type": {"$in": ["iiitk-android", "iiitk-win-lin"]}})
+    user = await db.sessions.find_one(
+        {"_id": api_key, "type": {"$in": ["iiitk-android", "iiitk-win-lin"]}}
+    )
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized, api key invalid")
     if user is None:
@@ -58,8 +60,8 @@ async def iiitk_auth(
 
 
 async def api_key_auth(
-        request: Request,
-        api_key: str = Depends(api_key_header),
+    request: Request,
+    api_key: str = Depends(api_key_header),
 ):
     if api_key is None:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")

@@ -52,51 +52,54 @@ Your output should be a comprehensive, clear, and educational set of notes that 
  """
 
 
-
 @router.get("/get_creds")
 async def upload_content(request: Request):
     token = request.headers.get("X-API-KEY")
     if not token:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    
+
     db = await connect_to_database()
     session = await db.sessions.find_one({"_id": token})
     if not session:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    
-    user = await db.users.find_one({"email": session.get('email')})
+
+    user = await db.users.find_one({"email": session.get("email")})
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    
-    if not user.get('ai_auth'):
+
+    if not user.get("ai_auth"):
         raise HTTPException(status_code=401, detail="AI authentication required")
 
-    creds_data = user.get('creds')
+    creds_data = user.get("creds")
     if not creds_data:
         raise HTTPException(status_code=401, detail="Credentials not found")
-    
+
     creds = Credentials(
-        token=creds_data['token'],
-        refresh_token=creds_data['refresh_token'],
-        token_uri=creds_data['token_uri'],
-        client_id=creds_data['client_id'],
-        client_secret=creds_data['client_secret'],
-        scopes=creds_data['scopes']
+        token=creds_data["token"],
+        refresh_token=creds_data["refresh_token"],
+        token_uri=creds_data["token_uri"],
+        client_id=creds_data["client_id"],
+        client_secret=creds_data["client_secret"],
+        scopes=creds_data["scopes"],
     )
-    
+
     if creds.expired:
         try:
             creds.refresh(GoogleRequest())
             await db.users.update_one(
-                {"email": user['email']},
-                {"$set": {"creds": {
-                    "token": creds.token,
-                    "refresh_token": creds.refresh_token,
-                    "token_uri": creds.token_uri,
-                    "client_id": creds.client_id,
-                    "client_secret": creds.client_secret,
-                    "scopes": creds.scopes
-                }}}
+                {"email": user["email"]},
+                {
+                    "$set": {
+                        "creds": {
+                            "token": creds.token,
+                            "refresh_token": creds.refresh_token,
+                            "token_uri": creds.token_uri,
+                            "client_id": creds.client_id,
+                            "client_secret": creds.client_secret,
+                            "scopes": creds.scopes,
+                        }
+                    }
+                },
             )
         except Exception as e:
             raise HTTPException(status_code=401, detail="Failed to refresh token")
@@ -104,23 +107,15 @@ async def upload_content(request: Request):
         return {
             "success": True,
         }
-        
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generating content: {str(e)}")
-    
-    
-    
+        raise HTTPException(
+            status_code=500, detail=f"Error generating content: {str(e)}"
+        )
 
     # file = genai.upload_file(path, mime_type=mime_type)
     # print(f"Uploaded file '{file.display_name}' as: {file.uri}")
     # return file
-
-
-
-
-
-
-
 
 
 @router.post("/generate_content")
@@ -128,50 +123,58 @@ async def generate_content(request: Request):
     token = request.headers.get("X-API-KEY")
     if not token:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    
+
     db = await connect_to_database()
     session = await db.sessions.find_one({"_id": token})
     if not session:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    
-    user = await db.users.find_one({"email": session.get('email')})
-    if not user or not user.get('ai_auth'):
+
+    user = await db.users.find_one({"email": session.get("email")})
+    if not user or not user.get("ai_auth"):
         raise HTTPException(status_code=401, detail="AI authentication required")
-    
-    creds_data = user.get('creds')
+
+    creds_data = user.get("creds")
     if not creds_data:
         raise HTTPException(status_code=401, detail="Credentials not found")
-    
+
     creds = Credentials(
-        token=creds_data['token'],
-        refresh_token=creds_data['refresh_token'],
-        token_uri=creds_data['token_uri'],
-        client_id=creds_data['client_id'],
-        client_secret=creds_data['client_secret'],
-        scopes=creds_data['scopes']
+        token=creds_data["token"],
+        refresh_token=creds_data["refresh_token"],
+        token_uri=creds_data["token_uri"],
+        client_id=creds_data["client_id"],
+        client_secret=creds_data["client_secret"],
+        scopes=creds_data["scopes"],
     )
-    
+
     if creds.expired:
         try:
             creds.refresh(GoogleRequest())
             await db.users.update_one(
-                {"email": user['email']},
-                {"$set": {"creds": {
-                    "token": creds.token,
-                    "refresh_token": creds.refresh_token,
-                    "token_uri": creds.token_uri,
-                    "client_id": creds.client_id,
-                    "client_secret": creds.client_secret,
-                    "scopes": creds.scopes
-                }}}
+                {"email": user["email"]},
+                {
+                    "$set": {
+                        "creds": {
+                            "token": creds.token,
+                            "refresh_token": creds.refresh_token,
+                            "token_uri": creds.token_uri,
+                            "client_id": creds.client_id,
+                            "client_secret": creds.client_secret,
+                            "scopes": creds.scopes,
+                        }
+                    }
+                },
             )
         except Exception as e:
             raise HTTPException(status_code=401, detail="Failed to refresh token")
-    
+
     try:
         genai.configure(credentials=creds)
-        model = genai.GenerativeModel('gemini-1.5-pro')
-        response = model.generate_content("Tell me a short story about a robot learning to paint.")
+        model = genai.GenerativeModel("gemini-1.5-pro")
+        response = model.generate_content(
+            "Tell me a short story about a robot learning to paint."
+        )
         return {"content": response.text}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generating content: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error generating content: {str(e)}"
+        )

@@ -15,12 +15,12 @@ async def get_states(country: str, req: Request):
         contry = sanitise(country)
         db = await world_db()
         states = db.state.find({"country_name": {"$regex": contry, "$options": "i"}})
-        state_list = [state async for state in states if '_id' in state]
+        state_list = [state async for state in states if "_id" in state]
         if len(state_list) == 0:
             if api_key:
                 await tokenconsuption(api_key, 1)
             raise HTTPException(status_code=404, detail="Country not found")
-        state_list = [{**state, '_id': str(state['_id'])} for state in state_list]
+        state_list = [{**state, "_id": str(state["_id"])} for state in state_list]
         return state_list
     except:
         if api_key:

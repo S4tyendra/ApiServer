@@ -2,14 +2,19 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 async def start(client, message):
-    await message.reply("Hi! I am intelligent bot! developed by [satya](t.me/me_satyendra)!\nSee /help and /note" ,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("📚 Help", callback_data="/help")],
-            [InlineKeyboardButton("🚶 Developer", callback_data="/about")],
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
-            [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")]
-        ]
-    ))
+    await message.reply(
+        "Hi! I am intelligent bot! developed by [satya](t.me/me_satyendra)!\nSee /help and /note",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("📚 Help", callback_data="/help")],
+                [InlineKeyboardButton("🚶 Developer", callback_data="/about")],
+                [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
+                [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")],
+            ]
+        ),
+    )
+
 
 help_message = """
 **Here are the commands you can use:**
@@ -32,25 +37,36 @@ help_message = """
 `/docs` - <i>Get the documentation</i>
 """
 
+
 async def help(client, message):
     if not help_message:  # Basic error handling
         await message.reply("Help message is not configured.")
         return
 
-    await message.reply(f"{help_message}", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
-            [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")]
-        ]
-    ))
+    await message.reply(
+        f"{help_message}",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
+                [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")],
+            ]
+        ),
+    )
+
 
 async def edit_help(client, query):
-    await query.message.edit_text(f"{help_message}", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
-            [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")]
-        ]
-    ))
+    await query.message.edit_text(
+        f"{help_message}",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
+                [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")],
+            ]
+        ),
+    )
+
 
 about_message = """
 **About:**
@@ -72,19 +88,29 @@ This bot is a Telegram client for [Devh](https://devh.in) API. Use this bot to a
 **API Documentation:** [Click here](https://api.devh.in/docs)
 """
 
+
 async def about(client, message):
-    await message.reply(about_message, parse_mode="Markdown", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
-            [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")]
-        ]
-    ))
+    await message.reply(
+        about_message,
+        parse_mode="Markdown",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
+                [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")],
+            ]
+        ),
+    )
 
 
 async def edit_about(client, query):
-    await query.message.edit_text(about_message, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
-            [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")]
-        ]
-    ))
+    await query.message.edit_text(
+        about_message,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("📢 Channel", url="https://t.me/DevhUpdates")],
+                [InlineKeyboardButton("👥 Group", url="https://t.me/devh_chat")],
+            ]
+        ),
+    )

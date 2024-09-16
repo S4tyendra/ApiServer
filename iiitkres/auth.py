@@ -1,3 +1,4 @@
+from google.generativeai.types import file_types
 import traceback
 from fastapi import APIRouter, Request, Depends, HTTPException, Response
 from fastapi.responses import RedirectResponse
@@ -11,7 +12,6 @@ import json
 
 local = bool(os.getenv("LOCAL", False))
 router = APIRouter()
-from google.generativeai.types import file_types
 
 
 CLIENT_SECRETS_FILE = "iiitkres/clientsecret.json"
@@ -36,9 +36,14 @@ def create_flow():
         ),
     )
 
+
 @router.get("/auth")
 async def auth(
-    request: Request, response: Response, state: str = None, code: str = None, token: str = None,
+    request: Request,
+    response: Response,
+    state: str = None,
+    code: str = None,
+    token: str = None,
 ):
     db = await connect_to_database()
 
@@ -59,7 +64,7 @@ async def auth(
             access_type="offline",
             login_hint=user.get("email"),
             enable_incremental_authorization=True,
-            prompt="consent"  # Add this to always get a refresh token
+            prompt="consent",  # Add this to always get a refresh token
         )
 
         await db.sessions.update_one({"_id": token}, {"$set": {"oauth_state": state}})
@@ -101,8 +106,7 @@ async def auth(
 
     else:
         raise HTTPException(status_code=400, detail="Invalid request")
-    
-    
+
 
 async def get_user_info(creds):
     try:
@@ -118,4 +122,3 @@ async def get_user_info(creds):
     except Exception as e:
         print(f"Error fetching user info: {str(e)}")
         return None
-
