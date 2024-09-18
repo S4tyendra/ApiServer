@@ -30,9 +30,11 @@ queue_handler = QueueHandler(log_queue)
 root_logger.addHandler(queue_handler)
 
 # Create a file handler
-file_handler = logging.FileHandler('database_backup_log.txt')
+file_handler = logging.FileHandler("database_backup_log.txt")
 file_handler.setLevel(logging.INFO)
-file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_formatter = logging.Formatter(
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 file_handler.setFormatter(file_formatter)
 
 # Create a console handler
@@ -45,40 +47,39 @@ file_handler.setFormatter(file_formatter)
 listener = QueueListener(log_queue, file_handler)
 listener.start()
 
+
 async def alog(msg, level=logging.INFO, logger=None):
     if logger is None:
         logger = logging.getLogger()
-    
+
     loop = asyncio.get_running_loop()
     await loop.run_in_executor(None, logger.log, level, msg)
 
 
-
 async def aprint(*args, **kwargs):
     loop = asyncio.get_running_loop()
-    kwargs['flush'] = True  # Ensure output is flushed immediately
+    kwargs["flush"] = True  # Ensure output is flushed immediately
     await loop.run_in_executor(None, lambda: print(*args, **kwargs))
     # Log the message
-    del kwargs['flush']
-    if 'end' in kwargs:
-        
-        del kwargs['end']
+    del kwargs["flush"]
+    if "end" in kwargs:
+
+        del kwargs["end"]
 
     await alog(*args, **kwargs)
 
-    
-
 
 async def backup_document(db, database_name, collection_name, document):
-    doc_id = str(document.get('_id', uuid.uuid4()))
+    doc_id = str(document.get("_id", uuid.uuid4()))
     file_name = f"{doc_id}.json"
     dir_path = os.path.join(BACKUP_DIR, database_name, collection_name)
     os.makedirs(dir_path, exist_ok=True)
     file_path = os.path.join(dir_path, file_name)
-    
-    with open(file_path, 'w') as f:
+
+    with open(file_path, "w") as f:
         await aprint(" .", end="")
         json.dump(json.loads(json_util.dumps(document)), f, indent=2)
+
 
 async def backup_collection(db, database_name, collection_name):
     await aprint(f"Backing up: {database_name}/{collection_name} ", end="")
@@ -94,8 +95,9 @@ async def backup_collection(db, database_name, collection_name):
     while True:
         if v:
             break
-        
+
     await aprint(f" -> Done.")
+
 
 async def backup_database(client, database_name):
     db = client[database_name]
@@ -103,35 +105,55 @@ async def backup_database(client, database_name):
     for collection_name in collection_names:
         await backup_collection(db, database_name, collection_name)
 
+
 async def backup_all_databases():
     client = AsyncIOMotorClient(MONGODB_URL)
     database_names = await client.list_database_names()
     for database_name in database_names:
-        if database_name not in ['admin', 'local', 'config', "WorldDB", "LinkToFileUploaderBot", "MY_UPLOADER"]:  # Skip some databases
+        # Skip some databases
+        if database_name not in [
+            "admin",
+            "local",
+            "config",
+            "WorldDB",
+            "LinkToFileUploaderBot",
+            "MY_UPLOADER",
+        ]:
             await backup_database(client, database_name)
     await aprint("All databases backed up.")
+
 
 async def start_backup():
     await backup_all_databases()
     from datetime import datetime
+
     current_date_and_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     os.system(f"tar -czf {BACKUP_DIR}_{current_date_and_time}.tar.gz {BACKUP_DIR}")
     import shutil
+
     shutil.rmtree(BACKUP_DIR)
 
     drive_service = driveauth.authenticate()
     folder_id = "1mwNqxosVh6JCDSoc5s7Wv93A30WspfMN"
     file_metadata = {
-        'name': f"{BACKUP_DIR}_{current_date_and_time}.tar.gz",
-        'parents': [folder_id]
+        "name": f"{BACKUP_DIR}_{current_date_and_time}.tar.gz",
+        "parents": [folder_id],
     }
-    media = MediaFileUpload(f"{BACKUP_DIR}_{current_date_and_time}.tar.gz", mimetype='application/gzip', resumable=True)
-    file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+    media = MediaFileUpload(
+        f"{BACKUP_DIR}_{current_date_and_time}.tar.gz",
+        mimetype="application/gzip",
+        resumable=True,
+    )
+    file = (
+        drive_service.files()
+        .create(body=file_metadata, media_body=media, fields="id")
+        .execute()
+    )
     await aprint("Backup uploaded to Google Drive.")
-    await aprint(f"Backup uploaded to Google Drive with ID: {file.get('id')}")    
+    await aprint(f"Backup uploaded to Google Drive with ID: {file.get('id')}")
     os.remove(f"{BACKUP_DIR}_{current_date_and_time}.tar.gz")
 
-    
+
 if __name__ == "__main__":
     asyncio.run(start_backup())
 
@@ -172,4 +194,3 @@ if __name__ == "__main__":
 
 
 # await backup_all_databases()
-
