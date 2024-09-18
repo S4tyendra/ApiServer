@@ -33,6 +33,7 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
     else:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
+
 @router.get("/notes-dates")
 async def get_notes_with_course_code(code: str, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
@@ -58,7 +59,6 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
 
-
 class UploadNotesModel(BaseModel):
     course_code: str
     date: str
@@ -77,7 +77,7 @@ async def upload_notes_on_that_date(
         session = await users_db.sessions.find_one({"_id": token})
         if not session:
             return JSONResponse({"error": "Unauthorized"}, status_code=401)
-        user = await users_db.users.find_one({'email': session.get('email')})
+        user = await users_db.users.find_one({"email": session.get("email")})
         if user:
             if user.get("is_admin", False):
                 db = await connect_to_database(db_name="notes")
@@ -110,6 +110,7 @@ async def upload_notes_on_that_date(
             return JSONResponse({"error": "User not found"}, status_code=404)
     else:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
+
 
 #
 # @router.get("/pending-notes")

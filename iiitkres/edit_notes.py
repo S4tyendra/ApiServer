@@ -25,8 +25,6 @@ async def edit_topic_notes(data: edit_topic_notes, request: Request):
     user = await db.users.find_one({"email": session.get("email")})
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    await db.notes.insert_one({
-        "code": data.code,
-        "path": data.path,
-        "content": data.content
-    })
+    await db.notes.insert_one(
+        {"code": data.code, "path": data.path, "content": data.content}
+    )

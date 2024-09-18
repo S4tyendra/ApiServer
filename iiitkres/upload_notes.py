@@ -27,27 +27,30 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
     if not user:
         return JSONResponse({"error": "User not found"}, status_code=404)
 
-    notes_db = await connect_to_database('iiitk_pending_notes')
+    notes_db = await connect_to_database("iiitk_pending_notes")
     if len(notes_data.points) < 1:
         points = genetares_points(notes_data.data)
     else:
         points = notes_data.points
     course_code = notes_data.title.split("-")[1].strip()
-    email = user.get('email')
+    email = user.get("email")
 
-    await getattr(notes_db, f'{course_code}').insert_one(dict(
-        _id=secrets.token_hex(16),
-        date=notes_data.date,
-        email=email,
-        points=points,
-        data=notes_data.data
-    ))
-    return {"message":"Operation Successful"}
+    await getattr(notes_db, f"{course_code}").insert_one(
+        dict(
+            _id=secrets.token_hex(16),
+            date=notes_data.date,
+            email=email,
+            points=points,
+            data=notes_data.data,
+        )
+    )
+    return {"message": "Operation Successful"}
 
 
 def genetares_points(data: str):
     KEY = "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"
     from groq import Groq
+
     client = Groq(
         api_key=KEY,
     )
@@ -56,16 +59,10 @@ def genetares_points(data: str):
         messages=[
             {
                 "role": "system",
-                "content": "Response ,must be in JSON\n\nYour job is to return the list of points discussed based on user input. each point must be in one or 2 words, Give as python programmable list without variable, and any unnecessary text such as Here are 10 single-worded points to get an idea about the content, etc. just list. thats it. not even with backquotes. Max 10 points\n\n"
+                "content": "Response ,must be in JSON\n\nYour job is to return the list of points discussed based on user input. each point must be in one or 2 words, Give as python programmable list without variable, and any unnecessary text such as Here are 10 single-worded points to get an idea about the content, etc. just list. thats it. not even with backquotes. Max 10 points\n\n",
             },
-            {
-                "role": "user",
-                "content": data
-            },
-            {
-                "role": "user",
-                "content": "Give me points as python list"
-            }
+            {"role": "user", "content": data},
+            {"role": "user", "content": "Give me points as python list"},
         ],
         temperature=0.2,
         max_tokens=520,
@@ -75,6 +72,7 @@ def genetares_points(data: str):
     )
     try:
         import ast
+
         print(completion.choices[0].message.content)
         json = ast.literal_eval(completion.choices[0].message.content)
         return json
@@ -102,27 +100,31 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
     if not session:
         return JSONResponse({"error": "User not found"}, status_code=404)
     email = session.get("email")
-    user = await users_db.users.find_one({"email":email})
+    user = await users_db.users.find_one({"email": email})
     if not user:
         return JSONResponse({"error": "No Access"}, status_code=401)
-    if not user.get('is_admin', False):
+    if not user.get("is_admin", False):
         return JSONResponse({"error": "No Access"}, status_code=401)
-    notes_db = await connect_to_database('iiitk_notes')
+    notes_db = await connect_to_database("iiitk_notes")
     course_code = notes_data.code
-    email = user.get('email')
-    await getattr(notes_db, f'{course_code}').insert_one(dict(
-        date=notes_data.date,
-        email=notes_data.email,
-        points=notes_data.points,
-        data=notes_data.data
-    ))
-    pending_db = await connect_to_database('iiitk_pending_notes')
-    await getattr(pending_db, f'{course_code}').delete_one(dict(
-        date=notes_data.date,
-        email=notes_data.email,
-    ))
+    email = user.get("email")
+    await getattr(notes_db, f"{course_code}").insert_one(
+        dict(
+            date=notes_data.date,
+            email=notes_data.email,
+            points=notes_data.points,
+            data=notes_data.data,
+        )
+    )
+    pending_db = await connect_to_database("iiitk_pending_notes")
+    await getattr(pending_db, f"{course_code}").delete_one(
+        dict(
+            date=notes_data.date,
+            email=notes_data.email,
+        )
+    )
 
-    return {"message":"Operation Successful"}
+    return {"message": "Operation Successful"}
 
 
 @router.delete("/upload-notes-admin")
@@ -136,23 +138,25 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
     if not session:
         return JSONResponse({"error": "User not found"}, status_code=404)
     email = session.get("email")
-    user = await users_db.users.find_one({"email":email})
+    user = await users_db.users.find_one({"email": email})
     if not user:
         return JSONResponse({"error": "No Access"}, status_code=401)
-    if not user.get('is_admin', False):
+    if not user.get("is_admin", False):
         return JSONResponse({"error": "No Access"}, status_code=401)
     course_code = notes_data.code
-    pending_db = await connect_to_database('iiitk_pending_notes')
-    await getattr(pending_db, f'{course_code}').delete_one(dict(
-        date=notes_data.date,
-        email=notes_data.email,
-    ))
+    pending_db = await connect_to_database("iiitk_pending_notes")
+    await getattr(pending_db, f"{course_code}").delete_one(
+        dict(
+            date=notes_data.date,
+            email=notes_data.email,
+        )
+    )
 
-    return {"message":"Operation Successful"}
+    return {"message": "Operation Successful"}
 
 
 @router.get("/pending-notes")
-async def get_pending_notes(code:str, request: Request, response: Response):
+async def get_pending_notes(code: str, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
     if not token:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
@@ -160,7 +164,7 @@ async def get_pending_notes(code:str, request: Request, response: Response):
     user = await users_db.sessions.find_one({"_id": token})
     if not user:
         return JSONResponse({"error": "User not found"}, status_code=404)
-    notes_db = await connect_to_database('iiitk_pending_notes')
+    notes_db = await connect_to_database("iiitk_pending_notes")
     pending_notes = getattr(notes_db, code).find({})
     notes_list = []
     async for note in pending_notes:

@@ -9,6 +9,7 @@ NOTES_DB_URL = MONGODB_URL
 
 # "mongodb+srv://mongodb:satyendra@mongodbdevh.9fqlqam.mongodb.net/?retryWrites=true&w=majority&appName=mongodbdevh"
 
+
 async def connect_to_database(db_name="fastapi_users_db"):
     client = AsyncIOMotorClient(MONGODB_URL)
     db = client[db_name]
