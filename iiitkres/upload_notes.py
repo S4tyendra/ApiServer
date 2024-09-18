@@ -1,6 +1,4 @@
-
-
-
+import secrets
 import traceback
 from fastapi import APIRouter, Request, Response
 from fastapi.responses import JSONResponse
@@ -10,51 +8,43 @@ from database import connect_to_database, connect_to_notes_database
 
 router = APIRouter()
 
+
 class NotesModel(BaseModel):
     title: str
     date: str
     data: str
+    points: list = []
+
 
 @router.post("/upload-notes")
 async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
     if not token:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
-    
+
     users_db = await connect_to_database()
     user = await users_db.sessions.find_one({"_id": token})
     if not user:
         return JSONResponse({"error": "User not found"}, status_code=404)
-    
-    notes_db = await connect_to_notes_database()
-    points = genetares_points(notes_data.data)
-    
-    document_id = f"{notes_data.date.split(' ')[0]}|{user.get('email')}"
-    course_name = notes_data.title.split("-")[1].strip()
-    
-    # Define the filter to find the document
-    filter_query = {"_id": document_id}
-    
-    # Define the update operation
-    update_query = {
-        "$set": {
-            course_name: notes_data.data,
-            f"{course_name}_intro": points
-        }
-    }
-    
-    # Perform the upsert operation
-    result = await notes_db.pending_notes.update_one(
-        filter_query,
-        update_query,
-        upsert=True
-    )
-    
-    if result.matched_count > 0:
-        return JSONResponse({"message": "Notes updated successfully"}, status_code=200)
+
+    notes_db = await connect_to_database('iiitk_pending_notes')
+    if len(notes_data.points) < 1:
+        points = genetares_points(notes_data.data)
     else:
-        return JSONResponse({"message": "New notes inserted successfully"}, status_code=200)
-        
+        points = notes_data.points
+    course_code = notes_data.title.split("-")[1].strip()
+    email = user.get('email')
+
+    await getattr(notes_db, f'{course_code}').insert_one(dict(
+        _id=secrets.token_hex(16),
+        date=notes_data.date,
+        email=email,
+        points=points,
+        data=notes_data.data
+    ))
+    return {"message":"Operation Successful"}
+
+
 def genetares_points(data: str):
     KEY = "***"
     from groq import Groq
@@ -93,8 +83,76 @@ def genetares_points(data: str):
         return []
 
 
+class NotesModel(BaseModel):
+    code: str
+    date: str
+    data: str
+    points: list
+    email: str
+
+
+@router.post("/upload-notes-admin")
+async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
+    token = request.headers.get("X-API-KEY")
+    if not token:
+        return JSONResponse({"error": "Unauthorized"}, status_code=401)
+
+    users_db = await connect_to_database()
+    session = await users_db.sessions.find_one({"_id": token})
+    if not session:
+        return JSONResponse({"error": "User not found"}, status_code=404)
+    email = session.get("email")
+    user = await users_db.users.find_one({"email":email})
+    if not user:
+        return JSONResponse({"error": "No Access"}, status_code=401)
+    if not user.get('is_admin', False):
+        return JSONResponse({"error": "No Access"}, status_code=401)
+    notes_db = await connect_to_database('iiitk_notes')
+    course_code = notes_data.code
+    email = user.get('email')
+    await getattr(notes_db, f'{course_code}').insert_one(dict(
+        date=notes_data.date,
+        email=notes_data.email,
+        points=notes_data.points,
+        data=notes_data.data
+    ))
+    pending_db = await connect_to_database('iiitk_pending_notes')
+    await getattr(pending_db, f'{course_code}').delete_one(dict(
+        date=notes_data.date,
+        email=notes_data.email,
+    ))
+
+    return {"message":"Operation Successful"}
+
+
+@router.delete("/upload-notes-admin")
+async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
+    token = request.headers.get("X-API-KEY")
+    if not token:
+        return JSONResponse({"error": "Unauthorized"}, status_code=401)
+
+    users_db = await connect_to_database()
+    session = await users_db.sessions.find_one({"_id": token})
+    if not session:
+        return JSONResponse({"error": "User not found"}, status_code=404)
+    email = session.get("email")
+    user = await users_db.users.find_one({"email":email})
+    if not user:
+        return JSONResponse({"error": "No Access"}, status_code=401)
+    if not user.get('is_admin', False):
+        return JSONResponse({"error": "No Access"}, status_code=401)
+    course_code = notes_data.code
+    pending_db = await connect_to_database('iiitk_pending_notes')
+    await getattr(pending_db, f'{course_code}').delete_one(dict(
+        date=notes_data.date,
+        email=notes_data.email,
+    ))
+
+    return {"message":"Operation Successful"}
+
+
 @router.get("/pending-notes")
-async def get_pending_notes(request: Request, response: Response):
+async def get_pending_notes(code:str, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
     if not token:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
@@ -102,60 +160,9 @@ async def get_pending_notes(request: Request, response: Response):
     user = await users_db.sessions.find_one({"_id": token})
     if not user:
         return JSONResponse({"error": "User not found"}, status_code=404)
-    notes_db = await connect_to_notes_database()
-    pending_notes = notes_db.pending_notes.find({})
+    notes_db = await connect_to_database('iiitk_pending_notes')
+    pending_notes = getattr(notes_db, code).find({})
     notes_list = []
     async for note in pending_notes:
         notes_list.append(note)
     return JSONResponse(notes_list)
-
-@router.post("/pending-notes")
-async def upload_pending_notes(data: NotesModel,  request: Request, response: Response, accept:bool = False,):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-    users_db = await connect_to_database()
-    user = await users_db.sessions.find_one({"_id": token})
-    if not user:
-        return JSONResponse({"error": "User not found"}, status_code=404)
-    email = user.get("email")
-    if str(email).lower() not in ['2022kucp1033@iiitkota.ac.in']:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-    notes_db = await connect_to_notes_database()
-
-    document_id = f"{data.date.split(' ')[0]}"
-    course_name = data.title.split("-")[1].strip()
-
-    # Define the filter to find the document
-    filter_query = {"_id": document_id}
-
-    # Define the update operation
-
-    update_query = {
-        "$set": {
-            course_name: data.data,
-            f"{course_name}_intro": data.points
-        }
-    }
-
-    if accept:
-        result = await notes_db.iiitkota.update_one(
-            filter_query,
-            update_query,
-            upsert=True
-        )
-        if result.matched_count > 0:
-            return JSONResponse({"message": "Notes updated successfully"}, status_code=200)
-        else:
-            return JSONResponse({"message": "New notes inserted successfully"}, status_code=200)
-
-    if not accept:
-        result = await notes_db.pending_notes.delete_one(filter_query)
-        if result.deleted_count > 0:
-            return JSONResponse({"message": "Notes deleted successfully"}, status_code=200)
-        else:
-            return JSONResponse({"message": "Notes not found"}, status_code=404)
-
-
-    
-
