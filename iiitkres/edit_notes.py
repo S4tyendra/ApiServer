@@ -1,13 +1,9 @@
-
-
-
 from fastapi import APIRouter, Depends, HTTPException, status, Request
 from pydantic import BaseModel
 from database import connect_to_database
 
-
-
 router = APIRouter()
+
 
 class edit_topic_notes(BaseModel):
     code: str
@@ -16,12 +12,12 @@ class edit_topic_notes(BaseModel):
 
 
 @router.post("/edit-topic-notes")
-async def edit_topic_notes(data:edit_topic_notes, request: Request):
+async def edit_topic_notes(data: edit_topic_notes, request: Request):
     token = request.headers.get("X-API-KEY")
     if not token:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-    db = await connect_to_database()
+    db = await connect_to_database("pending_topics")
     session = await db.sessions.find_one({"_id": token})
     if not session:
         raise HTTPException(status_code=401, detail="Unauthorized")

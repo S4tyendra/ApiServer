@@ -1,3 +1,6 @@
+import json
+
+from bson import json_util
 from fastapi import APIRouter, Request, Response
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
@@ -8,6 +11,9 @@ router = APIRouter()
 
 @router.get("/notes")
 async def get_notes_with_course_code(code: str, request: Request, response: Response):
+    """
+    Returns: Topic Wise notes for each course.
+    """
     token = request.headers.get("X-API-KEY")
     if token:
         users_db = await connect_to_database()
@@ -27,7 +33,6 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
     else:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
-
 @router.get("/notes-dates")
 async def get_notes_with_course_code(code: str, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
@@ -35,15 +40,15 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
         users_db = await connect_to_database()
         user = await users_db.sessions.find_one({"_id": token})
         if user:
-            db = await connect_to_database(db_name="notes")
-            notes = db.iiitkota.find({str(code.upper()).strip(): {"$exists": True}})
-            notes_list = {}
-            async for note in notes:
-                notes_list[note.get("_id")] = {
-                    "data": note.get(code),
-                    "points": note.get(f"{code}_intro"),
-                }
-            response = JSONResponse(notes_list)
+            db = await connect_to_database(db_name="iiitk_notes")
+            collection = getattr(db, code.upper())
+            cursor = collection.find({})
+            notes = await cursor.to_list(length=None)
+
+            # Convert ObjectId to string for JSON serialization
+            notes_json = json.loads(json_util.dumps(notes))
+
+            response = JSONResponse(content=notes_json)
             response.headers["Cache-Control"] = "public, max-age=3600"
             response.headers["Access-Control-Allow-Origin"] = "*"
             return response
@@ -53,11 +58,13 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
 
+
 class UploadNotesModel(BaseModel):
     course_code: str
     date: str
     data: str
-    points: str
+    points: list
+    email: str
 
 
 @router.post("/upload-md-notes")
@@ -67,7 +74,10 @@ async def upload_notes_on_that_date(
     token = request.headers.get("X-API-KEY")
     if token:
         users_db = await connect_to_database()
-        user = await users_db.sessions.find_one({"_id": token})
+        session = await users_db.sessions.find_one({"_id": token})
+        if not session:
+            return JSONResponse({"error": "Unauthorized"}, status_code=401)
+        user = await users_db.users.find_one({'email': session.get('email')})
         if user:
             if user.get("is_admin", False):
                 db = await connect_to_database(db_name="notes")
@@ -89,6 +99,7 @@ async def upload_notes_on_that_date(
                         f"{data.course_code.upper()}_intro": data.points,
                     }
                     await db.iiitkota.insert_one(new_note)
+                    await db.pending_notes.delete_one("_id")
                 return JSONResponse({"message": "Notes uploaded successfully"})
             else:
                 return JSONResponse(
@@ -100,74 +111,48 @@ async def upload_notes_on_that_date(
     else:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
-
-@router.get("/pending-notes")
-async def get_pending_notes(request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if token:
-        users_db = await connect_to_database()
-        user = await users_db.sessions.find_one({"_id": token})
-        if user:
-            db = await connect_to_database(db_name="notes")
-            pending_notes = db.pending_notes.find({})
-            notes_list = []
-            async for note in pending_notes:
-                notes_list.append(note)
-            return JSONResponse(notes_list)
-        else:
-            return JSONResponse({"error": "User not found"}, status_code=404)
-    else:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-
-@router.post("/pending-notes")
-async def upload_pending_notes(
-    data: UploadNotesModel, request: Request, response: Response
-):
-    token = request.headers.get("X-API-KEY")
-    if token:
-        users_db = await connect_to_database()
-        user = await users_db.sessions.find_one({"_id": token})
-        if user:
-            db = await connect_to_database(db_name="notes")
-            import secrets
-
-            pending_note = {
-                "_id": secrets.token_hex(8),
-                "course_code": data.course_code,
-                "date": data.date,
-                "data": data.data,
-                "points": data.points,
-            }
-            await db.pending_notes.insert_one(pending_note)
-            return JSONResponse({"message": "Notes uploaded to pending queue"})
-        else:
-            return JSONResponse({"error": "User not found"}, status_code=404)
-    else:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-
-@router.delete("/pending-notes")
-async def delete_pending_notes(id: str, request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if token:
-        users_db = await connect_to_database()
-        user = await users_db.sessions.find_one({"_id": token})
-        if user:
-            if user.get("is_admin", False):
-                db = await connect_to_database(db_name="notes")
-                existing_note = await db.pending_notes.find_one({"_id": id})
-                if existing_note:
-                    await db.pending_notes.delete({"_id": id})
-                    return JSONResponse({"message": "Note deleted successfully"})
-                else:
-                    return JSONResponse({"error": "Note not found"}, status_code=404)
-            else:
-                return JSONResponse(
-                    {"error": "Only admin users can delete notes directly"},
-                    status_code=403,
-                )
-        else:
-            return JSONResponse({"error": "User not found"}, status_code=404)
-    else:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
+#
+# @router.get("/pending-notes")
+# async def get_pending_notes(request: Request, response: Response):
+#     token = request.headers.get("X-API-KEY")
+#     if token:
+#         users_db = await connect_to_database()
+#         user = await users_db.sessions.find_one({"_id": token})
+#         if user:
+#             db = await connect_to_database(db_name="notes")
+#             pending_notes = db.pending_notes.find({})
+#             notes_list = []
+#             async for note in pending_notes:
+#                 notes_list.append(note)
+#             return JSONResponse(notes_list)
+#         else:
+#             return JSONResponse({"error": "User not found"}, status_code=404)
+#     else:
+#         return JSONResponse({"error": "Unauthorized"}, status_code=401)
+# #
+#
+# @router.post("/pending-notes")
+# async def upload_pending_notes(
+#     data: UploadNotesModel, request: Request, response: Response
+# ):
+#     token = request.headers.get("X-API-KEY")
+#     if token:
+#         users_db = await connect_to_database()
+#         user = await users_db.sessions.find_one({"_id": token})
+#         if user:
+#             db = await connect_to_database(db_name="notes")
+#             import secrets
+#
+#             pending_note = {
+#                 "_id": secrets.token_hex(8),
+#                 "course_code": data.course_code,
+#                 "date": data.date,
+#                 "data": data.data,
+#                 "points": data.points,
+#             }
+#             await db.pending_notes.insert_one(pending_note)
+#             return JSONResponse({"message": "Notes uploaded to pending queue"})
+#         else:
+#             return JSONResponse({"error": "User not found"}, status_code=404)
+#     else:
+#         return JSONResponse({"error": "Unauthorized"}, status_code=401)
