@@ -235,3 +235,6 @@ venv
 ./applog.txt
 applog.txt
 applog.txt
+database_backup_log.txt
+applog.txt
+applog.txt
