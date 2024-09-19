@@ -1,5 +1,8 @@
+import json
 import secrets
 import traceback
+
+from bson import json_util
 from fastapi import APIRouter, Request, Response
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
@@ -126,7 +129,7 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
 
 
 @router.delete("/upload-notes-admin")
-async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
+async def upload_notes(code,date,email_, request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
     if not token:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
@@ -141,28 +144,38 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
         return JSONResponse({"error": "No Access"}, status_code=401)
     if not user.get('is_admin', False):
         return JSONResponse({"error": "No Access"}, status_code=401)
-    course_code = notes_data.code
+    course_code = code
     pending_db = await connect_to_database('iiitk_pending_notes')
     await getattr(pending_db, f'{course_code}').delete_one(dict(
-        date=notes_data.date,
-        email=notes_data.email,
+        date=date,
+        email=email_,
     ))
 
     return {"message":"Operation Successful"}
 
 
 @router.get("/pending-notes")
-async def get_pending_notes(code:str, request: Request, response: Response):
+async def get_pending_notes(request: Request, response: Response):
     token = request.headers.get("X-API-KEY")
     if not token:
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
+
     users_db = await connect_to_database()
     user = await users_db.sessions.find_one({"_id": token})
     if not user:
         return JSONResponse({"error": "User not found"}, status_code=404)
+
     notes_db = await connect_to_database('iiitk_pending_notes')
-    pending_notes = getattr(notes_db, code).find({})
-    notes_list = []
-    async for note in pending_notes:
-        notes_list.append(note)
-    return JSONResponse(notes_list)
+
+    # Fetch all collections from the database
+    collections = await notes_db.list_collection_names()
+
+    result = {}
+    for collection_name in collections:
+        collection = notes_db[collection_name]
+        cursor = collection.find({})
+        documents = await cursor.to_list(length=None)
+        result[collection_name] = json.loads(json_util.dumps(documents))
+
+    return JSONResponse(content=result)
+
