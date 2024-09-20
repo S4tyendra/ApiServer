@@ -53,6 +53,14 @@ scheduler.add_job(clear_log, 'interval', minutes=10)
 scheduler.add_job(delete_temp, 'interval', minutes=5)
 scheduler.start()
 logging.info("Scheduler started!")
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
+from datetime import datetime
+import pytz
+import time
+import logging
+
+app = FastAPI()
 
 # Add CORS middleware
 app.add_middleware(
@@ -63,29 +71,36 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from datetime import datetime
-import pytz
-
 ist = pytz.timezone('Asia/Kolkata')
 
 @app.middleware("http")
 async def log_request(request: Request, call_next):
     start_time = time.time()
-
-    if "X-API-KEY" in request.headers or "WEB-KEY" in request.headers or "x-api-key" in request.headers or "web-key" in request.headers:
+    
+    # Get the client IP address
+    client_ip = request.headers.get("CF-Connecting-IP") or request.client.host
+    
+    if any(key in request.headers for key in ["X-API-KEY", "WEB-KEY", "x-api-key", "web-key"]):
         from database import connect_to_database
         db = await connect_to_database()
-        token = request.headers.get("X-API-KEY") or request.headers.get("WEB-KEY") or request.headers.get(
-            "x-api-key") or request.headers.get("web-key")
+        token = next((request.headers.get(key) for key in ["X-API-KEY", "WEB-KEY", "x-api-key", "web-key"] if key in request.headers), None)
         try:
             current_time_ist = datetime.now(ist)
             await db.sessions.update_one({"_id": token}, {"$set": {"last_accessed": current_time_ist}})
         except Exception as e:
-            logging.error(e)
+            logging.error(f"Error updating session: {e}")
+
     response = await call_next(request)
-    response.headers["X-Process-Time"] = str(time.time() - start_time)
-    logging.debug(
-        f"{request.method} - {request.url} / {request.headers.get('cookie')} /{request.headers.get('x-api-key')}")
+    process_time = time.time() - start_time
+    response.headers["X-Process-Time"] = f"{process_time:.4f}"
+    
+    logging.info(
+        f"{request.method} - {request.url} - IP: {client_ip} - "
+        f"Cookie: {request.headers.get('cookie')} - "
+        f"API Key: {request.headers.get('x-api-key')} - "
+        f"Process Time: {process_time:.4f}s"
+    )
+    
     return response
 
 
