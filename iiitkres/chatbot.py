@@ -20,7 +20,7 @@ groq_keys = [
     "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",
     "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",
     "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",
-    "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"
+    "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",
 ]
 SYSTEM = """
 You are an advanced AI tutor designed to assist students in their academic pursuits. Your primary goal is to provide educational support and guidance. Here are your core principles and functionalities:
