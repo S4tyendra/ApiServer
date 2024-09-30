@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends, Request
 
 from api.countrystatesapi.datab import world_db, TOKEN
-from functions.apiwrapper import api_key_auth, refund_tokens, get_user
+from functions.apiwrapper import  refund_tokens, get_user
 
 router = APIRouter()
 

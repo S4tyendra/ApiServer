@@ -4,7 +4,7 @@ from fastapi import Depends, APIRouter, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List, Union
-from functions.apiwrapper import api_key_auth, get_user
+from functions.apiwrapper import  get_user
 from functions.db import get_database
 
 router = APIRouter()

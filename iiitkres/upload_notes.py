@@ -7,7 +7,7 @@ from fastapi import APIRouter, Request, Response, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
-from functions.apiwrapper import api_key_auth, get_user
+from functions.apiwrapper import  get_user
 from functions.db import get_database
 
 router = APIRouter()

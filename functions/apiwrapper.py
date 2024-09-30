@@ -19,8 +19,8 @@ import icecream
 from icecream import ic
 
 async def get_user(
+    request: Request,
         accept: List[str],
-        request: Request,
         tokens: Optional[int] = None,
 ):
     api_key = request.headers.get(API_KEY_NAME)

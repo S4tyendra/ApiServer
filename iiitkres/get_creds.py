@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Request, Depends
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request as GoogleRequest
 import google.generativeai as genai
-from functions.apiwrapper import api_key_auth, get_user
+from functions.apiwrapper import  get_user
 from functions.db import get_database
 
 router = APIRouter()
