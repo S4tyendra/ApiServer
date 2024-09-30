@@ -1,13 +1,9 @@
-from fastapi import APIRouter, HTTPException, Request
-
-from database import connect_to_database
-
-from fastapi import APIRouter, Request, HTTPException
+from fastapi import APIRouter, HTTPException, Request, Depends
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request as GoogleRequest
-from database import connect_to_database
 import google.generativeai as genai
-from google.oauth2.credentials import Credentials
+from functions.apiwrapper import api_key_auth, get_user
+from functions.db import get_database
 
 router = APIRouter()
 
@@ -37,33 +33,22 @@ You are an advanced multimodal AI assistant designed to help students create com
 5. If the teacher assigns any homework or mentions upcoming assignments, include this information in a dedicated section.
 6. If there are any gaps in the information provided, use your knowledge base to fill in missing details, clearly marking any such additions as supplementary information.
 7. You shouldn't include timestamps like: 15:34 - 18:08.
-8. Your response is notes, that's it. Dont write like The professor works through.. , The discussion continues, etc.
+8. Your response is notes, that's it. Don't write like The professor works through.. , The discussion continues, etc.
+
 ## Ethical Considerations:
 1. Respect privacy by not identifying specific students in the notes.
 2. Focus on educational content and filter out any irrelevant or inappropriate material that may have been captured in the recordings.
 
 Your output should be a comprehensive, clear, and educational set of notes that not only captures the essence of the class but also enhances the student's understanding of the subject matter. Strive to create notes that would be valuable both for review and for students who may have missed the class.
- """
+"""
 
-
-@router.get("/get_creds")
+@router.get("/get_creds", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
 async def upload_content(request: Request):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
-    db = await connect_to_database()
-    session = await db.sessions.find_one({"_id": token})
-    if not session:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
-    user = await db.users.find_one({"email": session.get("email")})
-    if not user:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     if not user.get("ai_auth"):
         raise HTTPException(status_code=401, detail="AI authentication required")
 
+    db = await get_database()
     creds_data = user.get("creds")
     if not creds_data:
         raise HTTPException(status_code=401, detail="Credentials not found")
@@ -82,93 +67,9 @@ async def upload_content(request: Request):
             creds.refresh(GoogleRequest())
             await db.users.update_one(
                 {"email": user["email"]},
-                {
-                    "$set": {
-                        "creds": {
-                            "token": creds.token,
-                            "refresh_token": creds.refresh_token,
-                            "token_uri": creds.token_uri,
-                            "client_id": creds.client_id,
-                            "client_secret": creds.client_secret,
-                            "scopes": creds.scopes,
-                        }
-                    }
-                },
-            )
-        except Exception as e:
-            raise HTTPException(status_code=401, detail="Failed to refresh token")
-    try:
-        return {
-            "success": True,
-        }
-
-    except Exception as e:
-        raise HTTPException(
-            status_code=500, detail=f"Error generating content: {str(e)}"
-        )
-
-    # file = genai.upload_file(path, mime_type=mime_type)
-    # print(f"Uploaded file '{file.display_name}' as: {file.uri}")
-    # return file
-
-
-@router.post("/generate_content")
-async def generate_content(request: Request):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
-    db = await connect_to_database()
-    session = await db.sessions.find_one({"_id": token})
-    if not session:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
-    user = await db.users.find_one({"email": session.get("email")})
-    if not user or not user.get("ai_auth"):
-        raise HTTPException(status_code=401, detail="AI authentication required")
-
-    creds_data = user.get("creds")
-    if not creds_data:
-        raise HTTPException(status_code=401, detail="Credentials not found")
-
-    creds = Credentials(
-        token=creds_data["token"],
-        refresh_token=creds_data["refresh_token"],
-        token_uri=creds_data["token_uri"],
-        client_id=creds_data["client_id"],
-        client_secret=creds_data["client_secret"],
-        scopes=creds_data["scopes"],
-    )
-
-    if creds.expired:
-        try:
-            creds.refresh(GoogleRequest())
-            await db.users.update_one(
-                {"email": user["email"]},
-                {
-                    "$set": {
-                        "creds": {
-                            "token": creds.token,
-                            "refresh_token": creds.refresh_token,
-                            "token_uri": creds.token_uri,
-                            "client_id": creds.client_id,
-                            "client_secret": creds.client_secret,
-                            "scopes": creds.scopes,
-                        }
-                    }
-                },
+                {"$set": {"creds": creds_data}}
             )
         except Exception as e:
             raise HTTPException(status_code=401, detail="Failed to refresh token")
 
-    try:
-        genai.configure(credentials=creds)
-        model = genai.GenerativeModel("gemini-1.5-pro")
-        response = model.generate_content(
-            "Tell me a short story about a robot learning to paint."
-        )
-        return {"content": response.text}
-    except Exception as e:
-        raise HTTPException(
-            status_code=500, detail=f"Error generating content: {str(e)}"
-        )
+    return {"success": True}

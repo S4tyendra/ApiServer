@@ -8,3 +8,4 @@ async def world_db():
     client = AsyncIOMotorClient(MONGODB_URL)
     db = client["WorldDB"]
     return db
+TOKEN = 1

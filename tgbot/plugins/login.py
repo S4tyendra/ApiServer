@@ -3,7 +3,7 @@ import random
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-from database import connect_to_database
+from functions.db import get_database
 
 
 async def login(client, message):
@@ -19,7 +19,7 @@ async def login_callback(client, query):
     _hash = generate_random_string(16)
     state = generate_random_string(8)
     user_id = query.from_user.id
-    db = await connect_to_database()
+    db = await get_database()
     await db.tg_sessions.insert_one({"user_id": user_id, "_hash": _hash, "state": state, "message_id": query.message.id})
     await query.message.edit_text("Please login to the bot by clicking the button below.", reply_markup=InlineKeyboardMarkup(
         [

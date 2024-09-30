@@ -1,35 +1,39 @@
 from fastapi import APIRouter, HTTPException, Depends, Request
 
-from api.countrystatesapi.datab import world_db
-from functions.apiwrapper import api_key_auth, tokenconsuption
+from api.countrystatesapi.datab import world_db, TOKEN
+from functions.apiwrapper import api_key_auth, refund_tokens, get_user
 
 router = APIRouter()
 
-
-@router.get("/getcitiesinstate", dependencies=[Depends(api_key_auth)])
-async def get_cities(country: str, state: str, request: Request):
-    api_key = request.headers.get("X-API-KEY")
+@router.get("/getcitiesinstate", dependencies=[Depends(lambda: api_key_auth(tokens=-TOKEN, accept=["tools-key"]))])
+async def get_cities(
+        country: str,
+        state: str,
+        request: Request,
+):
+    user = await get_user(request, accept=["tools-key"])
     try:
-        contry = sanitise(country)
+        country = sanitise(country)
         state = sanitise(state)
         db = await world_db()
         cities = db.cities.find(
             {
-                "country_name": {"$regex": contry, "$options": "i"},
+                "country_name": {"$regex": country, "$options": "i"},
                 "state_name": {"$regex": state, "$options": "i"},
             }
         )
         cities_list = [city async for city in cities if "_id" in city]
         if len(cities_list) == 0:
-            if api_key:
-                await tokenconsuption(api_key, 1)
+            await refund_tokens(user['email'], 1)
             raise HTTPException(status_code=404, detail="Country or state not found")
-        cities_list = [{**state, "_id": str(state["_id"])} for state in cities_list]
+        cities_list = [{**city, "_id": str(city["_id"])} for city in cities_list]
+        db.client.close()
         return cities_list
-    except:
-        if api_key:
-            await tokenconsuption(api_key, 1)
-        raise HTTPException(status_code=500, detail="Internal server error")
+    except HTTPException:
+        raise
+    except Exception as e:
+        await refund_tokens(user['email'], 1)
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 
 def sanitise(state):

@@ -1,103 +1,65 @@
-from fastapi import APIRouter, HTTPException, Request, Response
-from database import connect_to_database
+from fastapi import APIRouter, HTTPException, Request, Response, Depends
+from functions.db import get_database
 from fastapi.responses import JSONResponse
+from typing import Optional
+from pydantic import BaseModel
 
 router = APIRouter()
 
+class UserProfile(BaseModel):
+    _id: str
+    email: str
+    name: str
+    picture: Optional[str]
+    tokens: Optional[int]
+    ai_auth: Optional[bool]
+    is_private: Optional[bool]
+    followers: Optional[list]
 
-@router.get("/profile")
-async def profile(request: Request, response: Response, _id: str):
-    """
-    Retrieve user profile based on the provided ID.
-    Parameters:
-    - request: Request object containing user request data.
-    - response: Response object for returning the response.
-    - _id: User ID to retrieve the profile for.
-    Returns:
-    - User profile data if accessible based on privacy settings.
-    Raises:
-    - HTTPException with status code 400 if the user is invalid or private.
-    """
-    cookie = request.cookies.get("_id-c")
-    db = await connect_to_database()
-    requester_data = await db.sessions.find_one({"_id": cookie})
-    requester_email = requester_data.get("email")
-    responser_data = await db.users.find_one({"_id": _id})
-    if responser_data is None:
-        raise HTTPException(status_code=400, detail="Invalid user")
-    if responser_data.get("email") == requester_email:
-        return responser_data
-    else:
-        private = responser_data.get("is_private")
-        if private:
-            if responser_data.get("followers") is None:
-                responser_data["followers"] = []
-            if requester_email in responser_data.get("followers"):
-                return responser_data
-            else:
-                raise HTTPException(status_code=400, detail="Private user")
-        else:
-            return responser_data
-
-
-@router.get("/me")
-async def me(request: Request, response: Response):
-    """
-    Retrieves user information based on cookie or API key.
-
-    This function handles authentication based on either a cookie or an API key. It then
-    retrieves user information from the database based on the authenticated email.
-
-    Args:
-        request (Request): The incoming request object.
-        response (Response): The outgoing response object.
-
-    Returns:
-        JSONResponse: A JSON response containing user information or an error message.
-    """
-
-    # Check for authentication credentials
+async def get_user_from_token(request: Request):
     cookie = request.cookies.get("_id-c")
     api_key = request.headers.get("X-API-KEY")
     auth_token = cookie or api_key
 
-    # Connect to the database
-    db = await connect_to_database()
+    db = await get_database()
+    user_data = await db.sessions.find_one({"_id": auth_token})
 
-    # Find the requester in the sessions collection
-    requester_data = await db.sessions.find_one({"_id": auth_token})
+    if user_data is None:
+        raise HTTPException(status_code=401, detail="Invalid authentication")
 
-    # Handle invalid user authentication
-    if requester_data is None:
-        raise HTTPException(status_code=400, detail="Invalid user")
+    return user_data.get("email")
 
-    # Get the requester's email
-    requester_email = requester_data.get("email")
+@router.get("/profile", response_model=UserProfile)
+async def profile(request: Request, _id: str, requester_email: str = Depends(get_user_from_token)):
+    db = await get_database()
+    responser_data = await db.users.find_one({"_id": _id})
 
-    # Retrieve user data based on email and role
+    if responser_data is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    if responser_data.get("email") == requester_email:
+        return UserProfile(**responser_data)
+
+    if responser_data.get("is_private", False):
+        if requester_email not in responser_data.get("followers", []):
+            raise HTTPException(status_code=403, detail="Private user")
+
+    return UserProfile(**responser_data)
+
+@router.get("/me", response_model=UserProfile)
+async def me(requester_email: str = Depends(get_user_from_token)):
+    db = await get_database()
+
+    projection = ["_id", "email", "name", "picture", "tokens", "ai_auth"]
+
     if requester_email.endswith("@iiitkota.ac.in"):
-        # Special handling for IIIT Kota users
-        responser_data = await db.users.find_one({"email": requester_email})
-        if responser_data is not None:
-            # Include ai_auth status if present
-            if responser_data.get("ai_auth", None) is not None:
-                responser_data = await db.users.find_one(
-                    {"email": requester_email},
-                    projection=["_id", "email", "name", "picture", "tokens", "ai_auth"],
-                )
-            else:
-                # Otherwise, default to False
-                responser_data = await db.users.find_one(
-                    {"email": requester_email},
-                    projection=["_id", "email", "name", "picture", "tokens", "ai_auth"],
-                )
-                responser_data["ai_auth"] = False
+        user_data = await db.users.find_one({"email": requester_email}, projection=projection)
+        if user_data is None:
+            raise HTTPException(status_code=404, detail="User not found")
+        user_data["ai_auth"] = user_data.get("ai_auth", False)
     else:
-        # General user retrieval
-        responser_data = await db.users.find_one(
-            {"email": requester_email},
-            projection=["_id", "email", "name", "picture", "tokens"],
-        )
+        user_data = await db.users.find_one({"email": requester_email}, projection=projection[:-1])
+        if user_data is None:
+            raise HTTPException(status_code=404, detail="User not found")
 
-    # Return the user data as a JSON response
-    return JSONResponse(responser_data)
+    return UserProfile(**user_data)

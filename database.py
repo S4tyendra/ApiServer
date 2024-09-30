@@ -1,5 +1,5 @@
-from motor.motor_asyncio import AsyncIOMotorClient
-
+from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
+from typing import Optional
 # MongoDB connection URL
 MONGODB_URL = "mongodb+srv://s4tyendra:satya@devh.cbvk0so.mongodb.net/?retryWrites=true&w=majority&appName=devh"
 
@@ -9,13 +9,26 @@ NOTES_DB_URL = MONGODB_URL
 
 # "mongodb+srv://mongodb:satyendra@mongodbdevh.9fqlqam.mongodb.net/?retryWrites=true&w=majority&appName=mongodbdevh"
 
-async def connect_to_database(db_name="fastapi_users_db"):
-    client = AsyncIOMotorClient(MONGODB_URL)
-    db = client[db_name]
-    return db
+
+from motor.motor_asyncio import AsyncIOMotorClient
+from typing import Optional
 
 
-async def connect_to_notes_database():
-    client = AsyncIOMotorClient(NOTES_DB_URL)
-    db = client["notes"]
-    return db
+class Database:
+    def __init__(self):
+        self.client: Optional[AsyncIOMotorClient] = None
+
+    async def connect(self) -> AsyncIOMotorClient:
+        if self.client is None:
+            self.client = AsyncIOMotorClient(MONGODB_URL)
+        return self.client
+
+    async def close(self) -> None:
+        if self.client is not None:
+            self.client.close()
+            self.client = None
+
+    async def get_db(self, database: str = "fastapi_users_db") -> AsyncIOMotorDatabase:
+        if self.client is None:
+            await self.connect()
+        return self.client[database]
