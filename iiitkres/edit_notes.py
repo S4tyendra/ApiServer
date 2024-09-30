@@ -14,7 +14,7 @@ class EditTopicNotes(BaseModel):
     path: list
     content: str
 
-@router.post("/edit-topic-notes", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
+@router.post("/edit-topic-notes", )
 async def post_edit_topic_notes(data: EditTopicNotes, request: Request):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     pending_db = await get_database("iiitk_pending_topics")
@@ -27,7 +27,7 @@ async def post_edit_topic_notes(data: EditTopicNotes, request: Request):
     })
     return {'message': 'Sent for review.'}
 
-@router.get("/edit-topic-notes", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
+@router.get("/edit-topic-notes", )
 async def get_edit_topic_notes(request: Request):
     await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     pending_db = await get_database("iiitk_pending_topics")
@@ -41,7 +41,7 @@ class AdminEditTopicNotes(BaseModel):
     content: str
     id: str
 
-@router.post("/admin-edit-topic-data", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
+@router.post("/admin-edit-topic-data", )
 async def only_admins_can_edit_topic_data(request: Request, data: AdminEditTopicNotes):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     if not user.get('is_admin', False):
@@ -89,7 +89,7 @@ async def only_admins_can_edit_topic_data(request: Request, data: AdminEditTopic
     else:
         return JSONResponse({"error": "No changes made to the document"}, status_code=400)
 
-@router.delete("/admin-edit-topic-data", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
+@router.delete("/admin-edit-topic-data", )
 async def only_admins_can_delete_topic_data(request: Request, id: str):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     if not user.get('is_admin', False):

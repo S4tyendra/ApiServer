@@ -9,11 +9,11 @@ TOKEN = 1
 router = APIRouter()
 
 
-@router.get("/countrieslist", dependencies=[Depends(lambda: api_key_auth(tokens=-TOKEN, accept=["tools-key"]))])
+@router.get("/countrieslist", )
 async def get_countries(
         request: Request,
 ):
-    current_user = await get_user(request, accept=["tools-key"])
+    current_user = await get_user(request, accept=["tools-key"],tokens=-TOKEN)
     ic(current_user)
     try:
         db = await world_db()

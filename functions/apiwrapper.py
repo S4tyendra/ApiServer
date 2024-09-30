@@ -15,19 +15,27 @@ api_key_header = APIKeyHeader(
     description="API Key for authentication",
 )
 
+import icecream
+from icecream import ic
 
-
-async def api_key_auth(
+async def get_user(
         accept: List[str],
-        api_key: str = Depends(api_key_header),
+        request: Request,
         tokens: Optional[int] = None,
 ):
+    api_key = request.headers.get(API_KEY_NAME)
+
     if not api_key:
+        print("No api key")
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
 
     db = await get_database()
+    accept_ = [str(i) for i in accept if i]
 
-    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
+    ic(accept_)
+    api_key = str(api_key)
+
+    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
     if not session:
         raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
 
@@ -36,6 +44,8 @@ async def api_key_auth(
         raise HTTPException(status_code=401, detail="Unauthorized, user not found")
 
     current_tokens = user.get("tokens", 10)  # Default to 10 if not set
+
+    icecream.ic(current_tokens)
 
     if tokens is not None:
         token_cost = tokens
@@ -81,23 +91,23 @@ async def refund_tokens(email: str, tokens_to_refund: int):
 
 
 
-async def get_user(
-        request: Request,
-        accept: List[str],
+# async def get_user(
+#         request: Request,
+#         accept: List[str],
 
-):
-    api_key = request.headers.get(API_KEY_NAME)
+# ):
+#     api_key = request.headers.get(API_KEY_NAME)
 
-    if not api_key:
-        raise HTTPException(status_code=401, detail="Unauthorized, api key required")
+#     if not api_key:
+#         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
 
-    db = await get_database()
+#     db = await get_database()
 
-    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
-    if not session:
-        raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
+#     session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
+#     if not session:
+#         raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
 
-    user = await db.users.find_one({"email": session.get('email')})
-    if not user:
-        raise HTTPException(status_code=401, detail="Unauthorized, user not found")
-    return user
+#     user = await db.users.find_one({"email": session.get('email')})
+#     if not user:
+#         raise HTTPException(status_code=401, detail="Unauthorized, user not found")
+#     return user

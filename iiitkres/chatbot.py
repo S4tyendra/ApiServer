@@ -1,10 +1,13 @@
 import traceback
-from fastapi import APIRouter, Depends, HTTPException, Request
+from multiprocessing.connection import default_family
+
+from fastapi import APIRouter, Depends, HTTPException, Request, Security
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
-from functions.apiwrapper import api_key_auth, refund_tokens, get_user
+from functions.apiwrapper import api_key_auth, refund_tokens, get_user, api_key_header
 import random
+
 groq_keys = [
     "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",
     "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",
@@ -22,8 +25,10 @@ groq_keys = [
 
 router = APIRouter()
 
+
 class PromptData(BaseModel):
     history: list = []
+
 
 def _generate_response(history):
     client = Groq(api_key=random.choice(groq_keys))
@@ -51,9 +56,10 @@ def _generate_response(history):
         except Exception:
             traceback.print_exc()
 
-@router.post("/generate", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"], tokens=-1))])
+
+@router.post("/generate")
 async def generate(data: PromptData, request: Request):
-    user = await get_user(request, accept=["iiitk-android","iiitk-win-lin"])
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"], tokens=-1)
     try:
         return StreamingResponse(_generate_response(data.history))
     except Exception as e:
