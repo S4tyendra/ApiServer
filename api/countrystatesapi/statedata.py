@@ -3,7 +3,7 @@ from fastapi import Request
 
 from api.countrystatesapi.citiesinstate import sanitise
 from api.countrystatesapi.datab import world_db, TOKEN
-from functions.apiwrapper import api_key_auth, refund_tokens, get_user
+from functions.apiwrapper import  refund_tokens, get_user
 
 router = APIRouter()
 

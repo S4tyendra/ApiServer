@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Security
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
-from functions.apiwrapper import api_key_auth, refund_tokens, get_user, api_key_header
+from functions.apiwrapper import  refund_tokens, get_user, api_key_header
 import random
 
 groq_keys = [

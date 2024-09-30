@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from fastapi import Request
 from icecream import ic
 from api.countrystatesapi.datab import world_db
-from functions.apiwrapper import api_key_auth, get_user
+from functions.apiwrapper import  get_user
 from functions.apiwrapper import refund_tokens
 
 TOKEN = 1
