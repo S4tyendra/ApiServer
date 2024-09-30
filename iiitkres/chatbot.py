@@ -4,15 +4,29 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
 from functions.apiwrapper import api_key_auth, refund_tokens, get_user
+import random
+groq_keys = [
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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",
+    "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"
+]
 
-API_TOKEN = "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"
 router = APIRouter()
 
 class PromptData(BaseModel):
     history: list = []
 
 def _generate_response(history):
-    client = Groq(api_key=API_TOKEN)
+    client = Groq(api_key=random.choice(groq_keys))
     completion = client.chat.completions.create(
         model="llama-3.1-70b-versatile",
         messages=[
