@@ -1,124 +1,132 @@
-from database import connect_to_database
-from auth.authapps import getApp_by_id
-import os
-import secrets
-from fastapi import APIRouter, Request, HTTPException, Response
+from fastapi import APIRouter, Request, HTTPException, Depends
 from fastapi.responses import RedirectResponse
-from google.auth.transport import requests
 from google_auth_oauthlib.flow import Flow
-from google.oauth2 import id_token as google_id_token
-from datetime import datetime
-from dotenv import load_dotenv
-
-load_dotenv(".env")
-
-local = bool(os.getenv("LOCAL", False))
-
+from google.oauth2.credentials import Credentials
+import aiohttp
+from typing import Optional
+from functions.db import get_database
+import os
+import logging
+from pydantic import BaseModel
 
 router = APIRouter()
-CLIENT_SECRETS_FILE = "auth/clientsecret.json"
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Load configuration from environment variables
+CLIENT_SECRETS_FILE = os.getenv("CLIENT_SECRETS_FILE", "iiitkres/clientsecret.json")
+LOCAL = os.getenv("LOCAL") == "True"
+REDIRECT_URI = os.getenv(
+    "REDIRECT_URI",
+    "http://localhost:8000/iiitk/auth" if LOCAL else "https://aws-api.devh.in/iiitk/auth"
+)
+
 SCOPES = [
     "https://www.googleapis.com/auth/userinfo.email",
     "https://www.googleapis.com/auth/userinfo.profile",
+    "https://www.googleapis.com/auth/generative-language.retriever",
     "openid",
 ]
 
-os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+class UserInfo(BaseModel):
+    email: str
+    name: str
 
-
-app_map = {}
-
-
-@router.get("/googlelogin")
-async def login(app_id=None, app_email=None):
-    app_ = None
-
-    flow = Flow.from_client_secrets_file(
+def create_flow() -> Flow:
+    return Flow.from_client_secrets_file(
         CLIENT_SECRETS_FILE,
         scopes=SCOPES,
-        redirect_uri=(
-            "http://localhost:8000/auth/googlesignin"
-            if local
-            else "https://aws-api.devh.in/auth/googlesignin"
-        ),
+        redirect_uri=REDIRECT_URI,
     )
-    email = None
-    if app_id and not app_email:
-        app_ = await getApp_by_id(app_id)
-        if not app_:
-            return HTTPException(404, "App not found")
-        email = app_.get("email", None)
-        print(app_email or email)
+
+async def get_user_info(creds: Credentials) -> Optional[UserInfo]:
+    async with aiohttp.ClientSession() as session:
+        async with session.get(
+                "https://www.googleapis.com/oauth2/v3/userinfo",
+                headers={"Authorization": f"Bearer {creds.token}"}
+        ) as response:
+            if response.status == 200:
+                user_data = await response.json()
+                return UserInfo(email=user_data["email"], name=user_data["name"])
+            else:
+                logger.error(f"Failed to fetch user info. Status code: {response.status}")
+                return None
+
+@router.get("/auth")
+async def auth(
+        request: Request,
+        state: Optional[str] = None,
+        code: Optional[str] = None,
+        token: Optional[str] = None
+):
+    db = await get_database()
+
+    try:
+        if not state and not code:
+            return await handle_initial_auth(db, token)
+        elif state and code:
+            return await handle_callback(db, state, code)
+        else:
+            raise HTTPException(status_code=400, detail="Invalid request")
+    except Exception as e:
+        logger.error(f"Error in auth process: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+async def handle_initial_auth(db, token):
+    if not token:
+        raise HTTPException(status_code=400, detail="Token not provided")
+
+    session = await db.sessions.find_one({"_id": token})
+    if not session:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    user = await db.users.find_one({"email": session.get("email")})
+    if not user or not user.get("email").endswith("@iiitkota.ac.in"):
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    flow = create_flow()
     authorization_url, state = flow.authorization_url(
         access_type="offline",
-        # include_granted_scopes="true",
-        hd=app_email or email,  # "iiitkota.ac.in",
-        # prompt="consent",
+        login_hint=user.get("email"),
         enable_incremental_authorization=True,
+        prompt="consent",
     )
-    app_map[state] = app_
-    print(authorization_url)
+
+    await db.sessions.update_one({"_id": token}, {"$set": {"oauth_state": state}})
     return RedirectResponse(authorization_url)
 
+async def handle_callback(db, state, code):
+    session = await db.sessions.find_one({"oauth_state": state})
+    if not session:
+        raise HTTPException(status_code=400, detail="Invalid state parameter")
 
-@router.get("/googlesignin")
-async def callback(request: Request, response: Response):
-    state = request.query_params.get("state")
-    redirect_uri = (
-        "http://localhost:8000/auth/googlesignin"
-        if local
-        else "https://aws-api.devh.in/auth/googlesignin"
-    )
-    if state in app_map.keys():
-        redirect_uri = redirect_uri
-        flow = Flow.from_client_secrets_file(
-            CLIENT_SECRETS_FILE, scopes=SCOPES, state=state, redirect_uri=redirect_uri
-        )
+    flow = create_flow()
+    flow.fetch_token(code=code)
 
-        flow.fetch_token(
-            authorization_response=str(request.url).replace("http", "https")
-        )
+    creds = flow.credentials
+    user_info = await get_user_info(creds)
 
-        id_token_data = google_id_token.verify_oauth2_token(
-            flow.credentials.id_token, requests.Request()
-        )
-
-        email = id_token_data["email"]
-        name = id_token_data["name"]
-        picture = id_token_data["picture"]
-
-        db = await connect_to_database()
-        user = await db.users.find_one({"email": email})
-        cookie = secrets.token_hex(32)
-
-        if user is None:
-            print(f"User not found, creating new user, {email}")
-            id = str(datetime.now().timestamp()).replace(".", "")
-            await db.users.insert_one(
-                {"_id": id, "email": email, "name": name, "picture": picture}
-            )
-        user = await db.users.find_one({"email": email})
-        id = user["_id"]
-        app = app_map.get(state)
-        if app:
-            await db.sessions.insert_one(
-                {
-                    "_id": cookie,
-                    "email": user.get("email"),
-                    "created_at": datetime.now().timestamp(),
-                    "type": app.get("_id"),
+    if user_info:
+        await db.users.update_one(
+            {"email": user_info.email},
+            {
+                "$set": {
+                    "name": user_info.name,
+                    "ai_auth": True,
+                    "creds": {
+                        "token": creds.token,
+                        "refresh_token": creds.refresh_token,
+                        "token_uri": creds.token_uri,
+                        "client_id": creds.client_id,
+                        "client_secret": creds.client_secret,
+                        "scopes": creds.scopes,
+                    },
                 }
-            )
-            response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
-            return RedirectResponse(f"{app.get('redirect_url')}?token={cookie}")
-        else:
-            await db.sessions.insert_one(
-                {
-                    "_id": cookie,
-                    "email": user.get("email"),
-                    "created_at": datetime.now().timestamp(),
-                    "type": "WEB-KEY",
-                }
-            )
-            response.set_cookie(key="_id-c", value=cookie, httponly=False, secure=False)
-            return RedirectResponse("https://account.devh.in/auth?_id-c=" + cookie)
+            },
+        )
+
+        return RedirectResponse("https://iiitk.devh.in/aidone")
+    else:
+        raise HTTPException(status_code=400, detail="Failed to get user info")

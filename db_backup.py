@@ -4,13 +4,41 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import json
 from bson import json_util, ObjectId
 import uuid
-from storage import driveauth
 from googleapiclient.http import MediaFileUpload
 import asyncio
 import asyncio
 import logging
 from logging.handlers import QueueHandler, QueueListener
 import queue
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
+SERVICE_ACCOUNT_EMAIL = "***"
+SERVICE_ACCOUNT_FILE = 'functions/service.json'
+FOLDER_ID = '1p90vuxE8jp7mBwW63qj7rIwpiCuaYMEP'
+SCOPES = ['https://www.googleapis.com/auth/drive']
+
+
+def authenticate():
+    credentials = service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, subject=SERVICE_ACCOUNT_EMAIL, scopes=SCOPES)
+    drive_service = build('drive', 'v3', credentials=credentials)
+    return drive_service
+
+
+def create_folder_and_get_id(folder_name, parent_folder_id):
+    drive_service = authenticate()
+    file_metadata = {
+        'name': folder_name,
+        'mimeType': 'application/vnd.google-apps.folder',
+        'parents': [parent_folder_id]
+    }
+    folder = drive_service.files().create(body=file_metadata,
+                                          fields='id').execute()
+    folder_id = folder.get('id')
+
+    return folder_id
+
 
 
 MONGODB_URL = "mongodb+srv://***:***@***.cbvk0so.mongodb.net/?retryWrites=true&w=majority&appName=devh"
@@ -119,7 +147,7 @@ async def start_backup():
     import shutil
     shutil.rmtree(BACKUP_DIR)
 
-    drive_service = driveauth.authenticate()
+    drive_service = authenticate()
     folder_id = "1mwNqxosVh6JCDSoc5s7Wv93A30WspfMN"
     file_metadata = {
         'name': f"{BACKUP_DIR}_{current_date_and_time}.tar.gz",

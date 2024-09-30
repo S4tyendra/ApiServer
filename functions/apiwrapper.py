@@ -1,10 +1,11 @@
 import time
+from typing import Optional, List
 
 from fastapi import Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from starlette.requests import Request
 
-from database import connect_to_database
+from functions.db import get_database
 
 API_KEY_NAME = "X-API-KEY"
 api_key_header = APIKeyHeader(
@@ -15,107 +16,88 @@ api_key_header = APIKeyHeader(
 )
 
 
-async def iiitk_auth(
-        request: Request,
-        api_key: str = Depends(api_key_header),
-):
-    if api_key is None:
-        raise HTTPException(status_code=401, detail="Unauthorized, api key required")
-    db = await connect_to_database()
-    user = await db.sessions.find_one({"_id": api_key, "type": {"$in": ["iiitk-android", "iiitk-win-lin"]}})
-    if not user:
-        raise HTTPException(status_code=401, detail="Unauthorized, api key invalid")
-    if user is None:
-        raise HTTPException(status_code=401, detail="Unauthorized, api key required")
-
-    email = user["email"]
-    user_in_db = await db.users.find_one({"email": email})
-    tokens = user_in_db.get("tokens", None)
-    if tokens is None:
-        await db.users.update_one(
-            {"email": email},
-            {
-                "$set": {
-                    "tokens": 10,
-                }
-            },
-        )
-        tokens = 10
-    path = request.url.path
-    tc = None
-    if path.endswith("generate") or path.endswith("sendpdf"):
-        tc = -2
-    else:
-        tc = -1
-    if tokens + tc < 0:
-        raise HTTPException(status_code=401, detail="Not enough Tokens")
-
-    print(path)
-    await db.users.update_one(
-        {"email": email},
-        {"$set": {"last_accessed": time.time()}, "$inc": {"tokens": tc or -1}},
-    )
-
 
 async def api_key_auth(
-        request: Request,
+        accept: List[str],
         api_key: str = Depends(api_key_header),
+        tokens: Optional[int] = None,
 ):
-    if api_key is None:
+    if not api_key:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
-    db = await connect_to_database()
-    user = await db.sessions.find_one({"_id": api_key})
+
+    db = await get_database()
+
+    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
+    if not session:
+        raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
+
+    user = await db.users.find_one({"email": session.get('email')})
     if not user:
-        raise HTTPException(status_code=401, detail="Unauthorized, api key invalid")
-    if user is None:
+        raise HTTPException(status_code=401, detail="Unauthorized, user not found")
+
+    current_tokens = user.get("tokens", 10)  # Default to 10 if not set
+
+    if tokens is not None:
+        token_cost = tokens
+        if current_tokens + token_cost < 0:
+            raise HTTPException(status_code=401, detail="Not enough Tokens")
+
+        await db.users.update_one(
+            {"email": user['email']},
+            {
+                "$set": {
+                    "last_accessed": time.time(),
+                    "tokens": current_tokens + token_cost
+                }
+            }
+        )
+    else:
+        await db.users.update_one(
+            {"email": user['email']},
+            {"$set": {"last_accessed": time.time()}}
+        )
+
+    return user
+
+async def refund_tokens(email: str, tokens_to_refund: int):
+    db = await get_database()
+
+    try:
+        result = await db.users.update_one(
+            {"email": email},
+            {"$inc": {"tokens": tokens_to_refund}}
+        )
+
+        if result.modified_count == 0:
+            print(f"Warning: No user found with email {email} for token refund.")
+            return False
+
+        print(f"Successfully refunded {tokens_to_refund} tokens to user {email}")
+        return True
+
+    except Exception as e:
+        print(f"Error refunding tokens to user {email}: {str(e)}")
+        return False
+
+
+
+async def get_user(
+        request: Request,
+        accept: List[str],
+
+):
+    api_key = request.headers.get(API_KEY_NAME)
+
+    if not api_key:
         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
 
-    email = user["email"]
-    user_in_db = await db.users.find_one({"email": email})
-    tokens = user_in_db.get("tokens", None)
-    if tokens is None:
-        await db.users.update_one(
-            {"email": email},
-            {
-                "$set": {
-                    "tokens": 10,
-                }
-            },
-        )
-        tokens = 10
-    path = request.url.path
-    tc = None
-    if path.endswith("generate") or path.endswith("sendpdf"):
-        tc = -2
-    else:
-        tc = -1
-    if tokens + tc < 0:
-        raise HTTPException(status_code=401, detail="Not enough Tokens")
+    db = await get_database()
 
-    print(path)
-    await db.users.update_one(
-        {"email": email},
-        {"$set": {"last_accessed": time.time()}, "$inc": {"tokens": tc or -1}},
-    )
+    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
+    if not session:
+        raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
 
-
-async def tokenconsuption(api_key, tokens__):
-    db = await connect_to_database()
-    user = await db.sessions.find_one({"_id": api_key, "type": "api_key"})
-    email = user["email"]
-    user_in_db = await db.users.find_one({"email": email})
-    tokens = user_in_db.get("tokens", None)
-    if tokens is None:
-        await db.users.update_one(
-            {"email": email},
-            {
-                "$set": {
-                    "tokens": 10,
-                }
-            },
-        )
-        return
-    await db.users.update_one(
-        {"email": email},
-        {"$set": {"last_accessed": time.time()}, "$inc": {"tokens": tokens__}},
-    )
+    user = await db.users.find_one({"email": session.get('email')})
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized, user not found")
+    return user

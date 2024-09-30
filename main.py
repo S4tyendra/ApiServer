@@ -11,16 +11,12 @@ from fastapi.staticfiles import StaticFiles
 
 from api.countrystatesapi import router as countrystates_router
 from auth.google import router as google_router
+from functions.db import db_connect, db_close
 from iiitkres import router as iiitkres_router
-from storage import router as drive_router
 from stripe_pay.payments import router as stripe_router
 from auth.login import router as auth_router
 from user.profile import router as user_router
 
-#Print python version
-
-
-# os.system("git pull ")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
@@ -29,15 +25,19 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-# @app.on_event("startup")
-# async def startup_event():
-#     await bot.start()
-#     logging.info("Bot started!")
+
+
+@app.on_event("startup")
+async def startup_event():
+    await db_connect()
+    logging.info("Connected to databse!")
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    await db_close()
 
 
 async def clear_log():
-    # await bot.send_document(-1001543238877, "applog.txt")
-    # async with aiofiles.open('applog.txt', 'w') as f:
     pass
 
 
@@ -73,8 +73,8 @@ async def log_request(request: Request, call_next):
     start_time = time.time()
 
     if "X-API-KEY" in request.headers or "WEB-KEY" in request.headers or "x-api-key" in request.headers or "web-key" in request.headers:
-        from database import connect_to_database
-        db = await connect_to_database()
+        from functions.db import get_database
+        db = await get_database()
         token = request.headers.get("X-API-KEY") or request.headers.get("WEB-KEY") or request.headers.get(
             "x-api-key") or request.headers.get("web-key")
         try:
@@ -100,7 +100,6 @@ app.include_router(countrystates_router, tags=[
 app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
 app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_schema=False)
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
-app.include_router(drive_router, tags=["Storage"], prefix="/storage")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
 
 
@@ -116,24 +115,9 @@ async def delete_file(file_path: str, ):
         pass
 
 
-@app.get("/pull", include_in_schema=False)
-async def pull():
-    os.system("git pull")
-    return {"message": "Pulled successfully!"}
-
-
-@app.get("/set")
-async def set_file_content(file:str):
-    with open("list.txt", 'a') as f:
-        f.write(f"{file}\n")
-    return {"message": "Added successfully!"}
-@app.get("/get")
-async def get_file_contents_as_list():
-    with open("list.txt", 'r') as f:
-        v = f.readlines()
-    return v
 
 if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run("main:app", reload=True, port=8000)
+

@@ -3,11 +3,12 @@ import secrets
 import traceback
 
 from bson import json_util
-from fastapi import APIRouter, Request, Response
+from fastapi import APIRouter, Request, Response, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
-from database import connect_to_database, connect_to_notes_database
+from functions.apiwrapper import api_key_auth, get_user
+from functions.db import get_database
 
 router = APIRouter()
 
@@ -19,18 +20,10 @@ class NotesModel(BaseModel):
     points: list = []
 
 
-@router.post("/upload-notes")
+@router.post("/upload-notes" , dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
 async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-    users_db = await connect_to_database()
-    user = await users_db.sessions.find_one({"_id": token})
-    if not user:
-        return JSONResponse({"error": "User not found"}, status_code=404)
-
-    notes_db = await connect_to_database('iiitk_pending_notes')
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
+    notes_db = await get_database('iiitk_pending_notes')
     if len(notes_data.points) < 1:
         points = genetares_points(notes_data.data)
     else:
@@ -94,23 +87,12 @@ class NotesModel(BaseModel):
     email: str
 
 
-@router.post("/upload-notes-admin")
+@router.post("/upload-notes-admin", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
 async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-    users_db = await connect_to_database()
-    session = await users_db.sessions.find_one({"_id": token})
-    if not session:
-        return JSONResponse({"error": "User not found"}, status_code=404)
-    email = session.get("email")
-    user = await users_db.users.find_one({"email":email})
-    if not user:
-        return JSONResponse({"error": "No Access"}, status_code=401)
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     if not user.get('is_admin', False):
         return JSONResponse({"error": "No Access"}, status_code=401)
-    notes_db = await connect_to_database('iiitk_notes')
+    notes_db = await get_database('iiitk_notes')
     course_code = notes_data.code
     email = user.get('email')
     await getattr(notes_db, f'{course_code}').insert_one(dict(
@@ -119,7 +101,7 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
         points=notes_data.points,
         data=notes_data.data
     ))
-    pending_db = await connect_to_database('iiitk_pending_notes')
+    pending_db = await get_database('iiitk_pending_notes')
     await getattr(pending_db, f'{course_code}').delete_one(dict(
         date=notes_data.date,
         email=notes_data.email,
@@ -128,24 +110,15 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
     return {"message":"Operation Successful"}
 
 
-@router.delete("/upload-notes-admin")
+@router.delete("/upload-notes-admin", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
 async def upload_notes(code,date,email_, request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-    users_db = await connect_to_database()
-    session = await users_db.sessions.find_one({"_id": token})
-    if not session:
-        return JSONResponse({"error": "User not found"}, status_code=404)
-    email = session.get("email")
-    user = await users_db.users.find_one({"email":email})
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     if not user:
         return JSONResponse({"error": "No Access"}, status_code=401)
     if not user.get('is_admin', False):
         return JSONResponse({"error": "No Access"}, status_code=401)
     course_code = code
-    pending_db = await connect_to_database('iiitk_pending_notes')
+    pending_db = await get_database('iiitk_pending_notes')
     await getattr(pending_db, f'{course_code}').delete_one(dict(
         date=date,
         email=email_,
@@ -156,16 +129,8 @@ async def upload_notes(code,date,email_, request: Request, response: Response):
 
 @router.get("/pending-notes")
 async def get_pending_notes(request: Request, response: Response):
-    token = request.headers.get("X-API-KEY")
-    if not token:
-        return JSONResponse({"error": "Unauthorized"}, status_code=401)
-
-    users_db = await connect_to_database()
-    user = await users_db.sessions.find_one({"_id": token})
-    if not user:
-        return JSONResponse({"error": "User not found"}, status_code=404)
-
-    notes_db = await connect_to_database('iiitk_pending_notes')
+    user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
+    notes_db = await get_database('iiitk_pending_notes')
 
     # Fetch all collections from the database
     collections = await notes_db.list_collection_names()
