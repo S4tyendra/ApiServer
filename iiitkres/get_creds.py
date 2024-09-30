@@ -42,7 +42,7 @@ You are an advanced multimodal AI assistant designed to help students create com
 Your output should be a comprehensive, clear, and educational set of notes that not only captures the essence of the class but also enhances the student's understanding of the subject matter. Strive to create notes that would be valuable both for review and for students who may have missed the class.
 """
 
-@router.get("/get_creds", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin"]))])
+@router.get("/get_creds", )
 async def upload_content(request: Request):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin"])
     if not user.get("ai_auth"):

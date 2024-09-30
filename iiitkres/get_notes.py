@@ -11,7 +11,7 @@ from functions.db import get_database
 router = APIRouter()
 
 
-@router.get("/notes", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",],),),],)
+@router.get("/notes")
 async def get_notes_with_course_code(code: str, request: Request, response: Response):
     """
     Returns: Topic Wise notes for each course.
@@ -28,7 +28,7 @@ async def get_notes_with_course_code(code: str, request: Request, response: Resp
         return JSONResponse({"error": "Notes not found"}, status_code=404)
 
 
-@router.get("/notes-dates",dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",],),),])
+@router.get("/notes-dates",)
 async def get_notes_with_course_code(code: str, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     db = await get_database(db_name="iiitk_notes")
@@ -53,7 +53,7 @@ class UploadNotesModel(BaseModel):
     email: str
 
 
-@router.post("/upload-md-notes",dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",],),),])
+@router.post("/upload-md-notes",)
 async def upload_notes_on_that_date(data: UploadNotesModel, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     db = await get_database(db_name="notes")
@@ -101,7 +101,7 @@ def parallel_youtube_search(search_terms: List[str]) -> List[str]:
     return results
 
 
-@router.post("/search-youtube", response_model=SearchResponse, dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
+@router.post("/search-youtube", response_model=SearchResponse, )
 async def search_youtube_route(ytrequest: SearchRequest, request:Request):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     youtube_links = parallel_youtube_search(ytrequest.search_terms)

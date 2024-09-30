@@ -20,7 +20,7 @@ class NotesModel(BaseModel):
     points: list = []
 
 
-@router.post("/upload-notes" , dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
+@router.post("/upload-notes" , )
 async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     notes_db = await get_database('iiitk_pending_notes')
@@ -87,7 +87,7 @@ class NotesModel(BaseModel):
     email: str
 
 
-@router.post("/upload-notes-admin", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
+@router.post("/upload-notes-admin", )
 async def upload_notes(notes_data: NotesModel, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     if not user.get('is_admin', False):
@@ -110,7 +110,7 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
     return {"message":"Operation Successful"}
 
 
-@router.delete("/upload-notes-admin", dependencies=[Depends(lambda: api_key_auth(accept=["iiitk-android","iiitk-win-lin",]))])
+@router.delete("/upload-notes-admin", )
 async def upload_notes(code,date,email_, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     if not user:

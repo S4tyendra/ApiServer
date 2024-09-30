@@ -5,13 +5,13 @@ from functions.apiwrapper import api_key_auth, refund_tokens, get_user
 
 router = APIRouter()
 
-@router.get("/getcitiesinstate", dependencies=[Depends(lambda: api_key_auth(tokens=-TOKEN, accept=["tools-key"]))])
+@router.get("/getcitiesinstate")
 async def get_cities(
         country: str,
         state: str,
         request: Request,
 ):
-    user = await get_user(request, accept=["tools-key"])
+    user = await get_user(request, accept=["tools-key"],tokens=-TOKEN)
     try:
         country = sanitise(country)
         state = sanitise(state)
