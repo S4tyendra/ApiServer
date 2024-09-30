@@ -4,15 +4,29 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq
 from functions.apiwrapper import api_key_auth, refund_tokens, get_user
+import random
+groq_keys = [
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***",
+    "***"
+]
 
-API_TOKEN = "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"
 router = APIRouter()
 
 class PromptData(BaseModel):
     history: list = []
 
 def _generate_response(history):
-    client = Groq(api_key=API_TOKEN)
+    client = Groq(api_key=random.choice(groq_keys))
     completion = client.chat.completions.create(
         model="llama-3.1-70b-versatile",
         messages=[
