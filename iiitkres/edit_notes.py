@@ -33,7 +33,7 @@ async def get_edit_topic_notes(request: Request):
     pending_db = await get_database("iiitk_pending_topics")
     cursor = pending_db.notes.find({})
     data = await cursor.to_list(length=None)
-    return JSONResponse(ast.literal_eval(data))
+    return JSONResponse(data)
 
 class AdminEditTopicNotes(BaseModel):
     code: str
