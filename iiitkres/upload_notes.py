@@ -72,8 +72,8 @@ def genetares_points(data: str):
     try:
         import ast
         print(completion.choices[0].message.content)
-        json = ast.literal_eval(completion.choices[0].message.content)
-        return json
+        json_ = ast.literal_eval(completion.choices[0].message.content)
+        return json_
     except:
         traceback.print_exc()
         return []
@@ -111,7 +111,7 @@ async def upload_notes(notes_data: NotesModel, request: Request, response: Respo
 
 
 @router.delete("/upload-notes-admin", )
-async def upload_notes(code,date,email_, request: Request, response: Response):
+async def upload_notes(code,date,email, request: Request, response: Response):
     user = await get_user(request, accept=["iiitk-android", "iiitk-win-lin", ])
     if not user:
         return JSONResponse({"error": "No Access"}, status_code=401)
@@ -121,7 +121,7 @@ async def upload_notes(code,date,email_, request: Request, response: Response):
     pending_db = await get_database('iiitk_pending_notes')
     await getattr(pending_db, f'{course_code}').delete_one(dict(
         date=date,
-        email=email_,
+        email=email,
     ))
 
     return {"message":"Operation Successful"}
