@@ -44,3 +44,4 @@ groq
 youtube-search-python
 aiohttp
 httpx
+psutil
