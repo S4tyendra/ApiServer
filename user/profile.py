@@ -46,7 +46,7 @@ async def profile(request: Request, _id: str, requester_email: str = Depends(get
 
     return UserProfile(**responser_data)
 
-@router.get("/me", response_model=UserProfile)
+@router.get("/me",)
 async def me(requester_email: str = Depends(get_user_from_token)):
     db = await get_database()
 
@@ -62,4 +62,4 @@ async def me(requester_email: str = Depends(get_user_from_token)):
         if user_data is None:
             raise HTTPException(status_code=404, detail="User not found")
 
-    return UserProfile(**user_data)
+    return user_data
