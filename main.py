@@ -86,23 +86,12 @@ total_bandwidth = 0
 @app.middleware("http")
 async def log_request(request: Request, call_next):
     global request_count, total_bandwidth
+    global start_time
     start_time = time.time()
-
-    if "X-API-KEY" in request.headers or "WEB-KEY" in request.headers or "x-api-key" in request.headers or "web-key" in request.headers:
-        from functions.db import get_database
-        db = await get_database()
-        token = request.headers.get("X-API-KEY") or request.headers.get("WEB-KEY") or request.headers.get(
-            "x-api-key") or request.headers.get("web-key")
-        try:
-            current_time_ist = datetime.now(timezone('Asia/Kolkata'))
-            await db.sessions.update_one({"_id": token}, {"$set": {"last_accessed": current_time_ist}})
-        except Exception as e:
-            logging.error(e)
-
+    # await asyncio.sleep(14)
     response = await call_next(request)
     process_time = time.time() - start_time
     response.headers["X-Process-Time"] = str(process_time)
-
     request_count += 1
 
     if isinstance(response, StreamingResponse):

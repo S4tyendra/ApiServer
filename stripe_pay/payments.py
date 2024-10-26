@@ -1,26 +1,29 @@
 import stripe
-from fastapi import APIRouter, Request, HTTPException, Depends
+from fastapi import APIRouter, Request, Depends, Header
 from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.templating import Jinja2Templates
 from typing import Optional
-router :APIRouter = APIRouter()
+from fastapi.templating import Jinja2Templates
+
+router = APIRouter()
+
+STRIPE_PUBLIC_KEY = 'pk_test_51MsIyDSGMujHlWLWSos9EH1tUBVDmcGq9fDm9DTVDxePPT1hj6aodS1AjQqfNy4unX3FXc1gubpXgmnqPgDKHM3v00n3fUfox6'
+STRIPE_SECRET_KEY = 'sk_test_51MsIyDSGMujHlWLWek5IU8RlVoOparKPnroXCgDpyFh47Ms15j8SnsGJi4kQcKsv99lxJSFOw8SEorxCySPDIWyD00xZZEgPxL'
+
+stripe.api_key = STRIPE_SECRET_KEY
+stripe.api_version = "2020-08-27"  # Use the latest API version recommended for India
 
 templates = Jinja2Templates(directory="templates")
 
-STRIPE_PUBLIC_KEY = 'pk_live_51MsIyDSGMujHlWLW0Ja6bhr1e6TjCqdAb1gvTJRFeqBoUQr8kd2td1PDGXpDH2OLJy4Mrxe4bIzMjLZJcDoQCMs100L0UyWCm7'
-STRIPE_SECRET_KEY = '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'
-
-
-
-
-
-stripe.api_key = STRIPE_SECRET_KEY
 
 async def get_stripe_session(request: Request):
     return stripe.checkout.Session.create(
-        payment_method_types=['card'],
+        payment_method_types=[
+    "card"
+]
+,
+        customer_email="2022kucp1022@iiitkota.ac.in",
         line_items=[{
-            'price': "price_1OeameSGMujHlWLWSX9Hemlj",
+            'price': "price_1QE5LwSGMujHlWLWUmMBkxaD",
             'quantity': 1,
         }],
         mode='payment',
@@ -28,48 +31,48 @@ async def get_stripe_session(request: Request):
         cancel_url=str(request.base_url),
     )
 
+
 @router.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request, "stripe_public_key": STRIPE_PUBLIC_KEY})
+
 
 @router.get("/stripe_pay", response_class=JSONResponse)
 async def stripe_pay(request: Request, session: dict = Depends(get_stripe_session)):
     return {
-        'checkout_session_id': session['id'],
-        'checkout_public_key': settings.STRIPE_PUBLIC_KEY
+        'checkout_session_id': session.id,
+        'checkout_public_key': STRIPE_PUBLIC_KEY
     }
+
 
 @router.get("/thanks", response_class=HTMLResponse)
 async def thanks(request: Request, session_id: Optional[str] = None):
-    return templates.TemplateResponse("thanks.html", {"request": request, "session_id": session_id})
+    if session_id:
+        session = stripe.checkout.Session.retrieve(session_id)
+        if session.payment_status == "paid":
+            return templates.TemplateResponse("thanks.html", {"request": request, "paid": True})
+    return templates.TemplateResponse("thanks.html", {"request": request, "paid": False})
+
 
 @router.post("/stripe_webhook")
-async def stripe_webhook(request: Request):
+async def stripe_webhook(request: Request, stripe_signature: str = Header(None)):
     payload = await request.body()
-    sig_header = request.headers.get('stripe-signature')
-
     try:
         event = stripe.Webhook.construct_event(
-            payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
+            payload, stripe_signature, STRIPE_SECRET_KEY
         )
-    except ValueError:
-        raise HTTPException(status_code=400, detail='Invalid payload')
-    except stripe.error.SignatureVerificationError:
-        raise HTTPException(status_code=400, detail='Invalid signature')
+        print("Webhook data:", event)
+        # Handle the event
+        if event['type'] == 'checkout.session.completed':
+            session = event['data']['object']
+            # Fulfill the purchase...
+            print("Payment was successful.")
+        # Add more event handling as needed
+    except ValueError as e:
+        # Invalid payload
+        return JSONResponse(status_code=400, content={"error": str(e)})
+    except stripe.error.SignatureVerificationError as e:
+        # Invalid signature
+        return JSONResponse(status_code=400, content={"error": str(e)})
 
-    if event['type'] == 'checkout.session.completed':
-        session = event['data']['object']
-        await handle_completed_checkout(session)
-
-    return JSONResponse(status_code=200)
-
-async def handle_completed_checkout(session: dict):
-    # Implement your logic for handling completed checkouts here
-    # For example, you might want to:
-    # 1. Retrieve the customer information
-    # 2. Update your database
-    # 3. Send a confirmation email
-    # 4. etc.
-
-    line_items = stripe.checkout.Session.list_line_items(session['id'], limit=1)
-    print(f"Completed checkout for: {line_items['data'][0]['description']}")
+    return JSONResponse(status_code=200, content={"status": "success"})

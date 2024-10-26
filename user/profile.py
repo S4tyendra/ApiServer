@@ -20,17 +20,17 @@ async def get_user_from_token(request: Request):
     cookie = request.cookies.get("_id-c")
     api_key = request.headers.get("X-API-KEY")
     auth_token = cookie or api_key
-
     db = await get_database()
     user_data = await db.sessions.find_one({"_id": auth_token})
 
     if user_data is None:
         raise HTTPException(status_code=401, detail="Invalid authentication")
 
-    return user_data.get("email")
+    return user_data
 
 @router.get("/profile", response_model=UserProfile)
-async def profile(request: Request, _id: str, requester_email: str = Depends(get_user_from_token)):
+async def profile(request: Request, _id: str, requester_email: dict = Depends(get_user_from_token)):
+    requester_email = requester_email.get("email")
     db = await get_database()
     responser_data = await db.users.find_one({"_id": _id})
 
@@ -47,7 +47,8 @@ async def profile(request: Request, _id: str, requester_email: str = Depends(get
     return UserProfile(**responser_data)
 
 @router.get("/me",)
-async def me(requester_email: str = Depends(get_user_from_token)):
+async def me(requester_email: dict = Depends(get_user_from_token)):
+    requester_email = requester_email.get("email")
     db = await get_database()
 
     projection = ["_id", "email", "name", "picture", "tokens", "ai_auth"]
@@ -63,3 +64,24 @@ async def me(requester_email: str = Depends(get_user_from_token)):
             raise HTTPException(status_code=404, detail="User not found")
 
     return user_data
+
+@router.get("/logs")
+async def get_logs(request: Request, response: Response, user: dict = Depends(get_user_from_token)):
+    email = user.get("email")
+    db = await get_database()
+    logs = await db.logs.find_one({"_id": email})
+    if logs:
+        return logs.get("logs")
+    else:
+        return []
+
+
+@router.get("/payments")
+async def get_logs(request: Request, response: Response, user: dict = Depends(get_user_from_token)):
+    email = user.get("email")
+    db = await get_database()
+    logs = await db.payments.find_one({"_id": email})
+    if logs:
+        return logs.get("payments")
+    else:
+        return []
