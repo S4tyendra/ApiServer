@@ -1,3 +1,6 @@
+from pytz import timezone
+
+from functions.add_to_logs import add_to_logs
 from functions.db import get_database
 from auth.authapps import get_app_by_id
 import os
@@ -104,6 +107,13 @@ async def callback(request: Request, response: Response):
 
     response.set_cookie(key="_id-c", value=cookie, httponly=True, secure=not local)
     del app_map[state]
+    await add_to_logs(
+        session=cookie,
+        email=email,
+        message="Logged in",
+        app=app.get("_id") if app else "WEB-KEY",
+        timestamp=datetime.now(tz=timezone('Asia/Kolkata')).timestamp(),
+    )
     if app:
         return RedirectResponse(f"{app.get('redirect_url')}?token={cookie}")
     else:
