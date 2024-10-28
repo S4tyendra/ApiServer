@@ -1,9 +1,11 @@
 import time
+from lib2to3.btm_utils import tokens
 from typing import Optional, List
 
 from fastapi import Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from starlette.requests import Request
+from starlette.websockets import WebSocket
 
 from functions.db import get_database
 
@@ -111,3 +113,92 @@ async def refund_tokens(email: str, tokens_to_refund: int):
 #     if not user:
 #         raise HTTPException(status_code=401, detail="Unauthorized, user not found")
 #     return user
+
+
+
+
+async def get_ws_user(
+        websocket: WebSocket,
+        accept: List[str],
+        token:str
+):
+    api_key = token
+    ic(api_key)
+    if not api_key:
+        await websocket.accept()
+        await websocket.send_text("Unauthorized, api key required. please go to [Login page](/login) to set api key")
+        await websocket.close(code=1008)
+        return
+
+    db = await get_database()
+    accept_ = [str(i) for i in accept if i]
+
+    ic(accept_)
+    api_key = str(api_key)
+
+    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
+    if not session:
+        await websocket.accept()
+        await websocket.send_text("Invalid session. please go to [Login page](/login) to set api key")
+        await websocket.close(code=1008)
+        return
+
+    user = await db.users.find_one({"email": session.get('email')})
+    if not user:
+
+        await websocket.accept()
+        await websocket.send_text("Invalid user. please go to [Login page](/login) to set api key")
+        await websocket.close(code=1008)
+        return
+
+
+
+    current_tokens = user.get("tokens", 10)  # Default to 10 if not set
+
+    icecream.ic(current_tokens)
+
+    tokens = 5
+
+    if current_tokens < tokens:
+        await websocket.accept()
+        await websocket.send_text(f"You have only {current_tokens} tokens, You must have more than 5 tokens to use this service please go to [Account page](https://account.devh.in/plans) to get tokens!")
+        await websocket.close(code=1008)
+
+    if tokens is not None:
+        token_cost = tokens
+        if current_tokens + token_cost < 0:
+            raise HTTPException(status_code=401, detail="Not enough Tokens")
+
+        await db.users.update_one(
+            {"email": user['email']},
+            {
+                "$set": {
+                    "last_accessed": time.time(),
+                    "tokens": current_tokens + token_cost
+                }
+            }
+        )
+    else:
+        await db.users.update_one(
+            {"email": user['email']},
+            {"$set": {"last_accessed": time.time()}}
+        )
+
+    return user
+
+
+async def update_user_tokens(email: str, tokens: int):
+    db = await get_database()
+    user = await db.users.find_one({"email": email})
+    if not user:
+        return False
+    current_tokens = user.get("tokens", 10)  # Default to 10 if not set
+    await db.users.update_one(
+        {"email": email},
+        {
+            "$set": {
+                "last_accessed": time.time(),
+                "tokens": current_tokens + tokens
+            }
+        }
+    )
