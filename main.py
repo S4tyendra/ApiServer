@@ -25,7 +25,7 @@ from stripe_pay.payments import router as stripe_router
 from auth.login import router as auth_router
 from user.profile import router as user_router
 from pytz import timezone
-
+from ai.ai import router as ai_router
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
 
@@ -108,7 +108,10 @@ async def log_request(request: Request, call_next):
         response.body_iterator = wrapped_body()
     else:
         # For regular responses, we can get the content length directly
-        total_bandwidth += len(response.body)
+        try:
+            total_bandwidth += len(response.body)
+        except:
+            pass
 
     logging.debug(
         f"{request.method} - {request.url} / {request.headers.get('cookie')} /{request.headers.get('x-api-key')}")
@@ -128,6 +131,7 @@ app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_
 app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_schema=False)
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
+app.include_router(ai_router, tags=["AI"], prefix="/ai")
 
 
 @app.get("/", include_in_schema=False)

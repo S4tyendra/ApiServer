@@ -94,7 +94,6 @@ async def callback(request: Request, response: Response):
             {"_id": id, "email": email, "name": name, "picture": picture}
         )
     user = await db.users.find_one({"email": email})
-    id = user["_id"]
     app = app_map.get(state)
 
     session_data = {
