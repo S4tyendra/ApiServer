@@ -26,6 +26,9 @@ from auth.login import router as auth_router
 from user.profile import router as user_router
 from pytz import timezone
 from ai.ai import router as ai_router
+from apps import router as apps_router
+
+
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
 
@@ -132,6 +135,8 @@ app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_sch
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
 app.include_router(ai_router, tags=["AI"], prefix="/ai")
+app.include_router(apps_router, tags=["Apps"], prefix="/apps")
+
 
 
 @app.get("/", include_in_schema=False)
