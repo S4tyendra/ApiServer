@@ -25,7 +25,7 @@ async def get_user(
         accept: List[str],
         tokens: Optional[int] = None,
 ):
-    api_key = request.headers.get(API_KEY_NAME)
+    api_key = request.headers.get(API_KEY_NAME) or request.query_params.get("key") or request.cookies.get("web-key") or request.cookies.get("WEB-KEY")
 
     if not api_key:
         print("No api key")
