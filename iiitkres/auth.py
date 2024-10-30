@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-LOCAL = os.getenv("LOCAL", "False").lower() == "true"
 CLIENT_SECRETS_FILE = os.getenv("CLIENT_SECRETS_FILE", "iiitkres/clientsecret.json")
 SCOPES = [
     "https://www.googleapis.com/auth/userinfo.email",
@@ -20,7 +19,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/generative-language.retriever",
     "openid",
 ]
-REDIRECT_URI = "http://localhost:8000/iiitk/auth" if LOCAL else "https://aws-api.devh.in/iiitk/auth"
+REDIRECT_URI = "https://api.devh.in/iiitk/auth"
 
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 

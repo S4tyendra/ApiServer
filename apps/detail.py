@@ -18,4 +18,4 @@ async def get_app_detail(request: Request, response: Response, app:str):
     sessions_tr = []
     async for session in sessions:
         sessions_tr.append(session)
-    return {"sessions": sessions_tr, **app_detail}
+    return {"sessions": sessions_tr, "user_email":user.get('email'), **app_detail}
