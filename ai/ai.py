@@ -123,7 +123,6 @@ async def websocket_chat_endpoint(websocket: WebSocket, token):
                     messages = request_data.get("messages", [])
                     temperature = request_data.get("temperature", 0.7)
                     system_prompt = request_data.get("prompt", "")
-                    icecream.ic(messages, temperature, system_prompt)
 
                     # Initialize Anthropic client
                     client = get_anthropic_client()
