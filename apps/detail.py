@@ -1,5 +1,4 @@
 from fastapi import APIRouter, HTTPException, Request, Response, Depends
-from typing import List, Dict, Any
 from functions.apiwrapper import get_user
 from functions.db import get_database
 

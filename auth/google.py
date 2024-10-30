@@ -31,7 +31,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/userinfo.profile",
     "openid",
 ]
-REDIRECT_URI = "https://api.devh.in/auth/googlesignin"
+REDIRECT_URI = "https://aws-api.devh.in/auth/googlesignin"
 COOKIE_NAME = "_id-c"
 SESSION_EXPIRY = 3600  # 1 hour
 
