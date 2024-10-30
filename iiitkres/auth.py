@@ -19,7 +19,7 @@ SCOPES = [
     "https://www.googleapis.com/auth/generative-language.retriever",
     "openid",
 ]
-REDIRECT_URI = "https://api.devh.in/iiitk/auth"
+REDIRECT_URI = "https://aws-api.devh.in/iiitk/auth"
 
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
