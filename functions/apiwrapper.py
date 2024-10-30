@@ -33,7 +33,6 @@ async def get_user(
     db = await get_database()
     accept_ = [str(i) for i in accept if i]
 
-    ic(accept_)
     api_key = str(api_key)
 
     session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
@@ -46,7 +45,6 @@ async def get_user(
 
     current_tokens = user.get("tokens", 10)  # Default to 10 if not set
 
-    icecream.ic(current_tokens)
 
     if tokens is not None:
         token_cost = tokens
@@ -122,7 +120,6 @@ async def get_ws_user(
         token:str
 ):
     api_key = token
-    ic(api_key)
     if not api_key:
         await websocket.accept()
         await websocket.send_text("Unauthorized, api key required. please go to [Login page](/login) to set api key")
@@ -132,7 +129,6 @@ async def get_ws_user(
     db = await get_database()
     accept_ = [str(i) for i in accept if i]
 
-    ic(accept_)
     api_key = str(api_key)
 
     session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
@@ -154,7 +150,6 @@ async def get_ws_user(
 
     current_tokens = user.get("tokens", 10)  # Default to 10 if not set
 
-    icecream.ic(current_tokens)
 
     tokens = 5
 

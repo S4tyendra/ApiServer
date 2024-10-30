@@ -14,7 +14,6 @@ async def get_countries(
         request: Request,
 ):
     current_user = await get_user(request, accept=["tools-key"],tokens=-TOKEN)
-    ic(current_user)
     try:
         db = await world_db()
         countries = db.countries.find()
