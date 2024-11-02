@@ -68,7 +68,7 @@ logging.info("Scheduler started!")
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://account.devh.in"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
