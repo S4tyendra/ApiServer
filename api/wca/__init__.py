@@ -4,8 +4,8 @@ from .citiesinstate import router as city_router
 from .countries import router as countrystates_router
 from .statedata import router as states_router
 
-router = APIRouter()
+wca = APIRouter()
 
-router.include_router(countrystates_router, prefix="/wca")
-router.include_router(states_router, prefix="/wca")
-router.include_router(city_router, prefix="/wca")
+wca.include_router(countrystates_router)
+wca.include_router(states_router)
+wca.include_router(city_router)

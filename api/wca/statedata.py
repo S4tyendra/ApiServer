@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi import Request
 
-from api.countrystatesapi.citiesinstate import sanitise
-from api.countrystatesapi.datab import world_db, TOKEN
+from api.wca.citiesinstate import sanitise
+from api.wca.datab import world_db, TOKEN
 from functions.apiwrapper import  refund_tokens, get_user
 
 router = APIRouter()

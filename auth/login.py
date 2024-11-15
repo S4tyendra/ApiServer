@@ -9,47 +9,6 @@ router = APIRouter()
 async def get_db():
     return await get_database()
 
-@router.get("/approveapp")
-async def approve_app(
-        request: Request,
-        response: Response,
-        app_id: str,
-        db: AsyncIOMotorDatabase = Depends(get_db)
-):
-    app = await db.apps.find_one({"_id": app_id})
-    if not app:
-        raise HTTPException(status_code=404, detail="App Not Found")
-
-    token = request.headers.get("WEB-KEY")
-    if not token:
-        raise HTTPException(status_code=401, detail="Not Authorized")
-
-    session = await db.sessions.find_one({"_id": token, "type": "WEB-KEY"})
-    if not session:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
-    email = session.get("email")
-    if not email:
-        raise HTTPException(status_code=404, detail="User not found")
-
-    new_token = secrets.token_hex(32)
-    await db.sessions.insert_one(
-        {"_id": new_token, "email": email, "type": f"{app['_id']}"}
-    )
-
-    return {"redirect": f"{app['redirect_url']}?token={new_token}"}
-
-@router.get("/appdetails")
-async def app_details(
-        request: Request,
-        response: Response,
-        app_url: str,
-        db: AsyncIOMotorDatabase = Depends(get_db)
-):
-    app = await db.apps.find_one({"app_url": app_url})
-    if not app:
-        raise HTTPException(status_code=404, detail="App not found")
-    return app
 
 @router.get("/tokens")
 async def get_tokens(

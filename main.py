@@ -17,7 +17,7 @@ from starlette.responses import HTMLResponse, StreamingResponse
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 import secrets
-from api.countrystatesapi import router as countrystates_router
+from api import api
 from auth.google import router as google_router
 from functions.db import db_connect, db_close
 from iiitkres import router as iiitkres_router
@@ -128,8 +128,8 @@ if os.path.exists(".env"):
     load_dotenv()
 
 app.include_router(user_router, tags=["user"], prefix="/user")
-app.include_router(countrystates_router, tags=[
-    "World cities api", ], prefix="/api")
+app.include_router(api, tags=[
+    "API", ], prefix="/api")
 app.include_router(stripe_router, tags=["stripe"], prefix="/stripe", include_in_schema=False)
 app.include_router(google_router, tags=["GAUTH"], prefix="/auth", include_in_schema=False)
 app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")

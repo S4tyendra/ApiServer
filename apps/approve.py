@@ -23,6 +23,11 @@ async def approve_an_app(request: Request, response: Response, app: str):
     if not app_name:
         response.status_code = 404
         raise HTTPException(status_code=404, detail="App not found")
+    email :str = app_detail.get("email")
+    if email:
+        if not user.get("email").endswith(email):
+            response.status_code = 403
+            raise HTTPException(status_code=403, detail="You are not authorized to approve this app")
 
     # Calculate the start of the current day in timestamp
     now = datetime.now()

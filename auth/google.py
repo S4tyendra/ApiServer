@@ -13,6 +13,7 @@ from google.oauth2 import id_token as google_id_token
 from dotenv import load_dotenv
 
 from functions.db import get_database
+from user.profile import get_user_from_token
 
 # Load environment variables
 load_dotenv(".env")

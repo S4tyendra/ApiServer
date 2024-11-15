@@ -1,219 +1,378 @@
+# --- Config and Requirements ---
+from fastapi import FastAPI, HTTPException, Depends
+from motor.motor_asyncio import AsyncIOMotorClient
+import webauthn
+from starlette.responses import HTMLResponse
+from webauthn.helpers import bytes_to_base64url
+from webauthn.helpers.structs import (
+    RegistrationCredential,
+    AuthenticationCredential,
+    UserVerificationRequirement, AuthenticatorSelectionCriteria, ResidentKeyRequirement, AttestationConveyancePreference
+)
+from pydantic import BaseModel, Field
+from typing import Optional, List
+import uuid
+from datetime import datetime, timedelta
+import jwt
+from bson import ObjectId
 import os
-import asyncio
-import subprocess
-from fastapi import FastAPI, WebSocket, Request, HTTPException
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
 
+load_dotenv()
+
+# --- Configuration ---
+MONGODB_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
+JWT_SECRET = os.getenv("JWT_SECRET")
+RP_ID = os.getenv("RP_ID", "account.devh.in")  # Your domain
+RP_NAME = os.getenv("RP_NAME", "DevH")
+ORIGIN = os.getenv("ORIGIN", "https://account.devh.in")  # Your origin URL
+
+
+# --- Database Setup ---
+class MongoDB:
+    client: AsyncIOMotorClient = None
+    db = None
+
+    @classmethod
+    async def connect_db(cls):
+        cls.client = AsyncIOMotorClient(MONGODB_URL)
+        cls.db = cls.client.passkeys_db
+
+    @classmethod
+    async def close_db(cls):
+        if cls.client:
+            await cls.client.close()
+
+    @classmethod
+    def get_db(cls):
+        return cls.db
+
+
+# --- Pydantic Models ---
+class PyObjectId(ObjectId):
+    @classmethod
+    def __get_validators__(cls):
+        yield cls.validate
+
+    @classmethod
+    def validate(cls, v):
+        if not ObjectId.is_valid(v):
+            raise ValueError("Invalid ObjectId")
+        return ObjectId(v)
+
+
+class User(BaseModel):
+    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    username: str
+    email: Optional[str]
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    class Config:
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+
+
+class Credential(BaseModel):
+    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    user_id: str
+    credential_id: str
+    public_key: bytes
+    sign_count: int = 0
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    class Config:
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str, bytes: lambda v: bytes_to_base64url(v)}
+
+
+class Challenge(BaseModel):
+    id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    challenge: str
+    user_id: Optional[str]
+    expires_at: datetime
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    class Config:
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+
+
+# --- Request/Response Models ---
+class RegistrationRequest(BaseModel):
+    username: str
+    email: Optional[str] = None
+
+
+class AuthenticationRequest(BaseModel):
+    credential_id: str
+
+
+# --- FastAPI App ---
 app = FastAPI()
 
-# Project configurations
-projects = {
-    "ApiServer": {
-        "tmux_session": "1",
-        "github_url": "https://github.com/S4tyendra/ApiServer",
-        "working_dir": "~/ApiServer",
-        "command": "git pull ; hypercorn main:app -b localhost:5001"
-    },
-    "ai.devh.in": {
-        "tmux_session": "0",
-        "github_url": "https://github.com/S4tyendra/ai.devh.in",
-        "working_dir": "~/ai.devh.in",
-        "command": "git pull && pnpm run build && pnpm run start"
-    },
-    "account.devh.in-v2": {
-        "tmux_session": "3",
-        "prod_port": "5004",
-        "test_port": "3060",
-        "github_url": "https://github.com/S4tyendra/account.devh.in-v2",
-        "working_dir": "~/account.devh.in-v2",
-        "command": "PORT={port} pnpm run start"  # We'll inject the port here
+
+# --- Startup and Shutdown ---
+@app.on_event("startup")
+async def startup():
+    await MongoDB.connect_db()
+
+
+@app.on_event("shutdown")
+async def shutdown():
+    await MongoDB.close_db()
+
+
+# --- Helper Functions ---
+async def get_user_by_username(username: str):
+    """Get user by username from MongoDB"""
+    db = MongoDB.get_db()
+    return await db.users.find_one({"username": username})
+
+
+async def store_challenge(challenge: str, user_id: Optional[str] = None):
+    """Store challenge in MongoDB"""
+    db = MongoDB.get_db()
+    expires_at = datetime.utcnow() + timedelta(minutes=5)
+    challenge_doc = Challenge(
+        challenge=challenge,
+        user_id=user_id,
+        expires_at=expires_at
+    ).dict(by_alias=True)
+    await db.challenges.insert_one(challenge_doc)
+
+
+async def get_challenge(user_id: Optional[str] = None):
+    """Get latest valid challenge from MongoDB"""
+    db = MongoDB.get_db()
+    query = {
+        "expires_at": {"$gt": datetime.utcnow()}
     }
-}
-HTML = r"""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Manager</title>
-    <style>
-        {CSS}
-    </style>
-</head>
-<body>
-    <h1>Project Manager</h1>
-    <div id="projects"></div>
-    <div id="output"></div>
-
-    <script>
-        {JS}
-    </script>
-</body>
-</html>
-"""
-
-CSS = r"""
-body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.project {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-#output {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-}
-"""
-
-JS = r"""
-let socket = new WebSocket("ws://" + window.location.host + "/ws");
-let projects = {projects};
-
-socket.onmessage = function(event) {
-    document.getElementById("output").innerHTML += event.data + "<br>";
-};
-
-function updateProject(projectName) {
-    socket.send(projectName);
-}
-
-function renderProjects() {
-    let projectsDiv = document.getElementById("projects");
-    for (let [projectName, project] of Object.entries(projects)) {
-        projectsDiv.innerHTML += `
-            <div class="project">
-                <h2>${projectName}</h2>
-                <p>GitHub: <a href="${project.github_url}" target="_blank">${project.github_url}</a></p>
-                <p>Working Directory: ${project.working_dir}</p>
-                <p>Tmux Session: ${project.tmux_session}</p>
-                <button onclick="updateProject('${projectName}')">Update and Restart</button>
-            </div>
-        `;
-    }
-}
-
-renderProjects();
-"""
-
-async def run_command(cmd):
-    process = await asyncio.create_subprocess_shell(
-        cmd,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE
+    if user_id:
+        query["user_id"] = user_id
+    challenge = await db.challenges.find_one(
+        query,
+        sort=[("created_at", -1)]
     )
-    stdout, stderr = await process.communicate()
-    return stdout, stderr
+    if not challenge:
+        raise HTTPException(status_code=400, detail="Challenge not found or expired")
+    return challenge
 
 
-async def update_project(project_name, ws):
-    project = projects[project_name]
-    await ws.send_text(f"Updating {project_name}...")
-    working_dir = os.path.expanduser(project["working_dir"])
-    await ws.send_text(f"Working directory: {working_dir}")
+# --- Registration Endpoints ---
+@app.post("/auth/register/begin")
+async def start_registration(request: RegistrationRequest):
+    """Start passkey registration process"""
+    try:
+        # Check if user exists
+        if await get_user_by_username(request.username):
+            raise HTTPException(status_code=400, detail="Username already exists")
 
-    # Navigate to the working directory
-    os.chdir(working_dir)
+        user_id = str(uuid.uuid4())
 
-    if project_name == "account.devh.in-v2":# or project_name == "ai.devh.in":
-        await ws.send_text(f"Zero-downtime deployment for {project_name}")
-        # Zero-downtime deployment for Next.js app
-        prod_session = project["tmux_session"]
-        test_session = f"{prod_session}_test"
+        # Generate registration options
+        # r_key : ResidentKeyRequirement = ResidentKeyRequirement()
+        aut_se : AuthenticatorSelectionCriteria = AuthenticatorSelectionCriteria(
+            user_verification=UserVerificationRequirement.REQUIRED,
+            resident_key=ResidentKeyRequirement.REQUIRED
+        )
+        options = webauthn.generate_registration_options(
+            rp_id=RP_ID,
+            rp_name=RP_NAME,
+            user_id=user_id.encode("utf-8"),
+            user_name=request.username,
+            authenticator_selection=aut_se,
+            attestation=AttestationConveyancePreference.NONE
+        )
 
-        await ws.send_text(f"Production session: {prod_session}")
-        await ws.send_text(f"Test session: {test_session}")
+        # Store challenge
+        await store_challenge(
+            challenge=bytes_to_base64url(options.challenge),
+            user_id=user_id
+        )
 
-        # 1. Create new tmux session for test instance
-        await ws.send_text("Creating new tmux session for test instance")
-        await run_command(f"tmux new-session -d -s {test_session}")
-        await ws.send_text("Navigating to working directory")
-        await run_command(f"tmux send-keys -t {test_session} 'cd {working_dir}' Enter")
+        return options
 
-        # 2. Pull latest code and build
-        await ws.send_text("Pulling latest code and building")
-        await run_command("git pull")
-        await ws.send_text("Installing dependencies")
-        await run_command("pnpm install")
-        await ws.send_text("Building the app")
-        await run_command("pnpm run build")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
-        # 3. Start test instance on test port
-        await ws.send_text("Starting test instance")
-        test_command = project["command"].format(port=project["test_port"])
-        await ws.send_text(f"Test command: {test_command}")
-        await run_command(f"tmux send-keys -t {test_session} '{test_command}' Enter")
 
-        # 4. Wait for test instance to start
-        await asyncio.sleep(10)
+@app.post("/auth/register/complete")
+async def complete_registration(credential: RegistrationCredential):
+    """Complete passkey registration"""
+    try:
+        db = MongoDB.get_db()
 
-        # 5. Stop production instance
-        await ws.send_text("Stopping production instance")
-        prod_command = project["command"].format(port=project["prod_port"])
-        await ws.send_text(f"Production command: {prod_command}")
-        await run_command(f"tmux send-keys -t {prod_session} C-c")
+        # Get stored challenge
+        challenge_doc = await get_challenge(credential.response.client_data.user_id)
 
-        # 6. Start new production instance
-        await ws.send_text("Starting new production instance")
-        await run_command(f"tmux send-keys -t {prod_session} '{prod_command}' Enter")
+        # Verify registration
+        verification = webauthn.verify_registration_response(
+            credential=credential,
+            expected_challenge=webauthn.base64url_to_bytes(challenge_doc["challenge"]),
+            expected_origin=ORIGIN,
+            expected_rp_id=RP_ID
+        )
 
-        # 7. Clean up test instance
-        await ws.send_text("Cleaning up test instance")
-        await asyncio.sleep(5)  # Wait for any remaining connections
-        await run_command(f"tmux kill-session -t {test_session}")
+        # Store user
+        user = User(
+            _id=ObjectId(),
+            id=verification.user_id,
+            username=credential.response.client_data.user_name
+        )
+        await db.users.insert_one(user.dict(by_alias=True))
 
-        return f"Updated {project_name} with zero downtime"
-    else:
-        await ws.send_text(f"Regular deployment for {project_name}")
-        # Regular deployment for other projects
-        tmux_session = project["tmux_session"]
-        command = project["command"]
-        await ws.send_text(f"Command: {command}")
-        await run_command("git pull")
-        await run_command(f"tmux send-keys -t {tmux_session} C-c")
-        await ws.send_text("Starting the app")
-        await run_command(f"tmux send-keys -t {tmux_session} '{command}' Enter")
+        # Store credential
+        cred = Credential(
+            user_id=verification.user_id,
+            credential_id=bytes_to_base64url(verification.credential_id),
+            public_key=verification.credential_public_key,
+            sign_count=verification.sign_count
+        )
+        await db.credentials.insert_one(cred.dict(by_alias=True))
 
-        return f"Updated and restarted {project_name}"
+        return {"status": "success"}
 
-@app.get("/", response_class=HTMLResponse)
-async def root(request: Request):
-    content = HTML.format(CSS=CSS, JS=JS.replace("{projects}", str(projects)))
-    return HTMLResponse(content=content)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
-@app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    while True:
-        data = await websocket.receive_text()
-        if data in projects:
-            result = await update_project(data, websocket)
-            await websocket.send_text(result)
-        else:
-            await websocket.send_text(f"Unknown project: {data}")
+
+# --- Authentication Endpoints ---
+@app.post("/auth/login/begin")
+async def start_authentication():
+    """Start passkey authentication"""
+    try:
+        # Generate authentication options
+        options = webauthn.generate_authentication_options(
+            rp_id=RP_ID,
+            user_verification=UserVerificationRequirement.REQUIRED,
+        )
+
+        # Store challenge
+        await store_challenge(bytes_to_base64url(options.challenge))
+
+        return options
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/auth/login/complete")
+async def complete_authentication(credential: AuthenticationCredential):
+    """Complete passkey authentication"""
+    try:
+        db = MongoDB.get_db()
+
+        # Get stored challenge
+        challenge_doc = await get_challenge()
+
+        # Get credential from database
+        stored_credential = await db.credentials.find_one({
+            "credential_id": bytes_to_base64url(credential.raw_id)
+        })
+        if not stored_credential:
+            raise HTTPException(status_code=400, detail="Credential not found")
+
+        # Verify authentication
+        verification = webauthn.verify_authentication_response(
+            credential=credential,
+            expected_challenge=webauthn.base64url_to_bytes(challenge_doc["challenge"]),
+            expected_origin=ORIGIN,
+            expected_rp_id=RP_ID,
+            credential_public_key=stored_credential["public_key"],
+            credential_current_sign_count=stored_credential["sign_count"]
+        )
+
+        # Update sign count
+        await db.credentials.update_one(
+            {"_id": stored_credential["_id"]},
+            {"$set": {"sign_count": verification.new_sign_count}}
+        )
+
+        # Generate JWT token
+        token = jwt.encode(
+            {
+                "user_id": stored_credential["user_id"],
+                "exp": datetime.utcnow() + timedelta(days=1)
+            },
+            JWT_SECRET,
+            algorithm="HS256"
+        )
+
+        return {"access_token": token, "token_type": "bearer"}
+
+    except Exception as e:
+        raise HTTPException(status_code=401, detail=str(e))
+
+
+# --- Middleware for cleaning up expired challenges ---
+@app.middleware("http")
+async def cleanup_expired_challenges(request, call_next):
+    """Cleanup expired challenges periodically"""
+    db = MongoDB.get_db()
+    await db.challenges.delete_many({
+        "expires_at": {"$lt": datetime.utcnow()}
+    })
+    response = await call_next(request)
+    return response
+
+@app.get("/")
+async def read_root():
+    return HTMLResponse(
+        r"""
+<form id="registerForm">
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="email" id="email" placeholder="Email">
+  <button type="button" onclick="register()">Register</button>
+</form>
+
+
+<script>
+async function register() {
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+
+  try {
+    // 1. Get options from server
+    const response = await fetch('/auth/register/begin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, email }),
+    });
+    const options = await response.json();
+
+
+    // 2. Create credentials
+    const credential = await navigator.credentials.create({
+      publicKey: options,
+    });
+
+    // 3. Send credential back to server
+    await fetch('/auth/register/complete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(credential), // Send the entire credential object
+    });
+
+    alert('Registration successful!');
+
+  } catch (error) {
+    console.error('Registration error:', error);
+    alert('Registration failed. Please try again.');
+  }
+}
+
+</script>
+<script>
+// Add event listener to form submit to prevent page reload
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting normally
+  register(); // Call your register function
+});
+</script>
+        """
+    )
+
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=3000)
