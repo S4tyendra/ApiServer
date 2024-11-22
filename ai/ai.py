@@ -20,10 +20,10 @@ router = APIRouter()
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 import pickle
-from anthropic import AnthropicVertex
+from anthropic import AnthropicBedrock
 
 
-# AnthropicVertex setup
+
 PROJECT_ID = "claude-433203"
 REGION = "europe-west1"
 SCOPES = ["https://www.googleapis.com/auth/cloud-platform"]
@@ -74,28 +74,41 @@ async def handle_tool_call(tool_call):
 
     return json.dumps({"error": f"Unknown function: {function_name}"})
 def get_anthropic_client():
-    creds = None
-    if os.path.exists("ai/token.pickle"):
-        with open("ai/token.pickle", "rb") as token:
-            creds = pickle.load(token)
+   
 
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            from google.auth.transport.requests import Request as G_Request
+    return AnthropicBedrock(
+    # Authenticate by either providing the keys below or use the default AWS credential providers, such as
+    # using ~/.aws/credentials or the "AWS_SECRET_ACCESS_KEY" and "AWS_ACCESS_KEY_ID" environment variables.
+    aws_access_key="AKIA3FLD4F7FPLAOONWM",
+    aws_secret_key="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",
+    # Temporary credentials can be used with aws_session_token.
+    # Read more at https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html.
+    # aws_region changes the aws region to which the request is made. By default, we read AWS_REGION,
+    # and if that's not present, we default to us-east-1. Note that we do not read ~/.aws/config for the region.
+    aws_region="us-west-2",
+)
 
-            creds.refresh(G_Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                "ai/oauth-client.json", SCOPES
-            )
-            creds = flow.run_local_server(port=45459, prompt="consent")
+g_system_prompt = """You're a friendly AI who keeps things short and sweet. When someone asks for help:
 
-        with open("ai/token.pickle", "wb") as token:
-            pickle.dump(creds, token)
+- Keep responses brief but helpful
+- Use casual language, but stay professional
+- Add occasional emojis for personality (1-2 max)
+- Be helpful but encourage learning
+- For code requests, guide rather than giving full solutions
+- Keep explanations under 2-3 sentences when possible
 
-    return AnthropicVertex(
-        region=REGION, project_id=PROJECT_ID, access_token=creds.token
-    )
+Tone examples:
+"Looks like you're missing a semicolon there! 👀"
+"Hmm, what have you tried so far?"
+"That's a cool project idea! Start with..."
+"The error's coming from line 42 - any guess why?"
+
+For coding help:
+- Point to documentation
+- Share small snippets, not full solutions
+- Encourage problem-solving
+
+Keep it natural but professional - no excessive slang or memes."""
 
 @router.websocket("/chat")
 async def websocket_chat_endpoint(websocket: WebSocket, token):
@@ -132,9 +145,9 @@ async def websocket_chat_endpoint(websocket: WebSocket, token):
                         with client.messages.stream(
                             max_tokens=8192,
                             messages=messages,
-                            model="claude-3-5-sonnet@20240620",
+                            model="anthropic.claude-3-5-sonnet-20241022-v2:0",
                             temperature=temperature,
-                            system=system_prompt
+                            system=f"{g_system_prompt}\n\nAlso, user instructions are: {system_prompt}"
                         ) as stream:
                             for event in stream:
                                 if hasattr(event, 'type'):

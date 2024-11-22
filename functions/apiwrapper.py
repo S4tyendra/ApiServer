@@ -35,7 +35,10 @@ async def get_user(
 
     api_key = str(api_key)
 
-    session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
+    if not accept_:
+        session = await db.sessions.find_one({"_id": api_key})
+    else:
+        session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept_}})
     if not session:
         raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
 
