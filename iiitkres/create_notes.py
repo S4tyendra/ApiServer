@@ -320,6 +320,10 @@ async def generate_content(
     )
     creds = await refresh_token(db, user, creds)
 
+    if proto.messages[0].parts[0] == "devider": # yes, it's devider. not divider
+        # return text only response
+        return Response(content="devider", media_type="text/plain")
+
     return StreamingResponse(
         content_generator(proto, creds), media_type="text/event-stream"
     )
@@ -343,7 +347,7 @@ def content_generator(proto: Message, creds: Credentials):
 
         genai.configure(credentials=creds)
         model = genai.GenerativeModel(
-            "gemini-1.5-flash-exp-0827",
+            model_name="gemini-1.5-flash" if files else "learnlm-1.5-pro-experimental",
             system_instruction=SYSTEM_PROMPT,
             safety_settings={
                 HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
@@ -353,21 +357,32 @@ def content_generator(proto: Message, creds: Credentials):
             },
         )
 
-
-        chat_session = model.start_chat(
-            history=[
+        history=[
                 {
                     "role": "user",
                     "parts": files,
                 },
                 *messages_history,
-            ]
+            ] if files else messages_history
+
+
+        chat_session = model.start_chat(
+            history=history,
         )
         response = chat_session.send_message(
-            "Files related to class is attached at the beginning of this chat. please review and create notes!, ignore any motivation/unrelated content discussed in class", stream=True
+            "Please analyze the provided class materials and create comprehensive educational notes following these guidelines:\n"
+            "1. Extract and organize key academic concepts\n"
+            "2. Include any mathematical formulas using LaTeX syntax\n"
+            "3. Add relevant diagrams where needed using mermaid\n"
+            "4. Structure content with clear headings and sections\n"
+            "5. Focus only on academic/educational content\n"
+            "6. Maintain proper Markdown formatting\n"
+            "7. Exclude any non-academic discussions or tangential content",
+            stream=True
         )
         for chunk in response:
             yield f"{chunk.text}"
     except Exception as e:
+        
         traceback.print_exc()
 
