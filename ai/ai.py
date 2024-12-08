@@ -221,7 +221,10 @@ async def websocket_chat_endpoint(websocket: WebSocket, token):
                                             })
                                             break
                                         # Deduct input credits
-                                        
+                                        await db.users.update_one(
+                                            {"email": user['email']},
+                                            {"$inc": {"tokens": -input_credits}}
+                                        )
                                     elif event.type == "content_block_delta":
                                         event_dict["index"] = event.index
                                         event_dict["delta"] = {
@@ -245,7 +248,11 @@ async def websocket_chat_endpoint(websocket: WebSocket, token):
                                                 break
                                             
                                             # Deduct output credits
-                                        
+                                            await db.users.update_one(
+                                                {"email": user['email']},
+                                                {"$inc": {"tokens": -output_credits_delta}}
+                                            )
+                                            
                                         output_tokens = int(event.usage.output_tokens)
                                         event_dict["delta"] = event.delta.model_dump()
                                         if hasattr(event, 'usage'):
@@ -311,18 +318,14 @@ async def websocket_chat_endpoint(websocket: WebSocket, token):
             print(f"Unexpected error: {str(e)}")
             traceback.print_exc()
         finally:
-            cost = calculate_token_credits(input_tokens, output_tokens)
-            await db.users.update_one(
-                {"email": user['email']},
-                {"$inc": {"tokens": -cost}}
-            )
+            # Remove the final credit deduction since we're now deducting in real-time
             await add_to_logs(
                 session=token,
                 email=user["email"],
                 message=f"AI usage: Input tokens: {input_tokens}, Output tokens: {output_tokens}" if not err else "AI usage: Error, Overloaded",
                 app="ai",
                 timestamp=datetime.now(tz=timezone('Asia/Kolkata')).timestamp(),
-                cost=cost
+                cost=calculate_token_credits(input_tokens, output_tokens)
             )
 
             try:
