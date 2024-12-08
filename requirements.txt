@@ -86,6 +86,7 @@ pyasn1-modules==0.4.1
 pycparser==2.22
 pydantic==2.9.2
 pydantic-core==2.23.4
+pydantic[email]
 pydub==0.25.1
 pydyf==0.11.0
 pygithub==2.4.0
@@ -191,3 +192,4 @@ hypercorn
 aiohttp
 supabase
 asyncpg
+passlib
