@@ -28,9 +28,9 @@ from pytz import timezone
 from ai.ai import router as ai_router
 from apps import router as apps_router
 from internal import router as internal_router
-
-
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
+from devh import router as devh_router
+from devh.test import test_init_db
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
 
 app = FastAPI()
@@ -121,7 +121,10 @@ async def log_request(request: Request, call_next):
         f"{request.method} - {request.url} / {request.headers.get('cookie')} /{request.headers.get('x-api-key')}")
     return response
 
-
+# @app.get("/lol")
+# async def lozl(request: Request, response: Response):
+#     await test_init_db()
+#     return {"message": "lol"}
 
 if os.path.exists(".env"):
     from dotenv import load_dotenv
@@ -138,6 +141,7 @@ app.include_router(auth_router, tags=["Auth"], prefix="/auth")
 app.include_router(ai_router, tags=["AI"], prefix="/ai")
 app.include_router(apps_router, tags=["Apps"], prefix="/apps")
 app.include_router(internal_router, include_in_schema=False)  # Add the internal router for GitHub webhooks
+app.include_router(devh_router, include_in_schema=False)
 
 @app.get("/", include_in_schema=False)
 async def root(request: Request, response: Response):
