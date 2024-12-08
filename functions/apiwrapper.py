@@ -125,9 +125,9 @@ async def get_ws_user(
         return
 
     current_tokens = user.get("tokens", 10)  # Default to 10 if not set
-    if current_tokens <= 0:
+    if current_tokens <= 5:
         await websocket.accept()
-        await websocket.send_text(f"You have no credits remaining. Please go to [Account page](https://account.devh.in/plans) to get more credits!")
+        await websocket.send_text(f"You should have at least 5 credits remaining. Please go to [Account page](https://account.devh.in/plans) to get more credits!")
         await websocket.close(code=1008)
         return
 
