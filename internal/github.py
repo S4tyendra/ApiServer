@@ -2,6 +2,7 @@ import hmac
 import hashlib
 import subprocess
 import logging
+import os
 from fastapi import Request, HTTPException
 from . import router
 
@@ -33,7 +34,15 @@ async def github_webhook(request: Request):
         # Pull the latest changes
         subprocess.run(["git", "pull"], check=True)
         logging.info("Successfully pulled latest changes from GitHub")
-        return {"message": "Updates received and applied successfully"}
+        
+        # Execute the restart script in the background
+        script_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "restart_server.sh")
+        subprocess.Popen([script_path], start_new_session=True)
+        
+        return {"message": "Updates received and restart initiated"}
     except subprocess.CalledProcessError as e:
         logging.error(f"Failed to pull changes: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to pull changes")
+    except Exception as e:
+        logging.error(f"Failed to restart server: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to restart server")
