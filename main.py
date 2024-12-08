@@ -27,6 +27,7 @@ from user.profile import router as user_router
 from pytz import timezone
 from ai.ai import router as ai_router
 from apps import router as apps_router
+from internal import router as internal_router
 
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
@@ -136,8 +137,7 @@ app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
 app.include_router(ai_router, tags=["AI"], prefix="/ai")
 app.include_router(apps_router, tags=["Apps"], prefix="/apps")
-
-
+app.include_router(internal_router)  # Add the internal router for GitHub webhooks
 
 @app.get("/", include_in_schema=False)
 async def root(request: Request, response: Response):
@@ -529,4 +529,3 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run("main:app", reload=True, port=8000)
-
