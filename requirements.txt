@@ -97,7 +97,7 @@ pymupdf==1.24.2
 pymupdfb==1.24.1
 pynacl==1.5.0
 pyparsing==3.2.0
-pypdf==3.9.0
+pypdf>=3.17.0
 pyphen==0.16.0
 pyrogram==2.0.106
 pysocks==1.7.1
