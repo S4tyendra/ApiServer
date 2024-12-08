@@ -137,7 +137,7 @@ app.include_router(iiitkres_router, tags=["IIITK RES"], prefix="/iiitk")
 app.include_router(auth_router, tags=["Auth"], prefix="/auth")
 app.include_router(ai_router, tags=["AI"], prefix="/ai")
 app.include_router(apps_router, tags=["Apps"], prefix="/apps")
-app.include_router(internal_router)  # Add the internal router for GitHub webhooks
+app.include_router(internal_router, include_in_schema=False)  # Add the internal router for GitHub webhooks
 
 @app.get("/", include_in_schema=False)
 async def root(request: Request, response: Response):
