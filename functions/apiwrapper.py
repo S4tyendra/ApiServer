@@ -93,30 +93,6 @@ async def refund_tokens(email: str, tokens_to_refund: int):
 
 
 
-# async def get_user(
-#         request: Request,
-#         accept: List[str],
-
-# ):
-#     api_key = request.headers.get(API_KEY_NAME)
-
-#     if not api_key:
-#         raise HTTPException(status_code=401, detail="Unauthorized, api key required")
-
-#     db = await get_database()
-
-#     session = await db.sessions.find_one({"_id": api_key, "type": {"$in": accept}})
-#     if not session:
-#         raise HTTPException(status_code=401, detail="Unauthorized, invalid session")
-
-#     user = await db.users.find_one({"email": session.get('email')})
-#     if not user:
-#         raise HTTPException(status_code=401, detail="Unauthorized, user not found")
-#     return user
-
-
-
-
 async def get_ws_user(
         websocket: WebSocket,
         accept: List[str],
@@ -143,43 +119,22 @@ async def get_ws_user(
 
     user = await db.users.find_one({"email": session.get('email')})
     if not user:
-
         await websocket.accept()
         await websocket.send_text("Invalid user. please go to [Login page](/login) to set api key")
         await websocket.close(code=1008)
         return
 
-
-
     current_tokens = user.get("tokens", 10)  # Default to 10 if not set
-
-
-    tokens = 5
-
-    if current_tokens < tokens:
+    if current_tokens <= 0:
         await websocket.accept()
-        await websocket.send_text(f"You have only {current_tokens} tokens, You must have more than 5 tokens to use this service please go to [Account page](https://account.devh.in/plans) to get tokens!")
+        await websocket.send_text(f"You have no credits remaining. Please go to [Account page](https://account.devh.in/plans) to get more credits!")
         await websocket.close(code=1008)
+        return
 
-    if tokens is not None:
-        token_cost = tokens
-        if current_tokens + token_cost < 0:
-            raise HTTPException(status_code=401, detail="Not enough Tokens")
-
-        await db.users.update_one(
-            {"email": user['email']},
-            {
-                "$set": {
-                    "last_accessed": time.time(),
-                    "tokens": current_tokens + token_cost
-                }
-            }
-        )
-    else:
-        await db.users.update_one(
-            {"email": user['email']},
-            {"$set": {"last_accessed": time.time()}}
-        )
+    await db.users.update_one(
+        {"email": user['email']},
+        {"$set": {"last_accessed": time.time()}}
+    )
 
     return user
 
