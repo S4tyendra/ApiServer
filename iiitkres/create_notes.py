@@ -347,7 +347,7 @@ def content_generator(proto: Message, creds: Credentials):
 
         genai.configure(credentials=creds)
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash" if files else "learnlm-1.5-pro-experimental",
+            model_name="gemini-2.0-flash-exp" if files else "learnlm-1.5-pro-experimental",
             system_instruction=SYSTEM_PROMPT,
             safety_settings={
                 HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
