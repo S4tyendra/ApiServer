@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: apiserver
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - ./logs:/app/logs
+      - ./temp:/app/temp
+      - ./static:/app/static
+    deploy:
+      resources:
+        limits:
+          memory: 400M
+          cpus: '0.50'
+        reservations:
+          memory: 200M
+          cpus: '0.25'
+
+networks:
+  default:
+    driver: bridge
